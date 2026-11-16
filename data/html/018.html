@@ -1,0 +1,300 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #18 - This is going to make writing ransom letters SO much easier</title><meta name="description" content="npm v7, a new functional programming language, and I got bloody blurhashed last night, mate"/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/18"/><meta property="og:title" content="Bytes #18 - This is going to make writing ransom letters SO much easier"/><meta property="og:description" content="npm v7, a new functional programming language, and I got bloody blurhashed last night, mate"/><meta property="og:url" content="https://bytes.dev/archives/18"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/npm7.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #18 - This is going to make writing ransom letters SO much easier"/><meta name="twitter:description" content="npm v7, a new functional programming language, and I got bloody blurhashed last night, mate"/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/npm7.png"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase">This is going to make writing ransom letters SO much easier</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->18<!-- -->.</span><span class="mr-6 font-bold">October 19, 2020<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/npm7.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/cereal.jpg"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><h2><a href="https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli/">npm 7.0.0 Released</a></h2>
+<p><img src="https://bytes.dev/images/content/npm7.png" alt="npm v7">
+</p><p class="image-alt">What’s in the b̶o̶x̶ update??!?</p><p></p>
+<p><strong>It’s been 11 years…</strong> since npm was introduced to the JavaScript ecosystem (back when the creepiest thing we knew about Kevin Spacey was his serial killer acting role).</p>
+<p>Last week, npm released v7.0 — a major update that will be part of the upcoming Node.js 15.0.0 release later this week. But if you’re an eager beaver, you can install npm 7 today by running <code>npm i -g npm@7</code> in your terminal.</p>
+<h3>The Highlights</h3>
+<p><strong>Workspaces:</strong> By far the most-requested feature by npm users everywhere, this new set of npm CLI features lets you manage multiple packages from within a singular, top-level root package. It’s the first time any package manager (not named Y*rn) has offered this functionality <span role="img" aria-label="upside-down face">🙃</span>.</p>
+<p><strong>Auto-installing peer dependencies:</strong> With npm v6 (because programming is hard), <code>peerDependencies</code> are not installed by default. With v7 (because we can do hard things), they are.</p>
+<p><strong>package-lock v2 <em>and</em> support for yarn.lock:</strong> When your parents are separated but they put aside their differences to support you anyway. v7 will now support <code>yarn.lock</code> files. There’s also a new <code>package-lock</code> format which will (in their words, obviously) “allow you to do ‘deterministically reproducible builds’ and includes everything npm needs to fully build the package tree.”</p>
+<p>Other cool features include improved <code>npm audit</code> output and the ability to skip pre/post scripts when using <code>--ignore-scripts</code>.</p>
+<h3>The Bottom Line</h3>
+<p>This is npm’s first major release since it <del>created a lot of value for shareholders</del> was acquired by GitHub back in March. When that deal happened, GitHub’s CEO promised to invest some of those sweet PowerPoint dollars from Microsoft (Github’s parent co.) into modernizing npm and making it faster and more scalable.</p>
+<p>With the release of npm v7, it looks like Github is starting to make good on that promise, while working towards <a href="https://thenewstack.io/github-acquires-npm-buying-microsoft-a-presence-in-the-node-javascript-community/">its bigger goals of integrating npm into GitHub itself.</a></p>
+<hr>
+<h2><a href="https://github.com/grain-lang/grain">Grain - A New Web Staple</a></h2>
+<p><img src="https://bytes.dev/images/content/cereal.jpg" alt="Cereal">
+</p><p class="image-alt">Of course they’re healthy, they’ve got whole grains</p><p></p>
+<p><strong>Don’t talk to us about Paleo…</strong> because grain is back. At least that what we thought last week when we heard about Grain<span role="img" aria-label="trade mark">™</span> — a new programming language that puts “academic features” to work.</p>
+<p><strong>Wtf does that mean?</strong> Grain wants to modernize various features from functional and academic languages that typically get ignored by the vast majority of developers because they’re either too abstract or too hard to learn (or both). Grain is trying to bring these features into mainstream by making them easier to use and understand for those of us who didn’t get a PhD in Computer Science from MIT.</p>
+<p>The project is still  new, but here are <strong>3 cool things to know about Grain:</strong></p>
+<p><strong>Compiles to WASM:</strong> Aka WebAssembly aka the future if you read Hacker News. This means that Grain can run in the browser, on your computer, or on a server. And it’s fast.</p>
+<p><strong>Sensible Types:</strong> You can define your own types without getting any runtime type errors. The docs promise that “every <em>bit of Grain</em> you write is thoroughly <em>sifted</em> for type errors, with no need for type annotations.” They’re really leaning into the metaphor here.</p>
+<p><strong>Functional, but chill:</strong> Grain is a functional language, but it isn’t a d*ck about it. It has a strong typechecker, but it’s flexible enough to allow for different programming styles, which makes it a lot more practical. And it’s currently adopting features like Rust’s <code>let mut</code> that definitely aren’t technically “functional”, but should make Grain easier to use.</p>
+<h3>The Bottom Line</h3>
+<p>There’s no shortage of projects claiming to be “the new, modern language of the future.” And then… no one uses them. So it’s cool to see the Grain creators talk about accessibility, ease of use, and mainstream adoption as their main goals from Day 1.</p>
+<p><em>Now go back and read this section again but swap out “Grain” for “Elm”. <span role="img" aria-label="grinning face with sweat">😅</span></em></p>
+<hr>
+<h2>JS Tip</h2>
+<p>Have you ever used Array’s <code>fill</code> method? Probably not. Defined, <code>fill</code> “fills all the elements of an array from a start index to an end index with a static value”. It sounds pretty useless, but I’ve found one scenario where it’s actually pretty helpful.</p>
+<p>As you start to make your code more functional, you naturally start to avoid using regular for loops in favor of <code>.map</code>, <code>.reduce</code>, etc. Let’s say our use case was we wanted to execute a function an arbitrary amount of times, say 10. How could we do this and avoid using a for loop? Your first intuition might be to use an Array constructor with <code>.map</code>.</p>
+<pre class="language-js"><code class="language-js"><span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">doThing</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>You’ll notice if you run that code it won’t work. When you do <code>Array(10)</code>, you’re creating an array of 10 unset or “empty” values. Unfortunately, when you use any of the array methods, they won’t work on an array with empty values.</p>
+<p>This is where <code>.fill</code> comes into play. If you do <code>Array(10).fill()</code>, you’ll then get an array with 10 <code>undefined</code>, not empty elements.</p>
+<pre class="language-js"><code class="language-js"><span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">doThing</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Not <em>super</em> useful, but good to know it exists if you need it.</p>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p>For the first time ever, <a href="https://twitter.com/darylginn/status/1317773436983410690">a singular Tweet</a> has made cool bits.</p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/blog/introducing-digitalocean-app-platform-reimagining-paas-to-make-it-simpler-for-you-to-build-deploy-and-scale-apps/">Digital Ocean released a new app platform</a>. Sadly this release doesn’t ruin the whole OSS ecosystem be incentivizing cheap PRs. Instead, it promises to make it easier to build, deploy, and scale your applications.</p>
+</li>
+<li>
+<p><a href="https://babeljs.io/blog/2020/10/15/7.12.0">Babel 7.12.0 was released</a> and includes support for new TypeScript 4.1 beta features, Webpack 5, and two new ECMAScript proposals.</p>
+</li>
+<li>
+<p>BlurHashes were <a href="https://twitter.com/lukechesser/status/1316767692620267520">just added to the Unsplash API</a>. A “blurhash” sounds like a British word for getting really drunk (i.e. “I got bloody blurhashed last night, mate”), but it’s actually just <a href="https://blurha.sh/">a compact representation of a placeholder for an image</a>.</p>
+</li>
+<li>
+<p>Jakob <a href="https://www.jakobmeier.ch/blogging/Rust_on_the_Web.html">wrote about</a> how Rust is moving into the browser via WASM, creating a “Clash of Programming Paradigms.” On one paradigm you have developers suffering from Dunning–Kruger effect and on the other they’re suffering from Imposter Syndrome.</p>
+</li>
+<li>
+<p>Maxime wrote about <a href="https://blog.maximeheckel.com/posts/seo-mistakes-i-have-made-and-how-i-fixed-them">SEO mistakes he’s made and how he fixed them</a>. No word on if spamming your main keywords in white font on your site is considered a “mistake”. We’ll keep you updated.</p>
+</li>
+<li>
+<p>Lea Verou wrote about <a href="https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/">The -​-var: ; hack to toggle multiple values with one custom property</a>. We’ve been doing this newsletter long enough to be convinced that Lea uses a newer, far more superior version of CSS than the rest of us.</p>
+</li>
+<li>
+<p>Rahil made <a href="https://github.com/alias-rahil/handwritten.js">a CLI tool that converts typed text to realistic handwriting.</a> This is going to make writing ransom letters SO much easier.</p>
+</li>
+</ol>
+<hr></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"18\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"18\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"18\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\"This is going to make writing ransom letters SO much easier\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"18\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"October 19, 2020\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T2a09,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/npm7.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cereal.jpg\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003ch2\u003e\u003ca href=\"https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli/\"\u003enpm 7.0.0 Released\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/npm7.png\" alt=\"npm v7\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eWhat’s in the b̶o̶x̶ update??!?\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eIt’s been 11 years…\u003c/strong\u003e since npm was introduced to the JavaScript ecosystem (back when the creepiest thing we knew about Kevin Spacey was his serial killer acting role).\u003c/p\u003e\n\u003cp\u003eLast week, npm released v7.0 — a major update that will be part of the upcoming Node.js 15.0.0 release later this week. But if you’re an eager beaver, you can install npm 7 today by running \u003ccode\u003enpm i -g npm@7\u003c/code\u003e in your terminal.\u003c/p\u003e\n\u003ch3\u003eThe Highlights\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003eWorkspaces:\u003c/strong\u003e By far the most-requested feature by npm users everywhere, this new set of npm CLI features lets you manage multiple packages from within a singular, top-level root package. It’s the first time any package manager (not named Y*rn) has offered this functionality \u003cspan role=\"img\" aria-label=\"upside-down face\"\u003e🙃\u003c/span\u003e.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eAuto-installing peer dependencies:\u003c/strong\u003e With npm v6 (because programming is hard), \u003ccode\u003epeerDependencies\u003c/code\u003e are not installed by default. With v7 (because we can do hard things), they are.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003epackage-lock v2 \u003cem\u003eand\u003c/em\u003e support for yarn.lock:\u003c/strong\u003e When your parents are separated but they put aside their differences to support you anyway. v7 will now support \u003ccode\u003eyarn.lock\u003c/code\u003e files. There’s also a new \u003ccode\u003epackage-lock\u003c/code\u003e format which will (in their words, obviously) “allow you to do ‘deterministically reproducible builds’ and includes everything npm needs to fully build the package tree.”\u003c/p\u003e\n\u003cp\u003eOther cool features include improved \u003ccode\u003enpm audit\u003c/code\u003e output and the ability to skip pre/post scripts when using \u003ccode\u003e--ignore-scripts\u003c/code\u003e.\u003c/p\u003e\n\u003ch3\u003eThe Bottom Line\u003c/h3\u003e\n\u003cp\u003eThis is npm’s first major release since it \u003cdel\u003ecreated a lot of value for shareholders\u003c/del\u003e was acquired by GitHub back in March. When that deal happened, GitHub’s CEO promised to invest some of those sweet PowerPoint dollars from Microsoft (Github’s parent co.) into modernizing npm and making it faster and more scalable.\u003c/p\u003e\n\u003cp\u003eWith the release of npm v7, it looks like Github is starting to make good on that promise, while working towards \u003ca href=\"https://thenewstack.io/github-acquires-npm-buying-microsoft-a-presence-in-the-node-javascript-community/\"\u003eits bigger goals of integrating npm into GitHub itself.\u003c/a\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003e\u003ca href=\"https://github.com/grain-lang/grain\"\u003eGrain - A New Web Staple\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/cereal.jpg\" alt=\"Cereal\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eOf course they’re healthy, they’ve got whole grains\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eDon’t talk to us about Paleo…\u003c/strong\u003e because grain is back. At least that what we thought last week when we heard about Grain\u003cspan role=\"img\" aria-label=\"trade mark\"\u003e™\u003c/span\u003e — a new programming language that puts “academic features” to work.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eWtf does that mean?\u003c/strong\u003e Grain wants to modernize various features from functional and academic languages that typically get ignored by the vast majority of developers because they’re either too abstract or too hard to learn (or both). Grain is trying to bring these features into mainstream by making them easier to use and understand for those of us who didn’t get a PhD in Computer Science from MIT.\u003c/p\u003e\n\u003cp\u003eThe project is still  new, but here are \u003cstrong\u003e3 cool things to know about Grain:\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eCompiles to WASM:\u003c/strong\u003e Aka WebAssembly aka the future if you read Hacker News. This means that Grain can run in the browser, on your computer, or on a server. And it’s fast.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eSensible Types:\u003c/strong\u003e You can define your own types without getting any runtime type errors. The docs promise that “every \u003cem\u003ebit of Grain\u003c/em\u003e you write is thoroughly \u003cem\u003esifted\u003c/em\u003e for type errors, with no need for type annotations.” They’re really leaning into the metaphor here.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eFunctional, but chill:\u003c/strong\u003e Grain is a functional language, but it isn’t a d*ck about it. It has a strong typechecker, but it’s flexible enough to allow for different programming styles, which makes it a lot more practical. And it’s currently adopting features like Rust’s \u003ccode\u003elet mut\u003c/code\u003e that definitely aren’t technically “functional”, but should make Grain easier to use.\u003c/p\u003e\n\u003ch3\u003eThe Bottom Line\u003c/h3\u003e\n\u003cp\u003eThere’s no shortage of projects claiming to be “the new, modern language of the future.” And then… no one uses them. So it’s cool to see the Grain creators talk about accessibility, ease of use, and mainstream adoption as their main goals from Day 1.\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eNow go back and read this section again but swap out “Grain” for “Elm”. \u003cspan role=\"img\" aria-label=\"grinning face with sweat\"\u003e😅\u003c/span\u003e\u003c/em\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eJS Tip\u003c/h2\u003e\n\u003cp\u003eHave you ever used Array’s \u003ccode\u003efill\u003c/code\u003e method? Probably not. Defined, \u003ccode\u003efill\u003c/code\u003e “fills all the elements of an array from a start index to an end index with a static value”. It sounds pretty useless, but I’ve found one scenario where it’s actually pretty helpful.\u003c/p\u003e\n\u003cp\u003eAs you start to make your code more functional, you naturally start to avoid using regular for loops in favor of \u003ccode\u003e.map\u003c/code\u003e, \u003ccode\u003e.reduce\u003c/code\u003e, etc. Let’s say our use case was we wanted to execute a function an arbitrary amount of times, say 10. How could we do this and avoid using a for loop? Your first intuition might be to use an Array constructor with \u003ccode\u003e.map\u003c/code\u003e.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token function\"\u003eArray\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token number\"\u003e10\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003emap\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"token function\"\u003edoThing\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eYou’ll notice if you run that code it won’t work. When you do \u003ccode\u003eArray(10)\u003c/code\u003e, you’re creating an array of 10 unset or “empty” values. Unfortunately, when you use any of the array methods, they won’t work on an array with empty values.\u003c/p\u003e\n\u003cp\u003eThis is where \u003ccode\u003e.fill\u003c/code\u003e comes into play. If you do \u003ccode\u003eArray(10).fill()\u003c/code\u003e, you’ll then get an array with 10 \u003ccode\u003eundefined\u003c/code\u003e, not empty elements.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token function\"\u003eArray\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token number\"\u003e10\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003efill\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003emap\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"token function\"\u003edoThing\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNot \u003cem\u003esuper\u003c/em\u003e useful, but good to know it exists if you need it.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eFor the first time ever, \u003ca href=\"https://twitter.com/darylginn/status/1317773436983410690\"\u003ea singular Tweet\u003c/a\u003e has made cool bits.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://www.digitalocean.com/blog/introducing-digitalocean-app-platform-reimagining-paas-to-make-it-simpler-for-you-to-build-deploy-and-scale-apps/\"\u003eDigital Ocean released a new app platform\u003c/a\u003e. Sadly this release doesn’t ruin the whole OSS ecosystem be incentivizing cheap PRs. Instead, it promises to make it easier to build, deploy, and scale your applications.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://babeljs.io/blog/2020/10/15/7.12.0\"\u003eBabel 7.12.0 was released\u003c/a\u003e and includes support for new TypeScript 4.1 beta features, Webpack 5, and two new ECMAScript proposals.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eBlurHashes were \u003ca href=\"https://twitter.com/lukechesser/status/1316767692620267520\"\u003ejust added to the Unsplash API\u003c/a\u003e. A “blurhash” sounds like a British word for getting really drunk (i.e. “I got bloody blurhashed last night, mate”), but it’s actually just \u003ca href=\"https://blurha.sh/\"\u003ea compact representation of a placeholder for an image\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJakob \u003ca href=\"https://www.jakobmeier.ch/blogging/Rust_on_the_Web.html\"\u003ewrote about\u003c/a\u003e how Rust is moving into the browser via WASM, creating a “Clash of Programming Paradigms.” On one paradigm you have developers suffering from Dunning–Kruger effect and on the other they’re suffering from Imposter Syndrome.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eMaxime wrote about \u003ca href=\"https://blog.maximeheckel.com/posts/seo-mistakes-i-have-made-and-how-i-fixed-them\"\u003eSEO mistakes he’s made and how he fixed them\u003c/a\u003e. No word on if spamming your main keywords in white font on your site is considered a “mistake”. We’ll keep you updated.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eLea Verou wrote about \u003ca href=\"https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/\"\u003eThe -​-var: ; hack to toggle multiple values with one custom property\u003c/a\u003e. We’ve been doing this newsletter long enough to be convinced that Lea uses a newer, far more superior version of CSS than the rest of us.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eRahil made \u003ca href=\"https://github.com/alias-rahil/handwritten.js\"\u003ea CLI tool that converts typed text to realistic handwriting.\u003c/a\u003e This is going to make writing ransom letters SO much easier.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #18 - This is going to make writing ransom letters SO much easier\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"npm v7, a new functional programming language, and I got bloody blurhashed last night, mate\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/18\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #18 - This is going to make writing ransom letters SO much easier\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"npm v7, a new functional programming language, and I got bloody blurhashed last night, mate\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/18\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/npm7.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #18 - This is going to make writing ransom letters SO much easier\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"npm v7, a new functional programming language, and I got bloody blurhashed last night, mate\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/npm7.png\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

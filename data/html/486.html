@@ -1,0 +1,325 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #486 - TanStack Attack</title><meta name="description" content="Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/486"/><meta property="og:title" content="Bytes #486 - TanStack Attack"/><meta property="og:description" content="Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS."/><meta property="og:url" content="https://bytes.dev/archives/486"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/katya-help.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #486 - TanStack Attack"/><meta name="twitter:description" content="Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS."/><meta name="twitter:image" content="https://bytes.dev/images/content/katya-help.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> TanStack Attack</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->486<!-- -->.</span><span class="mr-6 font-bold">May 13, 2026<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/katya-help.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/qa-wolf-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/monkey-computer.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/pop-quiz.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/486">#486</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/katya-help.jpg" alt="A woman holding a little hand that says help on it" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Me after revoking my GitHub tokens without reading the postmortem first<!-- --> </p></div><h3>TanStack Attack</h3><p>Yesterday, an attacker published 84 malicious versions across 42 <code>@tanstack/*</code> packages that were live for ~20 minutes before external researcher <code>ashishkurmi</code> caught it.</p><p>The good news is that it was discovered quickly, so packages were deprecated and tarballs pulled. The bad news is that if you ran <code>npm install</code> yesterday, your machine may be cooked.</p><p><strong>How it worked:</strong> The attack worked by chaining three vulnerabilities together. A malicious PR exploited <code>pull_request_target</code> in GitHub Actions to poison the shared pnpm cache with a custom payload.</p><p>So the next time a legitimate release ran, it restored that poisoned cache, and the attacker’s code extracted an OIDC token directly from runner memory to publish to npm without ever touching a stored credential. To npm, the poisoned version looked 100% legitimate.</p><p>And once installed, the payload got pretty nasty:</p><ul>
+<li>
+<p><strong>Credential harvesting</strong> — AWS, GCP, Kubernetes, Vault, GitHub tokens, SSH keys, <code>~/.npmrc</code>. Everything reachable from the install host.</p>
+</li>
+<li>
+<p><strong>Self-propagating worm</strong> — Queries the npm registry for other packages the victim maintains and reinfects those too.</p>
+</li>
+<li>
+<p><strong>Dead man’s switch</strong> — <code>~/.local/bin/gh-token-monitor.sh</code> installs as a systemd service (Linux) or LaunchAgent (macOS) and polls <code>api.github.com/user</code> with the stolen token every 60s. If the user revokes the token, it runs <code>rm -rf ~/</code>. Revoking is what pulls the trigger, so <strong>do not</strong> just go rotating credentials before you read <a href="https://github.com/TanStack/router/issues/7383">the full warning</a>.</p>
+</li>
+</ul><p><strong>What to do:</strong></p><ul>
+<li>
+<p>Carefully rotate credentials if you installed any <code>@tanstack/*</code> package on May 11th</p>
+</li>
+<li>
+<p>Set a <a href="https://daniakash.com/posts/simplest-supply-chain-defense/">minimum release age</a> in your package manager. A 7-day hold would have blocked most known supply chain attacks from the past 8 years</p>
+</li>
+<li>
+<p>Upgrade to pnpm 11, which has supply chain attack mitigations baked in</p>
+</li>
+</ul><p><strong>Bottom Line:</strong> TanStack is one of the most respected and well-maintained OSS orgs we have. So if they can get hit this cleanly, maybe it’s finally time for the industry to move on from npm for good.</p><p>We can dream.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/486" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F486" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=How%20the%20TanStack%20shai%20halud%20attack%20went%20down%20and%20what%20to%20do%20now%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F486" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AHow%20the%20TanStack%20shai%20halud%20attack%20went%20down%20and%20what%20to%20do%20now%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F486" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/qa-wolf-logo.png" alt="QA Wolf logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/monkey-computer.jpg" alt="A monkey lying in bed on a computer" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">When testing the code takes longer than writing the code<!-- --> </p></div><h3><a href="https://www.qawolf.com">The testing platform built for AI software development</a></h3><p>When testing can’t keep up with AI, your team’s PRs pile up, releases get stuck in QA, and you ship a lot more slop to production.</p><p><a href="https://www.qawolf.com">QA Wolf</a> built a testing platform for agentic SDLC, so your team can ship fast and fearlessly:</p><ul>
+<li><strong>Mapping AI</strong> autonomously maps your app’s workflows</li>
+<li><strong>Automation AI</strong> generates deterministic, code-based tests for web, iOS, and Android</li>
+<li><strong>100% parallel runs</strong> return results in minutes</li>
+</ul><p><a href="https://www.qawolf.com">Get a personalized demo for your team</a> – and see why one Salesloft engineer said, “I’ve never seen anything like QA Wolf’s parallel run infrastructure.”</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="140" src="https://bytes.dev/images/content/pop-quiz.png" alt="Pop Quiz logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Pop Quiz</h2><div class="section-presenter" style="margin-bottom:50px;margin-top:15px"><h4>Sponsored by <a href="https://go.clerk.com/rjfhkBF">Clerk</a></h4><p><em>The new <a href="https://go.clerk.com/rjfhkBF">Clerk CLI</a> gives you a single command, <code>clerk init</code> that detects your framework, scaffolds Clerk into your project, and wires up auth end to end with middleware, providers, auth pages, and more.</em></p></div></div>
+<p>What gets logged?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">speak</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token string">'Woof Woof'</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Dog</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">speak</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">'Ruff Ruff'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> dog <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">'Leo'</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog<span class="token punctuation">.</span><span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p><a href="https://tailwindcss.com/blog/tailwindcss-v4-3">Tailwind CSS v4.3</a> comes with new scrollbar utilities, new zoom utilities and lots of other little stuff that’s only possible thanks to contributions to your local PBS station from viewers like you.</p>
+</li>
+<li>
+<p>Jad Joubran wrote about <a href="https://jadjoubran.io/blog/web-platform-influenced-by-libraries">9 times the web platform was influenced by libraries</a>. Like how my Pre-Calc final answers were influenced by my friend Jon Lee.</p>
+</li>
+<li>
+<p><a href="https://www.greptile.com/examples">Greptile in Action</a> is a fun collection of bugs that Greptile caught in some of the most popular open source repos like PyTorch, CUDA, and OpenClaw. And it links to each PR in GitHub, so you can dive deeper. [sponsored]</p>
+</li>
+<li>
+<p><a href="https://waku.gg/blog/waku-v1-beta">Waku 1.0 beta</a> comes with version skew handling, a Vite 8 upgrade with Rolldown, and new compatibility updates for the minimal RSC framework.</p>
+</li>
+<li>
+<p><a href="https://expo.dev/changelog/sdk-56-beta">Expo 56 beta</a> comes with 50% faster iOS builds, stable Expo UI, and stable iOS widgets. But by the time your App Store review gets approved, we’ll be on Expo 87.</p>
+</li>
+<li>
+<p><a href="https://blacksmith.sh?utm_source=bytes">Blacksmith is a drop-in replacement for GitHub runners</a> that costs 60% less and is 2x faster because it runs on bare metal gaming CPUs. And all your actions are fully observable. [sponsored]</p>
+</li>
+<li>
+<p>Sylvie wrote up how they <a href="https://sylvie.fyi/posts/react2shell/">discovered and disclosed the React2Shell RCE</a> in React Server Components.</p>
+</li>
+<li>
+<p>Cyrus made the case for why <a href="http://unix.foo/posts/local-ai-needs-to-be-norm/">local AI should become the norm</a>.</p>
+</li>
+<li>
+<p><a href="https://fandf.co/4ttXtPu">16 ways to make a small language model think bigger</a> breaks down fundamental strategies you can use to make smaller models better at multi-step reasoning, without increasing their size. [sponsored]</p>
+</li>
+<li>
+<p>Jeff Kaufman explained <a href="https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures">how AI is breaking two vulnerability cultures</a>.</p>
+</li>
+<li>
+<p>Aral Roca wrote about <a href="https://dev.to/aralroca/the-on2-bug-that-looked-like-clean-code-3556">The O(n^2) bug that looked like clean code</a>. If I had a dollar for every time I’ve thought that.</p>
+</li>
+<li>
+<p><a href="http://ratty-term.org/">Ratty</a> is a terminal emulator with inline 3D graphics and a spinning rat cursor built by Orhun Parmaksız, while under the influence of the small rodent living under his hat and controlling his hands.</p>
+</li>
+</ol>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="140" src="https://bytes.dev/images/content/pop-quiz.png" alt="Pop Quiz logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Pop Quiz: Answer</h2><div class="section-presenter" style="margin-bottom:50px;margin-top:15px"><h4>Sponsored by <a href="https://go.clerk.com/rjfhkBF">Clerk</a></h4></div></div>
+<p>What gets logged?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">speak</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token string">'Woof Woof'</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Dog</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">speak</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">'Ruff Ruff'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> dog <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">'Leo'</span><span class="token punctuation">)</span>
+</code></pre>
+<p><code>Woof Woof</code> gets logged.</p>
+<p>Before JavaScript delegates the lookup of the property to the Constructor’s <code>prototype</code>, it first checks to see if the property exists on the object being returned from the Constructor. In this case, it does so it calls it.</p></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"486\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"486\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"486\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" TanStack Attack\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"486\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"May 13, 2026\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T3e30,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/katya-help.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/qa-wolf-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/monkey-computer.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/pop-quiz.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/486\"\u003e#486\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/katya-help.jpg\" alt=\"A woman holding a little hand that says help on it\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eMe after revoking my GitHub tokens without reading the postmortem first\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eTanStack Attack\u003c/h3\u003e\u003cp\u003eYesterday, an attacker published 84 malicious versions across 42 \u003ccode\u003e@tanstack/*\u003c/code\u003e packages that were live for ~20 minutes before external researcher \u003ccode\u003eashishkurmi\u003c/code\u003e caught it.\u003c/p\u003e\u003cp\u003eThe good news is that it was discovered quickly, so packages were deprecated and tarballs pulled. The bad news is that if you ran \u003ccode\u003enpm install\u003c/code\u003e yesterday, your machine may be cooked.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eHow it worked:\u003c/strong\u003e The attack worked by chaining three vulnerabilities together. A malicious PR exploited \u003ccode\u003epull_request_target\u003c/code\u003e in GitHub Actions to poison the shared pnpm cache with a custom payload.\u003c/p\u003e\u003cp\u003eSo the next time a legitimate release ran, it restored that poisoned cache, and the attacker’s code extracted an OIDC token directly from runner memory to publish to npm without ever touching a stored credential. To npm, the poisoned version looked 100% legitimate.\u003c/p\u003e\u003cp\u003eAnd once installed, the payload got pretty nasty:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eCredential harvesting\u003c/strong\u003e — AWS, GCP, Kubernetes, Vault, GitHub tokens, SSH keys, \u003ccode\u003e~/.npmrc\u003c/code\u003e. Everything reachable from the install host.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eSelf-propagating worm\u003c/strong\u003e — Queries the npm registry for other packages the victim maintains and reinfects those too.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eDead man’s switch\u003c/strong\u003e — \u003ccode\u003e~/.local/bin/gh-token-monitor.sh\u003c/code\u003e installs as a systemd service (Linux) or LaunchAgent (macOS) and polls \u003ccode\u003eapi.github.com/user\u003c/code\u003e with the stolen token every 60s. If the user revokes the token, it runs \u003ccode\u003erm -rf ~/\u003c/code\u003e. Revoking is what pulls the trigger, so \u003cstrong\u003edo not\u003c/strong\u003e just go rotating credentials before you read \u003ca href=\"https://github.com/TanStack/router/issues/7383\"\u003ethe full warning\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eWhat to do:\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eCarefully rotate credentials if you installed any \u003ccode\u003e@tanstack/*\u003c/code\u003e package on May 11th\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSet a \u003ca href=\"https://daniakash.com/posts/simplest-supply-chain-defense/\"\u003eminimum release age\u003c/a\u003e in your package manager. A 7-day hold would have blocked most known supply chain attacks from the past 8 years\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eUpgrade to pnpm 11, which has supply chain attack mitigations baked in\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e TanStack is one of the most respected and well-maintained OSS orgs we have. So if they can get hit this cleanly, maybe it’s finally time for the industry to move on from npm for good.\u003c/p\u003e\u003cp\u003eWe can dream.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/486\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F486\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=How%20the%20TanStack%20shai%20halud%20attack%20went%20down%20and%20what%20to%20do%20now%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F486\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AHow%20the%20TanStack%20shai%20halud%20attack%20went%20down%20and%20what%20to%20do%20now%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F486\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/qa-wolf-logo.png\" alt=\"QA Wolf logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/monkey-computer.jpg\" alt=\"A monkey lying in bed on a computer\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eWhen testing the code takes longer than writing the code\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://www.qawolf.com\"\u003eThe testing platform built for AI software development\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eWhen testing can’t keep up with AI, your team’s PRs pile up, releases get stuck in QA, and you ship a lot more slop to production.\u003c/p\u003e\u003cp\u003e\u003ca href=\"https://www.qawolf.com\"\u003eQA Wolf\u003c/a\u003e built a testing platform for agentic SDLC, so your team can ship fast and fearlessly:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eMapping AI\u003c/strong\u003e autonomously maps your app’s workflows\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eAutomation AI\u003c/strong\u003e generates deterministic, code-based tests for web, iOS, and Android\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e100% parallel runs\u003c/strong\u003e return results in minutes\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003ca href=\"https://www.qawolf.com\"\u003eGet a personalized demo for your team\u003c/a\u003e – and see why one Salesloft engineer said, “I’ve never seen anything like QA Wolf’s parallel run infrastructure.”\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"140\" src=\"https://bytes.dev/images/content/pop-quiz.png\" alt=\"Pop Quiz logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003ePop Quiz\u003c/h2\u003e\u003cdiv class=\"section-presenter\" style=\"margin-bottom:50px;margin-top:15px\"\u003e\u003ch4\u003eSponsored by \u003ca href=\"https://go.clerk.com/rjfhkBF\"\u003eClerk\u003c/a\u003e\u003c/h4\u003e\u003cp\u003e\u003cem\u003eThe new \u003ca href=\"https://go.clerk.com/rjfhkBF\"\u003eClerk CLI\u003c/a\u003e gives you a single command, \u003ccode\u003eclerk init\u003c/code\u003e that detects your framework, scaffolds Clerk into your project, and wires up auth end to end with middleware, providers, auth pages, and more.\u003c/em\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\n\u003cp\u003eWhat gets logged?\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003eDog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003ename\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ethis\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003ename \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e name\n  \u003cspan class=\"token keyword\"\u003ethis\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function-variable function\"\u003espeak\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Woof Woof'\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token class-name\"\u003eDog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003eprototype\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function-variable function\"\u003espeak\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Ruff Ruff'\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e dog \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token keyword\"\u003enew\u003c/span\u003e \u003cspan class=\"token class-name\"\u003eDog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token string\"\u003e'Leo'\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\nconsole\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003edog\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003espeak\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://tailwindcss.com/blog/tailwindcss-v4-3\"\u003eTailwind CSS v4.3\u003c/a\u003e comes with new scrollbar utilities, new zoom utilities and lots of other little stuff that’s only possible thanks to contributions to your local PBS station from viewers like you.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJad Joubran wrote about \u003ca href=\"https://jadjoubran.io/blog/web-platform-influenced-by-libraries\"\u003e9 times the web platform was influenced by libraries\u003c/a\u003e. Like how my Pre-Calc final answers were influenced by my friend Jon Lee.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://www.greptile.com/examples\"\u003eGreptile in Action\u003c/a\u003e is a fun collection of bugs that Greptile caught in some of the most popular open source repos like PyTorch, CUDA, and OpenClaw. And it links to each PR in GitHub, so you can dive deeper. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://waku.gg/blog/waku-v1-beta\"\u003eWaku 1.0 beta\u003c/a\u003e comes with version skew handling, a Vite 8 upgrade with Rolldown, and new compatibility updates for the minimal RSC framework.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://expo.dev/changelog/sdk-56-beta\"\u003eExpo 56 beta\u003c/a\u003e comes with 50% faster iOS builds, stable Expo UI, and stable iOS widgets. But by the time your App Store review gets approved, we’ll be on Expo 87.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://blacksmith.sh?utm_source=bytes\"\u003eBlacksmith is a drop-in replacement for GitHub runners\u003c/a\u003e that costs 60% less and is 2x faster because it runs on bare metal gaming CPUs. And all your actions are fully observable. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSylvie wrote up how they \u003ca href=\"https://sylvie.fyi/posts/react2shell/\"\u003ediscovered and disclosed the React2Shell RCE\u003c/a\u003e in React Server Components.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eCyrus made the case for why \u003ca href=\"http://unix.foo/posts/local-ai-needs-to-be-norm/\"\u003elocal AI should become the norm\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://fandf.co/4ttXtPu\"\u003e16 ways to make a small language model think bigger\u003c/a\u003e breaks down fundamental strategies you can use to make smaller models better at multi-step reasoning, without increasing their size. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJeff Kaufman explained \u003ca href=\"https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures\"\u003ehow AI is breaking two vulnerability cultures\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAral Roca wrote about \u003ca href=\"https://dev.to/aralroca/the-on2-bug-that-looked-like-clean-code-3556\"\u003eThe O(n^2) bug that looked like clean code\u003c/a\u003e. If I had a dollar for every time I’ve thought that.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"http://ratty-term.org/\"\u003eRatty\u003c/a\u003e is a terminal emulator with inline 3D graphics and a spinning rat cursor built by Orhun Parmaksız, while under the influence of the small rodent living under his hat and controlling his hands.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"140\" src=\"https://bytes.dev/images/content/pop-quiz.png\" alt=\"Pop Quiz logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003ePop Quiz: Answer\u003c/h2\u003e\u003cdiv class=\"section-presenter\" style=\"margin-bottom:50px;margin-top:15px\"\u003e\u003ch4\u003eSponsored by \u003ca href=\"https://go.clerk.com/rjfhkBF\"\u003eClerk\u003c/a\u003e\u003c/h4\u003e\u003c/div\u003e\u003c/div\u003e\n\u003cp\u003eWhat gets logged?\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003eDog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003ename\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ethis\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003ename \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e name\n  \u003cspan class=\"token keyword\"\u003ethis\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function-variable function\"\u003espeak\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Woof Woof'\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token class-name\"\u003eDog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003eprototype\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function-variable function\"\u003espeak\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Ruff Ruff'\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e dog \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token keyword\"\u003enew\u003c/span\u003e \u003cspan class=\"token class-name\"\u003eDog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token string\"\u003e'Leo'\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003ccode\u003eWoof Woof\u003c/code\u003e gets logged.\u003c/p\u003e\n\u003cp\u003eBefore JavaScript delegates the lookup of the property to the Constructor’s \u003ccode\u003eprototype\u003c/code\u003e, it first checks to see if the property exists on the object being returned from the Constructor. In this case, it does so it calls it.\u003c/p\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #486 - TanStack Attack\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/486\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #486 - TanStack Attack\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/486\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/katya-help.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #486 - TanStack Attack\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Great libraries steal, brilliant rodents build terminal emulators, and your local PBS station helps you write CSS.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/katya-help.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

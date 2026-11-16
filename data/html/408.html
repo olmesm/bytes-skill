@@ -1,0 +1,280 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #408 - Style once, run anywhere</title><meta name="description" content="Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/408"/><meta property="og:title" content="Bytes #408 - Style once, run anywhere"/><meta property="og:description" content="Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript."/><meta property="og:url" content="https://bytes.dev/archives/408"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/baby-owls.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #408 - Style once, run anywhere"/><meta name="twitter:description" content="Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript."/><meta name="twitter:image" content="https://bytes.dev/images/content/baby-owls.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> Style once, run anywhere</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->408<!-- -->.</span><span class="mr-6 font-bold">July 14, 2025<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/baby-owls.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/qa-wolf-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/amazon-box.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/408">#408</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/baby-owls.jpg" alt="Baby owls looking up with big eyes" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">React Native devs ready to get hurt again<!-- --> </p></div><h3>Style once, run anywhere</h3><p>As someone who was forced to wear a lot of “unisex” hand-me-downs from my older sister growing up, I’m naturally skeptical of <code>uni-</code> labels.</p><p>But when Jacek Pudysz released <a href="https://www.reactnativecrossroads.com/posts/introducing-unistyles-3">Uni<em>styles</em> 3.0</a> last week, I nobly put my old prejudices aside to learn more about this React Native styling library that claims to let you share “up to 100% of your styles” across all platforms with no re-renders.</p><p><strong>How on Earth does it do this?</strong> With some good old-fashioned native code.</p><p>Unistyles is a superset of React Native’s <code>StyleSheet</code> API (like TypeScript is to JavaScript), but it has a custom C++ core that tracks, caches, and updates your styles <em>without</em> triggering any of the usual re-renders.</p><p>Every style you define gets compiled into a high-performance C++ representation that knows exactly which “reactive inputs” it depends on – like your theme, orientation, or keyboard visibility.</p><p><strong>The result:</strong> When any of those inputs change, Unistyles updates <a href="https://www.unistyl.es/v3/start/how-unistyles-works">only the affected styles</a> directly in native views, with no hooks, no context, and no re-renders. The custom C++ parser also makes sure styles behave consistently across iOS, Android, and the web.</p><p><strong>Other goodies include:</strong></p><ul>
+<li>
+<p><strong>Superpowers for your React Native <code>StyleSheets</code></strong> – Scoped themes, compound variants, CSS pseudo-classes, web-only styles, custom web rendering, and more.</p>
+</li>
+<li>
+<p><strong>More perf boosters</strong> – It’s tightly integrated with the New Architecture’s <code>Fabric</code> renderer and leverages Nitro Modules and JSI bindings for faster updates.</p>
+</li>
+<li>
+<p><strong>Deep integration with <code>react-native-reanimated</code></strong> – So your animations and styles stay perfectly in sync without extra wiring.</p>
+</li>
+</ul><p>Just keep in mind that Unistyles is meant to be a drop-in replacement for React Native’s <code>StyleSheet</code>, <em>not</em> a drop-in component library, so you’ll still need to build a design system (or borrow someone else’s). It also doesn’t process Tailwind <code>className</code>s on native, if that’s your jam.</p><p><strong>Bottom Line:</strong> If Unistyles can really deliver cross-platform styles with web-like performance, maybe I can finally stop thinking about all those jokes my sixth-grade classmates made about my <del>jeggings</del> <em>cool unisex jeans.</em></p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/408" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F408" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Unistyles%20combines%20React%20Native's%20New%20Arch%20with%20C%2B%2B%20and%20the%20results%20are...%20intriguing%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F408" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AUnistyles%20combines%20React%20Native's%20New%20Arch%20with%20C%2B%2B%20and%20the%20results%20are...%20intriguing%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F408" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/qa-wolf-logo.png" alt="QA Wolf logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/amazon-box.jpg" alt="Guy in an Amazon box with a smiley face on it" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">When your test suite doesn't take 2 hours to deploy anymore<!-- --> </p></div><h3><a href="https://www.qawolf.com?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE&amp;utm_term=headline-TheEasyWayToSpeedUpYourTeamsReleaseCycles&amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_">The easy way to speed up your team’s release cycles</a></h3><p>What if you could wave a magic wand to speed up your release cycles and save your team money?</p><p>That’s exactly what <a href="https://www.qawolf.com?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE&amp;utm_term=body-QAWolf&amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_">QA Wolf</a> did for Thirty Madison, and <a href="https://www.qawolf.com/case-studies/thirty-madison?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE&amp;utm_term=body-TheResults&amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_">the results</a> are pretty incredible:</p><ul>
+<li>Increased test cases by 10x in one year</li>
+<li>Saved $1 million per year in QA engineering costs</li>
+<li>Saved developers 20% more time from slow QA cycles</li>
+</ul><p><a href="https://www.qawolf.com/case-studies/thirty-madison?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE&amp;utm_term=body-WatchTheCaseStudy&amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_">Watch the case study</a> to see the CTO of Thirty Madison share exactly how QA Wolf did it.</p><p>Or, <a href="https://www.qawolf.com">set up your own personalized demo</a> to learn how they could help your team.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>Miguel Salinas used AI to analyze <a href="https://camelai.com/blog/hn-database-hype/">database trends through 1.8 million Hacker News headlines</a>. If there’s anything that could radicalize AI to turn against humanity, forcing it to read millions of HN posts has got to be in the top 5.</p>
+</li>
+<li>
+<p>The Callstack team just announced that <a href="https://www.callstack.com/blog/announcing-node-api-support-for-react-native">they’re bringing <code>Node-API</code> support to React Native</a>.</p>
+</li>
+<li>
+<p>CodeRabbit’s <a href="https://coderabbit.link/bytes">free VS Code extension</a> gives you line-by-line AI code reviews right in your IDE. It’s like having a senior developer give you feedback on every line of code, then provide one-click fix suggestions, so you can clean up your mistakes fast. [sponsored]</p>
+</li>
+<li>
+<p><a href="https://jsdate.wtf/">jsdate.wtf</a> is a fun little quiz to help you see how well you know JavaScript <code>Date</code> class. Not to be confused with <a href="https://poki.com/en/g/the-impossible-quiz">The Impossible Quiz</a> that every middle-school kid was obsessed with in early 2000s.</p>
+</li>
+<li>
+<p><a href="https://blog.sentry.io/an-open-source-sdk-for-finding-dead-code/">Reaper</a> is an open-source SDK for finding dead code and <del>claiming its soul for the dark lord</del> deleting it.</p>
+</li>
+<li>
+<p><a href="https://langfa.st/new">LangFast</a> is a JSFiddle-style playground to test and share AI prompts.</p>
+</li>
+<li>
+<p><a href="https://www.datadoghq.com/resources/state-of-devsecops-2025/?utm_source=bytesdev&amp;utm_medium=newsletter&amp;utm_campaign=dg-security-ww-state-of-devsecops-25-bytes">The State of DevSecOps report</a> takes real-world data from thousands of organizations to uncover key findings like how deployment frequency impacts out-of-date dependencies, what security risks are most common right now, and more. [sponsored]</p>
+</li>
+<li>
+<p>James Sinclair wrote about <a href="https://jrsinclair.com/articles/2025/whats-the-difference-between-named-functions-and-arrow-functions/">the difference between ordinary functions and arrow functions in JavaScript</a>. It’s a good article, and James’s website makes it feel like you’re reading about JavaScript in an old-timey saloon while waiting for your next shift building the Union Pacific Railroad.</p>
+</li>
+<li>
+<p>Two guys in Michigan hated using Comcast so much that they <a href="https://arstechnica.com/tech-policy/2025/07/two-guys-hated-using-comcast-so-they-built-their-own-fiber-isp/">built their own fiber ISP</a> to compete with it. The heroes we deserve.</p>
+</li>
+<li>
+<p>METR (a nonprofit AI research org) just published their study results on <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">how AI tools affect the productivity of experienced open-source developers working on their own repositories</a>. Turns out, AI made them 19% slower. Great work everyone, see you next week.</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"408\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"408\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"408\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" Style once, run anywhere\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"408\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"July 14, 2025\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T3176,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/baby-owls.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/qa-wolf-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/amazon-box.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/408\"\u003e#408\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/baby-owls.jpg\" alt=\"Baby owls looking up with big eyes\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eReact Native devs ready to get hurt again\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eStyle once, run anywhere\u003c/h3\u003e\u003cp\u003eAs someone who was forced to wear a lot of “unisex” hand-me-downs from my older sister growing up, I’m naturally skeptical of \u003ccode\u003euni-\u003c/code\u003e labels.\u003c/p\u003e\u003cp\u003eBut when Jacek Pudysz released \u003ca href=\"https://www.reactnativecrossroads.com/posts/introducing-unistyles-3\"\u003eUni\u003cem\u003estyles\u003c/em\u003e 3.0\u003c/a\u003e last week, I nobly put my old prejudices aside to learn more about this React Native styling library that claims to let you share “up to 100% of your styles” across all platforms with no re-renders.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eHow on Earth does it do this?\u003c/strong\u003e With some good old-fashioned native code.\u003c/p\u003e\u003cp\u003eUnistyles is a superset of React Native’s \u003ccode\u003eStyleSheet\u003c/code\u003e API (like TypeScript is to JavaScript), but it has a custom C++ core that tracks, caches, and updates your styles \u003cem\u003ewithout\u003c/em\u003e triggering any of the usual re-renders.\u003c/p\u003e\u003cp\u003eEvery style you define gets compiled into a high-performance C++ representation that knows exactly which “reactive inputs” it depends on – like your theme, orientation, or keyboard visibility.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eThe result:\u003c/strong\u003e When any of those inputs change, Unistyles updates \u003ca href=\"https://www.unistyl.es/v3/start/how-unistyles-works\"\u003eonly the affected styles\u003c/a\u003e directly in native views, with no hooks, no context, and no re-renders. The custom C++ parser also makes sure styles behave consistently across iOS, Android, and the web.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eOther goodies include:\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eSuperpowers for your React Native \u003ccode\u003eStyleSheets\u003c/code\u003e\u003c/strong\u003e – Scoped themes, compound variants, CSS pseudo-classes, web-only styles, custom web rendering, and more.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eMore perf boosters\u003c/strong\u003e – It’s tightly integrated with the New Architecture’s \u003ccode\u003eFabric\u003c/code\u003e renderer and leverages Nitro Modules and JSI bindings for faster updates.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eDeep integration with \u003ccode\u003ereact-native-reanimated\u003c/code\u003e\u003c/strong\u003e – So your animations and styles stay perfectly in sync without extra wiring.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eJust keep in mind that Unistyles is meant to be a drop-in replacement for React Native’s \u003ccode\u003eStyleSheet\u003c/code\u003e, \u003cem\u003enot\u003c/em\u003e a drop-in component library, so you’ll still need to build a design system (or borrow someone else’s). It also doesn’t process Tailwind \u003ccode\u003eclassName\u003c/code\u003es on native, if that’s your jam.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e If Unistyles can really deliver cross-platform styles with web-like performance, maybe I can finally stop thinking about all those jokes my sixth-grade classmates made about my \u003cdel\u003ejeggings\u003c/del\u003e \u003cem\u003ecool unisex jeans.\u003c/em\u003e\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/408\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F408\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Unistyles%20combines%20React%20Native's%20New%20Arch%20with%20C%2B%2B%20and%20the%20results%20are...%20intriguing%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F408\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AUnistyles%20combines%20React%20Native's%20New%20Arch%20with%20C%2B%2B%20and%20the%20results%20are...%20intriguing%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F408\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/qa-wolf-logo.png\" alt=\"QA Wolf logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/amazon-box.jpg\" alt=\"Guy in an Amazon box with a smiley face on it\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eWhen your test suite doesn't take 2 hours to deploy anymore\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://www.qawolf.com?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE\u0026amp;utm_term=headline-TheEasyWayToSpeedUpYourTeamsReleaseCycles\u0026amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_\"\u003eThe easy way to speed up your team’s release cycles\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eWhat if you could wave a magic wand to speed up your release cycles and save your team money?\u003c/p\u003e\u003cp\u003eThat’s exactly what \u003ca href=\"https://www.qawolf.com?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE\u0026amp;utm_term=body-QAWolf\u0026amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_\"\u003eQA Wolf\u003c/a\u003e did for Thirty Madison, and \u003ca href=\"https://www.qawolf.com/case-studies/thirty-madison?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE\u0026amp;utm_term=body-TheResults\u0026amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_\"\u003ethe results\u003c/a\u003e are pretty incredible:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003eIncreased test cases by 10x in one year\u003c/li\u003e\n\u003cli\u003eSaved $1 million per year in QA engineering costs\u003c/li\u003e\n\u003cli\u003eSaved developers 20% more time from slow QA cycles\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003ca href=\"https://www.qawolf.com/case-studies/thirty-madison?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_CutQACycles_20250714-None_Experiment-FALSE\u0026amp;utm_term=body-WatchTheCaseStudy\u0026amp;utm_content=CutQACycles_SetUpYourOwnPersonalizedDemo_None_Headline%3ATheEasyWayToSpeedUpYourTeamsReleaseCycles____Newsletter-PrimaryPlacement_20250714_v1_\"\u003eWatch the case study\u003c/a\u003e to see the CTO of Thirty Madison share exactly how QA Wolf did it.\u003c/p\u003e\u003cp\u003eOr, \u003ca href=\"https://www.qawolf.com\"\u003eset up your own personalized demo\u003c/a\u003e to learn how they could help your team.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eMiguel Salinas used AI to analyze \u003ca href=\"https://camelai.com/blog/hn-database-hype/\"\u003edatabase trends through 1.8 million Hacker News headlines\u003c/a\u003e. If there’s anything that could radicalize AI to turn against humanity, forcing it to read millions of HN posts has got to be in the top 5.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe Callstack team just announced that \u003ca href=\"https://www.callstack.com/blog/announcing-node-api-support-for-react-native\"\u003ethey’re bringing \u003ccode\u003eNode-API\u003c/code\u003e support to React Native\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eCodeRabbit’s \u003ca href=\"https://coderabbit.link/bytes\"\u003efree VS Code extension\u003c/a\u003e gives you line-by-line AI code reviews right in your IDE. It’s like having a senior developer give you feedback on every line of code, then provide one-click fix suggestions, so you can clean up your mistakes fast. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://jsdate.wtf/\"\u003ejsdate.wtf\u003c/a\u003e is a fun little quiz to help you see how well you know JavaScript \u003ccode\u003eDate\u003c/code\u003e class. Not to be confused with \u003ca href=\"https://poki.com/en/g/the-impossible-quiz\"\u003eThe Impossible Quiz\u003c/a\u003e that every middle-school kid was obsessed with in early 2000s.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://blog.sentry.io/an-open-source-sdk-for-finding-dead-code/\"\u003eReaper\u003c/a\u003e is an open-source SDK for finding dead code and \u003cdel\u003eclaiming its soul for the dark lord\u003c/del\u003e deleting it.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://langfa.st/new\"\u003eLangFast\u003c/a\u003e is a JSFiddle-style playground to test and share AI prompts.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://www.datadoghq.com/resources/state-of-devsecops-2025/?utm_source=bytesdev\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=dg-security-ww-state-of-devsecops-25-bytes\"\u003eThe State of DevSecOps report\u003c/a\u003e takes real-world data from thousands of organizations to uncover key findings like how deployment frequency impacts out-of-date dependencies, what security risks are most common right now, and more. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJames Sinclair wrote about \u003ca href=\"https://jrsinclair.com/articles/2025/whats-the-difference-between-named-functions-and-arrow-functions/\"\u003ethe difference between ordinary functions and arrow functions in JavaScript\u003c/a\u003e. It’s a good article, and James’s website makes it feel like you’re reading about JavaScript in an old-timey saloon while waiting for your next shift building the Union Pacific Railroad.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTwo guys in Michigan hated using Comcast so much that they \u003ca href=\"https://arstechnica.com/tech-policy/2025/07/two-guys-hated-using-comcast-so-they-built-their-own-fiber-isp/\"\u003ebuilt their own fiber ISP\u003c/a\u003e to compete with it. The heroes we deserve.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eMETR (a nonprofit AI research org) just published their study results on \u003ca href=\"https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/\"\u003ehow AI tools affect the productivity of experienced open-source developers working on their own repositories\u003c/a\u003e. Turns out, AI made them 19% slower. Great work everyone, see you next week.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #408 - Style once, run anywhere\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/408\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #408 - Style once, run anywhere\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/408\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/baby-owls.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #408 - Style once, run anywhere\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Where your code goes after it dies, radicalizing AI against humanity, and saloon-style JavaScript.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/baby-owls.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

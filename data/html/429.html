@@ -1,0 +1,293 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #429 - My hot takes on a new React release</title><meta name="description" content="Why the React haters hate, wellness tips for newsletter writers, and what the mid-&#x27;90s era of indie funk can teach us about web development."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/429"/><meta property="og:title" content="Bytes #429 - My hot takes on a new React release"/><meta property="og:description" content="Why the React haters hate, wellness tips for newsletter writers, and what the mid-&#x27;90s era of indie funk can teach us about web development."/><meta property="og:url" content="https://bytes.dev/archives/429"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/pied-piper.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #429 - My hot takes on a new React release"/><meta name="twitter:description" content="Why the React haters hate, wellness tips for newsletter writers, and what the mid-&#x27;90s era of indie funk can teach us about web development."/><meta name="twitter:image" content="https://bytes.dev/images/content/pied-piper.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> My hot takes on a new React release</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->429<!-- -->.</span><span class="mr-6 font-bold">October 3, 2025<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/pied-piper.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/auth0-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/mike-dead.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> Why the React haters hate, wellness tips for newsletter writers, and what the mid-’90s era of indie funk can teach us about web development.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/429">#429</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/pied-piper.jpg" alt="A guy playing a fake flute to a bunch of paper mice" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Dan Abramov calling all the influencers to give their hot takes on a new React release<!-- --> </p></div><h3>My hot takes on a new React release</h3><p><a href="https://react.dev/blog/2025/10/01/react-19-2">React 19.2</a> was released to the unwashed masses on Wednesday, and it feels like the community’s reaction has been pretty muted so far.</p><p>That might be because everyone’s brains turned into oatmeal from consuming too much Sora slop – or maybe it’s just that this was a pretty chill release overall. Instead of a bunch of splashy new APIs, React 19.2 stitches together a set of primitives that lay the groundwork for faster navigation and better DX.</p><p>The star here is the new <code>&lt;Activity /&gt;</code> component, which is basically tabbed browsing for your component tree. Instead of conditionally mounting/unmounting UI, you can mark sections as <code>hidden</code> and React will:</p><ul>
+<li>Hide them from view</li>
+<li>Unmount their effects</li>
+<li>Defer updates until nothing else is happening</li>
+</ul><p>But crucially, it keeps the component tree alive in memory while this is happening. That means React can pre-render the screens a user is likely to navigate to next, or restore the state of a screen they just left — with no lost form inputs, no re-fetching, and much snappier transitions.</p><p>Here are a few more highlights:</p><ul>
+<li>
+<p><strong><code>useEffectEvent</code></strong> — Cleanly handle “event-like” code inside Effects without breaking your dependency arrays or silencing ESLint (yes, the name is confusing).</p>
+</li>
+<li>
+<p><strong><code>cacheSignal</code> (RSC-only)</strong> — Lets you abort or clean up work when cached results won’t be used anymore.</p>
+</li>
+<li>
+<p><strong>Performance Tracks in DevTools</strong> — New Chrome profiler views showing priorities, scheduling, and component timings.</p>
+</li>
+<li>
+<p><strong>Partial Pre-rendering</strong> — Pre-render static shells to a CDN, then resume rendering with dynamic content later.</p>
+</li>
+</ul><p><strong>Bottom Line:</strong> This is the least amount of hype we’ve seen around a React release for a while, but considering this is its third one in the past 10 months, that’s probably a healthy thing (unlike your aunt’s addiction to AI videos of Bobby Flay making backyard BBQ as an anime cat).</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/429" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F429" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Breaking%20down%20everything%20interesting%20from%20the%20React%2019.2%20release%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F429" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0ABreaking%20down%20everything%20interesting%20from%20the%20React%2019.2%20release%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F429" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/auth0-logo.png" alt="Auth0 logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/mike-dead.jpg" alt="Mike from Breaking Bad looking defeated" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Realizing my AI agent side project just emailed the entire company<!-- --> </p></div><h3><a href="https://auth0.com/ai?onboard_app=genai&amp;ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM?utm_source=bytes&amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2&amp;utm_medium=cpc&amp;utm_id=aNKKZ00000004X44AI">Auth0 for AI Agents just launched their developer preview <span role="img" aria-label="eyes">👀</span></a></h3><p>So now you can use their <a href="https://auth0.com/ai/docs/intro/overview?onboard_app=genai&amp;ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM?utm_source=bytes&amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2&amp;utm_medium=cpc&amp;utm_id=aNKKZ00000004X44AI">smooth SDK</a> to ship AI agents with built-in auth and security that just works.</p><p>Here are a few of the hairy problems it handles for you:</p><ul>
+<li>
+<p><strong>Real user login</strong> – Agents can securely identify who they’re talking to, remember past history, and access the right data without shortcuts.</p>
+</li>
+<li>
+<p><strong>Token Vault</strong> – Store and refresh API tokens safely, so agents don’t end up with over-broad access or creds in logs (<a href="https://auth0.com/resources/webinars/securing-your-ai-agents-a-technical-demo?utm_source=bytes&amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2&amp;utm_medium=cpc&amp;utm_id=aNKKZ00000004Wu4AI">this technical demo</a> shows how it works).</p>
+</li>
+<li>
+<p><strong>Human-in-the-loop</strong> – Add async approvals for sensitive AI agent actions, with audit trails baked in.</p>
+</li>
+</ul><p><a href="https://auth0.com/signup?onboard_app=genai&amp;ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM?utm_source=bytes&amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2&amp;utm_medium=cpc&amp;utm_id=aNKKZ00000004X44AI">Try out Auth0 for AI Agents free now</a> – and ship new agents faster, safer, and without ever duct-taping OAuth again <span role="img" aria-label="folded hands">🙏</span>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>Dan Abramov wrote an article called <a href="https://overreacted.io/where-its-at/">Where It’s at://</a> – and how he’s still got <em>two turntables and a microphone.</em></p>
+</li>
+<li>
+<p><a href="https://www.g2i.co/why-g2i?utm_source=Newsletter&amp;utm_medium=AD&amp;utm_campaign=Fireship+Newsletter">G2i connects your team with pre-vetted senior developers</a> (contract and full-time). They’ve helped teams at Meta, Microsoft, and more hire faster and with full transparency – so you don’t have to waste time digging through more AI-slop resumes <span role="img" aria-label="folded hands">🙏</span>. [sponsored]</p>
+</li>
+<li>
+<p>Chad Nauseam wrote about how <a href="https://chadnauseam.com/coding/pltd/react-is-good-javascript-is-the-problem">everything people hate about React, is really just stuff they hate about JavaScript</a> – or stuff they hate about themselves, I’d argue.</p>
+</li>
+<li>
+<p><a href="https://x.com/devongovett/status/1973842909666685111">A new React Aria update</a> just dropped with Multi Select, enhanced animation support across components, a new <code>SelectionIndicator</code> component, and more.</p>
+</li>
+<li>
+<p><a href="https://github.com/ryanntannn/zustand-sync">zustand-sync</a> is a barebones middleware to sync zustand stores across multiple clients.</p>
+</li>
+<li>
+<p>Datadog created this <a href="https://www.datadoghq.com/resources/frontend-monitoring-best-practices/?utm_source=bytesdev&amp;utm_medium=newsletter&amp;utm_campaign=dg-infra-ww-front-end-monitoring-guide-bytes">frontend monitoring best practices guide</a> that shows you how to monitor three key aspects of your single-page apps to optimize your performance and UX. [sponsored]</p>
+</li>
+<li>
+<p>Mateusz Krzeszowiak wrote about <a href="https://performance.shopify.com/blogs/blog/speculation-rules-at-shopify">speculation rules on Shopify</a> – and unfortunately, it didn’t include any helpful tips on how to resell the hundreds of Labubus I <del>impulse bought</del> <em>invested in</em> a couple months back.</p>
+</li>
+<li>
+<p><a href="https://github.com/pompelmi/pompelmi">pompelmi</a> is a Node.js file-upload security toolkit (CLI + middleware) that scans files before ingestion using YARA rules, MIME/content sniffing, and ZIP-bomb detection.</p>
+</li>
+<li>
+<p>Sergio Xalambrí wrote about <a href="https://sergiodxa.com/tutorials/leverage-react-router-s-built-in-data-deduplication">how to leverage React Router’s built-in data deduplication</a>.</p>
+</li>
+<li>
+<p>Christian Ekrem wrote an article called <a href="https://cekrem.github.io/posts/the-discipline-of-constraints-elm-usereducer-lessons/">The Discipline of Constraints</a> about what Elm taught him about React’s <code>useReducer</code>. It’s similar logic to why I constrain myself to only writing this newsletter in a hot sauna between the hours of 2-4 am with nothing in my system but <em>Thai Green Curry</em> flavored Pringles. Healthy body, healthy mind <span role="img" aria-label="yin yang">☯️</span>.</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"429\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"429\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"429\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" My hot takes on a new React release\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"429\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"October 3, 2025\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T2f75,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/pied-piper.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/auth0-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/mike-dead.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e Why the React haters hate, wellness tips for newsletter writers, and what the mid-’90s era of indie funk can teach us about web development.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/429\"\u003e#429\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/pied-piper.jpg\" alt=\"A guy playing a fake flute to a bunch of paper mice\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eDan Abramov calling all the influencers to give their hot takes on a new React release\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eMy hot takes on a new React release\u003c/h3\u003e\u003cp\u003e\u003ca href=\"https://react.dev/blog/2025/10/01/react-19-2\"\u003eReact 19.2\u003c/a\u003e was released to the unwashed masses on Wednesday, and it feels like the community’s reaction has been pretty muted so far.\u003c/p\u003e\u003cp\u003eThat might be because everyone’s brains turned into oatmeal from consuming too much Sora slop – or maybe it’s just that this was a pretty chill release overall. Instead of a bunch of splashy new APIs, React 19.2 stitches together a set of primitives that lay the groundwork for faster navigation and better DX.\u003c/p\u003e\u003cp\u003eThe star here is the new \u003ccode\u003e\u0026lt;Activity /\u0026gt;\u003c/code\u003e component, which is basically tabbed browsing for your component tree. Instead of conditionally mounting/unmounting UI, you can mark sections as \u003ccode\u003ehidden\u003c/code\u003e and React will:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003eHide them from view\u003c/li\u003e\n\u003cli\u003eUnmount their effects\u003c/li\u003e\n\u003cli\u003eDefer updates until nothing else is happening\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eBut crucially, it keeps the component tree alive in memory while this is happening. That means React can pre-render the screens a user is likely to navigate to next, or restore the state of a screen they just left — with no lost form inputs, no re-fetching, and much snappier transitions.\u003c/p\u003e\u003cp\u003eHere are a few more highlights:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ccode\u003euseEffectEvent\u003c/code\u003e\u003c/strong\u003e — Cleanly handle “event-like” code inside Effects without breaking your dependency arrays or silencing ESLint (yes, the name is confusing).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ccode\u003ecacheSignal\u003c/code\u003e (RSC-only)\u003c/strong\u003e — Lets you abort or clean up work when cached results won’t be used anymore.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePerformance Tracks in DevTools\u003c/strong\u003e — New Chrome profiler views showing priorities, scheduling, and component timings.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePartial Pre-rendering\u003c/strong\u003e — Pre-render static shells to a CDN, then resume rendering with dynamic content later.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e This is the least amount of hype we’ve seen around a React release for a while, but considering this is its third one in the past 10 months, that’s probably a healthy thing (unlike your aunt’s addiction to AI videos of Bobby Flay making backyard BBQ as an anime cat).\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/429\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F429\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Breaking%20down%20everything%20interesting%20from%20the%20React%2019.2%20release%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F429\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0ABreaking%20down%20everything%20interesting%20from%20the%20React%2019.2%20release%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F429\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/auth0-logo.png\" alt=\"Auth0 logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/mike-dead.jpg\" alt=\"Mike from Breaking Bad looking defeated\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eRealizing my AI agent side project just emailed the entire company\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://auth0.com/ai?onboard_app=genai\u0026amp;ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM?utm_source=bytes\u0026amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2\u0026amp;utm_medium=cpc\u0026amp;utm_id=aNKKZ00000004X44AI\"\u003eAuth0 for AI Agents just launched their developer preview \u003cspan role=\"img\" aria-label=\"eyes\"\u003e👀\u003c/span\u003e\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eSo now you can use their \u003ca href=\"https://auth0.com/ai/docs/intro/overview?onboard_app=genai\u0026amp;ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM?utm_source=bytes\u0026amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2\u0026amp;utm_medium=cpc\u0026amp;utm_id=aNKKZ00000004X44AI\"\u003esmooth SDK\u003c/a\u003e to ship AI agents with built-in auth and security that just works.\u003c/p\u003e\u003cp\u003eHere are a few of the hairy problems it handles for you:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eReal user login\u003c/strong\u003e – Agents can securely identify who they’re talking to, remember past history, and access the right data without shortcuts.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eToken Vault\u003c/strong\u003e – Store and refresh API tokens safely, so agents don’t end up with over-broad access or creds in logs (\u003ca href=\"https://auth0.com/resources/webinars/securing-your-ai-agents-a-technical-demo?utm_source=bytes\u0026amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2\u0026amp;utm_medium=cpc\u0026amp;utm_id=aNKKZ00000004Wu4AI\"\u003ethis technical demo\u003c/a\u003e shows how it works).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eHuman-in-the-loop\u003c/strong\u003e – Add async approvals for sensitive AI agent actions, with audit trails baked in.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003ca href=\"https://auth0.com/signup?onboard_app=genai\u0026amp;ocid=7014z000001NyoxAAC-aPA4z0000008OZeGAM?utm_source=bytes\u0026amp;utm_campaign=global_mult_mult_all_ciam-dev_dg-plg_auth_native_bytes_newsletter_aud_Bytes-Primary-GenAI-PGA_utm2\u0026amp;utm_medium=cpc\u0026amp;utm_id=aNKKZ00000004X44AI\"\u003eTry out Auth0 for AI Agents free now\u003c/a\u003e – and ship new agents faster, safer, and without ever duct-taping OAuth again \u003cspan role=\"img\" aria-label=\"folded hands\"\u003e🙏\u003c/span\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eDan Abramov wrote an article called \u003ca href=\"https://overreacted.io/where-its-at/\"\u003eWhere It’s at://\u003c/a\u003e – and how he’s still got \u003cem\u003etwo turntables and a microphone.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://www.g2i.co/why-g2i?utm_source=Newsletter\u0026amp;utm_medium=AD\u0026amp;utm_campaign=Fireship+Newsletter\"\u003eG2i connects your team with pre-vetted senior developers\u003c/a\u003e (contract and full-time). They’ve helped teams at Meta, Microsoft, and more hire faster and with full transparency – so you don’t have to waste time digging through more AI-slop resumes \u003cspan role=\"img\" aria-label=\"folded hands\"\u003e🙏\u003c/span\u003e. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eChad Nauseam wrote about how \u003ca href=\"https://chadnauseam.com/coding/pltd/react-is-good-javascript-is-the-problem\"\u003eeverything people hate about React, is really just stuff they hate about JavaScript\u003c/a\u003e – or stuff they hate about themselves, I’d argue.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://x.com/devongovett/status/1973842909666685111\"\u003eA new React Aria update\u003c/a\u003e just dropped with Multi Select, enhanced animation support across components, a new \u003ccode\u003eSelectionIndicator\u003c/code\u003e component, and more.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/ryanntannn/zustand-sync\"\u003ezustand-sync\u003c/a\u003e is a barebones middleware to sync zustand stores across multiple clients.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eDatadog created this \u003ca href=\"https://www.datadoghq.com/resources/frontend-monitoring-best-practices/?utm_source=bytesdev\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=dg-infra-ww-front-end-monitoring-guide-bytes\"\u003efrontend monitoring best practices guide\u003c/a\u003e that shows you how to monitor three key aspects of your single-page apps to optimize your performance and UX. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eMateusz Krzeszowiak wrote about \u003ca href=\"https://performance.shopify.com/blogs/blog/speculation-rules-at-shopify\"\u003especulation rules on Shopify\u003c/a\u003e – and unfortunately, it didn’t include any helpful tips on how to resell the hundreds of Labubus I \u003cdel\u003eimpulse bought\u003c/del\u003e \u003cem\u003einvested in\u003c/em\u003e a couple months back.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/pompelmi/pompelmi\"\u003epompelmi\u003c/a\u003e is a Node.js file-upload security toolkit (CLI + middleware) that scans files before ingestion using YARA rules, MIME/content sniffing, and ZIP-bomb detection.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSergio Xalambrí wrote about \u003ca href=\"https://sergiodxa.com/tutorials/leverage-react-router-s-built-in-data-deduplication\"\u003ehow to leverage React Router’s built-in data deduplication\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eChristian Ekrem wrote an article called \u003ca href=\"https://cekrem.github.io/posts/the-discipline-of-constraints-elm-usereducer-lessons/\"\u003eThe Discipline of Constraints\u003c/a\u003e about what Elm taught him about React’s \u003ccode\u003euseReducer\u003c/code\u003e. It’s similar logic to why I constrain myself to only writing this newsletter in a hot sauna between the hours of 2-4 am with nothing in my system but \u003cem\u003eThai Green Curry\u003c/em\u003e flavored Pringles. Healthy body, healthy mind \u003cspan role=\"img\" aria-label=\"yin yang\"\u003e☯️\u003c/span\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #429 - My hot takes on a new React release\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Why the React haters hate, wellness tips for newsletter writers, and what the mid-'90s era of indie funk can teach us about web development.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/429\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #429 - My hot takes on a new React release\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Why the React haters hate, wellness tips for newsletter writers, and what the mid-'90s era of indie funk can teach us about web development.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/429\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/pied-piper.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #429 - My hot takes on a new React release\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Why the React haters hate, wellness tips for newsletter writers, and what the mid-'90s era of indie funk can teach us about web development.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/pied-piper.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

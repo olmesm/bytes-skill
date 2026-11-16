@@ -1,0 +1,337 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #33 - Big Tech has established an over-leveraged short position in Backbone.js</title><meta name="description" content="Hot or Not -- ES2021 edition, the best of /r/javascript, and some jokes about $GME."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/33"/><meta property="og:title" content="Bytes #33 - Big Tech has established an over-leveraged short position in Backbone.js"/><meta property="og:description" content="Hot or Not -- ES2021 edition, the best of /r/javascript, and some jokes about $GME."/><meta property="og:url" content="https://bytes.dev/archives/33"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/jon.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #33 - Big Tech has established an over-leveraged short position in Backbone.js"/><meta name="twitter:description" content="Hot or Not -- ES2021 edition, the best of /r/javascript, and some jokes about $GME."/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/jon.png"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase">Big Tech has established an over-leveraged short position in Backbone.js</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->33<!-- -->.</span><span class="mr-6 font-bold">February 1, 2021<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/jon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/jsbets.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p>Hear me out. I have reason to believe Big Tech has established an over-leveraged short position in Backbone.js. If we all migrate to Backbone.js and refuse to ever migrate off, it’ll create a massive short squeeze on their tech debt that they won’t be able to recover from. #<span role="img" aria-label="gem stone">💎</span><span role="img" aria-label="raised hand">✋</span></p>
+<hr>
+<h2>Hot or Not? — ES2021 Edition</h2>
+<p><img src="https://bytes.dev/images/content/jon.png" alt="Jon">
+</p><p class="image-alt">When you finally make it into the Spec</p><p></p>
+<p><strong>Coming soon to an IDE near you:</strong> ECMAScript 2021 / ES12 / Nü-Script (k, we made that up). The latest version of JavaScript is all set to be released in June, and we’ll see five TC39 proposals finally get their wings and be officially added to the Spec.</p>
+<p><strong>Quick review on TC39 process:</strong> Proposals go through a 5-stage process (numbered 0-4, because of course it is), with each stage requiring an additional level of <a href="https://nitayneeman.com/posts/introducing-all-stages-of-the-tc39-process-in-ecmascript/">approval and commitment</a> from members of the TC39 committee. The amount of time required to clear all 5 stages can vary widely — some proposals are approved in months, others get stuck on one or more stages for years at time (kinda like a game of <a href="https://www.reddit.com/r/boardgames/comments/77mi1j/have_you_witnessed_a_meltdown_at_the_table_before/">Phase 10 from hell</a>).</p>
+<p><strong>We’ll run through all five new features</strong> and give each one a hotness rating on a scale of 1-5 <span role="img" aria-label="fire">🔥</span>. Why? Because we’ve been watching too much Bachelor/Bachelorette in quarantine like everybody else.</p>
+<ul>
+<li>
+<p><strong><a href="https://github.com/tc39/proposal-promise-any">Promise.any()</a></strong> — This new method for promise will resolves if <em>any</em> one of the supplied promises are resolved.
+<strong><span role="img" aria-label="fire">🔥</span> Rating: 2/5</strong> — <em>I’m sure there are some fantastic use cases for this that one of the 80,000 of you will tell me about while also being upset it only got a 2, but I can’t think of any.</em></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/tc39/proposal-weakrefs">WeakRef</a></strong> — Typically, references to objects in JavaScript are “strongly held,” which just means that if you have a reference to the object it won’t be garbage-collected. <code>WeakRef</code> is a new class that lets you create <em>weak references</em> to objects, AKA references that won’t stop the referenced objects from being garbage-collected. The main use case for this would be to implement caches or mappings to large objects.
+<strong><span role="img" aria-label="fire">🔥</span> Rating: 3/5</strong> — <em>Pretty cool in theory, but you’ll probably never use it in practice.</em></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/tc39/proposal-string-replaceall">String’s replaceAll() Method</a></strong> — Lets you <em>replace all</em> occurrences of a string with another string value; kinda like “Find and Replace” in Microsoft Word.
+<strong><span role="img" aria-label="fire">🔥</span> Hottness Rating: 3/5</strong> — <em>Not ground breaking, but on more than one occasion I’ve been upset that <code>replace</code> only actually worked on the first occurrence.</em></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/tc39/proposal-logical-assignment/">Logical assignment operators</a></strong> — This feature was <del>lifted from</del> inspired by Ruby, and it combines logical operations (<code>&amp;&amp;</code>, <code>||</code> or <code>??</code>) with assignment (<code>a ||= b</code>, <code>a &amp;&amp;= b</code>, <code>a ??= b</code>). There’s a lot more to explain here, but we’re running out of space.
+<strong><span role="img" aria-label="fire">🔥</span> Rating: 4/5</strong> — <em>Combining two concepts into one new feature like this is pretty exciting.</em></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/tc39/proposal-numeric-separator">Numeric separators</a></strong> — Helps make numeric literals more readable by using <code>_</code> to create a visual separation between groups of digits. So instead of <code>let billion = 1000000000</code>, you can do <code>let billion = 1_000_000_000</code>.
+<strong><span role="img" aria-label="fire">🔥</span> Rating: 5/5</strong> — <em>No more squinting and counting the digits with your cursor 4 times to make sure you got it right??? We’re <a href="https://www.youtube.com/watch?v=YeemJlrNx2Q">smokin’ meats</a> now!</em></p>
+</li>
+</ul>
+<h3>The Bottom Line</h3>
+<p>Remember the days when we’d get new JavaScript features every 5 years? Glad we figured that out.</p>
+<hr>
+<h2>/r/JavaScript becomes an angsty teen</h2>
+<p><img src="https://bytes.dev/images/content/jsbets.png" alt="JS Bets">
+</p><p class="image-alt">Which framework are we pumping today, folks?</p><p></p>
+<p><strong>The subreddit that everyone’s talking about…</strong> /r/JavaScript (obvi), turned 13 years old last week! When John Resig (creator of JQuery) started the subreddit back in January 2008, it was just a few web OG’s posting random JavaScript links. Today it’s up to 1.4 million members who… mostly post random JavaScript links.</p>
+<p>To commemorate the milestone, here are a few r/JavaScript highlights through the years.</p>
+<ul>
+<li>
+<p><strong><a href="https://web.archive.org/web/20080209174931/http://reddit.com:80/r/javascript/">The first post:</a></strong> A list of job openings for JavaScript, JQuery, and Ajax developers, posted by John Resig. Not sure if these folks are still hiring, but if you’re looking for a killer Ajax role, it might be worth reaching out via the hotmail email address they listed in the description.</p>
+</li>
+<li>
+<p><strong><a href="https://www.reddit.com/r/javascript/comments/6hz7o6/pass_by_reference_pass_by_value/">The most upvoted post:</a></strong> A fun gif that uses two coffee cups to demonstrate the difference between pass by <em>reference</em> and pass by <em>value</em>. Posted 3 years ago by u/mburakerman.</p>
+</li>
+<li>
+<p><strong><a href="https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/">The most commented-on post:</a></strong> “Nobody talks about the real reason to use Tabs over Spaces” by u/ChaseMoskal, predictably had a lot of people ready to fight to the death in the comments for their beliefs.</p>
+</li>
+</ul>
+<p>Look how far we’ve come, together <span role="img" aria-label="sparkling heart">💖</span>.</p>
+<hr>
+<h2><span role="img" aria-label="fire">🔥</span> Tip - Get the current URL in JavaScript</h2>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getCurrentURL</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Example</span>
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token function">getCurrentURL</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+url <span class="token comment">// https://ui.dev/get-current-url-javascript/</span>
+</code></pre>
+<p>Simple enough. If you’re using JavaScript in the browser you can get the full current URL by using <code>window.location.href</code>. I think it’s also worth noting that <code>window.location</code> has a bunch of different properties on it that may be of use to you as well.</p>
+<p>Let’s assume this is the current URL we’re on</p>
+<pre><code>https://ui.dev/get-current-url-javascript/?comments=false
+</code></pre>
+<p>These are all the properties that <code>window.location</code> gives us.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span>
+  host<span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> href<span class="token punctuation">,</span> origin<span class="token punctuation">,</span> pathname<span class="token punctuation">,</span> port<span class="token punctuation">,</span> protocol<span class="token punctuation">,</span> search
+<span class="token punctuation">}</span> <span class="token operator">=</span> window<span class="token punctuation">.</span>location
+
+host <span class="token comment">// "ui.dev"</span>
+hostname <span class="token comment">// "ui"</span>
+href <span class="token comment">// "https://ui.dev/get-current-url-javascript/?comments=false"</span>
+origin <span class="token comment">// "https://ui.dev"</span>
+pathname <span class="token comment">// "/get-current-url-javascript/""</span>
+port <span class="token comment">// ""</span>
+protocol <span class="token comment">// "https:"</span>
+search <span class="token comment">// "?comments=false"</span>
+</code></pre>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p>Last week, we made a joke about how “AnimeXYZ would be a great name for an animation library that makes a tiny Naruto run across the bottom of your screen every time a new page loads.” And in a matter of hours, I was reminded why we have the best readers on the planet. I present to you <strong><a href="https://www.npmjs.com/package/animexyz">a fully-functioning AnimeXYZ</a></strong> — courtesy of <a href="https://twitter.com/mcjoejoe0911">Jordan Gardner</a>.</p>
+</li>
+<li>
+<p>Dave Geddes wrote about how to <strong><a href="https://mastery.games/post/practice-css/">practicie CSS like an artist</a>.</strong> That’s cool, but don’t you think Michelangelo could’ve painted the Sistine Chapel wayyyy faster using a cookie-cutter Bootstrap template?</p>
+</li>
+<li>
+<p><strong><a href="https://runjs.dev/">RunJS</a></strong> is a JavaScript/TypeScript playground desktop app that seems to be pretty universally-loved and had the foresight to make <a href="https://www.youtube.com/watch?v=eTMb2UkW4xY">a fantastic promo video</a> all the way back in 2015.</p>
+</li>
+<li>
+<p><strong><a href="https://ui.toast.com/weekly-pick/en_20210126">TOAST UI Chart</a></strong> just released v4.0 of its chart library. This should make it easier than ever to track your portfolio, especially when you consider the fact that stonks only go up <span role="img" aria-label="gem stone">💎</span><span role="img" aria-label="palms up together">🤲</span>.</p>
+</li>
+<li>
+<p>Dave Plummer — a retired OS engineer from Microsoft made an awesome video on the <strong><a href="https://www.youtube.com/watch?v=KgqJJECQQH0&amp;feature=youtu.be">secret history of Windows bluescreens</a></strong>, which answers the age-old question, “why are blue screens blue?”</p>
+</li>
+<li>
+<p>Brian wrote a fantastic post on <strong><a href="https://formidable.com/blog/2021/future-ui/">building futuristic UIs</a></strong> (like the ones you see in Sci-Fi movies) for the web today. He also created a <a href="https://formidablelabs.github.io/github-2049/?cachebust=123">live demo</a>, if you’re feeling ready to fully enter the Matrix.</p>
+</li>
+<li>
+<p>Fireship made <strong><a href="https://www.youtube.com/watch?v=tzq4asJegKY">a great video</a></strong> breaking down all of the AWS vs. Elasticsearch drama. TL;DR — everyone loses, except Amazon (like always).</p>
+</li>
+<li>
+<p>Stackshare just released their list of <strong><a href="https://stackshare.io/posts/top-developer-tools-2020">top 100 developer tools</a></strong> for 2020, which seems weird considering it feels like 2020 ended like 8 months ago. Congrats to <a href="https://github.com/Cosmo/Clippy">this guy</a> for taking the top spot (again).</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"33\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"33\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"33\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\"Big Tech has established an over-leveraged short position in Backbone.js\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"33\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"February 1, 2021\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T30ed,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/jon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/jsbets.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003eHear me out. I have reason to believe Big Tech has established an over-leveraged short position in Backbone.js. If we all migrate to Backbone.js and refuse to ever migrate off, it’ll create a massive short squeeze on their tech debt that they won’t be able to recover from. #\u003cspan role=\"img\" aria-label=\"gem stone\"\u003e💎\u003c/span\u003e\u003cspan role=\"img\" aria-label=\"raised hand\"\u003e✋\u003c/span\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eHot or Not? — ES2021 Edition\u003c/h2\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/jon.png\" alt=\"Jon\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eWhen you finally make it into the Spec\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eComing soon to an IDE near you:\u003c/strong\u003e ECMAScript 2021 / ES12 / Nü-Script (k, we made that up). The latest version of JavaScript is all set to be released in June, and we’ll see five TC39 proposals finally get their wings and be officially added to the Spec.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eQuick review on TC39 process:\u003c/strong\u003e Proposals go through a 5-stage process (numbered 0-4, because of course it is), with each stage requiring an additional level of \u003ca href=\"https://nitayneeman.com/posts/introducing-all-stages-of-the-tc39-process-in-ecmascript/\"\u003eapproval and commitment\u003c/a\u003e from members of the TC39 committee. The amount of time required to clear all 5 stages can vary widely — some proposals are approved in months, others get stuck on one or more stages for years at time (kinda like a game of \u003ca href=\"https://www.reddit.com/r/boardgames/comments/77mi1j/have_you_witnessed_a_meltdown_at_the_table_before/\"\u003ePhase 10 from hell\u003c/a\u003e).\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eWe’ll run through all five new features\u003c/strong\u003e and give each one a hotness rating on a scale of 1-5 \u003cspan role=\"img\" aria-label=\"fire\"\u003e🔥\u003c/span\u003e. Why? Because we’ve been watching too much Bachelor/Bachelorette in quarantine like everybody else.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://github.com/tc39/proposal-promise-any\"\u003ePromise.any()\u003c/a\u003e\u003c/strong\u003e — This new method for promise will resolves if \u003cem\u003eany\u003c/em\u003e one of the supplied promises are resolved.\n\u003cstrong\u003e\u003cspan role=\"img\" aria-label=\"fire\"\u003e🔥\u003c/span\u003e Rating: 2/5\u003c/strong\u003e — \u003cem\u003eI’m sure there are some fantastic use cases for this that one of the 80,000 of you will tell me about while also being upset it only got a 2, but I can’t think of any.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://github.com/tc39/proposal-weakrefs\"\u003eWeakRef\u003c/a\u003e\u003c/strong\u003e — Typically, references to objects in JavaScript are “strongly held,” which just means that if you have a reference to the object it won’t be garbage-collected. \u003ccode\u003eWeakRef\u003c/code\u003e is a new class that lets you create \u003cem\u003eweak references\u003c/em\u003e to objects, AKA references that won’t stop the referenced objects from being garbage-collected. The main use case for this would be to implement caches or mappings to large objects.\n\u003cstrong\u003e\u003cspan role=\"img\" aria-label=\"fire\"\u003e🔥\u003c/span\u003e Rating: 3/5\u003c/strong\u003e — \u003cem\u003ePretty cool in theory, but you’ll probably never use it in practice.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://github.com/tc39/proposal-string-replaceall\"\u003eString’s replaceAll() Method\u003c/a\u003e\u003c/strong\u003e — Lets you \u003cem\u003ereplace all\u003c/em\u003e occurrences of a string with another string value; kinda like “Find and Replace” in Microsoft Word.\n\u003cstrong\u003e\u003cspan role=\"img\" aria-label=\"fire\"\u003e🔥\u003c/span\u003e Hottness Rating: 3/5\u003c/strong\u003e — \u003cem\u003eNot ground breaking, but on more than one occasion I’ve been upset that \u003ccode\u003ereplace\u003c/code\u003e only actually worked on the first occurrence.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://github.com/tc39/proposal-logical-assignment/\"\u003eLogical assignment operators\u003c/a\u003e\u003c/strong\u003e — This feature was \u003cdel\u003elifted from\u003c/del\u003e inspired by Ruby, and it combines logical operations (\u003ccode\u003e\u0026amp;\u0026amp;\u003c/code\u003e, \u003ccode\u003e||\u003c/code\u003e or \u003ccode\u003e??\u003c/code\u003e) with assignment (\u003ccode\u003ea ||= b\u003c/code\u003e, \u003ccode\u003ea \u0026amp;\u0026amp;= b\u003c/code\u003e, \u003ccode\u003ea ??= b\u003c/code\u003e). There’s a lot more to explain here, but we’re running out of space.\n\u003cstrong\u003e\u003cspan role=\"img\" aria-label=\"fire\"\u003e🔥\u003c/span\u003e Rating: 4/5\u003c/strong\u003e — \u003cem\u003eCombining two concepts into one new feature like this is pretty exciting.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://github.com/tc39/proposal-numeric-separator\"\u003eNumeric separators\u003c/a\u003e\u003c/strong\u003e — Helps make numeric literals more readable by using \u003ccode\u003e_\u003c/code\u003e to create a visual separation between groups of digits. So instead of \u003ccode\u003elet billion = 1000000000\u003c/code\u003e, you can do \u003ccode\u003elet billion = 1_000_000_000\u003c/code\u003e.\n\u003cstrong\u003e\u003cspan role=\"img\" aria-label=\"fire\"\u003e🔥\u003c/span\u003e Rating: 5/5\u003c/strong\u003e — \u003cem\u003eNo more squinting and counting the digits with your cursor 4 times to make sure you got it right??? We’re \u003ca href=\"https://www.youtube.com/watch?v=YeemJlrNx2Q\"\u003esmokin’ meats\u003c/a\u003e now!\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003eThe Bottom Line\u003c/h3\u003e\n\u003cp\u003eRemember the days when we’d get new JavaScript features every 5 years? Glad we figured that out.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003e/r/JavaScript becomes an angsty teen\u003c/h2\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/jsbets.png\" alt=\"JS Bets\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eWhich framework are we pumping today, folks?\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eThe subreddit that everyone’s talking about…\u003c/strong\u003e /r/JavaScript (obvi), turned 13 years old last week! When John Resig (creator of JQuery) started the subreddit back in January 2008, it was just a few web OG’s posting random JavaScript links. Today it’s up to 1.4 million members who… mostly post random JavaScript links.\u003c/p\u003e\n\u003cp\u003eTo commemorate the milestone, here are a few r/JavaScript highlights through the years.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://web.archive.org/web/20080209174931/http://reddit.com:80/r/javascript/\"\u003eThe first post:\u003c/a\u003e\u003c/strong\u003e A list of job openings for JavaScript, JQuery, and Ajax developers, posted by John Resig. Not sure if these folks are still hiring, but if you’re looking for a killer Ajax role, it might be worth reaching out via the hotmail email address they listed in the description.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://www.reddit.com/r/javascript/comments/6hz7o6/pass_by_reference_pass_by_value/\"\u003eThe most upvoted post:\u003c/a\u003e\u003c/strong\u003e A fun gif that uses two coffee cups to demonstrate the difference between pass by \u003cem\u003ereference\u003c/em\u003e and pass by \u003cem\u003evalue\u003c/em\u003e. Posted 3 years ago by u/mburakerman.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/\"\u003eThe most commented-on post:\u003c/a\u003e\u003c/strong\u003e “Nobody talks about the real reason to use Tabs over Spaces” by u/ChaseMoskal, predictably had a lot of people ready to fight to the death in the comments for their beliefs.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eLook how far we’ve come, together \u003cspan role=\"img\" aria-label=\"sparkling heart\"\u003e💖\u003c/span\u003e.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003e\u003cspan role=\"img\" aria-label=\"fire\"\u003e🔥\u003c/span\u003e Tip - Get the current URL in JavaScript\u003c/h2\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003egetCurrentURL\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e window\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003elocation\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003ehref\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token comment\"\u003e// Example\u003c/span\u003e\n\u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e url \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token function\"\u003egetCurrentURL\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\nurl \u003cspan class=\"token comment\"\u003e// https://ui.dev/get-current-url-javascript/\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eSimple enough. If you’re using JavaScript in the browser you can get the full current URL by using \u003ccode\u003ewindow.location.href\u003c/code\u003e. I think it’s also worth noting that \u003ccode\u003ewindow.location\u003c/code\u003e has a bunch of different properties on it that may be of use to you as well.\u003c/p\u003e\n\u003cp\u003eLet’s assume this is the current URL we’re on\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ehttps://ui.dev/get-current-url-javascript/?comments=false\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThese are all the properties that \u003ccode\u003ewindow.location\u003c/code\u003e gives us.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  host\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e hostname\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e href\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e origin\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e pathname\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e port\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e protocol\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e search\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e window\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003elocation\n\nhost \u003cspan class=\"token comment\"\u003e// \"ui.dev\"\u003c/span\u003e\nhostname \u003cspan class=\"token comment\"\u003e// \"ui\"\u003c/span\u003e\nhref \u003cspan class=\"token comment\"\u003e// \"https://ui.dev/get-current-url-javascript/?comments=false\"\u003c/span\u003e\norigin \u003cspan class=\"token comment\"\u003e// \"https://ui.dev\"\u003c/span\u003e\npathname \u003cspan class=\"token comment\"\u003e// \"/get-current-url-javascript/\"\"\u003c/span\u003e\nport \u003cspan class=\"token comment\"\u003e// \"\"\u003c/span\u003e\nprotocol \u003cspan class=\"token comment\"\u003e// \"https:\"\u003c/span\u003e\nsearch \u003cspan class=\"token comment\"\u003e// \"?comments=false\"\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eLast week, we made a joke about how “AnimeXYZ would be a great name for an animation library that makes a tiny Naruto run across the bottom of your screen every time a new page loads.” And in a matter of hours, I was reminded why we have the best readers on the planet. I present to you \u003cstrong\u003e\u003ca href=\"https://www.npmjs.com/package/animexyz\"\u003ea fully-functioning AnimeXYZ\u003c/a\u003e\u003c/strong\u003e — courtesy of \u003ca href=\"https://twitter.com/mcjoejoe0911\"\u003eJordan Gardner\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eDave Geddes wrote about how to \u003cstrong\u003e\u003ca href=\"https://mastery.games/post/practice-css/\"\u003epracticie CSS like an artist\u003c/a\u003e.\u003c/strong\u003e That’s cool, but don’t you think Michelangelo could’ve painted the Sistine Chapel wayyyy faster using a cookie-cutter Bootstrap template?\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://runjs.dev/\"\u003eRunJS\u003c/a\u003e\u003c/strong\u003e is a JavaScript/TypeScript playground desktop app that seems to be pretty universally-loved and had the foresight to make \u003ca href=\"https://www.youtube.com/watch?v=eTMb2UkW4xY\"\u003ea fantastic promo video\u003c/a\u003e all the way back in 2015.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://ui.toast.com/weekly-pick/en_20210126\"\u003eTOAST UI Chart\u003c/a\u003e\u003c/strong\u003e just released v4.0 of its chart library. This should make it easier than ever to track your portfolio, especially when you consider the fact that stonks only go up \u003cspan role=\"img\" aria-label=\"gem stone\"\u003e💎\u003c/span\u003e\u003cspan role=\"img\" aria-label=\"palms up together\"\u003e🤲\u003c/span\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eDave Plummer — a retired OS engineer from Microsoft made an awesome video on the \u003cstrong\u003e\u003ca href=\"https://www.youtube.com/watch?v=KgqJJECQQH0\u0026amp;feature=youtu.be\"\u003esecret history of Windows bluescreens\u003c/a\u003e\u003c/strong\u003e, which answers the age-old question, “why are blue screens blue?”\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eBrian wrote a fantastic post on \u003cstrong\u003e\u003ca href=\"https://formidable.com/blog/2021/future-ui/\"\u003ebuilding futuristic UIs\u003c/a\u003e\u003c/strong\u003e (like the ones you see in Sci-Fi movies) for the web today. He also created a \u003ca href=\"https://formidablelabs.github.io/github-2049/?cachebust=123\"\u003elive demo\u003c/a\u003e, if you’re feeling ready to fully enter the Matrix.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eFireship made \u003cstrong\u003e\u003ca href=\"https://www.youtube.com/watch?v=tzq4asJegKY\"\u003ea great video\u003c/a\u003e\u003c/strong\u003e breaking down all of the AWS vs. Elasticsearch drama. TL;DR — everyone loses, except Amazon (like always).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eStackshare just released their list of \u003cstrong\u003e\u003ca href=\"https://stackshare.io/posts/top-developer-tools-2020\"\u003etop 100 developer tools\u003c/a\u003e\u003c/strong\u003e for 2020, which seems weird considering it feels like 2020 ended like 8 months ago. Congrats to \u003ca href=\"https://github.com/Cosmo/Clippy\"\u003ethis guy\u003c/a\u003e for taking the top spot (again).\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #33 - Big Tech has established an over-leveraged short position in Backbone.js\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Hot or Not -- ES2021 edition, the best of /r/javascript, and some jokes about $GME.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/33\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #33 - Big Tech has established an over-leveraged short position in Backbone.js\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Hot or Not -- ES2021 edition, the best of /r/javascript, and some jokes about $GME.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/33\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/jon.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #33 - Big Tech has established an over-leveraged short position in Backbone.js\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Hot or Not -- ES2021 edition, the best of /r/javascript, and some jokes about $GME.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/jon.png\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

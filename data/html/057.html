@@ -1,0 +1,299 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #57 - a monthly subscription fee for node_modules</title><meta name="description" content="This issue, Apollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/57"/><meta property="og:title" content="Bytes #57 - a monthly subscription fee for node_modules"/><meta property="og:description" content="This issue, Apollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food."/><meta property="og:url" content="https://bytes.dev/archives/57"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/daft.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #57 - a monthly subscription fee for node_modules"/><meta name="twitter:description" content="This issue, Apollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food."/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/daft.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> a monthly subscription fee for node_modules</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->57<!-- -->.</span><span class="mr-6 font-bold">July 19, 2021<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/daft.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/fotr.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p>Apollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food. Welcome to Issue 57.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/daft.jpg" alt="Daft Punk">
+</p><p class="image-alt">Remember the astronauts from Apollo 11? This is them now. Feel old yet?</p><p></p>
+<h2>Apollo Server 3.0 took one small step for man</h2>
+<p><strong>…and one giant leap for GraphQL servers everywhere,</strong> when they released v3.0 last week (their first major release since 2018).</p>
+<p><strong>Quick review:</strong> Apollo Server is an open-source GraphQL server with a schema-first approach. It can be used as a standalone GraphQL server, a gateway for a federated data graph, or as an add-on to your existing Node.js middleware (like Express or Fastify).</p>
+<p><strong>Getting flexible:</strong> Apollo Server 2 had a bunch of hardcoded dependencies, which made it difficult to build new features. So, like many of us during quarantine, Apollo Server bought a cheap yoga mat off Amazon and decided to start working on its flexibility.</p>
+<p>In this case, that required removing the majority of those hardcoded dependencies, increasing extensibility, and modernizing the entire code base. These under-the-hood improvements were the major focus of this v3 release, but there are a few other <strong>cool new features:</strong></p>
+<ul>
+<li>
+<p><a href="https://studio.apollographql.com/sandbox/explorer?">Apollo Sandbox</a> is a new GraphQL IDE for local development that’s now the main recommended tool for querying your server</p>
+</li>
+<li>
+<p>There’s newly added support for the latest versions of Fastify and Hapi</p>
+</li>
+<li>
+<p>AWS Lambda and Google Cloud Functions integrations are now built directly on top of the Express integration — which means that new Apollo Server functionality will work in Lambda and Cloud Functions without making you write the same code three times</p>
+</li>
+</ul>
+<p><strong>The Bottom Line:</strong> This release is less about introducing a ton of exciting new features, and more about building a scalable foundation so that Apollo Server can actually build those new features in the future. Kind of like when Venusaur has to spend a whole turn charging up its Solar Beam move before it can use it to unleash hell.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/fotr.png" alt="Fellowship of the Ring">
+</p><p class="image-alt">If by my life or death I can protect you from breaking changes, I will.</p><p></p>
+<h2>A Quick TC39 Update</h2>
+<p>When we saw <a href="https://github.com/tc39/agendas/blob/master/2021/07.md">the agenda</a> for the upcoming 84th meeting of Ecma TC39, we were <strong>ecstatic</strong>. “Find volunteers for note taking”, “Intl Locale Info update”, “Module fragments current direction” had us –&nbsp;and I can’t emphasize this enough –&nbsp;riveted. So much so that we applied to join TC39.</p>
+<p>Unfortunately, our application was denied on the grounds of “we’re not smart” and “we’re not even that funny”. Thankfully <a href="https://twitter.com/GNUmanth">Hemanth</a>, a TC39 delegate, was there and <a href="https://dev.to/hemanth/updates-from-the-84th-meeting-of-tc39-c41">wrote a recap</a>:</p>
+<p><strong>Stage 1:</strong></p>
+<ul>
+<li><a href="https://github.com/tc39-transfer/proposal-arraybuffer-base64">ArrayBuffer to/from base64</a> — ArrayBuffer <span role="img" aria-label="left-right arrow">↔️</span> base64 string functions, which would give JavaScript a built-in mechanism to encode binary data as base64</li>
+</ul>
+<p><strong>Stage 3:</strong></p>
+<ul>
+<li><a href="https://github.com/tc39/proposal-array-find-from-last">Array find from last</a> — Proposal for <code>.findLast()</code> and <code>.findLastIndex()</code> methods on array and typed array</li>
+<li><a href="https://github.com/tc39/proposal-intl-enumeration">Intl Enumeration API</a> — Return supported values of options, such as timeZone, calendars, numberingSystems, currencies, units</li>
+</ul>
+<p><strong>Stage 4:</strong></p>
+<ul>
+<li><a href="https://github.com/tc39/proposal-private-fields-in-in">Ergonomic brand check for Private Fields</a> — Check if an object has a private field, and if not, have some fallback behavior, using the <code>in</code> keyword.</li>
+</ul>
+<p><strong>The Bottom Line:</strong> Yes, it was a slow week in JavaScript-land. Thanks for asking.</p>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p>Gigi wrote a deep dive on <a href="https://blog.sessionstack.com/how-javascript-works-the-evolution-of-graphics-500e0eb764a0">the evolution of graphics</a> in JavaScript from 1990 to today. We’ve come a long way in 30 years, but it turns out you can still host a website on a <a href="http://fxip.as203478.net/">Casio graphing calculator</a> if you want.</p>
+</li>
+<li>
+<p><a href="https://github.com/lukeed/tempura">Tempura</a> is a “light, crispy, and delicious template engine,” which sounds much classier than if he had named it <em>DeepFried.js</em>.</p>
+</li>
+<li>
+<p>Brendan Eich and Allen Wirfs-Brock gave an hour-long talk on <a href="https://www.pldi21.org/prerecorded_hopl.12.html">The First 20 Years of JavaScript</a>. It’s a quicker way to consume a lot of the material they covered in a super long paper they wrote on the topic last year.</p>
+</li>
+<li>
+<p><a href="https://github.com/dinerojs/dinero.js">Dinero.js</a> is a library that lets you create, calculate, and format money safely in JavaScript and TypeScript, and was obviously very inspired by the J-Lo and DJ Khaled <a href="https://www.youtube.com/watch?v=aEM2kOrrNJI">song</a> from 2018. Weren’t we all.</p>
+</li>
+<li>
+<p><a href="https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/">Firefox 90</a> was released last week with some new features for developers. 10 more updates and it’ll evolve into an Icefox.</p>
+</li>
+<li>
+<p><a href="https://j-brooke.github.io/FracturedJson/">FracturedJson</a> is a JSON formatter that produces a human-readable but fairly compact output.</p>
+</li>
+<li>
+<p><a href="https://github.com/privatenumber/esbuild-loader">esbuild-loader</a> lets you harness the speed of esbuild in your Webpack build by offering faster alternatives for transpilation.</p>
+</li>
+<li>
+<p>Átila wrote about <a href="https://www.smashingmagazine.com/2021/06/breaking-down-bulky-builds-netlify-nextjs/">Breaking Down Bulky Builds</a> with Netlify And Next.js. Really looking forward to him releasing an at-home workout DVD with the same name. “Breaking Down Bulky Builds — <a href="https://www.youtube.com/watch?v=ERR5Sdm7mA8">I hate it… but I love it</a>.”</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"57\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"57\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"57\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" a monthly subscription fee for node_modules\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"57\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"July 19, 2021\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T1c12,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/daft.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/fotr.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003eApollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food. Welcome to Issue 57.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/daft.jpg\" alt=\"Daft Punk\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eRemember the astronauts from Apollo 11? This is them now. Feel old yet?\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eApollo Server 3.0 took one small step for man\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003e…and one giant leap for GraphQL servers everywhere,\u003c/strong\u003e when they released v3.0 last week (their first major release since 2018).\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eQuick review:\u003c/strong\u003e Apollo Server is an open-source GraphQL server with a schema-first approach. It can be used as a standalone GraphQL server, a gateway for a federated data graph, or as an add-on to your existing Node.js middleware (like Express or Fastify).\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eGetting flexible:\u003c/strong\u003e Apollo Server 2 had a bunch of hardcoded dependencies, which made it difficult to build new features. So, like many of us during quarantine, Apollo Server bought a cheap yoga mat off Amazon and decided to start working on its flexibility.\u003c/p\u003e\n\u003cp\u003eIn this case, that required removing the majority of those hardcoded dependencies, increasing extensibility, and modernizing the entire code base. These under-the-hood improvements were the major focus of this v3 release, but there are a few other \u003cstrong\u003ecool new features:\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://studio.apollographql.com/sandbox/explorer?\"\u003eApollo Sandbox\u003c/a\u003e is a new GraphQL IDE for local development that’s now the main recommended tool for querying your server\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThere’s newly added support for the latest versions of Fastify and Hapi\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAWS Lambda and Google Cloud Functions integrations are now built directly on top of the Express integration — which means that new Apollo Server functionality will work in Lambda and Cloud Functions without making you write the same code three times\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eThe Bottom Line:\u003c/strong\u003e This release is less about introducing a ton of exciting new features, and more about building a scalable foundation so that Apollo Server can actually build those new features in the future. Kind of like when Venusaur has to spend a whole turn charging up its Solar Beam move before it can use it to unleash hell.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/fotr.png\" alt=\"Fellowship of the Ring\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eIf by my life or death I can protect you from breaking changes, I will.\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eA Quick TC39 Update\u003c/h2\u003e\n\u003cp\u003eWhen we saw \u003ca href=\"https://github.com/tc39/agendas/blob/master/2021/07.md\"\u003ethe agenda\u003c/a\u003e for the upcoming 84th meeting of Ecma TC39, we were \u003cstrong\u003eecstatic\u003c/strong\u003e. “Find volunteers for note taking”, “Intl Locale Info update”, “Module fragments current direction” had us –\u0026nbsp;and I can’t emphasize this enough –\u0026nbsp;riveted. So much so that we applied to join TC39.\u003c/p\u003e\n\u003cp\u003eUnfortunately, our application was denied on the grounds of “we’re not smart” and “we’re not even that funny”. Thankfully \u003ca href=\"https://twitter.com/GNUmanth\"\u003eHemanth\u003c/a\u003e, a TC39 delegate, was there and \u003ca href=\"https://dev.to/hemanth/updates-from-the-84th-meeting-of-tc39-c41\"\u003ewrote a recap\u003c/a\u003e:\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eStage 1:\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://github.com/tc39-transfer/proposal-arraybuffer-base64\"\u003eArrayBuffer to/from base64\u003c/a\u003e — ArrayBuffer \u003cspan role=\"img\" aria-label=\"left-right arrow\"\u003e↔️\u003c/span\u003e base64 string functions, which would give JavaScript a built-in mechanism to encode binary data as base64\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eStage 3:\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://github.com/tc39/proposal-array-find-from-last\"\u003eArray find from last\u003c/a\u003e — Proposal for \u003ccode\u003e.findLast()\u003c/code\u003e and \u003ccode\u003e.findLastIndex()\u003c/code\u003e methods on array and typed array\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://github.com/tc39/proposal-intl-enumeration\"\u003eIntl Enumeration API\u003c/a\u003e — Return supported values of options, such as timeZone, calendars, numberingSystems, currencies, units\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eStage 4:\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://github.com/tc39/proposal-private-fields-in-in\"\u003eErgonomic brand check for Private Fields\u003c/a\u003e — Check if an object has a private field, and if not, have some fallback behavior, using the \u003ccode\u003ein\u003c/code\u003e keyword.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eThe Bottom Line:\u003c/strong\u003e Yes, it was a slow week in JavaScript-land. Thanks for asking.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eGigi wrote a deep dive on \u003ca href=\"https://blog.sessionstack.com/how-javascript-works-the-evolution-of-graphics-500e0eb764a0\"\u003ethe evolution of graphics\u003c/a\u003e in JavaScript from 1990 to today. We’ve come a long way in 30 years, but it turns out you can still host a website on a \u003ca href=\"http://fxip.as203478.net/\"\u003eCasio graphing calculator\u003c/a\u003e if you want.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/lukeed/tempura\"\u003eTempura\u003c/a\u003e is a “light, crispy, and delicious template engine,” which sounds much classier than if he had named it \u003cem\u003eDeepFried.js\u003c/em\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eBrendan Eich and Allen Wirfs-Brock gave an hour-long talk on \u003ca href=\"https://www.pldi21.org/prerecorded_hopl.12.html\"\u003eThe First 20 Years of JavaScript\u003c/a\u003e. It’s a quicker way to consume a lot of the material they covered in a super long paper they wrote on the topic last year.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/dinerojs/dinero.js\"\u003eDinero.js\u003c/a\u003e is a library that lets you create, calculate, and format money safely in JavaScript and TypeScript, and was obviously very inspired by the J-Lo and DJ Khaled \u003ca href=\"https://www.youtube.com/watch?v=aEM2kOrrNJI\"\u003esong\u003c/a\u003e from 2018. Weren’t we all.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/\"\u003eFirefox 90\u003c/a\u003e was released last week with some new features for developers. 10 more updates and it’ll evolve into an Icefox.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://j-brooke.github.io/FracturedJson/\"\u003eFracturedJson\u003c/a\u003e is a JSON formatter that produces a human-readable but fairly compact output.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/privatenumber/esbuild-loader\"\u003eesbuild-loader\u003c/a\u003e lets you harness the speed of esbuild in your Webpack build by offering faster alternatives for transpilation.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eÁtila wrote about \u003ca href=\"https://www.smashingmagazine.com/2021/06/breaking-down-bulky-builds-netlify-nextjs/\"\u003eBreaking Down Bulky Builds\u003c/a\u003e with Netlify And Next.js. Really looking forward to him releasing an at-home workout DVD with the same name. “Breaking Down Bulky Builds — \u003ca href=\"https://www.youtube.com/watch?v=ERR5Sdm7mA8\"\u003eI hate it… but I love it\u003c/a\u003e.”\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #57 - a monthly subscription fee for node_modules\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"This issue, Apollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/57\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #57 - a monthly subscription fee for node_modules\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"This issue, Apollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/57\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/daft.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #57 - a monthly subscription fee for node_modules\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"This issue, Apollo Server releases v3.0, TC39 talks about JavaScript stuff, and a new template engine makes us hungry for Japanese food.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/daft.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>
