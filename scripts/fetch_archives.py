@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.9"
+# dependencies = ["beautifulsoup4", "markdownify"]
+# ///
 """Download every Bytes newsletter issue into data/.
 
   data/html/NNN.html  raw page as served
@@ -9,7 +13,9 @@
 Exits non-zero if any issue failed or came back empty.
 
 Re-runnable: issues already on disk are skipped unless --force is given.
-Requires: beautifulsoup4, markdownify.
+
+Run with `uv run scripts/fetch_archives.py` (dependencies are declared inline),
+or install beautifulsoup4 and markdownify and run it with python3.
 """
 import argparse
 import json
@@ -35,11 +41,10 @@ def get(url, tries=4):
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=30) as r:
                 return r.read().decode("utf-8", "replace")
-        except Exception as e:  # noqa: BLE001
+        except Exception:  # noqa: BLE001
             if attempt == tries - 1:
                 raise
             time.sleep(2 ** attempt)
-    return None
 
 
 def issue_numbers():
@@ -51,8 +56,10 @@ def to_markdown(n, html):
     soup = BeautifulSoup(html, "html.parser")
     h1 = soup.find("h1")
     title = h1.get_text(" ", strip=True) if h1 else ""
-    meta = h1.find_next("div").get_text(" ", strip=True) if h1 else ""
-    m = re.search(r"([A-Z][a-z]+ \d{1,2}, \d{4})", meta)
+    # The date sits in the header block that wraps the <h1>; search that whole
+    # block rather than a specific sibling. A few pages say "Invalid Date".
+    header = h1.parent.get_text(" ", strip=True) if h1 else ""
+    m = re.search(r"\b([A-Z][a-z]+ \d{1,2}, \d{4})\b", header)
     date = m.group(1) if m else ""
     post = soup.find("div", class_="post")
     if post is None:
@@ -76,17 +83,17 @@ def fetch(n, force):
     raw = ROOT / "html" / f"{n:03d}.html"
     try:
         if raw.exists() and not force:
-            html = raw.read_text()
+            html = raw.read_text(encoding="utf-8")
         else:
             html = get(f"{BASE}/{n}")
-            raw.write_text(html)
+            raw.write_text(html, encoding="utf-8")
             time.sleep(0.3)
         rec, md = to_markdown(n, html)
         md_path = ROOT / "md" / f"{n:03d}.md"
         if md is None:
             md_path.unlink(missing_ok=True)
             return n, rec, "empty body at source"
-        md_path.write_text(md)
+        md_path.write_text(md, encoding="utf-8")
         return n, rec, None
     except Exception as e:  # noqa: BLE001
         return n, None, str(e)
@@ -111,11 +118,14 @@ def main():
                     missing.append(rec)
             else:
                 records.append(rec)
-    (ROOT / "index.json").write_text(json.dumps(records, indent=1) + "\n")
-    (ROOT / "missing.json").write_text(json.dumps(missing, indent=1) + "\n")
+    (ROOT / "index.json").write_text(json.dumps(records, indent=1) + "\n", encoding="utf-8")
+    (ROOT / "missing.json").write_text(json.dumps(missing, indent=1) + "\n", encoding="utf-8")
     print(f"ok: {len(records)}  failed: {len(failed)} (listed in data/missing.json)")
     for n, err in failed:
         print(f"  #{n}: {err}", file=sys.stderr)
+    undated = [r["issue"] for r in records if not r["date"]]
+    if undated:
+        print(f"no date at source (site shows 'Invalid Date'): {undated}", file=sys.stderr)
     return 1 if failed else 0
 
 
