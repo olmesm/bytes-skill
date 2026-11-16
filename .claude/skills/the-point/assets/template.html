@@ -89,14 +89,18 @@
   .race .win b { background: var(--good); }
   @keyframes grow { 0% { transform: scaleX(0); } 45%, 100% { transform: scaleX(1); } }
 
-  /* count-up stat: set --to (integer) */
+  /* count-up stat: set --to (integer) AND write the same number as text inside
+     the <span>. The text is what gets copied, read aloud, and shown when CSS
+     does not load; the animated counter is a visual layer on top of it. */
   @property --n { syntax: "<integer>"; initial-value: 0; inherits: false; }
   .stat { text-align: center; }
   .stat strong { display: block; font: 900 clamp(44px, 12vw, 72px)/1 var(--sans); color: var(--accent); --n: var(--to); animation: count 5s ease-out infinite; counter-reset: n var(--n); }
-  .stat strong::after { content: counter(n); }
+  .stat strong::after { content: counter(n); content: counter(n) / ""; }
+  .stat strong span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   @keyframes count { from { --n: 0; } 55%, to { --n: var(--to); } }
 
-  /* typed terminal: set --chars to the command length */
+  /* typed terminal: set --chars to the command's character count. Keep the
+     command ASCII: wide characters (CJK, emoji) are not 1ch and will clip. */
   .term { background: var(--code-bg); color: var(--code-ink); border-radius: 10px; padding: 16px 18px; font: 14px/1.6 var(--mono); overflow-x: auto; }
   .term .cmd { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: calc(var(--chars) * 1ch); border-right: 2px solid var(--accent); animation: type 7s steps(var(--chars)) infinite; }
   .term .out { display: block; white-space: pre; color: #9fd8b4; animation: reveal 7s linear infinite; }
@@ -191,7 +195,7 @@
     <li>{{The strongest item goes first, the warmest or oddest last. About half get a joke.}}</li>
     <li>
       <figure class="stat">
-        <strong style="--to:14212"></strong>
+        <strong style="--to:14212"><span>14,212</span></strong>
         <figcaption>{{lines deleted in <a href="#">one PR</a>}}</figcaption>
       </figure>
     </li>

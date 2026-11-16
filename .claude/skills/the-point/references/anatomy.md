@@ -1,6 +1,6 @@
 # Anatomy of an issue
 
-Derived from all 538 Bytes issues (2020 to 2026). The format settled around issue 100 and has barely moved since, which is the strongest evidence that it works: roughly 1,000 words, 20 links, 7 images, a title of about 4 words, one deep story and a dozen one-liners.
+Derived from the 528 Bytes issues with content (2020 to 2026; ten 2021 issues are empty on the site). The format settled around issue 100 and has barely moved since, which is the strongest evidence that it works: roughly 1,000 words, 20 links, 7 images, a title of about 4 words, one deep story and a dozen one-liners.
 
 The Point keeps that skeleton and swaps the commercial slots for internal ones.
 
