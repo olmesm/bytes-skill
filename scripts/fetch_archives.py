@@ -3,7 +3,10 @@
 
   data/html/NNN.html  raw page as served
   data/md/NNN.md      cleaned Markdown with frontmatter (issue, title, date, url)
-  data/index.json     one record per issue
+  data/index.json     one record per issue with content
+  data/missing.json   issues the site serves with an empty body
+
+Exits non-zero if any issue failed or came back empty.
 
 Re-runnable: issues already on disk are skipped unless --force is given.
 Requires: beautifulsoup4, markdownify.
@@ -22,6 +25,7 @@ from markdownify import markdownify
 
 BASE = "https://bytes.dev/archives"
 ROOT = Path(__file__).resolve().parent.parent / "data"
+MIN_WORDS = 100  # anything shorter is an empty or broken page, not an issue
 UA = "Mozilla/5.0 (compatible; newsletter-archive-reader/1.0)"
 
 
@@ -57,8 +61,12 @@ def to_markdown(n, html):
         tag.decompose()
     body = markdownify(str(post), heading_style="ATX", bullets="-").strip()
     body = re.sub(r"\n{3,}", "\n\n", body)
+    words = len(body.split())
+    if words < MIN_WORDS:
+        # Some old issues are served with an empty body (even in a browser).
+        return {"issue": n, "title": title, "date": date, "url": f"{BASE}/{n}"}, None
     rec = {"issue": n, "title": title, "date": date, "url": f"{BASE}/{n}",
-           "words": len(body.split())}
+           "words": words}
     front = "\n".join(["---", f"issue: {n}", f"title: {json.dumps(title)}",
                        f"date: {json.dumps(date)}", f"url: {rec['url']}", "---", ""])
     return rec, f"{front}\n# {title}\n\n{body}\n"
@@ -74,9 +82,11 @@ def fetch(n, force):
             raw.write_text(html)
             time.sleep(0.3)
         rec, md = to_markdown(n, html)
-        if rec is None:
-            return n, None, "no post body"
-        (ROOT / "md" / f"{n:03d}.md").write_text(md)
+        md_path = ROOT / "md" / f"{n:03d}.md"
+        if md is None:
+            md_path.unlink(missing_ok=True)
+            return n, rec, "empty body at source"
+        md_path.write_text(md)
         return n, rec, None
     except Exception as e:  # noqa: BLE001
         return n, None, str(e)
@@ -92,15 +102,18 @@ def main():
 
     nums = issue_numbers()
     print(f"{len(nums)} issues listed ({nums[0]}..{nums[-1]})")
-    records, failed = [], []
+    records, failed, missing = [], [], []
     with ThreadPoolExecutor(args.workers) as ex:
         for n, rec, err in ex.map(lambda n: fetch(n, args.force), nums):
             if err:
                 failed.append((n, err))
+                if rec:
+                    missing.append(rec)
             else:
                 records.append(rec)
     (ROOT / "index.json").write_text(json.dumps(records, indent=1) + "\n")
-    print(f"ok: {len(records)}  failed: {len(failed)}")
+    (ROOT / "missing.json").write_text(json.dumps(missing, indent=1) + "\n")
+    print(f"ok: {len(records)}  failed: {len(failed)} (listed in data/missing.json)")
     for n, err in failed:
         print(f"  #{n}: {err}", file=sys.stderr)
     return 1 if failed else 0
