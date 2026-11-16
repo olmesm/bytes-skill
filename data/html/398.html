@@ -1,0 +1,276 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #398 - Storybook 9 thinks it can change me</title><meta name="description" content="The React Router Super PAC, JavaScript&#x27;s quiet heroes, and the only way to unfreeze React Native&#x27;s legacy architecture."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/398"/><meta property="og:title" content="Bytes #398 - Storybook 9 thinks it can change me"/><meta property="og:description" content="The React Router Super PAC, JavaScript&#x27;s quiet heroes, and the only way to unfreeze React Native&#x27;s legacy architecture."/><meta property="og:url" content="https://bytes.dev/archives/398"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/knife-laughing.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #398 - Storybook 9 thinks it can change me"/><meta name="twitter:description" content="The React Router Super PAC, JavaScript&#x27;s quiet heroes, and the only way to unfreeze React Native&#x27;s legacy architecture."/><meta name="twitter:image" content="https://bytes.dev/images/content/knife-laughing.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> Storybook 9 thinks it can change me</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->398<!-- -->.</span><span class="mr-6 font-bold">June 6, 2025<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/knife-laughing.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/convex-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/fates.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> The React Router Super PAC, JavaScript’s quiet heroes, and the only way to unfreeze React Native’s legacy architecture.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/398">#398</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/knife-laughing.jpg" alt="Old lady from Golden Girls laughing while holding a knife" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">When my manager promises me that I'll learn to love writing unit tests<!-- --> </p></div><h3>Storybook 9 thinks it can change me</h3><p>95% of my career success can be attributed to two things: 1) prescription-strength Monster Energy, and 2) my refusal to write tests under any circumstance.</p><p>But the Storybook team is trying to make me question my entire identity with this week’s <a href="https://storybook.js.org/blog/storybook-9/">Storybook 9</a> launch. They teamed up with Vitest and Playwright to create a new all-in-one testing tool <em>for components</em> that aims to <del>shame all non-testers into submission</del> combine the speed of unit tests with the in-browser fidelity of E2E tests.</p><p>And even I have to admit, it looks pretty smooth:</p><ul>
+<li>
+<p><strong>Interaction tests</strong> simulate user behavior like clicks and keypresses in a real browser (via Playwright) to verify that all of your functionality works</p>
+</li>
+<li>
+<p><strong>Accessibility tests</strong> can be run across all your stories simultaneously, using <code>axe-core</code> to catch and fix WCAG violations much faster and earlier than usual</p>
+</li>
+<li>
+<p><strong>Visual tests</strong> check for appearance bugs in all your components</p>
+</li>
+</ul><p>Storybook 9 now lets you run all of these tests directly in your app with a single click and gives you coverage reports to show you what was actually tested. It’s also 48% smaller than v8 and comes with some fresh framework upgrades for Svelte 5, React Native, and Next.js (now Vite-powered).</p><p><strong>Bottom Line:</strong> I have to admit, this release <em>might</em> be enticing me to give up some of my prejudices towards testing.</p><p>But the only way you’ll get me to give up my black-market stimulants is to pry them from my cold, dead-but-still-twitching fingers.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/398" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F398" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Storybook%209%20wants%20to%20help%20you%20test%20your%20components%20once%20and%20for%20all%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F398" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AStorybook%209%20wants%20to%20help%20you%20test%20your%20components%20once%20and%20for%20all%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F398" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/convex-logo.png" alt="Convex logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/fates.jpg" alt="The three fates from Hercules" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">The AI agents deciding my app's fate<!-- --> </p></div><h3><a href="https://chef.convex.dev/?ref=bytes">Chef is the AI agent for <em>*actual*</em> full-stack apps</a></h3><p>Most AI coding agents struggle to build real-world apps – so how is <a href="https://chef.convex.dev/?ref=bytes">Chef</a> by Convex able to build a complex chat app like Slack from a single prompt?</p><p><strong>Reason #1:</strong> Convex has <a href="https://stack.convex.dev/ai-gents-humans-good-abstractions/?ref=bytes">good abstractions</a>, where everything (frontend and backend) is written in pure TypeScript. This allows Chef to generate high-quality, type-safe code that works in one shot.</p><p><strong>Reason #2:</strong> Chef uses <a href="https://www.convex.dev/components/?ref=bytes">Convex Components</a>, which provide a drop-in microservice that can be plugged into any app.</p><p>So when you prompt Chef to “build a collaborative text editor,” it leverages the <a href="https://www.convex.dev/components/prosemirror-sync/?ref=bytes">Collaborative Text Editor Convex component</a>, saving thousands of lines of code and preventing lots of potential errors.</p><p><a href="https://chef.convex.dev/?ref=bytes">Use it for free</a> – and start building full-stack apps that actually work.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>Angular just launched a new guide to <a href="https://angular.dev/guide/routing">Angular Router</a> – the official navigation library for Angular that will probably spin out at some point to start a new VC-backed project called Angmix, then merge all of the Angular Router functionality into Angmix, then sell that project to an ecommerce platform, then put all the Angmix functionality back into Angular Router, then make a completely new project that has nothing to do with Angular and call it… Angmix.</p>
+</li>
+<li>
+<p><a href="https://socket.dev/blog/tc39-advances-9-proposals">TC39 advanced nine JavaScript proposals</a> last week in preparation for Hot Spec Summer<span role="img" aria-label="trade mark">™️</span>.</p>
+</li>
+<li>
+<p><a href="https://semgrep.dev/login?utm_source=bytes&amp;utm_medium=referral">Semgrep provides an AI AppSec Engineer</a> that combines static analysis and LLMs to eliminate all false positives – so that security teams and developers only ever deal with real security issues. [sponsored]</p>
+</li>
+<li>
+<p>The React Native team has officially <a href="https://github.com/reactwg/react-native-new-architecture/discussions/290">frozen the legacy architecture</a>. And the only thing that can unfreeze it is true love’s first kiss.</p>
+</li>
+<li>
+<p><a href="https://x.com/astrodotbuild/status/1930639452491145457">Astro 5.9</a> comes with experimental content security policy support, the ability to render Markdown in content loaders, and more.</p>
+</li>
+<li>
+<p><a href="https://remix.run/blog/rr-governance">React Router just moved to an open governance model</a>, and if you’ve got strong opinions about nested routes, you should consider joining my Super PAC to make sure your voice gets heard.</p>
+</li>
+<li>
+<p><a href="https://configcat.com/?utm_source=bytes_newsletter&amp;utm_medium=sponsor&amp;utm_campaign=bytes_202506">ConfigCat</a> is a feature flag service (with a cute cat logo) that helps teams toggle features without redeploying, do gradual rollouts, target specific users, and A/B test new ideas without changing code. It comes with unlimited seats, awesome support, a reasonable price tag, and a <a href="https://configcat.com/pricing/?utm_source=bytes_newsletter&amp;utm_medium=sponsor&amp;utm_campaign=bytes_202506">Forever Free plan</a>. [sponsored]</p>
+</li>
+<li>
+<p>Dan Abramov’s comeback tour continues with another blog post on <a href="https://overreacted.io/how-imports-work-in-rsc/">how imports work in RSC</a>.</p>
+</li>
+<li>
+<p>Alex MacArthur wrote about how <a href="https://macarthur.me/posts/current-script/"><code>document.currentScript</code> is more useful than I thought</a>.</p>
+</li>
+<li>
+<p>Tanner Linsley wrote an article called <a href="https://tanstack.com/blog/search-params-are-state">Search params are state – treat them that way</a>, which is an addendum to another important life lesson: <em>Newsletter writers are society’s quiet heroes – treat them that way.</em></p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"398\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"398\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"398\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" Storybook 9 thinks it can change me\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"398\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"June 6, 2025\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T29b0,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/knife-laughing.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/convex-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/fates.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e The React Router Super PAC, JavaScript’s quiet heroes, and the only way to unfreeze React Native’s legacy architecture.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/398\"\u003e#398\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/knife-laughing.jpg\" alt=\"Old lady from Golden Girls laughing while holding a knife\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eWhen my manager promises me that I'll learn to love writing unit tests\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eStorybook 9 thinks it can change me\u003c/h3\u003e\u003cp\u003e95% of my career success can be attributed to two things: 1) prescription-strength Monster Energy, and 2) my refusal to write tests under any circumstance.\u003c/p\u003e\u003cp\u003eBut the Storybook team is trying to make me question my entire identity with this week’s \u003ca href=\"https://storybook.js.org/blog/storybook-9/\"\u003eStorybook 9\u003c/a\u003e launch. They teamed up with Vitest and Playwright to create a new all-in-one testing tool \u003cem\u003efor components\u003c/em\u003e that aims to \u003cdel\u003eshame all non-testers into submission\u003c/del\u003e combine the speed of unit tests with the in-browser fidelity of E2E tests.\u003c/p\u003e\u003cp\u003eAnd even I have to admit, it looks pretty smooth:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eInteraction tests\u003c/strong\u003e simulate user behavior like clicks and keypresses in a real browser (via Playwright) to verify that all of your functionality works\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eAccessibility tests\u003c/strong\u003e can be run across all your stories simultaneously, using \u003ccode\u003eaxe-core\u003c/code\u003e to catch and fix WCAG violations much faster and earlier than usual\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eVisual tests\u003c/strong\u003e check for appearance bugs in all your components\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eStorybook 9 now lets you run all of these tests directly in your app with a single click and gives you coverage reports to show you what was actually tested. It’s also 48% smaller than v8 and comes with some fresh framework upgrades for Svelte 5, React Native, and Next.js (now Vite-powered).\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e I have to admit, this release \u003cem\u003emight\u003c/em\u003e be enticing me to give up some of my prejudices towards testing.\u003c/p\u003e\u003cp\u003eBut the only way you’ll get me to give up my black-market stimulants is to pry them from my cold, dead-but-still-twitching fingers.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/398\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F398\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Storybook%209%20wants%20to%20help%20you%20test%20your%20components%20once%20and%20for%20all%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F398\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AStorybook%209%20wants%20to%20help%20you%20test%20your%20components%20once%20and%20for%20all%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F398\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/convex-logo.png\" alt=\"Convex logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/fates.jpg\" alt=\"The three fates from Hercules\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eThe AI agents deciding my app's fate\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://chef.convex.dev/?ref=bytes\"\u003eChef is the AI agent for \u003cem\u003e*actual*\u003c/em\u003e full-stack apps\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eMost AI coding agents struggle to build real-world apps – so how is \u003ca href=\"https://chef.convex.dev/?ref=bytes\"\u003eChef\u003c/a\u003e by Convex able to build a complex chat app like Slack from a single prompt?\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eReason #1:\u003c/strong\u003e Convex has \u003ca href=\"https://stack.convex.dev/ai-gents-humans-good-abstractions/?ref=bytes\"\u003egood abstractions\u003c/a\u003e, where everything (frontend and backend) is written in pure TypeScript. This allows Chef to generate high-quality, type-safe code that works in one shot.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eReason #2:\u003c/strong\u003e Chef uses \u003ca href=\"https://www.convex.dev/components/?ref=bytes\"\u003eConvex Components\u003c/a\u003e, which provide a drop-in microservice that can be plugged into any app.\u003c/p\u003e\u003cp\u003eSo when you prompt Chef to “build a collaborative text editor,” it leverages the \u003ca href=\"https://www.convex.dev/components/prosemirror-sync/?ref=bytes\"\u003eCollaborative Text Editor Convex component\u003c/a\u003e, saving thousands of lines of code and preventing lots of potential errors.\u003c/p\u003e\u003cp\u003e\u003ca href=\"https://chef.convex.dev/?ref=bytes\"\u003eUse it for free\u003c/a\u003e – and start building full-stack apps that actually work.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eAngular just launched a new guide to \u003ca href=\"https://angular.dev/guide/routing\"\u003eAngular Router\u003c/a\u003e – the official navigation library for Angular that will probably spin out at some point to start a new VC-backed project called Angmix, then merge all of the Angular Router functionality into Angmix, then sell that project to an ecommerce platform, then put all the Angmix functionality back into Angular Router, then make a completely new project that has nothing to do with Angular and call it… Angmix.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://socket.dev/blog/tc39-advances-9-proposals\"\u003eTC39 advanced nine JavaScript proposals\u003c/a\u003e last week in preparation for Hot Spec Summer\u003cspan role=\"img\" aria-label=\"trade mark\"\u003e™️\u003c/span\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://semgrep.dev/login?utm_source=bytes\u0026amp;utm_medium=referral\"\u003eSemgrep provides an AI AppSec Engineer\u003c/a\u003e that combines static analysis and LLMs to eliminate all false positives – so that security teams and developers only ever deal with real security issues. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe React Native team has officially \u003ca href=\"https://github.com/reactwg/react-native-new-architecture/discussions/290\"\u003efrozen the legacy architecture\u003c/a\u003e. And the only thing that can unfreeze it is true love’s first kiss.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://x.com/astrodotbuild/status/1930639452491145457\"\u003eAstro 5.9\u003c/a\u003e comes with experimental content security policy support, the ability to render Markdown in content loaders, and more.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://remix.run/blog/rr-governance\"\u003eReact Router just moved to an open governance model\u003c/a\u003e, and if you’ve got strong opinions about nested routes, you should consider joining my Super PAC to make sure your voice gets heard.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://configcat.com/?utm_source=bytes_newsletter\u0026amp;utm_medium=sponsor\u0026amp;utm_campaign=bytes_202506\"\u003eConfigCat\u003c/a\u003e is a feature flag service (with a cute cat logo) that helps teams toggle features without redeploying, do gradual rollouts, target specific users, and A/B test new ideas without changing code. It comes with unlimited seats, awesome support, a reasonable price tag, and a \u003ca href=\"https://configcat.com/pricing/?utm_source=bytes_newsletter\u0026amp;utm_medium=sponsor\u0026amp;utm_campaign=bytes_202506\"\u003eForever Free plan\u003c/a\u003e. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eDan Abramov’s comeback tour continues with another blog post on \u003ca href=\"https://overreacted.io/how-imports-work-in-rsc/\"\u003ehow imports work in RSC\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAlex MacArthur wrote about how \u003ca href=\"https://macarthur.me/posts/current-script/\"\u003e\u003ccode\u003edocument.currentScript\u003c/code\u003e is more useful than I thought\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTanner Linsley wrote an article called \u003ca href=\"https://tanstack.com/blog/search-params-are-state\"\u003eSearch params are state – treat them that way\u003c/a\u003e, which is an addendum to another important life lesson: \u003cem\u003eNewsletter writers are society’s quiet heroes – treat them that way.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #398 - Storybook 9 thinks it can change me\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"The React Router Super PAC, JavaScript's quiet heroes, and the only way to unfreeze React Native's legacy architecture.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/398\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #398 - Storybook 9 thinks it can change me\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"The React Router Super PAC, JavaScript's quiet heroes, and the only way to unfreeze React Native's legacy architecture.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/398\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/knife-laughing.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #398 - Storybook 9 thinks it can change me\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"The React Router Super PAC, JavaScript's quiet heroes, and the only way to unfreeze React Native's legacy architecture.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/knife-laughing.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

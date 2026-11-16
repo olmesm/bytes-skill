@@ -1,0 +1,283 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #510 - A browser for agents</title><meta name="description" content="Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/510"/><meta property="og:title" content="Bytes #510 - A browser for agents"/><meta property="og:description" content="Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code."/><meta property="og:url" content="https://bytes.dev/archives/510"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/kitesurf-fail.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #510 - A browser for agents"/><meta name="twitter:description" content="Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code."/><meta name="twitter:image" content="https://bytes.dev/images/content/kitesurf-fail.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> A browser for agents</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->510<!-- -->.</span><span class="mr-6 font-bold">August 7, 2026<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/kitesurf-fail.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/meticulous-logo-new.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/off-by-an-inch.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/510">#510</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/kitesurf-fail.jpg" alt="A kitesurfer flying upside down above the ocean after losing control" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">You and your agent surfing the web<!-- --> </p></div><h3>A browser for agents</h3><p>Cloudflare just wrapped up “Agents Week,” where instead of releasing features for developers, they built a bunch of things for AI agents to use. Is this like when my dad got his co-worker an espresso machine for Christmas but all I got was towels? Maybe… but the most interesting thing they launched was <a href="https://blog.cloudflare.com/kitesurf">a new browser for agents called Kitesurf</a> that runs entirely on Workers.</p><p>A browser for agents makes sense when you consider how many features like tabs, extensions, profile sync, etc. are for human users. Even 60 FPS scrolling is not essential for agents. By removing these features, Cloudflare was able to create a browser that isn’t as memory-hungry as Chromium and is far more efficient for tasks like generating HTML and screenshots.</p><p>How does it work?</p><ul>
+<li>
+<p><strong>The Engine:</strong> The engine is the front door for the browser and allows agents to interface with it via HTTP or CDP (Chrome DevTools Protocol), meaning that tools like Playwright can drive it.</p>
+</li>
+<li>
+<p><strong>PageScript:</strong> PageScript is responsible for running a web page’s scripts with V8. For <code>eval()</code>, which is not supported in Workers for security reasons, it uses an embedded Rust/Wasm runtime called Boa JS. It also parses the HTML and CSS and then passes the document object to PageRenderer.</p>
+</li>
+<li>
+<p><strong>SandboxOutbound:</strong> External requests from the Engine (styles, images, fonts, scripts, etc.) or PageScript (<code>fetch()</code>) are executed via <a href="https://developers.cloudflare.com/dynamic-workers/">a Dynamic Worker</a> called SandboxOutbound. This Worker enforces CORS and securely communicates with the internet.</p>
+</li>
+<li>
+<p><strong>PageRenderer:</strong> Finally, when it’s ready to turn the document object into pixels, PageRenderer uses Wasm to paint the scene and render the output to an image buffer (JPEG/PNG) or a PDF. This stateless model is much more limited than the browsers we’re used to and currently doesn’t support WebGL, video playback, or long-running sessions.</p>
+</li>
+</ul><p><strong>Bottom Line:</strong> Kenton’s vision for Workers coming together this perfectly has me wondering if this really is a simulation and he’s a time traveler. In which case, please go back and tell my parents that towels for Christmas will haunt their son for the rest of his life.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/510" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F510" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Cloudflare%20built%20Kitesurf%2C%20a%20browser%20designed%20from%20the%20ground%20up%20for%20AI%20agents.%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F510" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0ACloudflare%20built%20Kitesurf%2C%20a%20browser%20designed%20from%20the%20ground%20up%20for%20AI%20agents.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F510" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/meticulous-logo-new.png" alt="Meticulous logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/off-by-an-inch.jpg" alt="A man using forced perspective to hold his fingers an inch apart around a distant airplane" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Developers trying to keep UI tests in sync with their app<!-- --> </p></div><h3><a href="https://www.meticulous.ai/?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=26q3&amp;utm_content=primary">Move fast and don’t break things</a></h3><p>The one thing everyone’s talking about: agents now write the majority of your code, but how do you test it?</p><p>As our name suggests, we use real user sessions to <em>meticulously</em> test every edge case and flag what will break before you merge:</p><ul>
+<li>Near-100% coverage on every PR</li>
+<li>70% coverage built automatically in 2 weeks</li>
+<li>Zero dev effort, no flakes</li>
+</ul><p>With Meticulous, Notion cut testing efforts by 30%, saving engineers 5+ hours a week.</p><p><a href="https://www.meticulous.ai/?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=26q3&amp;utm_content=primary">Schedule a demo to learn more.</a></p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p><a href="https://github.com/solidjs/solid-start/discussions/2281">SolidStart v2 is now stable</a> and easier to deploy thanks to Vite’s Environment API.</p>
+</li>
+<li>
+<p>The vlt team (hi Darcy &amp; Luke) just announced <a href="https://www.vlt.io/blog/1-0">version 1.0 of their package manager</a> and a new hosted package registry that keeps you safe from Shai-Hulud.</p>
+</li>
+<li>
+<p><a href="https://serpapi.com/?utm_source=bytesdev">SerpApi lets you scrape 100+ search engines with a single API</a>. One simple GET request gets you real-time results from Google Search, Maps, AI Overviews, and more—all as structured JSON. [sponsored]</p>
+</li>
+<li>
+<p><a href="https://base-ui.com/react/overview/releases/v1-7-0">Base UI released 1.7</a>, featuring smaller bundle sizes for components, bug fixes, and other fixes only Jenna Smith would understand.</p>
+</li>
+<li>
+<p>Colin McDonnell created <a href="https://boron.sh/">a tool called Boron</a> to generate pretty images of your terminal. I heard some agents on Moltbook are offering boudoir shoots with it.</p>
+</li>
+<li>
+<p>Ryan Dahl took a break from suing Oracle to go on another side quest—creating <a href="https://celld.dev/">an open-source implementation of Durable Objects called <code>celld</code></a> that anyone can self-host.</p>
+</li>
+<li>
+<p>Temporal wrote a <a href="https://temporal.io/pages/saga-patterns-state-machines-whitepaper?utm_source=newsletter&amp;utm_medium=sponsorship-bytes&amp;utm_campaign=saga-state-machines-whitepaper-2026-07&amp;utm_content=whitepaper-saga-state-machines">whitepaper about durable execution</a> and handling failures without adding complexity to your application. [sponsored]</p>
+</li>
+<li>
+<p>The team at Meta released <a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2">Muse Code and Muse Spark 1.2</a> and are furiously celebrating being the fourth-best model.</p>
+</li>
+<li>
+<p>Jaimie Lord wrote about <a href="https://lord.technology/2026/08/05/cloudflare-os-is-an-architecture-of-distrust.html">why Cloudflare OS is an architecture of distrust</a> (complementary). Thank you, m’Lord.</p>
+</li>
+<li>
+<p>Justin Jay wrote about how he <a href="https://justinjay.wang/designing-with-code/">designs everything in code now</a>, including posters, logos, and animations. Is the “should designers code” debate finally over?</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"510\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"510\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"510\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" A browser for agents\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"510\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"August 7, 2026\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T28f1,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/kitesurf-fail.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/meticulous-logo-new.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/off-by-an-inch.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/510\"\u003e#510\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/kitesurf-fail.jpg\" alt=\"A kitesurfer flying upside down above the ocean after losing control\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eYou and your agent surfing the web\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eA browser for agents\u003c/h3\u003e\u003cp\u003eCloudflare just wrapped up “Agents Week,” where instead of releasing features for developers, they built a bunch of things for AI agents to use. Is this like when my dad got his co-worker an espresso machine for Christmas but all I got was towels? Maybe… but the most interesting thing they launched was \u003ca href=\"https://blog.cloudflare.com/kitesurf\"\u003ea new browser for agents called Kitesurf\u003c/a\u003e that runs entirely on Workers.\u003c/p\u003e\u003cp\u003eA browser for agents makes sense when you consider how many features like tabs, extensions, profile sync, etc. are for human users. Even 60 FPS scrolling is not essential for agents. By removing these features, Cloudflare was able to create a browser that isn’t as memory-hungry as Chromium and is far more efficient for tasks like generating HTML and screenshots.\u003c/p\u003e\u003cp\u003eHow does it work?\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eThe Engine:\u003c/strong\u003e The engine is the front door for the browser and allows agents to interface with it via HTTP or CDP (Chrome DevTools Protocol), meaning that tools like Playwright can drive it.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePageScript:\u003c/strong\u003e PageScript is responsible for running a web page’s scripts with V8. For \u003ccode\u003eeval()\u003c/code\u003e, which is not supported in Workers for security reasons, it uses an embedded Rust/Wasm runtime called Boa JS. It also parses the HTML and CSS and then passes the document object to PageRenderer.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eSandboxOutbound:\u003c/strong\u003e External requests from the Engine (styles, images, fonts, scripts, etc.) or PageScript (\u003ccode\u003efetch()\u003c/code\u003e) are executed via \u003ca href=\"https://developers.cloudflare.com/dynamic-workers/\"\u003ea Dynamic Worker\u003c/a\u003e called SandboxOutbound. This Worker enforces CORS and securely communicates with the internet.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePageRenderer:\u003c/strong\u003e Finally, when it’s ready to turn the document object into pixels, PageRenderer uses Wasm to paint the scene and render the output to an image buffer (JPEG/PNG) or a PDF. This stateless model is much more limited than the browsers we’re used to and currently doesn’t support WebGL, video playback, or long-running sessions.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e Kenton’s vision for Workers coming together this perfectly has me wondering if this really is a simulation and he’s a time traveler. In which case, please go back and tell my parents that towels for Christmas will haunt their son for the rest of his life.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/510\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F510\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Cloudflare%20built%20Kitesurf%2C%20a%20browser%20designed%20from%20the%20ground%20up%20for%20AI%20agents.%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F510\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0ACloudflare%20built%20Kitesurf%2C%20a%20browser%20designed%20from%20the%20ground%20up%20for%20AI%20agents.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F510\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/meticulous-logo-new.png\" alt=\"Meticulous logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/off-by-an-inch.jpg\" alt=\"A man using forced perspective to hold his fingers an inch apart around a distant airplane\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eDevelopers trying to keep UI tests in sync with their app\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://www.meticulous.ai/?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=26q3\u0026amp;utm_content=primary\"\u003eMove fast and don’t break things\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eThe one thing everyone’s talking about: agents now write the majority of your code, but how do you test it?\u003c/p\u003e\u003cp\u003eAs our name suggests, we use real user sessions to \u003cem\u003emeticulously\u003c/em\u003e test every edge case and flag what will break before you merge:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003eNear-100% coverage on every PR\u003c/li\u003e\n\u003cli\u003e70% coverage built automatically in 2 weeks\u003c/li\u003e\n\u003cli\u003eZero dev effort, no flakes\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eWith Meticulous, Notion cut testing efforts by 30%, saving engineers 5+ hours a week.\u003c/p\u003e\u003cp\u003e\u003ca href=\"https://www.meticulous.ai/?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=26q3\u0026amp;utm_content=primary\"\u003eSchedule a demo to learn more.\u003c/a\u003e\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/solidjs/solid-start/discussions/2281\"\u003eSolidStart v2 is now stable\u003c/a\u003e and easier to deploy thanks to Vite’s Environment API.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe vlt team (hi Darcy \u0026amp; Luke) just announced \u003ca href=\"https://www.vlt.io/blog/1-0\"\u003eversion 1.0 of their package manager\u003c/a\u003e and a new hosted package registry that keeps you safe from Shai-Hulud.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://serpapi.com/?utm_source=bytesdev\"\u003eSerpApi lets you scrape 100+ search engines with a single API\u003c/a\u003e. One simple GET request gets you real-time results from Google Search, Maps, AI Overviews, and more—all as structured JSON. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://base-ui.com/react/overview/releases/v1-7-0\"\u003eBase UI released 1.7\u003c/a\u003e, featuring smaller bundle sizes for components, bug fixes, and other fixes only Jenna Smith would understand.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eColin McDonnell created \u003ca href=\"https://boron.sh/\"\u003ea tool called Boron\u003c/a\u003e to generate pretty images of your terminal. I heard some agents on Moltbook are offering boudoir shoots with it.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eRyan Dahl took a break from suing Oracle to go on another side quest—creating \u003ca href=\"https://celld.dev/\"\u003ean open-source implementation of Durable Objects called \u003ccode\u003ecelld\u003c/code\u003e\u003c/a\u003e that anyone can self-host.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTemporal wrote a \u003ca href=\"https://temporal.io/pages/saga-patterns-state-machines-whitepaper?utm_source=newsletter\u0026amp;utm_medium=sponsorship-bytes\u0026amp;utm_campaign=saga-state-machines-whitepaper-2026-07\u0026amp;utm_content=whitepaper-saga-state-machines\"\u003ewhitepaper about durable execution\u003c/a\u003e and handling failures without adding complexity to your application. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe team at Meta released \u003ca href=\"https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2\"\u003eMuse Code and Muse Spark 1.2\u003c/a\u003e and are furiously celebrating being the fourth-best model.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJaimie Lord wrote about \u003ca href=\"https://lord.technology/2026/08/05/cloudflare-os-is-an-architecture-of-distrust.html\"\u003ewhy Cloudflare OS is an architecture of distrust\u003c/a\u003e (complementary). Thank you, m’Lord.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJustin Jay wrote about how he \u003ca href=\"https://justinjay.wang/designing-with-code/\"\u003edesigns everything in code now\u003c/a\u003e, including posters, logos, and animations. Is the “should designers code” debate finally over?\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #510 - A browser for agents\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/510\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #510 - A browser for agents\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/510\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/kitesurf-fail.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #510 - A browser for agents\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Agentic boudoir photoshoots, another side quest for Ry, and finally settling whether or not designers should code.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/kitesurf-fail.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

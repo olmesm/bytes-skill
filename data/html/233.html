@@ -1,0 +1,305 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #233 - Angular goes meta</title><meta name="description" content="Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/233"/><meta property="og:title" content="Bytes #233 - Angular goes meta"/><meta property="og:description" content="Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago."/><meta property="og:url" content="https://bytes.dev/archives/233"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/analog.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #233 - Angular goes meta"/><meta name="twitter:description" content="Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago."/><meta name="twitter:image" content="https://bytes.dev/images/content/analog.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> Angular goes meta</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->233<!-- -->.</span><span class="mr-6 font-bold">October 23, 2023<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/analog.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/secureframe-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/cash-eyes.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/spot-the-bug.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/233">#233</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/analog.jpg" alt="An old keyboard and mouse plugged into a smartphone" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Had to go with my analog setup for this one<!-- --> </p></div><h3>Angular goes meta</h3><p>Have you ever been out on a first date and caught your mind wandering back to that same old question, <em>Why doesn’t Angular have its own meta-framework like Next.js or Nuxt?</em></p><p>Yeah, me too. But we don’t have to wonder anymore, thanks to Brandon Roberts and <a href="https://analogjs.org/">Analog.js</a> — his new(ish) meta-framework built on top of Angular that now provides lots of Next features to the ng crew.</p><p><strong>How we got here:</strong> When standalone components were first introduced to Angular v14 in June 2022, it opened up new ways to use the framework in other ecosystems. This change, plus a few other architectural improvements, finally made it feasible to build a meta-framework that combined Angular with other tools and libraries.</p><p>Brandon jumped at the opportunity, and a few months later he <a href="https://viteconf.org/2022/replay/angular">unveiled</a> Analog.js at ViteConf 2022. Initially, it provided a simple way of integrating Vite into Angular via a Vite plugin, but Brandon promised it would eventually grow into something more robust.</p><p><strong>Fast forward to two weeks ago,</strong> and Brandon was back on the (virtual) stage at ViteConf to make good on his promise. He <a href="https://viteconf.org/23/replay/analog">showed</a> how Analog now combines Vite, Nx, and Nitro to give you a full-stack Angular meta-framework with all the fixins:</p><ul>
+<li>
+<p><strong>A file-system based router</strong> that supports many different layouts, like group routes, dynamic routes, static routes, and pathless routes.</p>
+</li>
+<li>
+<p><strong>SSR and SSG</strong> through <code>ng serve</code> and <code>ng build</code>, along with server-side data fetching.</p>
+</li>
+<li>
+<p><strong>API routes</strong> that are also defined with file-based syntax.</p>
+</li>
+</ul><p><strong>Bottom Line:</strong> It’s still early days for Analog, but if meta-frameworks are your jam, you might be running out of excuses for avoiding Angular.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/233" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F233" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Why%20doesn't%20Angular%20have%20its%20own%20meta-framework%3F%20Well%20now%20it%20does%2C%20thanks%20to%20%40analogjs.%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F233" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AWhy%20doesn't%20Angular%20have%20its%20own%20meta-framework%3F%20Well%20now%20it%20does%2C%20thanks%20to%20%40analogjs.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F233" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/secureframe-logo.png" alt="secureframe logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/cash-eyes.jpg" alt="A guy with cash behind his glasses" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">When you get that new enterprise customer cash<!-- --> </p></div><h3><a href="https://secureframe.com/request-demo?utm_medium=newsletter&amp;utm_source=partner&amp;utm_campaign=102323-bytes-newsletter">Secureframe makes SOC 2 compliance easy</a></h3><p>Getting your application SOC 2 certified will finally let you start landing those big enterprise customers – but it usually takes months of engineering time, and lots of tricky hoops to jump through <span role="img" aria-label="skull and crossbones">☠️</span>.</p><p>That’s why thousands of companies let Secureframe handle it.</p><p>They’ve <a href="https://secureframe.com/?utm_source=partner&amp;utm_medium=newsletter&amp;utm_campaign=102323-bytes-newsletter">automated the entire compliance process</a> for SOC 2 and other security/privacy frameworks like ISO 27001, GDPR, and HIPAA. So now you can get certified in <em>weeks</em>, instead of months.</p><p>Plus, their AI-powered platform lets you automate manual tasks, so it’s easy for you to stay compliant in the future.</p><p><a href="https://secureframe.com/request-demo?utm_medium=newsletter&amp;utm_source=partner&amp;utm_campaign=102323-bytes-newsletter">Set up a free, personalized demo</a> — and they’ll help you get all those fancy security compliance badges on your homepage ASAP.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/spot-the-bug.png" alt="Spot the Bug logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Spot the Bug</h2><div class="section-presenter" style="margin-bottom:50px;margin-top:15px"><h4>Sponsored by <a href="https://p0.dev/?utm_campaign=bytes_dev_oct_23&amp;utm_source=email&amp;utm_medium=oct_23_spot_bug&amp;utm_content=presenting_sponsor">P0 Security</a></h4><p><em>P0 makes it easy to secure cloud access for your engineers. Easily automate privileged access and use the IAM assessment to find and fix vulnerabilities. <a href="https://p0.dev/?utm_campaign=bytes_dev_oct_23&amp;utm_source=email&amp;utm_medium=oct_23_spot_bug&amp;utm_content=presenting_sponsor">Try it for free</a>.</em></p></div></div>
+<p>What gets logged?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">function</span> <span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  i<span class="token operator">++</span>
+  <span class="token keyword">return</span> <span class="token number">10</span>
+<span class="token punctuation">}</span>
+
+i <span class="token operator">+=</span> <span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// ?</span>
+</code></pre>
+<p>Shout out to <a href="https://twitter.com/heyImMapleLeaf/status/1593070398916431872?s=20&amp;t=cycM9GNHSp4RwhKBmSPWsw">MapleLead</a> for this one.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>Joe Savona and Mofei Zhang from the React team gave a sneak preview of the <a href="https://youtu.be/hn_L56ypX1A?t=5916">React Forget</a> compiler at React Advanced Conf. But they still haven’t released anything publicly, because the React team loves a good tease.</p>
+</li>
+<li>
+<p>The New Relic team wrote about <a href="https://newrelic.com/blog/how-to-relic/opentelemetry-full-stack-javascript?utm_source=bytes&amp;utm_medium=community&amp;utm_campaign=global-fy24-q3-opentelemetry-full-stack-javascript">How to set up OpenTelemetry for full-stack JavaScript development</a>. It gives an in-depth walkthrough of how to integrate this open-source observability framework into a full-stack React + Node.js app. [sponsored]</p>
+</li>
+<li>
+<p><a href="https://mswjs.io/blog/introducing-msw-2.0">Mock Service Worker 2.0</a> just launched with its “biggest API change to the library since its inception.”</p>
+</li>
+<li>
+<p>TK Kinoshita wrote <a href="https://www.iamtk.co/series/essentials-of-interpretation/control-flow-if-and-while-expressions">Control Flow: If and While Expressions</a>, which is the fourth and final article in his “Essentials of Interpretation” Series. Disney and Warner Bros are locked in a bidding war for the movie rights, because their streaming services could <em>really</em> use another cinematic universe right about now.</p>
+</li>
+<li>
+<p>Speaking of streaming, Gal Schlezinger wrote about <a href="https://gal.hagever.com/posts/out-of-order-streaming-from-scratch">Out of Order Streaming from Scratch</a> and why people are so excited about it.</p>
+</li>
+<li>
+<p>Colin Eberhardt gave an interesting breakdown of <a href="https://blog.scottlogic.com/2023/10/18/the-state-of-webassembly-2023.html">The State of WebAssembly 2023</a> survey results. Which reminds me, please sign up to take my <em>State of MooTools 2023 Survey</em> before it’s too late. One lucky participant will receive a limited edition Furby signed by Gnarls Barkley.</p>
+</li>
+<li>
+<p><a href="https://unlayer.com/embed">Unlayer Embed</a> is a drag-and-drop email editor and page builder for your SaaS application that’s easy to embed and will easily save you weeks of dev time. [sponsored]</p>
+</li>
+<li>
+<p><a href="https://storybook.js.org/blog/storybook-7-5/">Storybook 7.5</a> was released last week with zero-config support for Vite, 2.2x faster startup times for React TS projects, and better Next.js support.</p>
+</li>
+<li>
+<p>Preethi Sam wrote about <a href="https://www.smashingmagazine.com/2023/10/animate-along-path-css/">How To Animate Along A Path In CSS</a>.</p>
+</li>
+<li>
+<p>Evan Czaplicki gave an insightful talk at Strange Loop Conf called <a href="https://www.youtube.com/watch?v=XZ3w_jec1v8">The Economics of Programming Languages</a>, which he says is the talk he needed to hear 10 years ago when he was just starting to create Elm. Turns out, building a programming language is pretty hard unless you have the full financial backing of a FAANG company, or your dad is Abe Froman, the sausage king of Chicago.</p>
+</li>
+</ol>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/spot-the-bug.png" alt="Spot the Bug logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Spot the Bug: Solution</h2><div class="section-presenter" style="margin-bottom:50px;margin-top:15px"><h4>Sponsored by <a href="https://p0.dev/?utm_campaign=bytes_dev_oct_23&amp;utm_source=email&amp;utm_medium=oct_23_spot_bug&amp;utm_content=presenting_sponsor">P0 Security</a></h4></div></div>
+<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">function</span> <span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  i<span class="token operator">++</span>
+  <span class="token keyword">return</span> <span class="token number">10</span>
+<span class="token punctuation">}</span>
+
+i <span class="token operator">+=</span> <span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// ?</span>
+</code></pre>
+<p>The answer is <code>10</code>. Here’s how it works.</p>
+<p>For clarity, we can refactor <code>i += x()</code> to be <code>i = i + x()</code>. From there, the interpreter begins evaluating our code. Before it evaluates the function invocation, it seems that <code>i</code> evaluates to <code>0</code>, so now our code is <code>i = 0 + x()</code>. The invocation of <code>x</code> returns <code>10</code>, so now it’s <code>i = 0 + 10</code>, which gives us <code>i = 10</code>.</p>
+<p>Note that if you swap the order of <code>i</code> and <code>x()</code> like <code>i = x() + i</code> you get a different value - <span role="img" aria-label="people hugging">🫂</span>.</p></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"233\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"233\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"233\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" Angular goes meta\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"233\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"October 23, 2023\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T3bc6,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/analog.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/secureframe-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cash-eyes.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/spot-the-bug.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/233\"\u003e#233\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/analog.jpg\" alt=\"An old keyboard and mouse plugged into a smartphone\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eHad to go with my analog setup for this one\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eAngular goes meta\u003c/h3\u003e\u003cp\u003eHave you ever been out on a first date and caught your mind wandering back to that same old question, \u003cem\u003eWhy doesn’t Angular have its own meta-framework like Next.js or Nuxt?\u003c/em\u003e\u003c/p\u003e\u003cp\u003eYeah, me too. But we don’t have to wonder anymore, thanks to Brandon Roberts and \u003ca href=\"https://analogjs.org/\"\u003eAnalog.js\u003c/a\u003e — his new(ish) meta-framework built on top of Angular that now provides lots of Next features to the ng crew.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eHow we got here:\u003c/strong\u003e When standalone components were first introduced to Angular v14 in June 2022, it opened up new ways to use the framework in other ecosystems. This change, plus a few other architectural improvements, finally made it feasible to build a meta-framework that combined Angular with other tools and libraries.\u003c/p\u003e\u003cp\u003eBrandon jumped at the opportunity, and a few months later he \u003ca href=\"https://viteconf.org/2022/replay/angular\"\u003eunveiled\u003c/a\u003e Analog.js at ViteConf 2022. Initially, it provided a simple way of integrating Vite into Angular via a Vite plugin, but Brandon promised it would eventually grow into something more robust.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eFast forward to two weeks ago,\u003c/strong\u003e and Brandon was back on the (virtual) stage at ViteConf to make good on his promise. He \u003ca href=\"https://viteconf.org/23/replay/analog\"\u003eshowed\u003c/a\u003e how Analog now combines Vite, Nx, and Nitro to give you a full-stack Angular meta-framework with all the fixins:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eA file-system based router\u003c/strong\u003e that supports many different layouts, like group routes, dynamic routes, static routes, and pathless routes.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eSSR and SSG\u003c/strong\u003e through \u003ccode\u003eng serve\u003c/code\u003e and \u003ccode\u003eng build\u003c/code\u003e, along with server-side data fetching.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eAPI routes\u003c/strong\u003e that are also defined with file-based syntax.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e It’s still early days for Analog, but if meta-frameworks are your jam, you might be running out of excuses for avoiding Angular.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/233\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F233\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Why%20doesn't%20Angular%20have%20its%20own%20meta-framework%3F%20Well%20now%20it%20does%2C%20thanks%20to%20%40analogjs.%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F233\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AWhy%20doesn't%20Angular%20have%20its%20own%20meta-framework%3F%20Well%20now%20it%20does%2C%20thanks%20to%20%40analogjs.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F233\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/secureframe-logo.png\" alt=\"secureframe logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/cash-eyes.jpg\" alt=\"A guy with cash behind his glasses\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eWhen you get that new enterprise customer cash\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://secureframe.com/request-demo?utm_medium=newsletter\u0026amp;utm_source=partner\u0026amp;utm_campaign=102323-bytes-newsletter\"\u003eSecureframe makes SOC 2 compliance easy\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eGetting your application SOC 2 certified will finally let you start landing those big enterprise customers – but it usually takes months of engineering time, and lots of tricky hoops to jump through \u003cspan role=\"img\" aria-label=\"skull and crossbones\"\u003e☠️\u003c/span\u003e.\u003c/p\u003e\u003cp\u003eThat’s why thousands of companies let Secureframe handle it.\u003c/p\u003e\u003cp\u003eThey’ve \u003ca href=\"https://secureframe.com/?utm_source=partner\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=102323-bytes-newsletter\"\u003eautomated the entire compliance process\u003c/a\u003e for SOC 2 and other security/privacy frameworks like ISO 27001, GDPR, and HIPAA. So now you can get certified in \u003cem\u003eweeks\u003c/em\u003e, instead of months.\u003c/p\u003e\u003cp\u003ePlus, their AI-powered platform lets you automate manual tasks, so it’s easy for you to stay compliant in the future.\u003c/p\u003e\u003cp\u003e\u003ca href=\"https://secureframe.com/request-demo?utm_medium=newsletter\u0026amp;utm_source=partner\u0026amp;utm_campaign=102323-bytes-newsletter\"\u003eSet up a free, personalized demo\u003c/a\u003e — and they’ll help you get all those fancy security compliance badges on your homepage ASAP.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/spot-the-bug.png\" alt=\"Spot the Bug logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eSpot the Bug\u003c/h2\u003e\u003cdiv class=\"section-presenter\" style=\"margin-bottom:50px;margin-top:15px\"\u003e\u003ch4\u003eSponsored by \u003ca href=\"https://p0.dev/?utm_campaign=bytes_dev_oct_23\u0026amp;utm_source=email\u0026amp;utm_medium=oct_23_spot_bug\u0026amp;utm_content=presenting_sponsor\"\u003eP0 Security\u003c/a\u003e\u003c/h4\u003e\u003cp\u003e\u003cem\u003eP0 makes it easy to secure cloud access for your engineers. Easily automate privileged access and use the IAM assessment to find and fix vulnerabilities. \u003ca href=\"https://p0.dev/?utm_campaign=bytes_dev_oct_23\u0026amp;utm_source=email\u0026amp;utm_medium=oct_23_spot_bug\u0026amp;utm_content=presenting_sponsor\"\u003eTry it for free\u003c/a\u003e.\u003c/em\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\n\u003cp\u003eWhat gets logged?\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003elet\u003c/span\u003e i \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token number\"\u003e0\u003c/span\u003e\n\n\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003ex\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  i\u003cspan class=\"token operator\"\u003e++\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"token number\"\u003e10\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\ni \u003cspan class=\"token operator\"\u003e+=\u003c/span\u003e \u003cspan class=\"token function\"\u003ex\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\nconsole\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ei\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token comment\"\u003e// ?\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eShout out to \u003ca href=\"https://twitter.com/heyImMapleLeaf/status/1593070398916431872?s=20\u0026amp;t=cycM9GNHSp4RwhKBmSPWsw\"\u003eMapleLead\u003c/a\u003e for this one.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eJoe Savona and Mofei Zhang from the React team gave a sneak preview of the \u003ca href=\"https://youtu.be/hn_L56ypX1A?t=5916\"\u003eReact Forget\u003c/a\u003e compiler at React Advanced Conf. But they still haven’t released anything publicly, because the React team loves a good tease.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe New Relic team wrote about \u003ca href=\"https://newrelic.com/blog/how-to-relic/opentelemetry-full-stack-javascript?utm_source=bytes\u0026amp;utm_medium=community\u0026amp;utm_campaign=global-fy24-q3-opentelemetry-full-stack-javascript\"\u003eHow to set up OpenTelemetry for full-stack JavaScript development\u003c/a\u003e. It gives an in-depth walkthrough of how to integrate this open-source observability framework into a full-stack React + Node.js app. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://mswjs.io/blog/introducing-msw-2.0\"\u003eMock Service Worker 2.0\u003c/a\u003e just launched with its “biggest API change to the library since its inception.”\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eTK Kinoshita wrote \u003ca href=\"https://www.iamtk.co/series/essentials-of-interpretation/control-flow-if-and-while-expressions\"\u003eControl Flow: If and While Expressions\u003c/a\u003e, which is the fourth and final article in his “Essentials of Interpretation” Series. Disney and Warner Bros are locked in a bidding war for the movie rights, because their streaming services could \u003cem\u003ereally\u003c/em\u003e use another cinematic universe right about now.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSpeaking of streaming, Gal Schlezinger wrote about \u003ca href=\"https://gal.hagever.com/posts/out-of-order-streaming-from-scratch\"\u003eOut of Order Streaming from Scratch\u003c/a\u003e and why people are so excited about it.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eColin Eberhardt gave an interesting breakdown of \u003ca href=\"https://blog.scottlogic.com/2023/10/18/the-state-of-webassembly-2023.html\"\u003eThe State of WebAssembly 2023\u003c/a\u003e survey results. Which reminds me, please sign up to take my \u003cem\u003eState of MooTools 2023 Survey\u003c/em\u003e before it’s too late. One lucky participant will receive a limited edition Furby signed by Gnarls Barkley.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://unlayer.com/embed\"\u003eUnlayer Embed\u003c/a\u003e is a drag-and-drop email editor and page builder for your SaaS application that’s easy to embed and will easily save you weeks of dev time. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://storybook.js.org/blog/storybook-7-5/\"\u003eStorybook 7.5\u003c/a\u003e was released last week with zero-config support for Vite, 2.2x faster startup times for React TS projects, and better Next.js support.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ePreethi Sam wrote about \u003ca href=\"https://www.smashingmagazine.com/2023/10/animate-along-path-css/\"\u003eHow To Animate Along A Path In CSS\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eEvan Czaplicki gave an insightful talk at Strange Loop Conf called \u003ca href=\"https://www.youtube.com/watch?v=XZ3w_jec1v8\"\u003eThe Economics of Programming Languages\u003c/a\u003e, which he says is the talk he needed to hear 10 years ago when he was just starting to create Elm. Turns out, building a programming language is pretty hard unless you have the full financial backing of a FAANG company, or your dad is Abe Froman, the sausage king of Chicago.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/spot-the-bug.png\" alt=\"Spot the Bug logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eSpot the Bug: Solution\u003c/h2\u003e\u003cdiv class=\"section-presenter\" style=\"margin-bottom:50px;margin-top:15px\"\u003e\u003ch4\u003eSponsored by \u003ca href=\"https://p0.dev/?utm_campaign=bytes_dev_oct_23\u0026amp;utm_source=email\u0026amp;utm_medium=oct_23_spot_bug\u0026amp;utm_content=presenting_sponsor\"\u003eP0 Security\u003c/a\u003e\u003c/h4\u003e\u003c/div\u003e\u003c/div\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003elet\u003c/span\u003e i \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token number\"\u003e0\u003c/span\u003e\n\n\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003ex\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  i\u003cspan class=\"token operator\"\u003e++\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"token number\"\u003e10\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\ni \u003cspan class=\"token operator\"\u003e+=\u003c/span\u003e \u003cspan class=\"token function\"\u003ex\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\nconsole\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ei\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token comment\"\u003e// ?\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThe answer is \u003ccode\u003e10\u003c/code\u003e. Here’s how it works.\u003c/p\u003e\n\u003cp\u003eFor clarity, we can refactor \u003ccode\u003ei += x()\u003c/code\u003e to be \u003ccode\u003ei = i + x()\u003c/code\u003e. From there, the interpreter begins evaluating our code. Before it evaluates the function invocation, it seems that \u003ccode\u003ei\u003c/code\u003e evaluates to \u003ccode\u003e0\u003c/code\u003e, so now our code is \u003ccode\u003ei = 0 + x()\u003c/code\u003e. The invocation of \u003ccode\u003ex\u003c/code\u003e returns \u003ccode\u003e10\u003c/code\u003e, so now it’s \u003ccode\u003ei = 0 + 10\u003c/code\u003e, which gives us \u003ccode\u003ei = 10\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eNote that if you swap the order of \u003ccode\u003ei\u003c/code\u003e and \u003ccode\u003ex()\u003c/code\u003e like \u003ccode\u003ei = x() + i\u003c/code\u003e you get a different value - \u003cspan role=\"img\" aria-label=\"people hugging\"\u003e🫂\u003c/span\u003e.\u003c/p\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #233 - Angular goes meta\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/233\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #233 - Angular goes meta\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/233\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/analog.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #233 - Angular goes meta\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Another tease from the React team, The State of MooTools 2023 survey, and the perils of building a programming language without the financial backing of the sausage king of Chicago.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/analog.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

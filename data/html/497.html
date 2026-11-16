@@ -1,0 +1,338 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #497 - Next.js for agents</title><meta name="description" content="Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/497"/><meta property="og:title" content="Bytes #497 - Next.js for agents"/><meta property="og:description" content="Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher."/><meta property="og:url" content="https://bytes.dev/archives/497"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/eve-rapper.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #497 - Next.js for agents"/><meta name="twitter:description" content="Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher."/><meta name="twitter:image" content="https://bytes.dev/images/content/eve-rapper.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> Next.js for agents</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->497<!-- -->.</span><span class="mr-6 font-bold">June 19, 2026<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eve-rapper.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/greptile-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/druski-point.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/pop-quiz.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/497">#497</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/eve-rapper.jpg" alt="Eve rapping" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">The last thing you see before your agent bankrupts you<!-- --> </p></div><h3>Next.js for agents</h3><p>The New York Knicks just won the NBA championship, World Cup fans are experiencing the joys of free refills and ranch, and Vercel just launched <a href="https://vercel.com/blog/introducing-eve">a new agent framework called <code>eve</code></a>. It’s safe to say that we haven’t seen this level of vibes since Hot Girl Summer. But as much as we want to talk ball, we all know why we’re here. Let’s get to it.</p><p>This new open-source framework is like <code>Next.js</code> but instead of composing routes, layouts and components for web pages, <code>eve</code> uses the file system to describe an agent’s infrastructure and behavior. And conveniently for Vercel, this framework uses pretty much all of their services <span role="img" aria-label="money-mouth face">🤑</span>. But to be fair, building agents is much more about stringing services together than writing a bunch of code, and as it turns out, a directory structure is a really nice way to do this.</p><p>With <code>eve</code>, an agent looks like this:</p><pre><code>agent/
+├── agent.ts                   # the model it runs on
+├── instructions.md            # who it is
+├── tools/
+│   ├── run_sql.ts             # what it can do
+│   └── post_chart.ts
+├── skills/
+│   └── revenue-definitions.md # what it knows
+├── subagents/
+│   └── investigator/          # who it delegates to
+├── channels/
+│   └── slack.ts               # where it lives
+└── schedules/
+    └── monday-summary.ts      # when it acts on its own
+</code></pre><p>Here is a quick breakdown of the different components:</p><ul>
+<li><strong>Durable runtime:</strong> Built on top of Vercel’s Workflows service, the runtime can be suspended and resumed without losing state.</li>
+<li><strong>Sandboxes:</strong> Agents can spin up sandboxed environments (Firecracker microVM) to run untrusted code that your agent generates.</li>
+<li><strong>Connect:</strong> This service handles OAuth connections to external services like Linear, Slack, Discord, and more.</li>
+<li><strong>Cron:</strong> When marketers use the word “agentic” they usually just mean a spicy cron job, so obviously that’s a part of the stack.</li>
+<li><strong>Evals:</strong> Built on their observability service, evals let you “score” how well your agent did on a given task and give you information on how to improve the agent over time.</li>
+</ul><p><strong>Bottom Line:</strong> If the brief for <code>eve</code> was to create a product that uses every service Vercel has ever created, they definitely succeeded. But even if this product bankrupts me, I’d still choose it over manually wiring things up in AWS.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/497" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F497" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Vercel%20launched%20a%20new%20agent%20framework%20called%20eve.%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F497" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AVercel%20launched%20a%20new%20agent%20framework%20called%20eve.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F497" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/greptile-logo.png" alt="Greptile logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/druski-point.jpg" alt="Druski pointing" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">When my AI code reviewer makes a valid point<!-- --> </p></div><h3><a href="https://www.greptile.com/?utm_source=bytes&amp;utm_medium=sponsorship&amp;utm_campaign=bytes_primary">The AI Code Reviewer that you’ll actually use.</a></h3><p>Have you noticed that there are a LOT of code review tools on the market but none of them seem to stick? This is because other tools are too noisy, miss important context, or take forever to run. <a href="https://www.greptile.com/?utm_source=bytes&amp;utm_medium=sponsorship&amp;utm_campaign=bytes_primary">Greptile</a> might be the missing sweet spot.</p><p>Here’s how it works.</p><ol>
+<li>It indexes your codebase to build a searchable map of architecture, dependencies, and code relationships.</li>
+<li>Then it dispatches agents in parallel to analyze changes from multiple angles and identify issues faster.</li>
+<li>Over time, Greptile learns your team’s standards to deliver reviews that match your engineering practices and preferences.</li>
+</ol><p>Find out why popular open source projects like PyTorch, Solana, and NVIDIA are all using Greptile as their code review agent.</p><p><a href="https://www.greptile.com/?utm_source=bytes&amp;utm_medium=sponsorship&amp;utm_campaign=bytes_primary">Learn more here</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="140" src="https://bytes.dev/images/content/pop-quiz.png" alt="Pop Quiz logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Pop Quiz</h2><div class="section-presenter" style="margin-bottom:50px;margin-top:15px"><h4>Sponsored by <a href="https://sentry.io/resources/201-series/?utm_source=bytes&amp;utm_medium=paid-community&amp;utm_campaign=brand-fy27q2-201workshop&amp;utm_content=newsletter-presenting-201-workshop-register">Sentry</a></h4><p><em>Learn how to get the most out of Sentry by <a href="https://sentry.io/resources/201-series/?utm_source=bytes&amp;utm_medium=paid-community&amp;utm_campaign=brand-fy27q2-201workshop&amp;utm_content=newsletter-presenting-201-workshop-register">registering for their free seminar series</a>, which covers integrations, debugging, and agentic workflows.</em></p></div></div>
+<p>What will be logged to the console after the code is finished executing?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">first</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Jordyn'</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">second</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Jake'</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Tyler'</span>
+<span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">second</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+</code></pre>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>Not to be outdone by Vercel, Fred and the Cloudflare team released the beta for their own <a href="https://flueframework.com/blog/flue-1-0-beta">agent framework called Flue</a>. Game on.</p>
+</li>
+<li>
+<p>The team at Thoughtful wrote about <a href="https://www.thoughtfullab.com/the-state-of-ai-post-training-agents.html">post-training AI agents</a>.</p>
+</li>
+<li>
+<p>Shopify Engineering breaks down the <a href="https://shopify.engineering/catalog-clustering?utm_source=comms_paid&amp;utm_medium=newsletter&amp;utm_campaign=bytes-eng_Q226YPWFBH">LLM-powered system that matches related products across billions of listings and millions of merchants</a>. [sponsored]</p>
+</li>
+<li>
+<p>Sydney Runkle wrote about the <a href="https://www.langchain.com/blog/the-art-of-loop-engineering">art of loop engineering</a>. The fact that there is something called “loop engineering” probably has John von Neumann rolling in his grave.</p>
+</li>
+<li>
+<p>Ryan Dahl let his team build <a href="https://docs.deno.com/runtime/desktop/">Deno Desktop</a>, an alternative to Electron that runs on Deno instead of Node.js. We love a petty king.</p>
+</li>
+<li>
+<p>The Remix team just released <a href="https://remix.run/blog/react-router-v8">React Router v8</a> featuring lazy-route discovery, better middleware, and an explanation of why Ryan and Michael <del>don’t love you anymore</del> are working on other things.</p>
+</li>
+<li>
+<p><a href="https://trigger.dev/">Trigger.dev</a> lets you build resilient AI agents and workflows in TypeScript without hitting timeouts, with queues, cron, scheduling, observability, and real-time UI streaming built in. [sponsored]</p>
+</li>
+<li>
+<p>Zod creator Colin McDonnell created a Bun-like all-in-one toolkit for Node.js and called it <a href="https://nubjs.com/"><code>nub</code></a>. Yes, Colin used to work on Bun and yes, <code>nub</code> is Bun spelled backwards.</p>
+</li>
+<li>
+<p>Poolside, an American open-source AI company, released <code>pool</code>, their <a href="https://github.com/poolsideai/pool">coding agent harness</a>.</p>
+</li>
+<li>
+<p>Companies like Supabase, Clerk, and Mintlify run CI on <a href="https://blacksmith.sh/?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=bytes_secondary_2026_06_19">Blacksmith</a>: a drop-in replacement for GitHub runners that’s 2x faster and 60% cheaper. [sponsored]</p>
+</li>
+<li>
+<p>Vicki Boykis wants you to know that <a href="https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/">local models are actually pretty good now</a>. You just need 64 GB of RAM and a fire extinguisher to run them.</p>
+</li>
+<li>
+<p>The release candidate for <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-rc/">TypeScript 7.0</a> is out now. It’s 10x faster than TypeScript 6.0 but also requires a fire extinguisher.</p>
+</li>
+</ol>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="140" src="https://bytes.dev/images/content/pop-quiz.png" alt="Pop Quiz logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Pop Quiz: Answer</h2><div class="section-presenter" style="margin-bottom:50px;margin-top:15px"><h4>Sponsored by <a href="https://sentry.io/resources/201-series/?utm_source=bytes&amp;utm_medium=paid-community&amp;utm_campaign=brand-fy27q2-201workshop&amp;utm_content=newsletter-presenting-201-workshop-register">Sentry</a></h4></div></div>
+<p>What will be logged to the console after the code is finished executing?</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">first</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Jordyn'</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">second</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Jake'</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Tyler'</span>
+<span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">second</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+</code></pre>
+<p>We get <code>undefined</code>, <code>Jordyn</code>, <code>Jake</code>, then <code>Tyler</code>.</p>
+<p>What this shows us is that you can think of each new Execution Context as having its own unique variable environment. Even though there are other Execution Contexts that contain the variable name, the JavaScript engine will first look to the current Execution Context for that variable.</p></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"497\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"497\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"497\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" Next.js for agents\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"497\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"June 19, 2026\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T4374,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eve-rapper.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/greptile-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/druski-point.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/pop-quiz.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/497\"\u003e#497\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/eve-rapper.jpg\" alt=\"Eve rapping\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eThe last thing you see before your agent bankrupts you\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eNext.js for agents\u003c/h3\u003e\u003cp\u003eThe New York Knicks just won the NBA championship, World Cup fans are experiencing the joys of free refills and ranch, and Vercel just launched \u003ca href=\"https://vercel.com/blog/introducing-eve\"\u003ea new agent framework called \u003ccode\u003eeve\u003c/code\u003e\u003c/a\u003e. It’s safe to say that we haven’t seen this level of vibes since Hot Girl Summer. But as much as we want to talk ball, we all know why we’re here. Let’s get to it.\u003c/p\u003e\u003cp\u003eThis new open-source framework is like \u003ccode\u003eNext.js\u003c/code\u003e but instead of composing routes, layouts and components for web pages, \u003ccode\u003eeve\u003c/code\u003e uses the file system to describe an agent’s infrastructure and behavior. And conveniently for Vercel, this framework uses pretty much all of their services \u003cspan role=\"img\" aria-label=\"money-mouth face\"\u003e🤑\u003c/span\u003e. But to be fair, building agents is much more about stringing services together than writing a bunch of code, and as it turns out, a directory structure is a really nice way to do this.\u003c/p\u003e\u003cp\u003eWith \u003ccode\u003eeve\u003c/code\u003e, an agent looks like this:\u003c/p\u003e\u003cpre\u003e\u003ccode\u003eagent/\n├── agent.ts                   # the model it runs on\n├── instructions.md            # who it is\n├── tools/\n│   ├── run_sql.ts             # what it can do\n│   └── post_chart.ts\n├── skills/\n│   └── revenue-definitions.md # what it knows\n├── subagents/\n│   └── investigator/          # who it delegates to\n├── channels/\n│   └── slack.ts               # where it lives\n└── schedules/\n    └── monday-summary.ts      # when it acts on its own\n\u003c/code\u003e\u003c/pre\u003e\u003cp\u003eHere is a quick breakdown of the different components:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eDurable runtime:\u003c/strong\u003e Built on top of Vercel’s Workflows service, the runtime can be suspended and resumed without losing state.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eSandboxes:\u003c/strong\u003e Agents can spin up sandboxed environments (Firecracker microVM) to run untrusted code that your agent generates.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eConnect:\u003c/strong\u003e This service handles OAuth connections to external services like Linear, Slack, Discord, and more.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCron:\u003c/strong\u003e When marketers use the word “agentic” they usually just mean a spicy cron job, so obviously that’s a part of the stack.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eEvals:\u003c/strong\u003e Built on their observability service, evals let you “score” how well your agent did on a given task and give you information on how to improve the agent over time.\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e If the brief for \u003ccode\u003eeve\u003c/code\u003e was to create a product that uses every service Vercel has ever created, they definitely succeeded. But even if this product bankrupts me, I’d still choose it over manually wiring things up in AWS.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/497\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F497\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Vercel%20launched%20a%20new%20agent%20framework%20called%20eve.%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F497\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AVercel%20launched%20a%20new%20agent%20framework%20called%20eve.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F497\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/greptile-logo.png\" alt=\"Greptile logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/druski-point.jpg\" alt=\"Druski pointing\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eWhen my AI code reviewer makes a valid point\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://www.greptile.com/?utm_source=bytes\u0026amp;utm_medium=sponsorship\u0026amp;utm_campaign=bytes_primary\"\u003eThe AI Code Reviewer that you’ll actually use.\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eHave you noticed that there are a LOT of code review tools on the market but none of them seem to stick? This is because other tools are too noisy, miss important context, or take forever to run. \u003ca href=\"https://www.greptile.com/?utm_source=bytes\u0026amp;utm_medium=sponsorship\u0026amp;utm_campaign=bytes_primary\"\u003eGreptile\u003c/a\u003e might be the missing sweet spot.\u003c/p\u003e\u003cp\u003eHere’s how it works.\u003c/p\u003e\u003col\u003e\n\u003cli\u003eIt indexes your codebase to build a searchable map of architecture, dependencies, and code relationships.\u003c/li\u003e\n\u003cli\u003eThen it dispatches agents in parallel to analyze changes from multiple angles and identify issues faster.\u003c/li\u003e\n\u003cli\u003eOver time, Greptile learns your team’s standards to deliver reviews that match your engineering practices and preferences.\u003c/li\u003e\n\u003c/ol\u003e\u003cp\u003eFind out why popular open source projects like PyTorch, Solana, and NVIDIA are all using Greptile as their code review agent.\u003c/p\u003e\u003cp\u003e\u003ca href=\"https://www.greptile.com/?utm_source=bytes\u0026amp;utm_medium=sponsorship\u0026amp;utm_campaign=bytes_primary\"\u003eLearn more here\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"140\" src=\"https://bytes.dev/images/content/pop-quiz.png\" alt=\"Pop Quiz logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003ePop Quiz\u003c/h2\u003e\u003cdiv class=\"section-presenter\" style=\"margin-bottom:50px;margin-top:15px\"\u003e\u003ch4\u003eSponsored by \u003ca href=\"https://sentry.io/resources/201-series/?utm_source=bytes\u0026amp;utm_medium=paid-community\u0026amp;utm_campaign=brand-fy27q2-201workshop\u0026amp;utm_content=newsletter-presenting-201-workshop-register\"\u003eSentry\u003c/a\u003e\u003c/h4\u003e\u003cp\u003e\u003cem\u003eLearn how to get the most out of Sentry by \u003ca href=\"https://sentry.io/resources/201-series/?utm_source=bytes\u0026amp;utm_medium=paid-community\u0026amp;utm_campaign=brand-fy27q2-201workshop\u0026amp;utm_content=newsletter-presenting-201-workshop-register\"\u003eregistering for their free seminar series\u003c/a\u003e, which covers integrations, debugging, and agentic workflows.\u003c/em\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\n\u003cp\u003eWhat will be logged to the console after the code is finished executing?\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003efirst\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003evar\u003c/span\u003e name \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Jordyn'\u003c/span\u003e\n\n  console\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003esecond\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003evar\u003c/span\u003e name \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Jake'\u003c/span\u003e\n\n  console\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\nconsole\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token keyword\"\u003evar\u003c/span\u003e name \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Tyler'\u003c/span\u003e\n\u003cspan class=\"token function\"\u003efirst\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token function\"\u003esecond\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\nconsole\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eNot to be outdone by Vercel, Fred and the Cloudflare team released the beta for their own \u003ca href=\"https://flueframework.com/blog/flue-1-0-beta\"\u003eagent framework called Flue\u003c/a\u003e. Game on.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe team at Thoughtful wrote about \u003ca href=\"https://www.thoughtfullab.com/the-state-of-ai-post-training-agents.html\"\u003epost-training AI agents\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eShopify Engineering breaks down the \u003ca href=\"https://shopify.engineering/catalog-clustering?utm_source=comms_paid\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=bytes-eng_Q226YPWFBH\"\u003eLLM-powered system that matches related products across billions of listings and millions of merchants\u003c/a\u003e. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSydney Runkle wrote about the \u003ca href=\"https://www.langchain.com/blog/the-art-of-loop-engineering\"\u003eart of loop engineering\u003c/a\u003e. The fact that there is something called “loop engineering” probably has John von Neumann rolling in his grave.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eRyan Dahl let his team build \u003ca href=\"https://docs.deno.com/runtime/desktop/\"\u003eDeno Desktop\u003c/a\u003e, an alternative to Electron that runs on Deno instead of Node.js. We love a petty king.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe Remix team just released \u003ca href=\"https://remix.run/blog/react-router-v8\"\u003eReact Router v8\u003c/a\u003e featuring lazy-route discovery, better middleware, and an explanation of why Ryan and Michael \u003cdel\u003edon’t love you anymore\u003c/del\u003e are working on other things.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://trigger.dev/\"\u003eTrigger.dev\u003c/a\u003e lets you build resilient AI agents and workflows in TypeScript without hitting timeouts, with queues, cron, scheduling, observability, and real-time UI streaming built in. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eZod creator Colin McDonnell created a Bun-like all-in-one toolkit for Node.js and called it \u003ca href=\"https://nubjs.com/\"\u003e\u003ccode\u003enub\u003c/code\u003e\u003c/a\u003e. Yes, Colin used to work on Bun and yes, \u003ccode\u003enub\u003c/code\u003e is Bun spelled backwards.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ePoolside, an American open-source AI company, released \u003ccode\u003epool\u003c/code\u003e, their \u003ca href=\"https://github.com/poolsideai/pool\"\u003ecoding agent harness\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eCompanies like Supabase, Clerk, and Mintlify run CI on \u003ca href=\"https://blacksmith.sh/?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=bytes_secondary_2026_06_19\"\u003eBlacksmith\u003c/a\u003e: a drop-in replacement for GitHub runners that’s 2x faster and 60% cheaper. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eVicki Boykis wants you to know that \u003ca href=\"https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/\"\u003elocal models are actually pretty good now\u003c/a\u003e. You just need 64 GB of RAM and a fire extinguisher to run them.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe release candidate for \u003ca href=\"https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-rc/\"\u003eTypeScript 7.0\u003c/a\u003e is out now. It’s 10x faster than TypeScript 6.0 but also requires a fire extinguisher.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"140\" src=\"https://bytes.dev/images/content/pop-quiz.png\" alt=\"Pop Quiz logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003ePop Quiz: Answer\u003c/h2\u003e\u003cdiv class=\"section-presenter\" style=\"margin-bottom:50px;margin-top:15px\"\u003e\u003ch4\u003eSponsored by \u003ca href=\"https://sentry.io/resources/201-series/?utm_source=bytes\u0026amp;utm_medium=paid-community\u0026amp;utm_campaign=brand-fy27q2-201workshop\u0026amp;utm_content=newsletter-presenting-201-workshop-register\"\u003eSentry\u003c/a\u003e\u003c/h4\u003e\u003c/div\u003e\u003c/div\u003e\n\u003cp\u003eWhat will be logged to the console after the code is finished executing?\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003efirst\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003evar\u003c/span\u003e name \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Jordyn'\u003c/span\u003e\n\n  console\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003esecond\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003evar\u003c/span\u003e name \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Jake'\u003c/span\u003e\n\n  console\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\nconsole\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token keyword\"\u003evar\u003c/span\u003e name \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token string\"\u003e'Tyler'\u003c/span\u003e\n\u003cspan class=\"token function\"\u003efirst\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token function\"\u003esecond\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\nconsole\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003elog\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003ename\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWe get \u003ccode\u003eundefined\u003c/code\u003e, \u003ccode\u003eJordyn\u003c/code\u003e, \u003ccode\u003eJake\u003c/code\u003e, then \u003ccode\u003eTyler\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eWhat this shows us is that you can think of each new Execution Context as having its own unique variable environment. Even though there are other Execution Contexts that contain the variable name, the JavaScript engine will first look to the current Execution Context for that variable.\u003c/p\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #497 - Next.js for agents\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/497\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #497 - Next.js for agents\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/497\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/eve-rapper.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #497 - Next.js for agents\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Bun spelled backwards, an all-American coding harness, and why you might need to buy a fire extinguisher.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/eve-rapper.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #109 - what exactly are the differences between JSC and V8?</title><meta name="description" content="This issue, we&#x27;ve got robots, engines, and minions."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/109"/><meta property="og:title" content="Bytes #109 - what exactly are the differences between JSC and V8?"/><meta property="og:description" content="This issue, we&#x27;ve got robots, engines, and minions."/><meta property="og:url" content="https://bytes.dev/archives/109"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/robot.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #109 - what exactly are the differences between JSC and V8?"/><meta name="twitter:description" content="This issue, we&#x27;ve got robots, engines, and minions."/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/robot.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> what exactly are the differences between JSC and V8?</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->109<!-- -->.</span><span class="mr-6 font-bold">July 18, 2022<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/robot.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/mj.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/familia.jpg"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p>This week, we’ve got robots, engines, and minions.</p>
+<p>Welcome to #109.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/robot.jpg" alt="Sad Robot">
+</p><p class="image-alt">When you finally give GitHub Copilot your credit card</p><p></p>
+<h2>Love, Death &amp; (Coding) Robots</h2>
+<p>Last year, GitHub introduced us all to Codepilot, aka T9Word for developers.</p>
+<p>It’s trained on OpenAI’s Codex, which is made up of billions of lines of open-source code, so it can suggest code and entire functions in real time inside your editor as you write code.</p>
+<p>Over 1.2 million developers used it during its 1-year “technical preview” stage, which <a href="https://github.blog/2022-06-21-github-copilot-is-generally-available-to-all-developers/">just ended</a> last month when GH made it generally available. Oh, and it also costs $10 a month now (surprise!) — but more on that later.</p>
+<p>Copilot is definitely a polarizing tool, so let’s do the responsible thing your mom always told you to do, and write out a list of the pro and cons.</p>
+<p><strong>Copilot Pros:</strong></p>
+<ul>
+<li>It makes writing code easier and faster. (Copilot writes almost 40% of the code in the files where it’s enabled.)</li>
+</ul>
+<p><strong>Copilot Cons:</strong></p>
+<ul>
+<li>
+<p>The open-source code it was trained on was written by *human* developers who never specifically consented to their code being used for this purpose.</p>
+</li>
+<li>
+<p>Copilot sometimes recommends larger code snippets that are copy-pasta’d directly from the training set.</p>
+</li>
+<li>
+<p>It can potentially recommend code with bugs and insecure/out of date coding patterns.</p>
+</li>
+<li>
+<p>It costs money now, and $10 is my exact monthly budget for <a href="https://www.pennlive.com/life/2022/04/mountain-dew-says-welcome-to-hell-with-national-retail-release-of-flamin-hot-flavor.html">Flamin’ Hot Mtn Dews</a>.</p>
+</li>
+</ul>
+<p>Ok, that’s a lot of cons, but in the interest of adding a little nuance <em>(gasp)</em>, here are some counterpoints to consider for each con:</p>
+<ul>
+<li>
+<p>Copilot <a href="https://www.fsf.org/licensing/copilot/copyright-implications-of-the-use-of-code-repositories-to-train-a-machine-learning-model">isn’t committing copyright infringement</a>. Training ML systems on public data falls under fair use (at least for now), with the output belonging to the operator, similar to a compiler — as Nat Friedman argued <a href="https://twitter.com/natfriedman/status/1409914420579344385">last year</a>.</p>
+</li>
+<li>
+<p>It only recommends snippets from the training set that are longer than 150 characters 1% of the time. And you can turn on a filter to make it so those results don’t ever get shown to you, if you want.</p>
+</li>
+<li>
+<p>You write code with bugs and insecure/out of date coding patterns literally every day.</p>
+</li>
+<li>
+<p>It costs <a href="https://twitter.com/rakyll/status/1539398214519951360?s=20&amp;t=Er9u8PDKF1I6zF3ASfXdIg">a lot of money</a> to run the racks on racks of GPU’s that are required to power a high-quality AI at scale. Giving away Copilot for free forever probably isn’t sustainable, even for Microsoft.</p>
+</li>
+</ul>
+<p><strong>Bottom Line:</strong> Love it or hate it, the robots aren’t going away anytime soon. Jeffrey B’s old squad just launched a preview of <a href="https://aws.amazon.com/blogs/aws/now-in-preview-amazon-codewhisperer-ml-powered-coding-companion/">Amazon CodeWhisperer</a> last month, and other tools like <a href="https://www.tabnine.com/">Tabnine</a> and Kite continue to pick up momentum.</p>
+<p>Let’s just hope that the code the AI’s write isn’t as cursed as the images that Dall-E <a href="https://www.reddit.com/r/weirddalle/comments/v9ai16/karl_marx_slimed_at_kids_choice_awards/">creates</a>.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/mj.jpg" alt="Michael Jordan celebrating after pushing off of Bryon Russel">
+</p><p class="image-alt">When you get analytics working after 12 weeks of SQL hell [sponsored]</p><p></p>
+<h2><a href="https://posthog.com/?utm_source=bytes&amp;utm_medium=newsletter">PostHog</a> cracked the code</h2>
+<p>For centuries, product managers and philosophers have tried to solve <strong>The Analytics Dilemma:</strong> “The more engineering time you spend building product analytics, the less time you can spend on <em>*actually building*</em> your product.”</p>
+<p>But PostHog has finally cut the Gordian Knot and set us all free.</p>
+<p>They built an open source <a href="https://github.com/PostHog/posthog">(8,000 GH stars with 280+ contributors)</a> and fully-featured product analytics platform that you can self-host.</p>
+<p><strong>The best parts:</strong></p>
+<ol>
+<li>
+<p>You don’t have to write SQL <span role="img" aria-label="face vomiting">🤮</span></p>
+</li>
+<li>
+<p>You can build anything — heatmaps, user paths, session recordings, funnel analysis, feature flags, split tests in production, and lots more</p>
+</li>
+<li>
+<p>You get real-time analytics with their event pipelines and simple API</p>
+</li>
+</ol>
+<p>Hasura, SpaceX, and 10,000 other companies have built their entire data stack on PostHog.</p>
+<p>That’s because they’re smart enough to realize that engineers should spend their time making the actual sausage, not building random tools to try and figure out if the customer likes how it tastes.</p>
+<p><a href="https://posthog.com/?utm_source=bytes&amp;utm_medium=newsletter">Check it out.</a> Say goodbye to SQL.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/familia.jpg" alt="The Rock and Vin Diesel">
+</p><p class="image-alt">You’re a long way from home</p><p></p>
+<h2>Fast and the Furious: Engine Wars</h2>
+<p>We wrote about Bun last week when it was hot out the oven, but it’s still the only thing people are talking about — so we wanted to take a peak underneath the hood to see what makes it so insanely fast.</p>
+<p>Yes, this is a lot like going to Jack in the Box and asking, “what exactly do you put in your tacos that makes them so delicious,” but we’re doing it anyway.</p>
+<p><strong>The Need for Speed:</strong> One of the biggest differences between Bun and competitors like Node and Deno is that it uses JavaScriptCore instead of V8 as the engine for its runtime. These two JS engines have been competing for a while now, but it’s worth noting that React Native chose JSC over V8 seven years ago <a href="https://twitter.com/Vjeux/status/1546440856059666432?s=20&amp;t=IeIL3nYIDtbdBkaSfU8-Yw">because it was faster</a> (before they built <a href="https://hermesengine.dev/">Hermes</a>).</p>
+<p>So what exactly are the differences between JSC and V8?</p>
+<p>When we’re talking about speed, we’re actually talking about <em>types</em> of speed (since there are lots of <a href="https://mathiasbynens.be/notes/prototypes#tradeoffs">tradeoffs</a> for JS engines to consider). Lets look at some <span role="img" aria-label="taco">🌮</span> meat:</p>
+<ul>
+<li>JSC prioritizes faster start times, while V8 prioritizes fast execution (that’s a semi-hand-wavey generalization <span role="img" aria-label="waving hand">👋</span>)</li>
+<li>JSC has 3 optimizing compilers (more complex, but faster), while V8 has 2 optimizing compilers (less complex and easier to use, but not as fast)</li>
+<li>JSC’s architecture uses less memory (great for battery life on the devices Apple is selling you), but it executes the code a little bit slower</li>
+<li>V8 does more runtime optimization, but that takes more memory — which is why your laptop is on fire when you have more than 3 Chrome tabs open</li>
+<li>Here are a <a href="https://twitter.com/jarredsumner/status/1548072064501747712?s=20&amp;t=i1jdCTDRq_1_pm8mtvaa4g">few more tradeoffs</a> from Jarred Sumner, CBO (Chief Bun-Boi Officer)</li>
+</ul>
+<p><strong>Bottom Line:</strong> Vin Diesel needed Dwayne “The Rock” Johnson to activate his nostril flare game, just like V8 needed JSC to give it a run for its money (with lil’ Bun riding that wave). The winner: JavaScript developers — <a href="https://www.youtube.com/watch?v=-NrU1IJGMZM">salute mi familia</a>.</p>
+<hr>
+<h2>Spot the Bug — Sponsored by <a href="https://raygun.com/?utm_medium=sponsorship&amp;utm_source=bytes&amp;utm_campaign=bytes-spot-the-bug&amp;utm_content=blog">Raygun</a></h2>
+<p><em>Raygun is the best tool for catching and resolving bugs before they crash prod. We use it at ui.dev and it’s been super helpful.</em></p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Modal<span class="token punctuation">,</span> ModalHeader<span class="token punctuation">,</span> ModalBody<span class="token punctuation">,</span> ModalFooter<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../components/Modal'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">InputModal</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>isOpen<span class="token punctuation">,</span> close<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> inputRef <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isOpen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      inputRef<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>isOpen<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Modal isOpen<span class="token operator">=</span><span class="token punctuation">{</span>isOpen<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>ModalHeader<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>What is your name<span class="token operator">?</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ModalHeader<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>ModalBody<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input name<span class="token operator">=</span><span class="token string">"name"</span> ref<span class="token operator">=</span><span class="token punctuation">{</span>inputRef<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ModalBody<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>ModalFooter<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Close<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ModalFooter<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Modal<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p><a href="https://vitejs.dev/blog/announcing-vite3.html">Vite 3</a> was just released with new docs, new <code>create-vite</code> starter templates for most major frameworks, new CLI improvements, and lots more as it continues to take over the web dev ecosystem. <em>Vini, Vidi, Vite-chi.</em></p>
+</li>
+<li>
+<p><a href="https://carbonqa.com/?utm_source=bytes&amp;utm_medium=email&amp;utm_campaign=cool_bits&amp;utm_content=dev1">CarbonQA</a> provides QA services geared for dev teams. They’ll boost your team’s morale sky-high by… breaking your code repeatedly. But the good news is that you’ll never have to waste time on testing again. They work in your tools, talk with your team on Slack, and let your devs be devs. [sponsored]</p>
+</li>
+<li>
+<p>Klint Finley wrote about how <a href="https://github.com/readme/featured/functional-programming">Functional programming is finally going mainstream</a> for the GitHub ReadMe project. No word yet on how much of the article was written by Copilot.</p>
+</li>
+<li>
+<p>The creator of Scrum said we should all <a href="https://twitter.com/allenholub/status/1547269599359447040?s=20&amp;t=n1sU5Rmq829VXodGj0EHuw">stop breaking up stories into estimated tasks</a>. Looks like your manager is going to have to get another job.</p>
+</li>
+<li>
+<p><a href="https://nodered.org/blog/2022/07/14/version-3-0-released">Node-RED 3.0</a> was just released, making it easier than ever to program IoT devices with their no-code UI. One day, we’ll use it to build a smart grill that’s so smart that it’ll automatically turn on whenever you start singing this banger about <a href="https://twitter.com/PardonMyTake/status/1543653516954173440">grillin’ on the roof</a>.</p>
+</li>
+<li>
+<p><a href="https://motion.dev/dom/scroll">Scroll</a> is a small function for creating scroll-linked animations. Now, every website can feel like the website for one of those boujee, Brooklyn-based “creative agencies” where no one understands what they actually do (including the people who work there).</p>
+</li>
+<li>
+<p>Jake Archibald and Cassie Evans chatted about <a href="https://www.youtube.com/watch?v=9qen5CKjUe8&amp;list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9">Demystifying SVG Paths</a> in this 17-minute video. Now if only someone could demystify <a href="https://www.youtube.com/watch?v=j15-CTFeAWg">this TikTok trend</a> for me where teenagers dress up in full suits to go see the new Minions movie.</p>
+</li>
+<li>
+<p><a href="https://github.com/ossjs/release">Release</a> is a minimalistic, opinionated, and predictable release automation tool that’s like Prettier for automated releases. <em>Sweet Release</em> is the name of a package I created to get myself out of a toxic job by deleting my team’s entire codebase and sending an automated Slack message to my manager letting him know that it was me who did it, so that I would be instantly fired (with severance). Sweet, sweet release.</p>
+</li>
+</ol>
+<hr>
+<h2>Spot the Bug Solution — Sponsored by <a href="https://raygun.com/?utm_medium=sponsorship&amp;utm_source=bytes&amp;utm_campaign=bytes-spot-the-bug&amp;utm_content=blog">Raygun</a></h2>
+<p>React treats the ref as a “box” that can hold a mutable value in it’s <code>.current</code> property, including DOM elements. Since React needs a way to update the ref’s value without completely overriding it, the ref itself is an object with a mutable <code>.current</code> property that can be changed any time without changing the object reference.</p>
+<p>The bug happens when we try to <code>.focus()</code> the <code>inputRef</code>. The input DOM element is stored in the <code>.current</code> property, so the correct way to focus the input is to call <code>inputRef.current.focus()</code>.</p>
+<p>Here’s the solution -</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">InputModal</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>isOpen<span class="token punctuation">,</span> close<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> inputRef <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isOpen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      inputRef<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">[</span>isOpen<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// ...</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Refs can store more than just DOM elements - they can store any value a component needs to hold on to without causing a re-render whenever the value changes.</p></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"109\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"109\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"109\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" what exactly are the differences between JSC and V8?\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"109\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"July 18, 2022\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T4c52,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/robot.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/mj.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/familia.jpg\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003eThis week, we’ve got robots, engines, and minions.\u003c/p\u003e\n\u003cp\u003eWelcome to #109.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/robot.jpg\" alt=\"Sad Robot\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eWhen you finally give GitHub Copilot your credit card\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eLove, Death \u0026amp; (Coding) Robots\u003c/h2\u003e\n\u003cp\u003eLast year, GitHub introduced us all to Codepilot, aka T9Word for developers.\u003c/p\u003e\n\u003cp\u003eIt’s trained on OpenAI’s Codex, which is made up of billions of lines of open-source code, so it can suggest code and entire functions in real time inside your editor as you write code.\u003c/p\u003e\n\u003cp\u003eOver 1.2 million developers used it during its 1-year “technical preview” stage, which \u003ca href=\"https://github.blog/2022-06-21-github-copilot-is-generally-available-to-all-developers/\"\u003ejust ended\u003c/a\u003e last month when GH made it generally available. Oh, and it also costs $10 a month now (surprise!) — but more on that later.\u003c/p\u003e\n\u003cp\u003eCopilot is definitely a polarizing tool, so let’s do the responsible thing your mom always told you to do, and write out a list of the pro and cons.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eCopilot Pros:\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eIt makes writing code easier and faster. (Copilot writes almost 40% of the code in the files where it’s enabled.)\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eCopilot Cons:\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eThe open-source code it was trained on was written by *human* developers who never specifically consented to their code being used for this purpose.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eCopilot sometimes recommends larger code snippets that are copy-pasta’d directly from the training set.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eIt can potentially recommend code with bugs and insecure/out of date coding patterns.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eIt costs money now, and $10 is my exact monthly budget for \u003ca href=\"https://www.pennlive.com/life/2022/04/mountain-dew-says-welcome-to-hell-with-national-retail-release-of-flamin-hot-flavor.html\"\u003eFlamin’ Hot Mtn Dews\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eOk, that’s a lot of cons, but in the interest of adding a little nuance \u003cem\u003e(gasp)\u003c/em\u003e, here are some counterpoints to consider for each con:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eCopilot \u003ca href=\"https://www.fsf.org/licensing/copilot/copyright-implications-of-the-use-of-code-repositories-to-train-a-machine-learning-model\"\u003eisn’t committing copyright infringement\u003c/a\u003e. Training ML systems on public data falls under fair use (at least for now), with the output belonging to the operator, similar to a compiler — as Nat Friedman argued \u003ca href=\"https://twitter.com/natfriedman/status/1409914420579344385\"\u003elast year\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eIt only recommends snippets from the training set that are longer than 150 characters 1% of the time. And you can turn on a filter to make it so those results don’t ever get shown to you, if you want.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYou write code with bugs and insecure/out of date coding patterns literally every day.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eIt costs \u003ca href=\"https://twitter.com/rakyll/status/1539398214519951360?s=20\u0026amp;t=Er9u8PDKF1I6zF3ASfXdIg\"\u003ea lot of money\u003c/a\u003e to run the racks on racks of GPU’s that are required to power a high-quality AI at scale. Giving away Copilot for free forever probably isn’t sustainable, even for Microsoft.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e Love it or hate it, the robots aren’t going away anytime soon. Jeffrey B’s old squad just launched a preview of \u003ca href=\"https://aws.amazon.com/blogs/aws/now-in-preview-amazon-codewhisperer-ml-powered-coding-companion/\"\u003eAmazon CodeWhisperer\u003c/a\u003e last month, and other tools like \u003ca href=\"https://www.tabnine.com/\"\u003eTabnine\u003c/a\u003e and Kite continue to pick up momentum.\u003c/p\u003e\n\u003cp\u003eLet’s just hope that the code the AI’s write isn’t as cursed as the images that Dall-E \u003ca href=\"https://www.reddit.com/r/weirddalle/comments/v9ai16/karl_marx_slimed_at_kids_choice_awards/\"\u003ecreates\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/mj.jpg\" alt=\"Michael Jordan celebrating after pushing off of Bryon Russel\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eWhen you get analytics working after 12 weeks of SQL hell [sponsored]\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003e\u003ca href=\"https://posthog.com/?utm_source=bytes\u0026amp;utm_medium=newsletter\"\u003ePostHog\u003c/a\u003e cracked the code\u003c/h2\u003e\n\u003cp\u003eFor centuries, product managers and philosophers have tried to solve \u003cstrong\u003eThe Analytics Dilemma:\u003c/strong\u003e “The more engineering time you spend building product analytics, the less time you can spend on \u003cem\u003e*actually building*\u003c/em\u003e your product.”\u003c/p\u003e\n\u003cp\u003eBut PostHog has finally cut the Gordian Knot and set us all free.\u003c/p\u003e\n\u003cp\u003eThey built an open source \u003ca href=\"https://github.com/PostHog/posthog\"\u003e(8,000 GH stars with 280+ contributors)\u003c/a\u003e and fully-featured product analytics platform that you can self-host.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eThe best parts:\u003c/strong\u003e\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eYou don’t have to write SQL \u003cspan role=\"img\" aria-label=\"face vomiting\"\u003e🤮\u003c/span\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYou can build anything — heatmaps, user paths, session recordings, funnel analysis, feature flags, split tests in production, and lots more\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYou get real-time analytics with their event pipelines and simple API\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eHasura, SpaceX, and 10,000 other companies have built their entire data stack on PostHog.\u003c/p\u003e\n\u003cp\u003eThat’s because they’re smart enough to realize that engineers should spend their time making the actual sausage, not building random tools to try and figure out if the customer likes how it tastes.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://posthog.com/?utm_source=bytes\u0026amp;utm_medium=newsletter\"\u003eCheck it out.\u003c/a\u003e Say goodbye to SQL.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/familia.jpg\" alt=\"The Rock and Vin Diesel\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eYou’re a long way from home\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eFast and the Furious: Engine Wars\u003c/h2\u003e\n\u003cp\u003eWe wrote about Bun last week when it was hot out the oven, but it’s still the only thing people are talking about — so we wanted to take a peak underneath the hood to see what makes it so insanely fast.\u003c/p\u003e\n\u003cp\u003eYes, this is a lot like going to Jack in the Box and asking, “what exactly do you put in your tacos that makes them so delicious,” but we’re doing it anyway.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eThe Need for Speed:\u003c/strong\u003e One of the biggest differences between Bun and competitors like Node and Deno is that it uses JavaScriptCore instead of V8 as the engine for its runtime. These two JS engines have been competing for a while now, but it’s worth noting that React Native chose JSC over V8 seven years ago \u003ca href=\"https://twitter.com/Vjeux/status/1546440856059666432?s=20\u0026amp;t=IeIL3nYIDtbdBkaSfU8-Yw\"\u003ebecause it was faster\u003c/a\u003e (before they built \u003ca href=\"https://hermesengine.dev/\"\u003eHermes\u003c/a\u003e).\u003c/p\u003e\n\u003cp\u003eSo what exactly are the differences between JSC and V8?\u003c/p\u003e\n\u003cp\u003eWhen we’re talking about speed, we’re actually talking about \u003cem\u003etypes\u003c/em\u003e of speed (since there are lots of \u003ca href=\"https://mathiasbynens.be/notes/prototypes#tradeoffs\"\u003etradeoffs\u003c/a\u003e for JS engines to consider). Lets look at some \u003cspan role=\"img\" aria-label=\"taco\"\u003e🌮\u003c/span\u003e meat:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eJSC prioritizes faster start times, while V8 prioritizes fast execution (that’s a semi-hand-wavey generalization \u003cspan role=\"img\" aria-label=\"waving hand\"\u003e👋\u003c/span\u003e)\u003c/li\u003e\n\u003cli\u003eJSC has 3 optimizing compilers (more complex, but faster), while V8 has 2 optimizing compilers (less complex and easier to use, but not as fast)\u003c/li\u003e\n\u003cli\u003eJSC’s architecture uses less memory (great for battery life on the devices Apple is selling you), but it executes the code a little bit slower\u003c/li\u003e\n\u003cli\u003eV8 does more runtime optimization, but that takes more memory — which is why your laptop is on fire when you have more than 3 Chrome tabs open\u003c/li\u003e\n\u003cli\u003eHere are a \u003ca href=\"https://twitter.com/jarredsumner/status/1548072064501747712?s=20\u0026amp;t=i1jdCTDRq_1_pm8mtvaa4g\"\u003efew more tradeoffs\u003c/a\u003e from Jarred Sumner, CBO (Chief Bun-Boi Officer)\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e Vin Diesel needed Dwayne “The Rock” Johnson to activate his nostril flare game, just like V8 needed JSC to give it a run for its money (with lil’ Bun riding that wave). The winner: JavaScript developers — \u003ca href=\"https://www.youtube.com/watch?v=-NrU1IJGMZM\"\u003esalute mi familia\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eSpot the Bug — Sponsored by \u003ca href=\"https://raygun.com/?utm_medium=sponsorship\u0026amp;utm_source=bytes\u0026amp;utm_campaign=bytes-spot-the-bug\u0026amp;utm_content=blog\"\u003eRaygun\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eRaygun is the best tool for catching and resolving bugs before they crash prod. We use it at ui.dev and it’s been super helpful.\u003c/em\u003e\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003eimport\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e useRef\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e useEffect \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e \u003cspan class=\"token keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"token string\"\u003e'react'\u003c/span\u003e\n\u003cspan class=\"token keyword\"\u003eimport\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003eModal\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e ModalHeader\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e ModalBody\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e ModalFooter\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e \u003cspan class=\"token keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"token string\"\u003e'../components/Modal'\u003c/span\u003e\n\n\u003cspan class=\"token keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"token keyword\"\u003edefault\u003c/span\u003e \u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003eInputModal\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003eisOpen\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e close\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e inputRef \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token function\"\u003euseRef\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token keyword\"\u003enull\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\n  \u003cspan class=\"token function\"\u003euseEffect\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n    \u003cspan class=\"token keyword\"\u003eif\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003eisOpen\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n      inputRef\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003efocus\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n    \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n  \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e[\u003c/span\u003eisOpen\u003cspan class=\"token punctuation\"\u003e]\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\n    \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003eModal isOpen\u003cspan class=\"token operator\"\u003e=\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003eisOpen\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n      \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003eModalHeader\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n        \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003eh3\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003eWhat is your name\u003cspan class=\"token operator\"\u003e?\u003c/span\u003e\u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e\u003cspan class=\"token operator\"\u003e/\u003c/span\u003eh3\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n      \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e\u003cspan class=\"token operator\"\u003e/\u003c/span\u003eModalHeader\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n      \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003eModalBody\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n        \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003einput name\u003cspan class=\"token operator\"\u003e=\u003c/span\u003e\u003cspan class=\"token string\"\u003e\"name\"\u003c/span\u003e ref\u003cspan class=\"token operator\"\u003e=\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003einputRef\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e \u003cspan class=\"token operator\"\u003e/\u003c/span\u003e\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n      \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e\u003cspan class=\"token operator\"\u003e/\u003c/span\u003eModalBody\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n      \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003eModalFooter\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n        \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003eButton onClick\u003cspan class=\"token operator\"\u003e=\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"token function\"\u003eclose\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003eClose\u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e\u003cspan class=\"token operator\"\u003e/\u003c/span\u003eButton\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n      \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e\u003cspan class=\"token operator\"\u003e/\u003c/span\u003eModalFooter\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n    \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e\u003cspan class=\"token operator\"\u003e/\u003c/span\u003eModal\u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e\n  \u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://vitejs.dev/blog/announcing-vite3.html\"\u003eVite 3\u003c/a\u003e was just released with new docs, new \u003ccode\u003ecreate-vite\u003c/code\u003e starter templates for most major frameworks, new CLI improvements, and lots more as it continues to take over the web dev ecosystem. \u003cem\u003eVini, Vidi, Vite-chi.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://carbonqa.com/?utm_source=bytes\u0026amp;utm_medium=email\u0026amp;utm_campaign=cool_bits\u0026amp;utm_content=dev1\"\u003eCarbonQA\u003c/a\u003e provides QA services geared for dev teams. They’ll boost your team’s morale sky-high by… breaking your code repeatedly. But the good news is that you’ll never have to waste time on testing again. They work in your tools, talk with your team on Slack, and let your devs be devs. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eKlint Finley wrote about how \u003ca href=\"https://github.com/readme/featured/functional-programming\"\u003eFunctional programming is finally going mainstream\u003c/a\u003e for the GitHub ReadMe project. No word yet on how much of the article was written by Copilot.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe creator of Scrum said we should all \u003ca href=\"https://twitter.com/allenholub/status/1547269599359447040?s=20\u0026amp;t=n1sU5Rmq829VXodGj0EHuw\"\u003estop breaking up stories into estimated tasks\u003c/a\u003e. Looks like your manager is going to have to get another job.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://nodered.org/blog/2022/07/14/version-3-0-released\"\u003eNode-RED 3.0\u003c/a\u003e was just released, making it easier than ever to program IoT devices with their no-code UI. One day, we’ll use it to build a smart grill that’s so smart that it’ll automatically turn on whenever you start singing this banger about \u003ca href=\"https://twitter.com/PardonMyTake/status/1543653516954173440\"\u003egrillin’ on the roof\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://motion.dev/dom/scroll\"\u003eScroll\u003c/a\u003e is a small function for creating scroll-linked animations. Now, every website can feel like the website for one of those boujee, Brooklyn-based “creative agencies” where no one understands what they actually do (including the people who work there).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJake Archibald and Cassie Evans chatted about \u003ca href=\"https://www.youtube.com/watch?v=9qen5CKjUe8\u0026amp;list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9\"\u003eDemystifying SVG Paths\u003c/a\u003e in this 17-minute video. Now if only someone could demystify \u003ca href=\"https://www.youtube.com/watch?v=j15-CTFeAWg\"\u003ethis TikTok trend\u003c/a\u003e for me where teenagers dress up in full suits to go see the new Minions movie.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/ossjs/release\"\u003eRelease\u003c/a\u003e is a minimalistic, opinionated, and predictable release automation tool that’s like Prettier for automated releases. \u003cem\u003eSweet Release\u003c/em\u003e is the name of a package I created to get myself out of a toxic job by deleting my team’s entire codebase and sending an automated Slack message to my manager letting him know that it was me who did it, so that I would be instantly fired (with severance). Sweet, sweet release.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\n\u003ch2\u003eSpot the Bug Solution — Sponsored by \u003ca href=\"https://raygun.com/?utm_medium=sponsorship\u0026amp;utm_source=bytes\u0026amp;utm_campaign=bytes-spot-the-bug\u0026amp;utm_content=blog\"\u003eRaygun\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eReact treats the ref as a “box” that can hold a mutable value in it’s \u003ccode\u003e.current\u003c/code\u003e property, including DOM elements. Since React needs a way to update the ref’s value without completely overriding it, the ref itself is an object with a mutable \u003ccode\u003e.current\u003c/code\u003e property that can be changed any time without changing the object reference.\u003c/p\u003e\n\u003cp\u003eThe bug happens when we try to \u003ccode\u003e.focus()\u003c/code\u003e the \u003ccode\u003einputRef\u003c/code\u003e. The input DOM element is stored in the \u003ccode\u003e.current\u003c/code\u003e property, so the correct way to focus the input is to call \u003ccode\u003einputRef.current.focus()\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eHere’s the solution -\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"token keyword\"\u003edefault\u003c/span\u003e \u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003eInputModal\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003eisOpen\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e close\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e inputRef \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token function\"\u003euseRef\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token keyword\"\u003enull\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\n  \u003cspan class=\"token function\"\u003euseEffect\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n    \u003cspan class=\"token keyword\"\u003eif\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003eisOpen\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n      inputRef\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003ecurrent\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003efocus\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n    \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n  \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e[\u003c/span\u003eisOpen\u003cspan class=\"token punctuation\"\u003e]\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\n  \u003cspan class=\"token comment\"\u003e// ...\u003c/span\u003e\n\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eRefs can store more than just DOM elements - they can store any value a component needs to hold on to without causing a re-render whenever the value changes.\u003c/p\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #109 - what exactly are the differences between JSC and V8?\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"This issue, we've got robots, engines, and minions.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/109\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #109 - what exactly are the differences between JSC and V8?\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"This issue, we've got robots, engines, and minions.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/109\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/robot.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #109 - what exactly are the differences between JSC and V8?\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"This issue, we've got robots, engines, and minions.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/robot.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

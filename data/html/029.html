@@ -1,0 +1,308 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #29 - My boy&#x27;s wicked smaht</title><meta name="description" content="Basecamp releases Hotwire, Flash is Dead, and we learn a little about useRef."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/29"/><meta property="og:title" content="Bytes #29 - My boy&#x27;s wicked smaht"/><meta property="og:description" content="Basecamp releases Hotwire, Flash is Dead, and we learn a little about useRef."/><meta property="og:url" content="https://bytes.dev/archives/29"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/dhh.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #29 - My boy&#x27;s wicked smaht"/><meta name="twitter:description" content="Basecamp releases Hotwire, Flash is Dead, and we learn a little about useRef."/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/dhh.png"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase">My boy&#x27;s wicked smaht</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->29<!-- -->.</span><span class="mr-6 font-bold">January 4, 2021<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/dhh.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/flash.jpg"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p>In this special edition of Bytes, I send it out late in the day because we’re an under resourced, bootstrapped startup just doing our best so be nice ok bye.</p>
+<hr>
+<h2><a href="https://hotwire.dev/">Basecamp releases Hotwire</a></h2>
+<p><img src="https://bytes.dev/images/content/dhh.png" alt="DHH">
+</p><p class="image-alt">Hotrod, meet Hotwire</p><p></p>
+<p><strong>First, they brought you Ruby on Rails…</strong> back in 2004. Then @DHH &amp; friends got <a href="https://m.signalvnoise.com/the-deal-jeff-bezos-got-on-basecamp/">a few million bucks from Jeff Bezos</a>, started racing F-1 cars, and developed <a href="https://twitter.com/callmevlad/status/1233181204452528129">terrible takes</a> on startup equity.</p>
+<p><strong>But now they’re back to tech with a new release, Hotwire</strong> — Hotwire is a new, JavaScript-light approach to building web apps. It’s what they used to implement all of the frontend elements of Hey.com, the paid email service that you probably churned off of because it’s <a href="https://twitter.com/ryanflorence/status/1301870899671437312"><del>slow</del></a> not free.</p>
+<p><strong>How does it work?</strong> Hotwire sends HTML instead of JSON over the wire, which (theoretically) allows for faster first-load pages, a lot less JavaScript, template rendering on the server, and a simpler dev experience.</p>
+<p>It’s a collection of three frameworks — <strong>Turbo, Stimulus, and Strada</strong> — that work together to provide all the benefits mentioned above without (again, theoretically) sacrificing the speed or responsiveness of traditional SPA’s. Let’s take a closer look at each.</p>
+<ul>
+<li>
+<p><a href="https://turbo.hotwire.dev/"><strong>Turbo:</strong></a> A set of 4 “complementary techniques” that greatly reduces how much custom JavaScript you need to write. It speeds up page changes and form submissions, divides complex pages into components, and streams partial page updates over WebSocket for you. Turbo is the meat and potatoes of the Hotwire dinner plate.</p>
+</li>
+<li>
+<p><a href="https://stimulus.hotwire.dev/"><strong>Stimulus:</strong></a> A “modest” JavaScript framework to help you write custom JS when you need it. It doesn’t actually render HTML, but it does provide an “HTML-centric” approach to things like state and wiring. It’s the dinner rolls and stuffing of Hotwire.</p>
+</li>
+<li>
+<p><strong>Strada:</strong> Provides bridge tooling for how the web and native parts of a mobile hybrid app talk to each other. It hasn’t been released yet, but it sounds like the gravy that will go on top of the whole Hotwire dinner.</p>
+</li>
+</ul>
+<p>For a deeper dive, check out <a href="https://fullstackradio.com/151">DHH’s appearance on the Full Stack Radio Podcast</a> with Adam Wathan.</p>
+<h3>The Bottom Line</h3>
+<p>Is Hotwire a game changer? <em>Probably</em> not. Is it worth checking out because it’s an interesting approach to building web apps and you want to hedge your downsides in case they are actually right? Of course.</p>
+<hr>
+<h2>Thanks for the Memories, Flash</h2>
+<p><img src="https://bytes.dev/images/content/flash.jpg" alt="Update your Flash Player">
+</p><p class="image-alt">Hackers are in shambles</p><p></p>
+<p><strong>Adobe officially discontinued Flash</strong> last week, marking the end of an era that began in the PJS (Pre-JavaScript) days in 1993. Back then, Flash was known as SmartSketch and was a vector drawing application developed by a company called FutureWave Software.</p>
+<p>The company was acquired by Macromedia and rebranded to Flash in late 1996, where its functionality was expanded to a two-part system — a graphics and animation editor known as Macromedia Flash, and a player known as Macromedia Flash Player.</p>
+<p>Adobe bought out Macromedia in 2005 which ushered in the Golden Age of Flash for the next 7-8 years. Sadly as happens with all good things, Flash’s days were numbered.</p>
+<p><del>Steve Jobs</del> Flash’s inability to innovate and scale with an evolving web ultimately doomed it. Flash sites were never able to reach an acceptable standard of speed, accessibility, reliability, and mobile-friendliness that we pretend to have on the web today.</p>
+<p>RIP Flash.</p>
+<hr>
+<h2>JS Tip - React’s useRef Hook</h2>
+<p>The marketing pitch for <code>React.useState</code> is that it allows you to add state to function components. This is true, but we can break it down even further. Fundamentally, the <code>useState</code> Hook gives you two things - a value that will persist across renders and an API to update that value and trigger a re-render.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValueAndReRender<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span>
+  <span class="token string">'initial value'</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>When building UI, both are necessary. Without the ability to persist the value across renders, you’d lose the ability to have dynamic data in your app. Without the ability to update the value and trigger a re-render, the UI would never update.</p>
+<p>Now, what if you had a use case where you weren’t dealing with any UI, so you didn’t care about re-rendering, but you did need to persist a value across renders? In this scenario, it’s like you need the half of <code>useState</code> that lets you persist a value across renders but not the other half that triggers a re-render — Something like this.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">usePersistentValue</span> <span class="token punctuation">(</span><span class="token parameter">initialValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">current</span><span class="token operator">:</span> initialValue
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Spoiler alert, the functionality of our custom <code>usePersistentValue</code> Hook is <strong>very</strong> similar to the built-in <code>React.useRef</code> Hook.</p>
+<p>If you want to add state to your component that persists across renders and can trigger a re-render when it’s updated, go with <code>useState</code> (or <code>useReducer</code>). If you want to add state to your component that persists across renders but doesn’t trigger a re-render when it’s updated, go with <code>useRef</code>.</p>
+<p>For more info on <code>useRef</code> (and a deeper explanation of how <code>useState</code> is similar to <code>useRef</code>), visit <a href="https://ui.dev/useref">Understanding React’s useRef Hook</a></p>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p>Lee Robinson (a member of the Next.js team) made a quick video that covers <a href="https://www.youtube.com/watch?v=R59e1Vl5lO8&amp;feature=youtu.be">10 Next.js tips you probably didn’t know.</a></p>
+</li>
+<li>
+<p>In <a href="https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec">this post</a>, Lucjan walks you through creating a free URL shortener with Cloudflare Workers. Much better than the other approach of spending <a href="https://twitter.com/tylermcginnis/status/1272632320911044610">all your allowance money</a> on a short domain name.</p>
+</li>
+<li>
+<p>The Github Team wrote <a href="https://github.blog/2020-12-21-how-we-built-the-github-globe/">an in-depth blog post about how they built the Github Globe</a>. tl;dr <code>npm install globe</code>.</p>
+</li>
+<li>
+<p>Brad Traversy released his annual <a href="https://www.youtube.com/watch?v=VfGW0Qiy2I0">Web Development in 2021 video</a> where he covers recent trends and what the landscape looks like for web development in 2021. Great to see Brad back on YouTube!</p>
+</li>
+<li>
+<p><a href="https://mydrive-storage.com/">MyDrive is an open source cloud file storage server</a> that just released v3 last week. Might be good to back up all your Google Drive files here, in case Google Drive goes down again <span role="img" aria-label="upside-down face">🙃</span>.</p>
+</li>
+<li>
+<p><a href="https://blocks.wickedtemplates.com/">WickedBlocks is a collection of 120+ layout blocks and components</a> built with Tailwind CSS ready to copy-paste into your Tailwind project. If you’d like the New England version, check out WickedBlachs. My boy’s wicked smaht.</p>
+</li>
+<li>
+<p><a href="https://www.svgrepo.com/">svgrepo.com is a collection of 300,000+ free SVG vectors and icons.</a> Now it’s easier than ever to waste an entire day agonizing over which icon set to use.</p>
+</li>
+<li>
+<p><a href="https://github.com/GRVYDEV/Project-lightspeed">Project Lightspeed is an open source, fully self contained, live streaming server.</a> Can’t wait to see what they come out with for Project Ludicrous Speed.</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"29\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"29\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"29\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\"My boy's wicked smaht\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"29\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"January 4, 2021\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T2752,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/dhh.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/flash.jpg\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003eIn this special edition of Bytes, I send it out late in the day because we’re an under resourced, bootstrapped startup just doing our best so be nice ok bye.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003e\u003ca href=\"https://hotwire.dev/\"\u003eBasecamp releases Hotwire\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/dhh.png\" alt=\"DHH\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eHotrod, meet Hotwire\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eFirst, they brought you Ruby on Rails…\u003c/strong\u003e back in 2004. Then @DHH \u0026amp; friends got \u003ca href=\"https://m.signalvnoise.com/the-deal-jeff-bezos-got-on-basecamp/\"\u003ea few million bucks from Jeff Bezos\u003c/a\u003e, started racing F-1 cars, and developed \u003ca href=\"https://twitter.com/callmevlad/status/1233181204452528129\"\u003eterrible takes\u003c/a\u003e on startup equity.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eBut now they’re back to tech with a new release, Hotwire\u003c/strong\u003e — Hotwire is a new, JavaScript-light approach to building web apps. It’s what they used to implement all of the frontend elements of Hey.com, the paid email service that you probably churned off of because it’s \u003ca href=\"https://twitter.com/ryanflorence/status/1301870899671437312\"\u003e\u003cdel\u003eslow\u003c/del\u003e\u003c/a\u003e not free.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eHow does it work?\u003c/strong\u003e Hotwire sends HTML instead of JSON over the wire, which (theoretically) allows for faster first-load pages, a lot less JavaScript, template rendering on the server, and a simpler dev experience.\u003c/p\u003e\n\u003cp\u003eIt’s a collection of three frameworks — \u003cstrong\u003eTurbo, Stimulus, and Strada\u003c/strong\u003e — that work together to provide all the benefits mentioned above without (again, theoretically) sacrificing the speed or responsiveness of traditional SPA’s. Let’s take a closer look at each.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://turbo.hotwire.dev/\"\u003e\u003cstrong\u003eTurbo:\u003c/strong\u003e\u003c/a\u003e A set of 4 “complementary techniques” that greatly reduces how much custom JavaScript you need to write. It speeds up page changes and form submissions, divides complex pages into components, and streams partial page updates over WebSocket for you. Turbo is the meat and potatoes of the Hotwire dinner plate.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://stimulus.hotwire.dev/\"\u003e\u003cstrong\u003eStimulus:\u003c/strong\u003e\u003c/a\u003e A “modest” JavaScript framework to help you write custom JS when you need it. It doesn’t actually render HTML, but it does provide an “HTML-centric” approach to things like state and wiring. It’s the dinner rolls and stuffing of Hotwire.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eStrada:\u003c/strong\u003e Provides bridge tooling for how the web and native parts of a mobile hybrid app talk to each other. It hasn’t been released yet, but it sounds like the gravy that will go on top of the whole Hotwire dinner.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eFor a deeper dive, check out \u003ca href=\"https://fullstackradio.com/151\"\u003eDHH’s appearance on the Full Stack Radio Podcast\u003c/a\u003e with Adam Wathan.\u003c/p\u003e\n\u003ch3\u003eThe Bottom Line\u003c/h3\u003e\n\u003cp\u003eIs Hotwire a game changer? \u003cem\u003eProbably\u003c/em\u003e not. Is it worth checking out because it’s an interesting approach to building web apps and you want to hedge your downsides in case they are actually right? Of course.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eThanks for the Memories, Flash\u003c/h2\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/flash.jpg\" alt=\"Update your Flash Player\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eHackers are in shambles\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eAdobe officially discontinued Flash\u003c/strong\u003e last week, marking the end of an era that began in the PJS (Pre-JavaScript) days in 1993. Back then, Flash was known as SmartSketch and was a vector drawing application developed by a company called FutureWave Software.\u003c/p\u003e\n\u003cp\u003eThe company was acquired by Macromedia and rebranded to Flash in late 1996, where its functionality was expanded to a two-part system — a graphics and animation editor known as Macromedia Flash, and a player known as Macromedia Flash Player.\u003c/p\u003e\n\u003cp\u003eAdobe bought out Macromedia in 2005 which ushered in the Golden Age of Flash for the next 7-8 years. Sadly as happens with all good things, Flash’s days were numbered.\u003c/p\u003e\n\u003cp\u003e\u003cdel\u003eSteve Jobs\u003c/del\u003e Flash’s inability to innovate and scale with an evolving web ultimately doomed it. Flash sites were never able to reach an acceptable standard of speed, accessibility, reliability, and mobile-friendliness that we pretend to have on the web today.\u003c/p\u003e\n\u003cp\u003eRIP Flash.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eJS Tip - React’s useRef Hook\u003c/h2\u003e\n\u003cp\u003eThe marketing pitch for \u003ccode\u003eReact.useState\u003c/code\u003e is that it allows you to add state to function components. This is true, but we can break it down even further. Fundamentally, the \u003ccode\u003euseState\u003c/code\u003e Hook gives you two things - a value that will persist across renders and an API to update that value and trigger a re-render.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e[\u003c/span\u003evalue\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e setValueAndReRender\u003cspan class=\"token punctuation\"\u003e]\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e React\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003euseState\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\n  \u003cspan class=\"token string\"\u003e'initial value'\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWhen building UI, both are necessary. Without the ability to persist the value across renders, you’d lose the ability to have dynamic data in your app. Without the ability to update the value and trigger a re-render, the UI would never update.\u003c/p\u003e\n\u003cp\u003eNow, what if you had a use case where you weren’t dealing with any UI, so you didn’t care about re-rendering, but you did need to persist a value across renders? In this scenario, it’s like you need the half of \u003ccode\u003euseState\u003c/code\u003e that lets you persist a value across renders but not the other half that triggers a re-render — Something like this.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003eusePersistentValue\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003einitialValue\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e React\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003euseState\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n    \u003cspan class=\"token literal-property property\"\u003ecurrent\u003c/span\u003e\u003cspan class=\"token operator\"\u003e:\u003c/span\u003e initialValue\n  \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e[\u003c/span\u003e\u003cspan class=\"token number\"\u003e0\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e]\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eSpoiler alert, the functionality of our custom \u003ccode\u003eusePersistentValue\u003c/code\u003e Hook is \u003cstrong\u003every\u003c/strong\u003e similar to the built-in \u003ccode\u003eReact.useRef\u003c/code\u003e Hook.\u003c/p\u003e\n\u003cp\u003eIf you want to add state to your component that persists across renders and can trigger a re-render when it’s updated, go with \u003ccode\u003euseState\u003c/code\u003e (or \u003ccode\u003euseReducer\u003c/code\u003e). If you want to add state to your component that persists across renders but doesn’t trigger a re-render when it’s updated, go with \u003ccode\u003euseRef\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eFor more info on \u003ccode\u003euseRef\u003c/code\u003e (and a deeper explanation of how \u003ccode\u003euseState\u003c/code\u003e is similar to \u003ccode\u003euseRef\u003c/code\u003e), visit \u003ca href=\"https://ui.dev/useref\"\u003eUnderstanding React’s useRef Hook\u003c/a\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eLee Robinson (a member of the Next.js team) made a quick video that covers \u003ca href=\"https://www.youtube.com/watch?v=R59e1Vl5lO8\u0026amp;feature=youtu.be\"\u003e10 Next.js tips you probably didn’t know.\u003c/a\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eIn \u003ca href=\"https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec\"\u003ethis post\u003c/a\u003e, Lucjan walks you through creating a free URL shortener with Cloudflare Workers. Much better than the other approach of spending \u003ca href=\"https://twitter.com/tylermcginnis/status/1272632320911044610\"\u003eall your allowance money\u003c/a\u003e on a short domain name.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe Github Team wrote \u003ca href=\"https://github.blog/2020-12-21-how-we-built-the-github-globe/\"\u003ean in-depth blog post about how they built the Github Globe\u003c/a\u003e. tl;dr \u003ccode\u003enpm install globe\u003c/code\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eBrad Traversy released his annual \u003ca href=\"https://www.youtube.com/watch?v=VfGW0Qiy2I0\"\u003eWeb Development in 2021 video\u003c/a\u003e where he covers recent trends and what the landscape looks like for web development in 2021. Great to see Brad back on YouTube!\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://mydrive-storage.com/\"\u003eMyDrive is an open source cloud file storage server\u003c/a\u003e that just released v3 last week. Might be good to back up all your Google Drive files here, in case Google Drive goes down again \u003cspan role=\"img\" aria-label=\"upside-down face\"\u003e🙃\u003c/span\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://blocks.wickedtemplates.com/\"\u003eWickedBlocks is a collection of 120+ layout blocks and components\u003c/a\u003e built with Tailwind CSS ready to copy-paste into your Tailwind project. If you’d like the New England version, check out WickedBlachs. My boy’s wicked smaht.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://www.svgrepo.com/\"\u003esvgrepo.com is a collection of 300,000+ free SVG vectors and icons.\u003c/a\u003e Now it’s easier than ever to waste an entire day agonizing over which icon set to use.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/GRVYDEV/Project-lightspeed\"\u003eProject Lightspeed is an open source, fully self contained, live streaming server.\u003c/a\u003e Can’t wait to see what they come out with for Project Ludicrous Speed.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #29 - My boy's wicked smaht\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Basecamp releases Hotwire, Flash is Dead, and we learn a little about useRef.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/29\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #29 - My boy's wicked smaht\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Basecamp releases Hotwire, Flash is Dead, and we learn a little about useRef.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/29\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/dhh.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #29 - My boy's wicked smaht\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Basecamp releases Hotwire, Flash is Dead, and we learn a little about useRef.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/dhh.png\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

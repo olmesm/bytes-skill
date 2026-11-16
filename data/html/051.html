@@ -1,0 +1,315 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #51 - My toddler&#x27;s only interested in Redux</title><meta name="description" content="This issue, we ventured into the depths of Browser-Land so that you don&#x27;t have to."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/51"/><meta property="og:title" content="Bytes #51 - My toddler&#x27;s only interested in Redux"/><meta property="og:description" content="This issue, we ventured into the depths of Browser-Land so that you don&#x27;t have to."/><meta property="og:url" content="https://bytes.dev/archives/51"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/browser-land.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #51 - My toddler&#x27;s only interested in Redux"/><meta name="twitter:description" content="This issue, we ventured into the depths of Browser-Land so that you don&#x27;t have to."/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/browser-land.png"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> My toddler&#x27;s only interested in Redux</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->51<!-- -->.</span><span class="mr-6 font-bold">June 7, 2021<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/browser-land.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/retool-banner.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/spectrum.jpeg"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><img src="https://bytes.dev/images/content/browser-land.png" alt="Browser Land">
+</p><p class="image-alt">The Happiest Place on Earth</p><p></p>
+<h2>Updates from Browser-Land</h2>
+<p>There’s been a lot of browser news recently, so we ventured into the depths of Browser-Land so that you don’t have to. Here’s the latest from the front lines.</p>
+<p><strong><a href="https://blog.chromium.org/2021/06/chrome-92-web-apps-as-file-handlers-new.html">Chrome 92</a></strong> just launched its beta, which includes a new <strong>File Handling API</strong> that lets you declare web apps as file handlers (great news for online text editors, design tools, etc.) and a new <strong>Shared Element Transitions API</strong> that makes it a lot easier to add polished, native-like transitions. v92 also comes with new <a href="https://developer.chrome.com/blog/new-in-devtools-92/">DevTools</a> like a <em>long</em>-requested CSS grid editor and a new source order viewer.</p>
+<p>And since every tech platform copies Snapchat, Chrome 92 also has a new feature called <a href="https://chromeunboxed.com/chrome-memories">Memories</a>. It’s a combined view for your bookmarks, history, and open tabs that (we hope) will serve up fun notifications like, “On this day 3 years ago, you spent 2 hours stalking <em>every single picture</em> of your ex’s trip to Maui — <strong>Share now?</strong>”</p>
+<p><strong><a href="https://www.mozilla.org/en-US/firefox/89.0/releasenotes/">Firefox 89</a></strong> was also released last week, with some major design changes. Some updates were welcomed with open arms — like the cleaner/simpler menus, modals, and toolbar. But the new tab redesign has generated a lot more <del>visceral rage</del> <em><a href="https://www.reddit.com/r/firefox/comments/npz18m/firefox_89_new_tab_design_is_awful/">mixed reviews</a></em>. v89 also doubles down on Firefox’s beloved <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/89#css">CSS DevTools</a>, with a new <code>forced-colors</code> media feature and new <code>-override</code> functionality.</p>
+<p><strong>Mighty</strong> [not sponsored, but dtf] jumped head-first into Browser-Land a month ago when it launched v1 of its super-fast-and-expensive browser with a twist. For $30/month, you can stream its remote Chromium-based browser that lives in the cloud to your own machine. It’s like Netflix, but instead of streaming <em>Breaking Bad</em>, you’re streaming <em>a marginally faster version of Chrome</em>.</p>
+<p>Some say that Mighty is <a href="https://twitter.com/balajis/status/1388028094733160448?s=20">the future</a> that will eventually help the web replace all native apps, while others are a little more… <a href="https://twitter.com/cozyunoist/status/1387223531520499712">skeptical</a> of the Chrome-in-a-server model.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/retool-banner.png" alt="Retool"></p>
+<h2>Retool &gt;&gt;&gt; office ping pong table [Sponsored]</h2>
+<p>You know what would be a great work perk? A lifetime guarantee that you’ll never be asked to “throw together some internal tools” for your company’s higher-ups ever again. But since that’s probably too much to ask, the next best perk is <a href="https://retool.com/?utm_source=sponsor&amp;utm_medium=newsletter&amp;utm_campaign=bytes">Retool</a>.</p>
+<p>That way, you won’t ever be forced to spend weeks hacking together your company’s <em>wide</em> variety of data sources, only to realize at the last minute that you never considered auth, and (oh crap) the whole thing looks terrible.</p>
+<p><a href="https://retool.com/?utm_source=sponsor&amp;utm_medium=newsletter&amp;utm_campaign=bytes">Retool</a> saves you a ton of time (and sanity) by abstracting away all the annoying parts of building internal tools, while still giving you the flexibility to write custom JavaScript anywhere in the app.</p>
+<p>Ping pong &amp; Free-Lunch-Fridays are great, but it’s time to tell your boss that they’re never allowed to say “we’re a family” until they let you <a href="https://retool.com/?utm_source=sponsor&amp;utm_medium=newsletter&amp;utm_campaign=bytes">try out Retool</a>.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/spectrum.jpeg" alt="Spectrum Vans">
+</p><p class="image-alt">Get the best triple play deals on Cable TV, High Speed Internet, and Home Phone Service.</p><p></p>
+<h2>Adobe Spectrum proves our theory that every tech company has a project named Spectrum</h2>
+<p><a href="https://github.com/adobe/react-spectrum">React Spectrum</a> is a collection of libraries and tools that Adobe created to prove that you don’t need Warby Parker glasses and a $200 haircut to build beautiful and accessible user experiences in React. It was first released last summer, but since it’s been getting a lot of buzz again this week, we wanted to give you a quick refresher.</p>
+<p>React Spectrum features 3 main libraries/tools:</p>
+<ul>
+<li>
+<p><strong>React Spectrum</strong> — Meta. This is an implementation of Adobe’s design system, Spectrum, that could be useful if you’re integrating with Adobe software or just want to use their component library in a project.</p>
+</li>
+<li>
+<p><strong>React Aria</strong> — A collection of Hooks that implement behavior and accessibility based on the <a href="https://www.w3.org/TR/wai-aria-practices-1.2/">WAI-ARIA Authoring Practices</a>. It also implements internationalization for 30+ languages.</p>
+</li>
+<li>
+<p><strong>React Stately</strong> — Another Hooks library that provides cross-platform state management and core logic for each component. They don’t make assumptions about the platform they’re on, and they don’t have any theme or design system-specific logic.</p>
+</li>
+</ul>
+<h3>The Bottom Line</h3>
+<p>Some of these tools are more production-ready than others, but we’re 100% down for any tools that make it easier to build cohesive design systems and more accessible React applications. If you want to learn more about React Spectrum or see it in action, check out <a href="https://www.youtube.com/watch?v=dxDcBB7Xoxs">Devon Govett’s talk</a> at last year’s React Europe Conference.</p>
+<hr>
+<h2>Jobs</h2>
+<h3><a href="https://hubs.ly/H0PzHmM0">G2i is seeking Senior React, React Native, or Node Developers | 100% Remote</a></h3>
+<p>Looking for highly competent engineers that take pride in their craft, are never satisfied with their knowledge base, and bring enthusiasm to building applications in React, React Native, and/or Node. Ideal candidates are comfortable working in dynamic engineering environments and display strong communication and documentation skills.</p>
+<h3><a href="https://jobs.lever.co/close.io/10a1e32b-1a59-48dc-b8f4-e6f0dfae4e20?lever-origin=applied&amp;lever-source%5B%5D=ReactNewsletter">2x Sr. Frontend Engineers - React | 100% Remote</a></h3>
+<p>Close.com is looking for two experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. They are a 100% globally distributed team of ~45 high-performing, happy people that are dedicated to building a product our customers love.</p>
+<hr>
+<h2>JS Tip</h2>
+<p>Sometimes (mostly in job interviews) you need to write a function to find the longest word in a string. Here’s one implementation using <code>.reduce</code> that’ll do it.</p>
+<p>Is it the best? I don’t know, but I dig it.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">findLongestWord</span> <span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">longest<span class="token punctuation">,</span> word</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+      word<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> longest<span class="token punctuation">.</span>length 
+        <span class="token operator">?</span> word 
+        <span class="token operator">:</span> longest
+  <span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">findLongestWord</span><span class="token punctuation">(</span><span class="token string">'Find the longest word'</span><span class="token punctuation">)</span> <span class="token comment">// longest</span>
+</code></pre>
+<p>Note it’ll return the first word if there’s a tie. If you’re in a job interview, that’s a good question to clarify before diving into the code.</p>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p>Facebook Open Source made a 90-second video called <strong><a href="https://www.youtube.com/watch?v=pR4A9YONzuo">“Explain Like I’m 5: Flux”</a></strong>, which also could’ve been titled “Explain Like it’s 2015”. Sorry, but my toddler’s only interested in Redux these days.</p>
+</li>
+<li>
+<p>Lin Clark wrote a great article about <strong><a href="https://bytecodealliance.org/articles/making-javascript-run-fast-on-webassembly">making JavaScript run fast on WebAssembly</a></strong> for the Bytecode Alliance blog. We’re not sure what we have to do to get invited to the Bytecode Alliance, but we’re willing.</p>
+</li>
+<li>
+<p>Ben Schmidt (a professor &amp; researcher at NYU) wrote an in-depth article about <strong><a href="http://benschmidt.org/post/2020-01-15/2020-01-15-webgpu/">Javascript and the next decade of data programming</a></strong>. Hopefully he’ll make an ELI5 video to go along with it too.</p>
+</li>
+<li>
+<p><strong><a href="https://svelte-motion.gradientdescent.de/">Svelte Motion</a></strong> is an animation library for Svelte apps that’s based on Framer Motion. It was also the name of my very fit all-male dance team, which came *this* close to winning regionals back in ‘07. Damn, we were good.</p>
+</li>
+<li>
+<p><strong><a href="https://yare.io/">Yare.io</a></strong> is a real-time strategy game where you control your units by writing JavaScript code. Now we just need an Age of Empires II version. <span role="img" aria-label="goat">🐐</span></p>
+</li>
+<li>
+<p>Pascal created an in-depth <strong><a href="https://pascalpares.appspot.ovh/webassembly-for-javascript-developers/">intro to WebAssembly</a></strong> for JavaScript developers. I guess that makes it like <a href="https://en.wikipedia.org/wiki/Pascal%27s_wager">Pascal’s Wager</a>, but for believing in Wasm?</p>
+</li>
+<li>
+<p><strong><a href="https://saul-mirone.github.io/milkdown/#/">Milkdown</a></strong> is a powerful WYSIWYG markdown editor that’s lightweight and really slick. Hopefully they raise a bunch of VC money, so they can build a Danimals drinkable yogurt competitor to really double down on their brand.</p>
+</li>
+<li>
+<p><strong><a href="https://stackoverflow.blog/2021/06/02/prosus-acquires-stack-overflow/">Prosus acquired StackOverflow for $1.8b</a></strong>, because that’s what can you do after your parent company cashes in on the <a href="https://twitter.com/AlecStapp/status/1400158526731915272">greatest VC investment in modern history</a>. <a href="https://twitter.com/tylermcginnis/status/1400221835535405057">No word yet</a> on if Prosus be allowing us to exchange our “reputation” points for dollars? Or at least Dogecoin?</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"51\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"51\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"51\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" My toddler's only interested in Redux\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"51\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"June 7, 2021\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T30f3,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/browser-land.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/retool-banner.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/spectrum.jpeg\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/browser-land.png\" alt=\"Browser Land\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eThe Happiest Place on Earth\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eUpdates from Browser-Land\u003c/h2\u003e\n\u003cp\u003eThere’s been a lot of browser news recently, so we ventured into the depths of Browser-Land so that you don’t have to. Here’s the latest from the front lines.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://blog.chromium.org/2021/06/chrome-92-web-apps-as-file-handlers-new.html\"\u003eChrome 92\u003c/a\u003e\u003c/strong\u003e just launched its beta, which includes a new \u003cstrong\u003eFile Handling API\u003c/strong\u003e that lets you declare web apps as file handlers (great news for online text editors, design tools, etc.) and a new \u003cstrong\u003eShared Element Transitions API\u003c/strong\u003e that makes it a lot easier to add polished, native-like transitions. v92 also comes with new \u003ca href=\"https://developer.chrome.com/blog/new-in-devtools-92/\"\u003eDevTools\u003c/a\u003e like a \u003cem\u003elong\u003c/em\u003e-requested CSS grid editor and a new source order viewer.\u003c/p\u003e\n\u003cp\u003eAnd since every tech platform copies Snapchat, Chrome 92 also has a new feature called \u003ca href=\"https://chromeunboxed.com/chrome-memories\"\u003eMemories\u003c/a\u003e. It’s a combined view for your bookmarks, history, and open tabs that (we hope) will serve up fun notifications like, “On this day 3 years ago, you spent 2 hours stalking \u003cem\u003eevery single picture\u003c/em\u003e of your ex’s trip to Maui — \u003cstrong\u003eShare now?\u003c/strong\u003e”\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://www.mozilla.org/en-US/firefox/89.0/releasenotes/\"\u003eFirefox 89\u003c/a\u003e\u003c/strong\u003e was also released last week, with some major design changes. Some updates were welcomed with open arms — like the cleaner/simpler menus, modals, and toolbar. But the new tab redesign has generated a lot more \u003cdel\u003evisceral rage\u003c/del\u003e \u003cem\u003e\u003ca href=\"https://www.reddit.com/r/firefox/comments/npz18m/firefox_89_new_tab_design_is_awful/\"\u003emixed reviews\u003c/a\u003e\u003c/em\u003e. v89 also doubles down on Firefox’s beloved \u003ca href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/89#css\"\u003eCSS DevTools\u003c/a\u003e, with a new \u003ccode\u003eforced-colors\u003c/code\u003e media feature and new \u003ccode\u003e-override\u003c/code\u003e functionality.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eMighty\u003c/strong\u003e [not sponsored, but dtf] jumped head-first into Browser-Land a month ago when it launched v1 of its super-fast-and-expensive browser with a twist. For $30/month, you can stream its remote Chromium-based browser that lives in the cloud to your own machine. It’s like Netflix, but instead of streaming \u003cem\u003eBreaking Bad\u003c/em\u003e, you’re streaming \u003cem\u003ea marginally faster version of Chrome\u003c/em\u003e.\u003c/p\u003e\n\u003cp\u003eSome say that Mighty is \u003ca href=\"https://twitter.com/balajis/status/1388028094733160448?s=20\"\u003ethe future\u003c/a\u003e that will eventually help the web replace all native apps, while others are a little more… \u003ca href=\"https://twitter.com/cozyunoist/status/1387223531520499712\"\u003eskeptical\u003c/a\u003e of the Chrome-in-a-server model.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/retool-banner.png\" alt=\"Retool\"\u003e\u003c/p\u003e\n\u003ch2\u003eRetool \u0026gt;\u0026gt;\u0026gt; office ping pong table [Sponsored]\u003c/h2\u003e\n\u003cp\u003eYou know what would be a great work perk? A lifetime guarantee that you’ll never be asked to “throw together some internal tools” for your company’s higher-ups ever again. But since that’s probably too much to ask, the next best perk is \u003ca href=\"https://retool.com/?utm_source=sponsor\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=bytes\"\u003eRetool\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eThat way, you won’t ever be forced to spend weeks hacking together your company’s \u003cem\u003ewide\u003c/em\u003e variety of data sources, only to realize at the last minute that you never considered auth, and (oh crap) the whole thing looks terrible.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://retool.com/?utm_source=sponsor\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=bytes\"\u003eRetool\u003c/a\u003e saves you a ton of time (and sanity) by abstracting away all the annoying parts of building internal tools, while still giving you the flexibility to write custom JavaScript anywhere in the app.\u003c/p\u003e\n\u003cp\u003ePing pong \u0026amp; Free-Lunch-Fridays are great, but it’s time to tell your boss that they’re never allowed to say “we’re a family” until they let you \u003ca href=\"https://retool.com/?utm_source=sponsor\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=bytes\"\u003etry out Retool\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/spectrum.jpeg\" alt=\"Spectrum Vans\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eGet the best triple play deals on Cable TV, High Speed Internet, and Home Phone Service.\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eAdobe Spectrum proves our theory that every tech company has a project named Spectrum\u003c/h2\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/adobe/react-spectrum\"\u003eReact Spectrum\u003c/a\u003e is a collection of libraries and tools that Adobe created to prove that you don’t need Warby Parker glasses and a $200 haircut to build beautiful and accessible user experiences in React. It was first released last summer, but since it’s been getting a lot of buzz again this week, we wanted to give you a quick refresher.\u003c/p\u003e\n\u003cp\u003eReact Spectrum features 3 main libraries/tools:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eReact Spectrum\u003c/strong\u003e — Meta. This is an implementation of Adobe’s design system, Spectrum, that could be useful if you’re integrating with Adobe software or just want to use their component library in a project.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eReact Aria\u003c/strong\u003e — A collection of Hooks that implement behavior and accessibility based on the \u003ca href=\"https://www.w3.org/TR/wai-aria-practices-1.2/\"\u003eWAI-ARIA Authoring Practices\u003c/a\u003e. It also implements internationalization for 30+ languages.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eReact Stately\u003c/strong\u003e — Another Hooks library that provides cross-platform state management and core logic for each component. They don’t make assumptions about the platform they’re on, and they don’t have any theme or design system-specific logic.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003eThe Bottom Line\u003c/h3\u003e\n\u003cp\u003eSome of these tools are more production-ready than others, but we’re 100% down for any tools that make it easier to build cohesive design systems and more accessible React applications. If you want to learn more about React Spectrum or see it in action, check out \u003ca href=\"https://www.youtube.com/watch?v=dxDcBB7Xoxs\"\u003eDevon Govett’s talk\u003c/a\u003e at last year’s React Europe Conference.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eJobs\u003c/h2\u003e\n\u003ch3\u003e\u003ca href=\"https://hubs.ly/H0PzHmM0\"\u003eG2i is seeking Senior React, React Native, or Node Developers | 100% Remote\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eLooking for highly competent engineers that take pride in their craft, are never satisfied with their knowledge base, and bring enthusiasm to building applications in React, React Native, and/or Node. Ideal candidates are comfortable working in dynamic engineering environments and display strong communication and documentation skills.\u003c/p\u003e\n\u003ch3\u003e\u003ca href=\"https://jobs.lever.co/close.io/10a1e32b-1a59-48dc-b8f4-e6f0dfae4e20?lever-origin=applied\u0026amp;lever-source%5B%5D=ReactNewsletter\"\u003e2x Sr. Frontend Engineers - React | 100% Remote\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eClose.com is looking for two experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. They are a 100% globally distributed team of ~45 high-performing, happy people that are dedicated to building a product our customers love.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eJS Tip\u003c/h2\u003e\n\u003cp\u003eSometimes (mostly in job interviews) you need to write a function to find the longest word in a string. Here’s one implementation using \u003ccode\u003e.reduce\u003c/code\u003e that’ll do it.\u003c/p\u003e\n\u003cp\u003eIs it the best? I don’t know, but I dig it.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003efindLongestWord\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003estr\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e str\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003esplit\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token string\"\u003e' '\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n    \u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003ereduce\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003elongest\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e word\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u0026gt;\u003c/span\u003e\n      word\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003elength \u003cspan class=\"token operator\"\u003e\u0026gt;\u003c/span\u003e longest\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003elength \n        \u003cspan class=\"token operator\"\u003e?\u003c/span\u003e word \n        \u003cspan class=\"token operator\"\u003e:\u003c/span\u003e longest\n  \u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e \u003cspan class=\"token string\"\u003e''\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\n\u003cspan class=\"token function\"\u003efindLongestWord\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token string\"\u003e'Find the longest word'\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token comment\"\u003e// longest\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNote it’ll return the first word if there’s a tie. If you’re in a job interview, that’s a good question to clarify before diving into the code.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eFacebook Open Source made a 90-second video called \u003cstrong\u003e\u003ca href=\"https://www.youtube.com/watch?v=pR4A9YONzuo\"\u003e“Explain Like I’m 5: Flux”\u003c/a\u003e\u003c/strong\u003e, which also could’ve been titled “Explain Like it’s 2015”. Sorry, but my toddler’s only interested in Redux these days.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eLin Clark wrote a great article about \u003cstrong\u003e\u003ca href=\"https://bytecodealliance.org/articles/making-javascript-run-fast-on-webassembly\"\u003emaking JavaScript run fast on WebAssembly\u003c/a\u003e\u003c/strong\u003e for the Bytecode Alliance blog. We’re not sure what we have to do to get invited to the Bytecode Alliance, but we’re willing.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eBen Schmidt (a professor \u0026amp; researcher at NYU) wrote an in-depth article about \u003cstrong\u003e\u003ca href=\"http://benschmidt.org/post/2020-01-15/2020-01-15-webgpu/\"\u003eJavascript and the next decade of data programming\u003c/a\u003e\u003c/strong\u003e. Hopefully he’ll make an ELI5 video to go along with it too.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://svelte-motion.gradientdescent.de/\"\u003eSvelte Motion\u003c/a\u003e\u003c/strong\u003e is an animation library for Svelte apps that’s based on Framer Motion. It was also the name of my very fit all-male dance team, which came *this* close to winning regionals back in ‘07. Damn, we were good.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://yare.io/\"\u003eYare.io\u003c/a\u003e\u003c/strong\u003e is a real-time strategy game where you control your units by writing JavaScript code. Now we just need an Age of Empires II version. \u003cspan role=\"img\" aria-label=\"goat\"\u003e🐐\u003c/span\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003ePascal created an in-depth \u003cstrong\u003e\u003ca href=\"https://pascalpares.appspot.ovh/webassembly-for-javascript-developers/\"\u003eintro to WebAssembly\u003c/a\u003e\u003c/strong\u003e for JavaScript developers. I guess that makes it like \u003ca href=\"https://en.wikipedia.org/wiki/Pascal%27s_wager\"\u003ePascal’s Wager\u003c/a\u003e, but for believing in Wasm?\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://saul-mirone.github.io/milkdown/#/\"\u003eMilkdown\u003c/a\u003e\u003c/strong\u003e is a powerful WYSIWYG markdown editor that’s lightweight and really slick. Hopefully they raise a bunch of VC money, so they can build a Danimals drinkable yogurt competitor to really double down on their brand.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://stackoverflow.blog/2021/06/02/prosus-acquires-stack-overflow/\"\u003eProsus acquired StackOverflow for $1.8b\u003c/a\u003e\u003c/strong\u003e, because that’s what can you do after your parent company cashes in on the \u003ca href=\"https://twitter.com/AlecStapp/status/1400158526731915272\"\u003egreatest VC investment in modern history\u003c/a\u003e. \u003ca href=\"https://twitter.com/tylermcginnis/status/1400221835535405057\"\u003eNo word yet\u003c/a\u003e on if Prosus be allowing us to exchange our “reputation” points for dollars? Or at least Dogecoin?\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #51 - My toddler's only interested in Redux\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"This issue, we ventured into the depths of Browser-Land so that you don't have to.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/51\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #51 - My toddler's only interested in Redux\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"This issue, we ventured into the depths of Browser-Land so that you don't have to.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/51\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/browser-land.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #51 - My toddler's only interested in Redux\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"This issue, we ventured into the depths of Browser-Land so that you don't have to.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/browser-land.png\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

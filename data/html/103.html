@@ -1,0 +1,341 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #103 - What do Air Bud and Angular have in common?</title><meta name="description" content="This issue, we&#x27;ve got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/103"/><meta property="og:title" content="Bytes #103 - What do Air Bud and Angular have in common?"/><meta property="og:description" content="This issue, we&#x27;ve got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia."/><meta property="og:url" content="https://bytes.dev/archives/103"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/bud.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #103 - What do Air Bud and Angular have in common?"/><meta name="twitter:description" content="This issue, we&#x27;ve got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia."/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/bud.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> What do Air Bud and Angular have in common?</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->103<!-- -->.</span><span class="mr-6 font-bold">June 6, 2022<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/bud.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/patback.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/pine.jpg"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p>This week, we’ve got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia.</p>
+<p>Welcome to #103.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/bud.jpg" alt="Airbud movie cover with an Angular crossover">
+</p><p class="image-alt">Was this a real movie, or did we all just share the same fever dream?</p><p></p>
+<h2>Air Bud + Angular — the crossover we didn’t know we needed</h2>
+<p>What do Air Bud and Angular have in common? The real question is, what <em>don’t</em> they have in common?</p>
+<p>With 14 films in the franchise, Air Bud has quietly made over $200 million. Angular just released <a href="https://blog.angular.io/angular-v14-is-now-available-391a6db736af">its 14th version</a> last week, and just like Air Bud, it’s also been quietly racking up the W’s (even if it isn’t a once-in-a-generation basketball talent).</p>
+<p>While the rest of the JavaScript world has been busy arguing on Twitter, the Angular team just keeps pushing out consistent, incremental improvements. They’ve clearly spent a lot of time revamping their documentation, adding helpful examples, and improving the developer experience overall.</p>
+<p>Honestly, the only thing we don’t love about <code>nG</code> these days is them going all in on decorators <span role="img" aria-label="face vomiting">🤮</span>. But we’ll let that slide for now, because they really brought the heat with Angular 14. Let’s get into the highlights.</p>
+<ul>
+<li>
+<p><strong>Standalone Components:</strong> these help to address the thing every developer loves to complain about most — boilerplate (you get a lot less of it now).</p>
+</li>
+<li>
+<p><strong>Faster builds + smaller bundles:</strong> In v14, builds take 90% less resources and bundles are 30% smaller out the box.</p>
+</li>
+<li>
+<p><strong>FORMS BABY:</strong> We all love forms (said no developer ever), but with this release Angular’s Typed Forms help you reduce errors and build safer forms.</p>
+</li>
+<li>
+<p><strong>Automated Version Migrations:</strong> Angular learned the hard way that backwards compat is hard, but now they give you a <a href="https://update.angular.io/">playbook</a> and automation scripts to help you migrate versions (enterprise managers stop drooling pls).</p>
+</li>
+</ul>
+<p><strong>Bottom Line</strong> Sometimes we forget that a team is only as good as the people (or dogs) on it, and Google has obviously put together an S-tier squad. The results speak for themselves. #AngBudForever.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/patback.jpg" alt="Patrick Star meme">
+</p><p class="image-alt">That’s a powerful back (end as a service) [sponsored].</p><p></p>
+<h2><a href="https://appwrite.io/?utm_source=newsletter&amp;utm_medium=homepage&amp;utm_campaign=bytes">Appwrite</a> wants to write your backend for you</h2>
+<p>Congrats! Your team’s app made it to the top of Hacker News, and now you’ve got traffic coming out your eyeballs <span role="img" aria-label="party popper">🎉</span>. There’s only one problem…</p>
+<p>You went with a “usage-based” pricing plan for your hosting — and all that traffic just ate up the rest of the cash in your company bank account <em>(RIP in peace).</em></p>
+<p>Should’ve used <a href="https://appwrite.io/?utm_source=newsletter&amp;utm_medium=homepage&amp;utm_campaign=bytes">Appwrite</a>.</p>
+<p>Appwrite is a <em>self-hosted</em> BAAS (backend as a service) platform that gives you a collection of easy-to-use REST APIs that abstract away all the complex and repetitive parts of building a secure backend.</p>
+<p>And since it’s packaged as a set of (open-source) Docker microservices, you can host it however you want and not have to worry about getting burned by usage-based pricing.</p>
+<p>It handles all of hairy stuff for you, so you can easily integrate your app with multiple user auth methods, set up a DB for storing and querying user data, and <a href="https://appwrite.io/docs?utm_source=newsletter&amp;utm_medium=docs&amp;utm_campaign=bytes">a lot more</a>.</p>
+<p>I guess <em>that’s</em> why they called it Appwrite. Finally makes sense now.</p>
+<p><a href="https://appwrite.io/?utm_source=newsletter&amp;utm_medium=homepage&amp;utm_campaign=bytes">Check it out.</a></p>
+<hr>
+<p><img src="https://bytes.dev/images/content/pine.jpg" alt="Pineapple meme">
+</p><p class="image-alt">I have some state… I have pineapple.</p><p></p>
+<h2>If you like Pinia Coladas</h2>
+<p><em>And getting caught in the…</em> weird corners of the internet where strangers passionately debate niche state management solutions. Then today is your lucky day, my friend.</p>
+<p>Because we’re talking about <a href="https://pinia.vuejs.org/">Pinia</a> — the Vue Store that was recently blessed by the Vue Core Team as the Officially Recommended<span role="img" aria-label="trade mark">™️</span> state management library for Vue apps.</p>
+<p>Besides the fact that Pinia has the cutest OSS logo in the game, there are a few practical reasons why the Vue Team decided to go all in on Pinia and <del>shank</del> <em>demote</em> Vuex to maintenance mode.</p>
+<ul>
+<li>
+<p><strong>More Modular</strong> — Pinia is built to have multiple stores, instead of just one global store with sub-modules (like Vuex). Each Pinia module can be its own store and can be directly imported into specific components. This makes for a better dev experience and also allows for better Type inferences and automatic code splitting.</p>
+</li>
+<li>
+<p><strong>More intuitive</strong> — Pinia is based on Vue 3’s Composition API, which is a lot simpler and requires a lot less boilerplate. This, combined with the modularity mentioned above, makes it a lot more intuitive to write well-organized stores that aren’t janky af.</p>
+</li>
+<li>
+<p><strong>More features</strong> — Pinia comes with built-in support for SSR and Hot Module Replacement, and it hooks into all the <a href="https://devtools.vuejs.org/">Vue devtools</a>. And it’s extensible, so it comes with a bunch of helpful <a href="https://pinia.vuejs.org/core-concepts/plugins.html">plugins</a> too.</p>
+</li>
+</ul>
+<p><strong>Bottom Line:</strong> Similar to the Vue 2 → Vue 3 upgrade, this transition from Vuex to Pinia seems to be focused on making Vue a more attractive choice for large-scale applications and teams.</p>
+<p>That’s why Pinia also comes with an Officially Recommended<span role="img" aria-label="trade mark">™</span> <del>drinking game</del> <em>team-building exercise:</em> every time you get a state error on a Friday, you add one more shot of rum to your blender and mix it up while singing the officially recommended Vue <a href="https://www.youtube.com/watch?v=1jWvQQVwFu4&amp;t=20s">theme song.</a></p>
+<hr>
+<h2>Jobs</h2>
+<h3><a href="https://jobs.lever.co/close.io/23451700-e03a-4739-9da8-f23d2aad91d2">Senior or Staff Front-end Engineer - React (100% Remote)</a></h3>
+<p>Close.com is looking for 3 experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. Close is a 100% globally distributed team of ~55 high-performing, happy people that are dedicated to building a product our customers love.</p>
+<hr>
+<h2><span role="img" aria-label="martial arts uniform">🥋</span> JS (React) Kata — Sponsored by <a href="https://www.courier.com/blog/announcing-courier-automations/?utm_campaign=automations-launch&amp;utm_source=email&amp;utm_medium=bytes-sponsor-link-06-06&amp;utm_content=automations-blog">Courier Automations</a></h2>
+<p><em>Courier just launched a brand new Automations API that makes it super easy to configure notification logic for just about any use case. <a href="https://www.courier.com/blog/announcing-courier-automations/?utm_campaign=automations-launch&amp;utm_source=email&amp;utm_medium=bytes-sponsor-link-06-06&amp;utm_content=automations-blog">See how it works.</a></em></p>
+<p>React’s <code>useRef</code> hook allows you to persist values between renders, without triggering a re-render of the component. The kata is to see if you can, using only <code>React.useState</code>, re-create the functionality of <code>React.useRef</code>.</p>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p><a href="https://github.com/unocss/unocss">UnoCSS</a> is an instant, on-demand atomic CSS engine that just released some cool, interactive <a href="https://uno.antfu.me/">docs</a>. It was created by Anthony Fu, who’s a member of the Vue, Nuxt, and Vite Core Teams (aka Vue Mafia). The project’s name is obviously based on his intense Uno games with Evan You and the rest of the V.M. — better be careful who you use that Draw-4 wild card on.</p>
+</li>
+<li>
+<p>Want to get a high-level summary of what’s going on in Java-land? New Relic’s got you covered with their <a href="https://newrelic.com/resources/report/2022-state-of-java-ecosystem?utm_source=bytes&amp;utm_medium=community&amp;utm_campaign=global-fy23-q1-state-of-java-ecosystem-report">2022 State of the Java Ecosystem Report</a>. [sponsored]</p>
+</li>
+<li>
+<p>Cosima Mielke wrote a great article about <a href="https://www.smashingmagazine.com/2022/05/magical-svg-techniques/">Magical SVG Techniques</a>. Now we just need her to write an article about how we can magically catch and imprison all the people who create non-transparent PNG’s.</p>
+</li>
+<li>
+<p>Matti Bar-Zeev wrote about <a href="https://dev.to/mbarzeev/converting-a-react-component-to-solidjs-5bgj">Converting a React Component to SolidJS</a>. He starts out the article by saying, “Not to diss anyone…” which means you know he’s about to diss someone <span role="img" aria-label="popcorn">🍿</span>.</p>
+</li>
+<li>
+<p>Nate Moore (the co-creator of Astro and Bytes reader (<span role="img" aria-label="waving hand">👋</span> Nate)) spoke about <a href="https://www.youtube.com/watch?v=-sUWvPh5W5k">WebAssembly in the JavaScript Ecosystem</a>. His talk is a lot like most Christopher Nolan films: you might not understand most of what’s going on, but it’s still worth your time.</p>
+</li>
+<li>
+<p>Robin Wieruch wrote an in-depth article on <a href="https://www.robinwieruch.de/javascript-monorepos/">Monorepos in JavaScript</a> that’s so long it might technically qualify as its own monorepo.</p>
+</li>
+<li>
+<p><a href="https://svelvet.io/">Svelvet</a> is a new Svelte component library for building interactive node-based flow diagrams. Now I can finally map out what the series of events that needs to take place in order for me to finally infiltrate the Vue Mafia and finally beat Evan and Anthony in Uno.</p>
+</li>
+<li>
+<p><a href="https://blueprintjs.com/">Blueprint</a> is a React-based UI toolkit for building complex, data-dense web interfaces. And it was created by Palantir — so you can rest easy knowing that the US Government is watching over all of your app’s data at all times to protect your freedom <span role="img" aria-label="woozy face">🥴</span>.</p>
+</li>
+</ol>
+<hr>
+<h2><span role="img" aria-label="martial arts uniform">🥋</span> JS (React) Kata — Sponsored by <a href="https://www.courier.com/blog/announcing-courier-automations/?utm_campaign=automations-launch&amp;utm_source=email&amp;utm_medium=bytes-sponsor-link-06-06&amp;utm_content=automations-blog">Courier Automations</a></h2>
+<p>The marketing pitch for <code>React.useState</code> is that it allows you to add state to function components. This is true, but we can break it down even further. Fundamentally, the <code>useState</code> Hook gives you two things - a value that will persist across renders and an API to update that value and trigger a re-render.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValueAndReRender<span class="token punctuation">]</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span>
+  <span class="token string">'initial value'</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>When building UI, both are necessary. Without the ability to persist the value across renders, you’d lose the ability to have dynamic data in your app. Without the ability to update the value and trigger a re-render, the UI would never update.</p>
+<p>Now, what if you had a use case where you weren’t dealing with any UI, so you didn’t care about re-rendering, but you did need to persist a value across renders? In this scenario, it’s like you need the half of <code>useState</code> that lets you persist a value across renders but not the other half that triggers a re-render — Something like this.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">usePersistentValue</span> <span class="token punctuation">(</span><span class="token parameter">initialValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> React<span class="token punctuation">.</span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">current</span><span class="token operator">:</span> initialValue
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Spoiler alert, the functionality of our custom <code>usePersistentValue</code> Hook is <strong>very</strong> similar to the built-in <code>React.useRef</code> Hook.</p>
+<p>If you want to add state to your component that persists across renders and can trigger a re-render when it’s updated, go with <code>useState</code> (or <code>useReducer</code>). If you want to add state to your component that persists across renders but doesn’t trigger a re-render when it’s updated, go with <code>useRef</code>.</p>
+<p>For more info on <code>useRef</code> (and a deeper explanation of how <code>useState</code> is similar to <code>useRef</code>), visit <a href="https://ui.dev/useref">Understanding React’s useRef Hook</a></p></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"103\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"103\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"103\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" What do Air Bud and Angular have in common?\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"103\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"June 6, 2022\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T3ad7,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/bud.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/patback.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/pine.jpg\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003eThis week, we’ve got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia.\u003c/p\u003e\n\u003cp\u003eWelcome to #103.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/bud.jpg\" alt=\"Airbud movie cover with an Angular crossover\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eWas this a real movie, or did we all just share the same fever dream?\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eAir Bud + Angular — the crossover we didn’t know we needed\u003c/h2\u003e\n\u003cp\u003eWhat do Air Bud and Angular have in common? The real question is, what \u003cem\u003edon’t\u003c/em\u003e they have in common?\u003c/p\u003e\n\u003cp\u003eWith 14 films in the franchise, Air Bud has quietly made over $200 million. Angular just released \u003ca href=\"https://blog.angular.io/angular-v14-is-now-available-391a6db736af\"\u003eits 14th version\u003c/a\u003e last week, and just like Air Bud, it’s also been quietly racking up the W’s (even if it isn’t a once-in-a-generation basketball talent).\u003c/p\u003e\n\u003cp\u003eWhile the rest of the JavaScript world has been busy arguing on Twitter, the Angular team just keeps pushing out consistent, incremental improvements. They’ve clearly spent a lot of time revamping their documentation, adding helpful examples, and improving the developer experience overall.\u003c/p\u003e\n\u003cp\u003eHonestly, the only thing we don’t love about \u003ccode\u003enG\u003c/code\u003e these days is them going all in on decorators \u003cspan role=\"img\" aria-label=\"face vomiting\"\u003e🤮\u003c/span\u003e. But we’ll let that slide for now, because they really brought the heat with Angular 14. Let’s get into the highlights.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eStandalone Components:\u003c/strong\u003e these help to address the thing every developer loves to complain about most — boilerplate (you get a lot less of it now).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eFaster builds + smaller bundles:\u003c/strong\u003e In v14, builds take 90% less resources and bundles are 30% smaller out the box.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eFORMS BABY:\u003c/strong\u003e We all love forms (said no developer ever), but with this release Angular’s Typed Forms help you reduce errors and build safer forms.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eAutomated Version Migrations:\u003c/strong\u003e Angular learned the hard way that backwards compat is hard, but now they give you a \u003ca href=\"https://update.angular.io/\"\u003eplaybook\u003c/a\u003e and automation scripts to help you migrate versions (enterprise managers stop drooling pls).\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eBottom Line\u003c/strong\u003e Sometimes we forget that a team is only as good as the people (or dogs) on it, and Google has obviously put together an S-tier squad. The results speak for themselves. #AngBudForever.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/patback.jpg\" alt=\"Patrick Star meme\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eThat’s a powerful back (end as a service) [sponsored].\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003e\u003ca href=\"https://appwrite.io/?utm_source=newsletter\u0026amp;utm_medium=homepage\u0026amp;utm_campaign=bytes\"\u003eAppwrite\u003c/a\u003e wants to write your backend for you\u003c/h2\u003e\n\u003cp\u003eCongrats! Your team’s app made it to the top of Hacker News, and now you’ve got traffic coming out your eyeballs \u003cspan role=\"img\" aria-label=\"party popper\"\u003e🎉\u003c/span\u003e. There’s only one problem…\u003c/p\u003e\n\u003cp\u003eYou went with a “usage-based” pricing plan for your hosting — and all that traffic just ate up the rest of the cash in your company bank account \u003cem\u003e(RIP in peace).\u003c/em\u003e\u003c/p\u003e\n\u003cp\u003eShould’ve used \u003ca href=\"https://appwrite.io/?utm_source=newsletter\u0026amp;utm_medium=homepage\u0026amp;utm_campaign=bytes\"\u003eAppwrite\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eAppwrite is a \u003cem\u003eself-hosted\u003c/em\u003e BAAS (backend as a service) platform that gives you a collection of easy-to-use REST APIs that abstract away all the complex and repetitive parts of building a secure backend.\u003c/p\u003e\n\u003cp\u003eAnd since it’s packaged as a set of (open-source) Docker microservices, you can host it however you want and not have to worry about getting burned by usage-based pricing.\u003c/p\u003e\n\u003cp\u003eIt handles all of hairy stuff for you, so you can easily integrate your app with multiple user auth methods, set up a DB for storing and querying user data, and \u003ca href=\"https://appwrite.io/docs?utm_source=newsletter\u0026amp;utm_medium=docs\u0026amp;utm_campaign=bytes\"\u003ea lot more\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eI guess \u003cem\u003ethat’s\u003c/em\u003e why they called it Appwrite. Finally makes sense now.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://appwrite.io/?utm_source=newsletter\u0026amp;utm_medium=homepage\u0026amp;utm_campaign=bytes\"\u003eCheck it out.\u003c/a\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/pine.jpg\" alt=\"Pineapple meme\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eI have some state… I have pineapple.\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eIf you like Pinia Coladas\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eAnd getting caught in the…\u003c/em\u003e weird corners of the internet where strangers passionately debate niche state management solutions. Then today is your lucky day, my friend.\u003c/p\u003e\n\u003cp\u003eBecause we’re talking about \u003ca href=\"https://pinia.vuejs.org/\"\u003ePinia\u003c/a\u003e — the Vue Store that was recently blessed by the Vue Core Team as the Officially Recommended\u003cspan role=\"img\" aria-label=\"trade mark\"\u003e™️\u003c/span\u003e state management library for Vue apps.\u003c/p\u003e\n\u003cp\u003eBesides the fact that Pinia has the cutest OSS logo in the game, there are a few practical reasons why the Vue Team decided to go all in on Pinia and \u003cdel\u003eshank\u003c/del\u003e \u003cem\u003edemote\u003c/em\u003e Vuex to maintenance mode.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eMore Modular\u003c/strong\u003e — Pinia is built to have multiple stores, instead of just one global store with sub-modules (like Vuex). Each Pinia module can be its own store and can be directly imported into specific components. This makes for a better dev experience and also allows for better Type inferences and automatic code splitting.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eMore intuitive\u003c/strong\u003e — Pinia is based on Vue 3’s Composition API, which is a lot simpler and requires a lot less boilerplate. This, combined with the modularity mentioned above, makes it a lot more intuitive to write well-organized stores that aren’t janky af.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eMore features\u003c/strong\u003e — Pinia comes with built-in support for SSR and Hot Module Replacement, and it hooks into all the \u003ca href=\"https://devtools.vuejs.org/\"\u003eVue devtools\u003c/a\u003e. And it’s extensible, so it comes with a bunch of helpful \u003ca href=\"https://pinia.vuejs.org/core-concepts/plugins.html\"\u003eplugins\u003c/a\u003e too.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e Similar to the Vue 2 → Vue 3 upgrade, this transition from Vuex to Pinia seems to be focused on making Vue a more attractive choice for large-scale applications and teams.\u003c/p\u003e\n\u003cp\u003eThat’s why Pinia also comes with an Officially Recommended\u003cspan role=\"img\" aria-label=\"trade mark\"\u003e™\u003c/span\u003e \u003cdel\u003edrinking game\u003c/del\u003e \u003cem\u003eteam-building exercise:\u003c/em\u003e every time you get a state error on a Friday, you add one more shot of rum to your blender and mix it up while singing the officially recommended Vue \u003ca href=\"https://www.youtube.com/watch?v=1jWvQQVwFu4\u0026amp;t=20s\"\u003etheme song.\u003c/a\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eJobs\u003c/h2\u003e\n\u003ch3\u003e\u003ca href=\"https://jobs.lever.co/close.io/23451700-e03a-4739-9da8-f23d2aad91d2\"\u003eSenior or Staff Front-end Engineer - React (100% Remote)\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eClose.com is looking for 3 experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. Close is a 100% globally distributed team of ~55 high-performing, happy people that are dedicated to building a product our customers love.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003e\u003cspan role=\"img\" aria-label=\"martial arts uniform\"\u003e🥋\u003c/span\u003e JS (React) Kata — Sponsored by \u003ca href=\"https://www.courier.com/blog/announcing-courier-automations/?utm_campaign=automations-launch\u0026amp;utm_source=email\u0026amp;utm_medium=bytes-sponsor-link-06-06\u0026amp;utm_content=automations-blog\"\u003eCourier Automations\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eCourier just launched a brand new Automations API that makes it super easy to configure notification logic for just about any use case. \u003ca href=\"https://www.courier.com/blog/announcing-courier-automations/?utm_campaign=automations-launch\u0026amp;utm_source=email\u0026amp;utm_medium=bytes-sponsor-link-06-06\u0026amp;utm_content=automations-blog\"\u003eSee how it works.\u003c/a\u003e\u003c/em\u003e\u003c/p\u003e\n\u003cp\u003eReact’s \u003ccode\u003euseRef\u003c/code\u003e hook allows you to persist values between renders, without triggering a re-render of the component. The kata is to see if you can, using only \u003ccode\u003eReact.useState\u003c/code\u003e, re-create the functionality of \u003ccode\u003eReact.useRef\u003c/code\u003e.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/unocss/unocss\"\u003eUnoCSS\u003c/a\u003e is an instant, on-demand atomic CSS engine that just released some cool, interactive \u003ca href=\"https://uno.antfu.me/\"\u003edocs\u003c/a\u003e. It was created by Anthony Fu, who’s a member of the Vue, Nuxt, and Vite Core Teams (aka Vue Mafia). The project’s name is obviously based on his intense Uno games with Evan You and the rest of the V.M. — better be careful who you use that Draw-4 wild card on.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eWant to get a high-level summary of what’s going on in Java-land? New Relic’s got you covered with their \u003ca href=\"https://newrelic.com/resources/report/2022-state-of-java-ecosystem?utm_source=bytes\u0026amp;utm_medium=community\u0026amp;utm_campaign=global-fy23-q1-state-of-java-ecosystem-report\"\u003e2022 State of the Java Ecosystem Report\u003c/a\u003e. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eCosima Mielke wrote a great article about \u003ca href=\"https://www.smashingmagazine.com/2022/05/magical-svg-techniques/\"\u003eMagical SVG Techniques\u003c/a\u003e. Now we just need her to write an article about how we can magically catch and imprison all the people who create non-transparent PNG’s.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eMatti Bar-Zeev wrote about \u003ca href=\"https://dev.to/mbarzeev/converting-a-react-component-to-solidjs-5bgj\"\u003eConverting a React Component to SolidJS\u003c/a\u003e. He starts out the article by saying, “Not to diss anyone…” which means you know he’s about to diss someone \u003cspan role=\"img\" aria-label=\"popcorn\"\u003e🍿\u003c/span\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eNate Moore (the co-creator of Astro and Bytes reader (\u003cspan role=\"img\" aria-label=\"waving hand\"\u003e👋\u003c/span\u003e Nate)) spoke about \u003ca href=\"https://www.youtube.com/watch?v=-sUWvPh5W5k\"\u003eWebAssembly in the JavaScript Ecosystem\u003c/a\u003e. His talk is a lot like most Christopher Nolan films: you might not understand most of what’s going on, but it’s still worth your time.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eRobin Wieruch wrote an in-depth article on \u003ca href=\"https://www.robinwieruch.de/javascript-monorepos/\"\u003eMonorepos in JavaScript\u003c/a\u003e that’s so long it might technically qualify as its own monorepo.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://svelvet.io/\"\u003eSvelvet\u003c/a\u003e is a new Svelte component library for building interactive node-based flow diagrams. Now I can finally map out what the series of events that needs to take place in order for me to finally infiltrate the Vue Mafia and finally beat Evan and Anthony in Uno.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://blueprintjs.com/\"\u003eBlueprint\u003c/a\u003e is a React-based UI toolkit for building complex, data-dense web interfaces. And it was created by Palantir — so you can rest easy knowing that the US Government is watching over all of your app’s data at all times to protect your freedom \u003cspan role=\"img\" aria-label=\"woozy face\"\u003e🥴\u003c/span\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\n\u003ch2\u003e\u003cspan role=\"img\" aria-label=\"martial arts uniform\"\u003e🥋\u003c/span\u003e JS (React) Kata — Sponsored by \u003ca href=\"https://www.courier.com/blog/announcing-courier-automations/?utm_campaign=automations-launch\u0026amp;utm_source=email\u0026amp;utm_medium=bytes-sponsor-link-06-06\u0026amp;utm_content=automations-blog\"\u003eCourier Automations\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eThe marketing pitch for \u003ccode\u003eReact.useState\u003c/code\u003e is that it allows you to add state to function components. This is true, but we can break it down even further. Fundamentally, the \u003ccode\u003euseState\u003c/code\u003e Hook gives you two things - a value that will persist across renders and an API to update that value and trigger a re-render.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e[\u003c/span\u003evalue\u003cspan class=\"token punctuation\"\u003e,\u003c/span\u003e setValueAndReRender\u003cspan class=\"token punctuation\"\u003e]\u003c/span\u003e \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e React\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003euseState\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\n  \u003cspan class=\"token string\"\u003e'initial value'\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWhen building UI, both are necessary. Without the ability to persist the value across renders, you’d lose the ability to have dynamic data in your app. Without the ability to update the value and trigger a re-render, the UI would never update.\u003c/p\u003e\n\u003cp\u003eNow, what if you had a use case where you weren’t dealing with any UI, so you didn’t care about re-rendering, but you did need to persist a value across renders? In this scenario, it’s like you need the half of \u003ccode\u003euseState\u003c/code\u003e that lets you persist a value across renders but not the other half that triggers a re-render — Something like this.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003eusePersistentValue\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003einitialValue\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e React\u003cspan class=\"token punctuation\"\u003e.\u003c/span\u003e\u003cspan class=\"token function\"\u003euseState\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n    \u003cspan class=\"token literal-property property\"\u003ecurrent\u003c/span\u003e\u003cspan class=\"token operator\"\u003e:\u003c/span\u003e initialValue\n  \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e[\u003c/span\u003e\u003cspan class=\"token number\"\u003e0\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e]\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eSpoiler alert, the functionality of our custom \u003ccode\u003eusePersistentValue\u003c/code\u003e Hook is \u003cstrong\u003every\u003c/strong\u003e similar to the built-in \u003ccode\u003eReact.useRef\u003c/code\u003e Hook.\u003c/p\u003e\n\u003cp\u003eIf you want to add state to your component that persists across renders and can trigger a re-render when it’s updated, go with \u003ccode\u003euseState\u003c/code\u003e (or \u003ccode\u003euseReducer\u003c/code\u003e). If you want to add state to your component that persists across renders but doesn’t trigger a re-render when it’s updated, go with \u003ccode\u003euseRef\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eFor more info on \u003ccode\u003euseRef\u003c/code\u003e (and a deeper explanation of how \u003ccode\u003euseState\u003c/code\u003e is similar to \u003ccode\u003euseRef\u003c/code\u003e), visit \u003ca href=\"https://ui.dev/useref\"\u003eUnderstanding React’s useRef Hook\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #103 - What do Air Bud and Angular have in common?\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"This issue, we've got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/103\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #103 - What do Air Bud and Angular have in common?\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"This issue, we've got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/103\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/bud.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #103 - What do Air Bud and Angular have in common?\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"This issue, we've got an Air Bud crossover for the ages, a new team-building drinking game, and a master plan for infiltrating the Vue Mafia.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/bud.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

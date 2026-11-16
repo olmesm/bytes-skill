@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Point #{{N}}</title>
+<!--
+  HOW TO USE
+  - Replace every {{PLACEHOLDER}} and all sample copy. Delete blocks you do not use.
+  - Keep each <section id="..."> so comments can refer to blocks by name.
+  - Brand: change the tokens in :root (and the dark overrides) only.
+  - Images sit beside this file and are referenced relatively.
+-->
+<style>
+  :root {
+    --bg: #f6f3ec; --paper: #fffdf8; --ink: #1d1b19; --muted: #6b655c;
+    --line: #e4ddd0; --accent: #e5482d; --accent-ink: #fff; --link: #0b63ce;
+    --mark: #ffe9a8; --code-bg: #1f1d1b; --code-ink: #f1ece2; --good: #1f9d68; --bad: #c9442c;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #131211; --paper: #1b1a18; --ink: #f1ece2; --muted: #a39c90;
+      --line: #2e2b27; --link: #7db7ff; --mark: #4a3d12; --code-bg: #0c0b0a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #131211; --paper: #1b1a18; --ink: #f1ece2; --muted: #a39c90;
+    --line: #2e2b27; --link: #7db7ff; --mark: #4a3d12; --code-bg: #0c0b0a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--sans); }
+  .issue { max-width: 640px; margin: 0 auto; background: var(--paper); border-inline: 1px solid var(--line); }
+  section, header, footer { padding: 28px 24px; }
+  section + section, footer { border-top: 4px solid var(--line); }
+  a { color: var(--link); font-weight: 600; text-underline-offset: 2px; }
+  img, svg, video { max-width: 100%; height: auto; display: block; }
+  h1, h2, h3 { line-height: 1.15; margin: 0; text-wrap: balance; }
+  p { margin: 14px 0; }
+  code { font: 0.88em var(--mono); background: var(--mark); padding: 1px 5px; border-radius: 4px; }
+  pre { background: var(--code-bg); color: var(--code-ink); padding: 18px; border-radius: 10px; overflow-x: auto; font: 14px/1.5 var(--mono); }
+  pre code { background: none; padding: 0; font-size: inherit; }
+  mark { background: var(--mark); color: inherit; padding: 0 3px; border-radius: 3px; }
+  del { color: var(--muted); }
+
+  /* masthead */
+  header { background: var(--ink); color: var(--paper); text-align: center; padding-block: 40px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font: 700 15px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+  .brand i { width: 0; height: 0; border-block: 9px solid transparent; border-left: 15px solid var(--accent); animation: nudge 1.6s ease-in-out infinite; }
+  header h1 { font-size: clamp(32px, 8vw, 52px); font-weight: 900; text-transform: uppercase; margin-top: 18px; }
+  .meta { font: 13px var(--mono); opacity: .75; margin-top: 14px; }
+  @keyframes nudge { 50% { transform: translateX(5px); } }
+
+  /* section label */
+  .label { display: inline-block; font: 700 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); padding: 4px 10px; border-radius: 999px; margin-bottom: 16px; }
+  h2 { font-size: 28px; font-weight: 850; margin-top: 16px; }
+  h3 { font-size: 20px; }
+
+  /* figures */
+  figure { margin: 18px 0; }
+  figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+  .meme img, .meme svg { width: 100%; border-radius: 12px; aspect-ratio: 16/9; object-fit: cover; background: var(--line); }
+  .meme figcaption { font-size: 17px; font-style: italic; color: var(--ink); text-align: center; }
+  .shot { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: 0 6px 22px rgb(0 0 0 / .12); }
+  .shot::before { content: "● ● ●"; display: block; font-size: 9px; letter-spacing: 3px; color: var(--muted); background: var(--bg); padding: 7px 10px; border-bottom: 1px solid var(--line); }
+
+  ul.points { padding-left: 20px; } ul.points li { margin: 10px 0; }
+  .bottom-line { border-left: 5px solid var(--accent); padding: 4px 0 4px 16px; margin-top: 22px; }
+  ol.bits { padding-left: 24px; } ol.bits li { margin: 14px 0; padding-left: 4px; }
+  ol.bits li::marker { font: 700 15px var(--mono); color: var(--accent); }
+  .cta { display: inline-block; background: var(--ink); color: var(--paper); padding: 10px 18px; border-radius: 8px; text-decoration: none; }
+  details summary { cursor: pointer; font-weight: 700; }
+  #receipts { font-size: 14px; color: var(--muted); } #receipts li { margin: 4px 0; overflow-wrap: anywhere; }
+  footer { text-align: center; font-size: 13px; color: var(--muted); }
+
+  /* ---------- animation patterns ---------- */
+  /* before/after wipe: two same-sized images */
+  .wipe { position: relative; overflow: hidden; }
+  .wipe img { width: 100%; }
+  .wipe .after { position: absolute; inset: 0; animation: wipe 6s ease-in-out infinite; border-right: 3px solid var(--accent); overflow: hidden; }
+  .wipe .after img { width: auto; height: 100%; max-width: none; }
+  @keyframes wipe { 0%, 15% { width: 0; } 50%, 85% { width: 100%; } 100% { width: 0; } }
+
+  /* racing bars: set --v as a percentage of the longest bar */
+  .race { display: grid; gap: 10px; font: 14px var(--mono); }
+  .race div { display: grid; grid-template-columns: 90px 1fr 70px; gap: 10px; align-items: center; }
+  .race b { height: 22px; border-radius: 5px; background: var(--muted); width: var(--v); transform-origin: left; animation: grow 5s cubic-bezier(.2,.7,.2,1) infinite; }
+  .race .win b { background: var(--good); }
+  @keyframes grow { 0% { transform: scaleX(0); } 45%, 100% { transform: scaleX(1); } }
+
+  /* count-up stat: set --to (integer) */
+  @property --n { syntax: "<integer>"; initial-value: 0; inherits: false; }
+  .stat { text-align: center; }
+  .stat strong { display: block; font: 900 clamp(44px, 12vw, 72px)/1 var(--sans); color: var(--accent); --n: var(--to); animation: count 5s ease-out infinite; counter-reset: n var(--n); }
+  .stat strong::after { content: counter(n); }
+  @keyframes count { from { --n: 0; } 55%, to { --n: var(--to); } }
+
+  /* typed terminal: set --chars to the command length */
+  .term { background: var(--code-bg); color: var(--code-ink); border-radius: 10px; padding: 16px 18px; font: 14px/1.6 var(--mono); overflow-x: auto; }
+  .term .cmd { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: calc(var(--chars) * 1ch); border-right: 2px solid var(--accent); animation: type 7s steps(var(--chars)) infinite; }
+  .term .out { display: block; white-space: pre; color: #9fd8b4; animation: reveal 7s linear infinite; }
+  @keyframes type { 0% { width: 0; } 30%, 100% { width: calc(var(--chars) * 1ch); } }
+  @keyframes reveal { 0%, 34% { opacity: 0; } 38%, 100% { opacity: 1; } }
+
+  /* flow diagram: dots travel along SVG paths via <animateMotion> */
+  .flow text { font: 12px var(--mono); fill: var(--ink); }
+  .flow rect { fill: var(--bg); stroke: var(--muted); rx: 8px; }
+  .flow path { fill: none; stroke: var(--muted); stroke-width: 2; stroke-dasharray: 5 5; }
+  .flow circle { fill: var(--accent); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; }
+    .wipe .after { width: 100%; } .flow circle { display: none; }
+  }
+</style>
+</head>
+<body>
+<article class="issue">
+
+<header id="masthead">
+  <div class="brand"><i></i>The Point</div>
+  <h1>{{ISSUE TITLE}}</h1>
+  <div class="meta">Issue #{{N}} · {{DATE}} · {{M}} minute read</div>
+</header>
+
+<section id="teaser">
+  <p><strong>Today's issue:</strong> {{real story in disguise}}, {{another real story in disguise}}, and {{the narrator's absurd personal aside}}.</p>
+  <p>Welcome to #{{N}}.</p>
+</section>
+
+<section id="main-thing">
+  <span class="label">The Main Thing</span>
+  <figure class="meme">
+    <img src="hero.jpg" alt="{{describe the image}}">
+    <figcaption>{{When you… / Me, …ing}}</figcaption>
+  </figure>
+  <h2>{{Issue title again}}</h2>
+  <p>{{Hook: start outside the story, arrive at the news with a <a href="#">link</a> by sentence two or three.}}</p>
+  <p><strong>{{Why did the team do this?}}</strong> {{The problem, in plain words.}}</p>
+
+  <!-- explaining visual: pick one pattern, delete the others -->
+  <figure>
+    <div class="race">
+      <div><span>before</span><b style="--v:100%"></b><span>11m 40s</span></div>
+      <div class="win"><span>after</span><b style="--v:31%"></b><span>3m 38s</span></div>
+    </div>
+    <figcaption>{{What is measured, over what, and the source link.}}</figcaption>
+  </figure>
+
+  <p>{{Signpost into the bullets:}}</p>
+  <ul class="points">
+    <li><strong>{{Label}}</strong> – {{One or two sentences.}}</li>
+    <li><strong>{{Label}}</strong> – {{One or two sentences.}}</li>
+    <li><strong>{{Label}}</strong> – {{One or two sentences, optionally a wry tail.}}</li>
+  </ul>
+
+  <figure>
+    <div class="shot"><img src="shot-1.png" alt="{{what the screenshot shows}}"></div>
+    <figcaption>{{What we are looking at.}}</figcaption>
+  </figure>
+
+  <p class="bottom-line"><strong>Bottom line:</strong> {{Verdict plus analogy or callback.}}</p>
+</section>
+
+<section id="spotlight">
+  <span class="label">Spotlight</span>
+  <h3><a href="#">{{Thing that deserves more users or more thanks}}</a></h3>
+  <p>{{Three short paragraphs: the itch, the thing, what to do about it.}}</p>
+
+  <figure>
+    <div class="term" style="--chars:27"><span>$ </span><span class="cmd">{{command that is 27 chars}}</span>
+<span class="out">{{✔ real output, line one
+✔ real output, line two}}</span></div>
+    <figcaption>{{Real output from … }}</figcaption>
+  </figure>
+
+  <p><a class="cta" href="#">{{Call to action}}</a></p>
+</section>
+
+<section id="spot-the-bug">
+  <span class="label">Spot the Bug</span>
+  <p>{{One line of setup. Answer at the bottom.}}</p>
+<pre><code>{{10 to 25 lines, one real bug}}</code></pre>
+</section>
+
+<section id="cool-bits">
+  <span class="label">Cool Bits</span>
+  <ol class="bits">
+    <li>{{Name}} <a href="#">{{did a thing}}</a>. {{Optional one-sentence tail.}}</li>
+    <li>{{The strongest item goes first, the warmest or oddest last. About half get a joke.}}</li>
+    <li>
+      <figure class="stat">
+        <strong style="--to:14212"></strong>
+        <figcaption>{{lines deleted in <a href="#">one PR</a>}}</figcaption>
+      </figure>
+    </li>
+    <li>{{Outside link from the news pass, on its own merit.}}</li>
+  </ol>
+
+  <!-- other patterns, move to where they explain something -->
+  <figure>
+    <div class="shot wipe">
+      <img src="before.png" alt="{{before}}">
+      <div class="after"><img src="after.png" alt="{{after}}"></div>
+    </div>
+    <figcaption>{{Before, then after.}}</figcaption>
+  </figure>
+
+  <figure>
+    <svg class="flow" viewBox="0 0 600 120" role="img" aria-label="{{describe the flow}}">
+      <path id="p1" d="M110 60 H250"/><path id="p2" d="M350 60 H490"/>
+      <rect x="10" y="35" width="100" height="50"/><text x="60" y="64" text-anchor="middle">{{client}}</text>
+      <rect x="250" y="35" width="100" height="50"/><text x="300" y="64" text-anchor="middle">{{gateway}}</text>
+      <rect x="490" y="35" width="100" height="50"/><text x="540" y="64" text-anchor="middle">{{service}}</text>
+      <circle r="6"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+      <circle r="6"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+    </svg>
+    <figcaption>{{What moved and what it means.}}</figcaption>
+  </figure>
+</section>
+
+<section id="bug-solution">
+  <span class="label">Spot the Bug: Solution</span>
+  <p>{{Name the bug in one sentence. Why it bites in one or two more. Credit the fixer and link <a href="#">the real PR</a>.}}</p>
+<pre><code>{{the fix}}</code></pre>
+</section>
+
+<section id="receipts">
+  <details>
+    <summary>Receipts ({{count}} sources)</summary>
+    <ul>
+      <li><a href="#">{{org/repo#123 – PR title}}</a></li>
+      <li><a href="#">{{Outside article – publication, date}}</a></li>
+    </ul>
+  </details>
+</section>
+
+<footer>The Point · {{org}} engineering · {{period covered}}<br>Something wrong or missing? Comment on the block and it will be fixed.</footer>
+
+</article>
+</body>
+</html>

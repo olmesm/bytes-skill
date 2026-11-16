@@ -1,0 +1,322 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #60 - using the computer to draw weiners</title><meta name="description" content="This issue, we&#x27;ve got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It&#x27;s summer fun for the whole family!"/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/60"/><meta property="og:title" content="Bytes #60 - using the computer to draw weiners"/><meta property="og:description" content="This issue, we&#x27;ve got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It&#x27;s summer fun for the whole family!"/><meta property="og:url" content="https://bytes.dev/archives/60"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/chrome-is-evil-lol.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #60 - using the computer to draw weiners"/><meta name="twitter:description" content="This issue, we&#x27;ve got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It&#x27;s summer fun for the whole family!"/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/chrome-is-evil-lol.png"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> using the computer to draw weiners</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->60<!-- -->.</span><span class="mr-6 font-bold">August 9, 2021<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/chrome-is-evil-lol.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/smrt.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/olympics.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p>Good <code>{whatever time of day it is for you}</code>. This week we’ve got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It’s summer fun for the whole family!</p>
+<p>Welcome to #60.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/chrome-is-evil-lol.png" alt="Chrome is evil lol">
+</p><p class="image-alt">Chrome woke up and chose violence</p><p></p>
+<h2>Chrome breaks the web</h2>
+<p>Remember last week when we wrote about how Safari is the new IE? Well, Chrome must have seen that because they decided to spice things up and… break the web.</p>
+<p><strong>How we got here:</strong> When Saint Tim Berners-Lee came down from the mountain with the World Wide Web back in 1989, it came with a single instruction to browser vendors:</p>
+<blockquote>
+<p>THOU SHALT NOT BREAK THE WEB
+~ — Tim, probably</p>
+</blockquote>
+<p>And everyone who’s created a browser since then has (mostly) followed that commandment. In the 32 years since the web was invented, there have only been <a href="https://styfle.dev/projects/breaking-changes-web">10 breaking changes</a> (RIP Flash <span role="img" aria-label="crying face">😢</span>). Not a bad track record.</p>
+<p>That’s because browser vendors and standards bodies bend over backwards to keep new changes in web browsers from breaking old sites. (Anybody remember <a href="https://developers.google.com/web/updates/2018/03/smooshgate">#SmooshGate</a>?) That’s how some of our longtime <a href="https://old.homestarrunner.com/sbsite/">favorite websites</a> are able to keep on chugging along, decades later.</p>
+<p>Which brings us to <strong>last week’s drama:</strong></p>
+<p>The latest version of Google Chrome <a href="https://www.chromestatus.com/feature/5148698084376576">disables</a> the <code>alert()</code>, <code>prompt()</code> and <code>confirm()</code> JavaScript APIs for cross-origin iframes. The intention is to <a href="https://twitter.com/estark37/status/1422694845076762629">stop bad websites</a> from using a scary alert message to trick your grandma into installing spyware. And they did it without really telling anyone.</p>
+<p>You might be thinking “That’s fine, who uses cross-origin <code>alert</code>s/<code>prompt</code>s/<code>comfirm</code>s anyway?” Turns out, quite a few people:</p>
+<ul>
+<li><a href="https://twitter.com/chriscoyier/status/1420027533005836298">Chris Coyier uses them</a> for CodePen.</li>
+<li><a href="https://twitter.com/dan_abramov/status/1422579810077904900">Dan Abramov uses them</a> to teach people about React.</li>
+<li><a href="https://twitter.com/bigtimebuddy/status/1422953235111825416">Matt Karl uses them</a> to pay his bills.</li>
+</ul>
+<p>Even more wild, this really isn’t even about “cross-origin”. Chrome’s long-term goal is <a href="https://twitter.com/Rich_Harris/status/1423631525564887040">“eventually deprecating and removing them from the platform”</a> all together. Another L for the #usetheplatform crowd.</p>
+<p><strong>The Bottom Line:</strong> Chrome has since back-tracked and re-enabled these features (for now), but the question on everyone’s mind is — what’s coming next? How will Chrome balance building a better web with not breaking the current web? We don’t have the answers, but be sure to lease a car from <a href="https://www.lingscars.com/">LingsCars.com</a> while you still can.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/smrt.png" alt="Smrt boy">
+</p><p class="image-alt">Adds “Experienced Cloud Engineer” to LinkedIn profile [sponsored]</p><p></p>
+<h2><a href="https://www.pulumi.com?utm_source=bytes-newsletter&amp;utm_medium=sponsored-primary&amp;utm_campaign=iac">Pulumi</a> lets you build on the cloud with JavaScript</h2>
+<p>You know how building and deploying apps on the cloud feels like a weird, overly complicated black box?</p>
+<p>Us too. That’s why we were stoked when we learned about <a href="https://www.pulumi.com?utm_source=bytes-newsletter&amp;utm_medium=sponsored-primary&amp;utm_campaign=iac">Pulumi</a> — a cloud engineering and infrastructure as code platform that makes cloud development feel like normal web development.</p>
+<p>Here are the top 3 reasons we think you should check out Pulumi’s <em>*generous*</em> <a href="https://www.pulumi.com/pricing?utm_source=bytes-newsletter&amp;utm_medium=sponsored-primary&amp;utm_campaign=iac">free trial</a>:</p>
+<ol>
+<li>
+<p>You can use JavaScript, TypeScript, and familiar web dev tools like IDEs and package managers to build cloud apps</p>
+</li>
+<li>
+<p>You can apply standard software engineering practices like modularity, testing, and CI/CD to cloud infrastructure</p>
+</li>
+<li>
+<p>You can use any cloud provider you want, and still use the same approach</p>
+</li>
+</ol>
+<p><span role="img" aria-label="backhand index pointing right">👉</span> <a href="https://www.pulumi.com/resources/getting-from-code-to-cloud-with-vscode-and-pulumi/?utm_source=bytes-newsletter&amp;utm_medium=sponsored-primary&amp;utm_campaign=iac">Check out this livestream</a> where they demo how easy it is to use Pulumi and VS Code to setup Azure (or any cloud) using JavaScript/TypeScript.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/olympics.png" alt="Framework Olympics">
+</p><p class="image-alt">Who will make it to the top of the podium?</p><p></p>
+<h2>Reporting from the Framework Olympics</h2>
+<p><strong>Stack Overflow’s 2021</strong> <a href="https://insights.stackoverflow.com/survey/2021">Developer Survey</a> came out last week, and the ceremonial torch of the JavaScript Framework Olympics was lit (at least in our hearts).</p>
+<ul>
+<li>
+<p>In the “Most Popular Web Framework” category, React beat out jQuery (lol) for first place, which ended three straight years of prior jQuery dominance. To its credit, jQuery bounced back and took third place in the “Most <em>Dreaded</em> Web Framework” category, because there’s no such thing as bad publicity (I think).</p>
+</li>
+<li>
+<p>Vue also had a big week. Wikipedia selected it over React as the <a href="https://lists.wikimedia.org/hyperkitty/list/wikitech-l@lists.wikimedia.org/thread/SOZREBYR36PUNFZXMIUBVAIOQI4N7PDU/">official JavaScript framework</a> for the Wikimedia Foundation. This was definitely do to an objective, principled look at the pros and cons of the framework and not because their lead developer has an Angular.js fetish <a href="https://bytes.dev/images/content/hellyes.gif"><span role="img" aria-label="">😮‍💨</span></a>.</p>
+</li>
+<li>
+<p>Last up, we had “Framework with the most buzz last week” — and React and Vue were locked in a battle for the ages. Vue started in the lead thanks to the Wikipedia announcement and the hype around some cool <a href="https://github.com/vuejs/vue-next/blob/master/CHANGELOG.md">new features</a> coming soon in Vue 3. But ultimately, React won Gold thanks to the endless speculation and <a href="https://swizec.com/blog/react-18-and-the-future-of-async-data/">experimentation</a> with new React 18 features like Suspense and Concurrency.</p>
+</li>
+</ul>
+<p><strong>Bottom Line:</strong> The Framework Olympics are pretty much the same as the real Olympics, just with a lot less athleticism and slightly less nationalism. See you all in 2024.</p>
+<hr>
+<h2>Jobs</h2>
+<h3><a href="https://jobs.lever.co/close.io/10a1e32b-1a59-48dc-b8f4-e6f0dfae4e20?lever-origin=applied&amp;lever-source%5B%5D=ReactNewsletter">2x Sr. Frontend Engineers - React | 100% Remote</a></h3>
+<p>Close.com is looking for two experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. They are a 100% globally distributed team of ~45 high-performing, happy people that are dedicated to building a product our customers love.</p>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p><a href="https://modern-web.dev/">Modern Web</a> is a collection of guides, tools, and libraries for modern web development. If it’s not full of talk about Web Components and absolutely NO mention of <code>alert</code>, I don’t buy it.</p>
+</li>
+<li>
+<p><a href="https://meyda.js.org/">Meyda</a> is a JavaScript audio feature extraction library that has the same vibes as the Windows Media Player visualizer back in 2004, AKA the glory days of Limewire.</p>
+</li>
+<li>
+<p>Vikrum made a sweet JavaScript implementation of <a href="https://kidpix.app/">Kid Pix</a> — the drawing app first released on Mac back in 1989. I’ll tell you the same thing my elementary school computer lab teacher told my class — “using the computer to draw weiners isn’t what <em>mature</em> kids do.” Look at me now, Mrs. Cather.</p>
+</li>
+<li>
+<p>Amelia Wattenberger (who continues to demonstrate how she’s smarter than all of us) created <a href="https://octo.github.com/projects/repo-visualization">Visualizing a Codebase</a>, which lets you generate a visual representation of any GitHub repo. Not sure how much she used Kid Pix for this project.</p>
+</li>
+<li>
+<p>While Chrome was breaking the internet, Peter wrote about how MDN’s <a href="https://hacks.mozilla.org/2021/08/mdns-autocomplete-search/">autocomplete search</a> tool works.</p>
+</li>
+<li>
+<p>Zak wrote a very comprehensive <a href="https://dev.to/cleancodestudio/the-most-comprehensive-javascript-design-principles-guide-7i3">JavaScript Design Principles Guide</a>, but he should’ve named it “<del>Ned’s</del> Zak’s Declassified JavaScript Design Survival Guide.” Way catchier.</p>
+</li>
+<li>
+<p><a href="https://github.com/Mugen87/yuka">Yuka</a> is a JavaScript library for developing game AI that we can only hope is marching us that much closer to the Singularity.</p>
+</li>
+<li>
+<p><a href="https://github.com/gilbarbara/react-joyride">React Joyride</a> is a library that makes it easy to create guided walk-throughs of your app. It’s also the name of this hilarious buddy cop movie where Jordan Walke and Dan Abramov have to hotwire a car and drive it across the country in order to steal the React 18 docs back from Nicolas Cage.</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"60\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"60\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"60\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" using the computer to draw weiners\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"60\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"August 9, 2021\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T2a14,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/chrome-is-evil-lol.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/smrt.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/olympics.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003eGood \u003ccode\u003e{whatever time of day it is for you}\u003c/code\u003e. This week we’ve got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It’s summer fun for the whole family!\u003c/p\u003e\n\u003cp\u003eWelcome to #60.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/chrome-is-evil-lol.png\" alt=\"Chrome is evil lol\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eChrome woke up and chose violence\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eChrome breaks the web\u003c/h2\u003e\n\u003cp\u003eRemember last week when we wrote about how Safari is the new IE? Well, Chrome must have seen that because they decided to spice things up and… break the web.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eHow we got here:\u003c/strong\u003e When Saint Tim Berners-Lee came down from the mountain with the World Wide Web back in 1989, it came with a single instruction to browser vendors:\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003eTHOU SHALT NOT BREAK THE WEB\n~ — Tim, probably\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003eAnd everyone who’s created a browser since then has (mostly) followed that commandment. In the 32 years since the web was invented, there have only been \u003ca href=\"https://styfle.dev/projects/breaking-changes-web\"\u003e10 breaking changes\u003c/a\u003e (RIP Flash \u003cspan role=\"img\" aria-label=\"crying face\"\u003e😢\u003c/span\u003e). Not a bad track record.\u003c/p\u003e\n\u003cp\u003eThat’s because browser vendors and standards bodies bend over backwards to keep new changes in web browsers from breaking old sites. (Anybody remember \u003ca href=\"https://developers.google.com/web/updates/2018/03/smooshgate\"\u003e#SmooshGate\u003c/a\u003e?) That’s how some of our longtime \u003ca href=\"https://old.homestarrunner.com/sbsite/\"\u003efavorite websites\u003c/a\u003e are able to keep on chugging along, decades later.\u003c/p\u003e\n\u003cp\u003eWhich brings us to \u003cstrong\u003elast week’s drama:\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eThe latest version of Google Chrome \u003ca href=\"https://www.chromestatus.com/feature/5148698084376576\"\u003edisables\u003c/a\u003e the \u003ccode\u003ealert()\u003c/code\u003e, \u003ccode\u003eprompt()\u003c/code\u003e and \u003ccode\u003econfirm()\u003c/code\u003e JavaScript APIs for cross-origin iframes. The intention is to \u003ca href=\"https://twitter.com/estark37/status/1422694845076762629\"\u003estop bad websites\u003c/a\u003e from using a scary alert message to trick your grandma into installing spyware. And they did it without really telling anyone.\u003c/p\u003e\n\u003cp\u003eYou might be thinking “That’s fine, who uses cross-origin \u003ccode\u003ealert\u003c/code\u003es/\u003ccode\u003eprompt\u003c/code\u003es/\u003ccode\u003ecomfirm\u003c/code\u003es anyway?” Turns out, quite a few people:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://twitter.com/chriscoyier/status/1420027533005836298\"\u003eChris Coyier uses them\u003c/a\u003e for CodePen.\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://twitter.com/dan_abramov/status/1422579810077904900\"\u003eDan Abramov uses them\u003c/a\u003e to teach people about React.\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://twitter.com/bigtimebuddy/status/1422953235111825416\"\u003eMatt Karl uses them\u003c/a\u003e to pay his bills.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eEven more wild, this really isn’t even about “cross-origin”. Chrome’s long-term goal is \u003ca href=\"https://twitter.com/Rich_Harris/status/1423631525564887040\"\u003e“eventually deprecating and removing them from the platform”\u003c/a\u003e all together. Another L for the #usetheplatform crowd.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eThe Bottom Line:\u003c/strong\u003e Chrome has since back-tracked and re-enabled these features (for now), but the question on everyone’s mind is — what’s coming next? How will Chrome balance building a better web with not breaking the current web? We don’t have the answers, but be sure to lease a car from \u003ca href=\"https://www.lingscars.com/\"\u003eLingsCars.com\u003c/a\u003e while you still can.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/smrt.png\" alt=\"Smrt boy\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eAdds “Experienced Cloud Engineer” to LinkedIn profile [sponsored]\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003e\u003ca href=\"https://www.pulumi.com?utm_source=bytes-newsletter\u0026amp;utm_medium=sponsored-primary\u0026amp;utm_campaign=iac\"\u003ePulumi\u003c/a\u003e lets you build on the cloud with JavaScript\u003c/h2\u003e\n\u003cp\u003eYou know how building and deploying apps on the cloud feels like a weird, overly complicated black box?\u003c/p\u003e\n\u003cp\u003eUs too. That’s why we were stoked when we learned about \u003ca href=\"https://www.pulumi.com?utm_source=bytes-newsletter\u0026amp;utm_medium=sponsored-primary\u0026amp;utm_campaign=iac\"\u003ePulumi\u003c/a\u003e — a cloud engineering and infrastructure as code platform that makes cloud development feel like normal web development.\u003c/p\u003e\n\u003cp\u003eHere are the top 3 reasons we think you should check out Pulumi’s \u003cem\u003e*generous*\u003c/em\u003e \u003ca href=\"https://www.pulumi.com/pricing?utm_source=bytes-newsletter\u0026amp;utm_medium=sponsored-primary\u0026amp;utm_campaign=iac\"\u003efree trial\u003c/a\u003e:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eYou can use JavaScript, TypeScript, and familiar web dev tools like IDEs and package managers to build cloud apps\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYou can apply standard software engineering practices like modularity, testing, and CI/CD to cloud infrastructure\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYou can use any cloud provider you want, and still use the same approach\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003cspan role=\"img\" aria-label=\"backhand index pointing right\"\u003e👉\u003c/span\u003e \u003ca href=\"https://www.pulumi.com/resources/getting-from-code-to-cloud-with-vscode-and-pulumi/?utm_source=bytes-newsletter\u0026amp;utm_medium=sponsored-primary\u0026amp;utm_campaign=iac\"\u003eCheck out this livestream\u003c/a\u003e where they demo how easy it is to use Pulumi and VS Code to setup Azure (or any cloud) using JavaScript/TypeScript.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/olympics.png\" alt=\"Framework Olympics\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eWho will make it to the top of the podium?\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003eReporting from the Framework Olympics\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eStack Overflow’s 2021\u003c/strong\u003e \u003ca href=\"https://insights.stackoverflow.com/survey/2021\"\u003eDeveloper Survey\u003c/a\u003e came out last week, and the ceremonial torch of the JavaScript Framework Olympics was lit (at least in our hearts).\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eIn the “Most Popular Web Framework” category, React beat out jQuery (lol) for first place, which ended three straight years of prior jQuery dominance. To its credit, jQuery bounced back and took third place in the “Most \u003cem\u003eDreaded\u003c/em\u003e Web Framework” category, because there’s no such thing as bad publicity (I think).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eVue also had a big week. Wikipedia selected it over React as the \u003ca href=\"https://lists.wikimedia.org/hyperkitty/list/wikitech-l@lists.wikimedia.org/thread/SOZREBYR36PUNFZXMIUBVAIOQI4N7PDU/\"\u003eofficial JavaScript framework\u003c/a\u003e for the Wikimedia Foundation. This was definitely do to an objective, principled look at the pros and cons of the framework and not because their lead developer has an Angular.js fetish \u003ca href=\"https://bytes.dev/images/content/hellyes.gif\"\u003e\u003cspan role=\"img\" aria-label=\"\"\u003e😮‍💨\u003c/span\u003e\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eLast up, we had “Framework with the most buzz last week” — and React and Vue were locked in a battle for the ages. Vue started in the lead thanks to the Wikipedia announcement and the hype around some cool \u003ca href=\"https://github.com/vuejs/vue-next/blob/master/CHANGELOG.md\"\u003enew features\u003c/a\u003e coming soon in Vue 3. But ultimately, React won Gold thanks to the endless speculation and \u003ca href=\"https://swizec.com/blog/react-18-and-the-future-of-async-data/\"\u003eexperimentation\u003c/a\u003e with new React 18 features like Suspense and Concurrency.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e The Framework Olympics are pretty much the same as the real Olympics, just with a lot less athleticism and slightly less nationalism. See you all in 2024.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eJobs\u003c/h2\u003e\n\u003ch3\u003e\u003ca href=\"https://jobs.lever.co/close.io/10a1e32b-1a59-48dc-b8f4-e6f0dfae4e20?lever-origin=applied\u0026amp;lever-source%5B%5D=ReactNewsletter\"\u003e2x Sr. Frontend Engineers - React | 100% Remote\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eClose.com is looking for two experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. They are a 100% globally distributed team of ~45 high-performing, happy people that are dedicated to building a product our customers love.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://modern-web.dev/\"\u003eModern Web\u003c/a\u003e is a collection of guides, tools, and libraries for modern web development. If it’s not full of talk about Web Components and absolutely NO mention of \u003ccode\u003ealert\u003c/code\u003e, I don’t buy it.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://meyda.js.org/\"\u003eMeyda\u003c/a\u003e is a JavaScript audio feature extraction library that has the same vibes as the Windows Media Player visualizer back in 2004, AKA the glory days of Limewire.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eVikrum made a sweet JavaScript implementation of \u003ca href=\"https://kidpix.app/\"\u003eKid Pix\u003c/a\u003e — the drawing app first released on Mac back in 1989. I’ll tell you the same thing my elementary school computer lab teacher told my class — “using the computer to draw weiners isn’t what \u003cem\u003emature\u003c/em\u003e kids do.” Look at me now, Mrs. Cather.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAmelia Wattenberger (who continues to demonstrate how she’s smarter than all of us) created \u003ca href=\"https://octo.github.com/projects/repo-visualization\"\u003eVisualizing a Codebase\u003c/a\u003e, which lets you generate a visual representation of any GitHub repo. Not sure how much she used Kid Pix for this project.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eWhile Chrome was breaking the internet, Peter wrote about how MDN’s \u003ca href=\"https://hacks.mozilla.org/2021/08/mdns-autocomplete-search/\"\u003eautocomplete search\u003c/a\u003e tool works.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eZak wrote a very comprehensive \u003ca href=\"https://dev.to/cleancodestudio/the-most-comprehensive-javascript-design-principles-guide-7i3\"\u003eJavaScript Design Principles Guide\u003c/a\u003e, but he should’ve named it “\u003cdel\u003eNed’s\u003c/del\u003e Zak’s Declassified JavaScript Design Survival Guide.” Way catchier.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/Mugen87/yuka\"\u003eYuka\u003c/a\u003e is a JavaScript library for developing game AI that we can only hope is marching us that much closer to the Singularity.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/gilbarbara/react-joyride\"\u003eReact Joyride\u003c/a\u003e is a library that makes it easy to create guided walk-throughs of your app. It’s also the name of this hilarious buddy cop movie where Jordan Walke and Dan Abramov have to hotwire a car and drive it across the country in order to steal the React 18 docs back from Nicolas Cage.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #60 - using the computer to draw weiners\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"This issue, we've got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It's summer fun for the whole family!\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/60\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #60 - using the computer to draw weiners\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"This issue, we've got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It's summer fun for the whole family!\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/60\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/chrome-is-evil-lol.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #60 - using the computer to draw weiners\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"This issue, we've got Chrome picking a fight with the internet, frameworks competing in the JavaScript Olympics, and a buddy cop summer blockbuster about recovering the React 18 docs. It's summer fun for the whole family!\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/chrome-is-evil-lol.png\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

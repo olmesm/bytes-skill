@@ -1,0 +1,305 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #150 - React Native vibe check</title><meta name="description" content="The decade of Tailwind, AIs for your APIs, and word that rhyme with vue"/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/150"/><meta property="og:title" content="Bytes #150 - React Native vibe check"/><meta property="og:description" content="The decade of Tailwind, AIs for your APIs, and word that rhyme with vue"/><meta property="og:url" content="https://bytes.dev/archives/150"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/rn.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #150 - React Native vibe check"/><meta name="twitter:description" content="The decade of Tailwind, AIs for your APIs, and word that rhyme with vue"/><meta name="twitter:image" content="https://bytes.dev/images/content/rn.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> React Native vibe check</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->150<!-- -->.</span><span class="mr-6 font-bold">January 5, 2023<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/rn.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/kodekloud-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/kubernetes.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/trends.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/tailwind-bootstrap-trend.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p>You’d think after 150 issues we’d be better at getting these out on time but here we are…</p>
+<p>Today’s issue:</p>
+<ul>
+<li>The decade of <del>Avatar</del> Tailwind</li>
+<li>AIs for your APIs <span role="img" aria-label="">😵‍💫</span></li>
+<li>Words that rhyme with Vue</li>
+</ul>
+<p>Welcome to <a href="https://bytes.dev/archives/150">#150</a></p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/rn.jpg" alt="Cursed dude" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">When your app is slow but you get to use React<!-- --> </p></div><h3>React Native vibe check</h3><p>React Native is about to release <a href="https://github.com/facebook/react-native/releases">v0.71</a>, so now seems like a good time to dip our toes in the cross-platform waters for a quick vibe check.</p><p><strong>How we got here:</strong> Much like every cast member in <em>Glee</em>, React Native’s rise to stardom has been filled with controversy since it first launched almost 8 years ago. In fact, former React Core Team manager Tom Occhino <a href="https://youtu.be/C1m5hQDjk20?t=1102">recently</a> called React Native “one of the most controversial technologies of all time.”</p><p>Let’s unpack both sides by taking a closer look at some of RN’s criticisms, then discuss some positive recent developments that have us hopeful for a brighter cross-platform future.</p><p><strong>The mid vibes:</strong></p><ul>
+<li>
+<p><strong>Performance issues.</strong> At worst, React Native apps can feel slower, jankier, and more buggy than native iOS and Android apps. This often comes from 1) shipping too much JavaScript and 2) my personal specialty, prioritizing developer experience over user experience.</p>
+</li>
+<li>
+<p><strong>The ecosystem.</strong> Historically, React Native has relied on many third-party libraries that are often out of date or unstable. It’s a big challenge because package authors have to write their code twice (once for iOS, once for Android), and mobile is always a PITA.</p>
+</li>
+<li>
+<p><strong>Poor routing and other DX issues.</strong> Programming in React Native can be frustrating for React developers who aren’t used to the quirks of mobile, and for mobile developers who aren’t used to the quirks of React. Routing, in particular, has always been less than ideal.</p>
+</li>
+</ul><p>But the winds of change have been blowing, giving way to <strong>some immaculate vibes:</strong></p><ul>
+<li>
+<p><strong>TGFE — Thank Goodness for Expo.</strong> Similar to Next.js for React, Expo has provided a simpler, more straightforward way to build React Native apps. Expo 47 recently brought file-based routing and concurrent features to RN and has helped improve many (though not all) of the above issues.</p>
+</li>
+<li>
+<p><strong>Performance improvements.</strong> RN v0.70 shipped with the new Hermes engine as the default back in September, which dramatically <a href="https://reactnative.dev/blog/2022/07/08/hermes-as-the-default#benchmarking">improved performance</a>. And this upcoming 0.71 release will ship with first-class TypeScript support.</p>
+</li>
+<li>
+<p><strong>Shifting the narrative</strong> from “write once, run anywhere” to “learn once, write anywhere.” This helps calibrate expectations and should reduce jank, as developers realize there’s often still a lot of platform-specific work involved with any mobile app.</p>
+</li>
+<li>
+<p><strong>Big-time apps switching to RN.</strong> It’s always a positive signal for a framework to see popular apps like Discord, Coinbase, and Shopify migrate over and give <a href="https://shopify.engineering/migrating-our-largest-mobile-app-to-react-native">glowing reviews</a>.</p>
+</li>
+</ul><p><strong>Bottom line:</strong> We’ve still got a long ways to go in the cross-platform world, but you could argue that the React Native vibes are stronger than ever.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/150" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F150" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=The%20%40bytesdotdev%20team%20gives%20React%20Native%20a%20quick%20vibe%20check%20ahead%20of%20the%20v0.71%20release.%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F150" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AThe%20%40bytesdotdev%20team%20gives%20React%20Native%20a%20quick%20vibe%20check%20ahead%20of%20the%20v0.71%20release.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F150" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/kodekloud-logo.png" alt="KodeKloud logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/kubernetes.jpg" alt="Puppet looking at chalkboard with tons of calcuations" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Every Kubernetes tutorial<!-- --> </p></div><h3><a href="https://kode.wiki/bytes-bf22">KodeKloud</a> will teach you DevOps (without making you hate life)</h3><p>Have you ever thought about exploring the DevOps world? Of course you have. (We all know how much those mofos get paid.)</p><p>But how do you start? The best way to learn anything is through building — but you can’t just spin up a real-world cloud environment and start learning like when you spin up a basic site to learn a new JS framework.</p><p>Oh wait, you actually <em>can</em> do that — with <a href="https://kode.wiki/bytes-bf22">KodeKloud</a>. Their 45+ courses are all super hands-on, and come with over 400 labs and practice problems.</p><p>Over 550,000 developers have taken their courses, and they seem to be <a href="https://kode.wiki/bytes-stories22">universally loved</a> for three big reasons:</p><ol>
+<li>
+<p>You get instant access to 3 sandboxed cloud environments (Google Cloud, Azure, and AWS) and 40+ DevOps environments (Docker servers, Kubernetes clusters, etc.) — so it’s easy to get started.</p>
+</li>
+<li>
+<p>You can use their KodeKloud Engineer Program to role-play a fictitious SysAdmin job, work on various portfolio-worthy projects, and get promoted through different roles all the way up to DevOps Architect. (Basically The Sims, but you actually learn stuff.)</p>
+</li>
+<li>
+<p>They’ve helped thousands of developers get hired at jobs where they make an average of $100k a year.</p>
+</li>
+</ol><p><a href="https://kode.wiki/bytes-sale22">Check it out</a> — they’ve extended their Cyber Monday sale for Bytes readers <span role="img" aria-label="party popper">🎉</span>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/trends.png" alt="Trends logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Trend of the Week</h2><div class="section-presenter" style="margin-bottom:50px;margin-top:15px"><h4>Sponsored by <a href="https://www.developereconomics.net/?member_id=bytes&amp;utm_medium=nl_pr2">The Developer Nation Survey</a></h4><p><em>Want to make an impact on the developer ecosystem? Take part in Developer Nation’s <a href="https://www.developereconomics.net/?member_id=bytes&amp;utm_medium=nl_pr2">brand new survey</a>, and you’ll help shape the ecosystem and be entered to win an iPad air, Udemy courses, IoT kits, and more.</em></p></div></div>
+<div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/tailwind-bootstrap-trend.jpg" alt="Tailwind vs Bootstrap" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Tailwind overtakes Bootstrap<!-- --> <!-- -->–&nbsp;data by <a href="https://npmtrends.com/bootstrap-vs-tailwindcss">npmtrends.com</a></p></div>
+<p>After a 10-year run on top, Bootstrap just gave up its crown as “npm’s most downloaded CSS framework.” Tailwind has the throne to itself now, thanks to growing by a whopping 2.65x in 2022. (Similarly, <em>Avatar 2</em> just passed <em>Top Gun Maverick</em> in total box office sales, despite being 2.65x more likely to put you to sleep).</p>
+<p>Let’s take a look at how Tailwind became the new top dog:</p>
+<p><strong>Components:</strong> Components have become the de facto way to reuse styles, making global selectors less necessary for building websites. Tailwind’s utility-style CSS embraced this, and components + tailwind became a match made in heaven.</p>
+<p><strong>Performance:</strong> Tailwind’s biggest innovation was combining the utility classes with tooling to purge unused styles. So instead of having a really large stylesheet, you only ship the styles your site actually uses.</p>
+<p><strong>Developer Experience:</strong> Features like JIT compilation, <a href="https://tailwindcss.com/blog/tailwindcss-v3-1">arbitrary variants</a>, and out-of-the-box defaults for your design system make styling easier than ever.</p>
+<p><strong>Modern CSS:</strong> As soon as the browser releases new CSS features, it feels like Tailwind has them integrated into their framework immediately.</p>
+<p>The big question is, will Tailwind still have the crown in 2033? And how many more Avatar movies can they possibly have made by then?</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>Evan You wrote <a href="https://blog.vuejs.org/posts/2022-year-in-review.html">A <em>2022</em> Year in <em>Review</em> for <em>Vue</em></a>. Apparently, 2022 was also a big year for rhyming.</p>
+</li>
+<li>
+<p>Sleuth is hosting a *free* live video chat on <a href="https://www.sleuth.io/webinar-work-in-progress?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=bytes">Best practices for managing Work in Progress</a>. You’ll get actionable insights from CTO’s and Engineering Managers who are currently in the trenches. <a href="https://www.sleuth.io/webinar-work-in-progress?utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=bytes">Check it out.</a> [sponsored]</p>
+</li>
+<li>
+<p>Isaac Way just released <a href="https://github.com/iway1/react-ts-form">react-ts-form</a>, which (as you might’ve guessed) is a new Typesafe React form library with a lot less boilerplate than other libraries. He also has a pet chihuahua named, <code>little-taco-bell-dog</code>.</p>
+</li>
+<li>
+<p>Jules Blom wrote an in-depth article about <a href="https://julesblom.com/writing/ref-callback-use-cases">Use Cases for React’s <code>ref</code> Callback</a> — which he describes as “a niche feature that you won’t need every day.” Sounds like the perfect API to sprinkle around your codebase for improved job security.</p>
+</li>
+<li>
+<p>Rik Schennink wrote this article about <a href="https://pqina.nl/blog/compress-image-before-upload">How to use JavaScript to compress images before uploading</a>, and posted it first thing in the morning on New Year’s Day. Five points to Gryffindor for getting an early start on those resolutions.</p>
+</li>
+<li>
+<p>HTTPie just launched a new <a href="https://httpie.io/blog/ai">AI assistant</a> that promises to be “a brand new way to interact with APIs.” Still waiting for an AI assitant that’ll give me a healthy new way to interact with my in-laws.</p>
+</li>
+<li>
+<p><a href="https://mafs.dev/">Mafs</a> is a set of opinionated React components for creating interactive math visualizations. <em>So get off your ath, let’s do some math — math, math, math, math, mafs <span role="img" aria-label="musical note">🎵</span>.</em></p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"150\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"150\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"150\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" React Native vibe check\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"150\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"January 5, 2023\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T3a64,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/rn.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/kodekloud-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/kubernetes.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/trends.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/tailwind-bootstrap-trend.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003eYou’d think after 150 issues we’d be better at getting these out on time but here we are…\u003c/p\u003e\n\u003cp\u003eToday’s issue:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eThe decade of \u003cdel\u003eAvatar\u003c/del\u003e Tailwind\u003c/li\u003e\n\u003cli\u003eAIs for your APIs \u003cspan role=\"img\" aria-label=\"\"\u003e😵‍💫\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003eWords that rhyme with Vue\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/150\"\u003e#150\u003c/a\u003e\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/rn.jpg\" alt=\"Cursed dude\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eWhen your app is slow but you get to use React\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eReact Native vibe check\u003c/h3\u003e\u003cp\u003eReact Native is about to release \u003ca href=\"https://github.com/facebook/react-native/releases\"\u003ev0.71\u003c/a\u003e, so now seems like a good time to dip our toes in the cross-platform waters for a quick vibe check.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eHow we got here:\u003c/strong\u003e Much like every cast member in \u003cem\u003eGlee\u003c/em\u003e, React Native’s rise to stardom has been filled with controversy since it first launched almost 8 years ago. In fact, former React Core Team manager Tom Occhino \u003ca href=\"https://youtu.be/C1m5hQDjk20?t=1102\"\u003erecently\u003c/a\u003e called React Native “one of the most controversial technologies of all time.”\u003c/p\u003e\u003cp\u003eLet’s unpack both sides by taking a closer look at some of RN’s criticisms, then discuss some positive recent developments that have us hopeful for a brighter cross-platform future.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eThe mid vibes:\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePerformance issues.\u003c/strong\u003e At worst, React Native apps can feel slower, jankier, and more buggy than native iOS and Android apps. This often comes from 1) shipping too much JavaScript and 2) my personal specialty, prioritizing developer experience over user experience.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eThe ecosystem.\u003c/strong\u003e Historically, React Native has relied on many third-party libraries that are often out of date or unstable. It’s a big challenge because package authors have to write their code twice (once for iOS, once for Android), and mobile is always a PITA.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePoor routing and other DX issues.\u003c/strong\u003e Programming in React Native can be frustrating for React developers who aren’t used to the quirks of mobile, and for mobile developers who aren’t used to the quirks of React. Routing, in particular, has always been less than ideal.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eBut the winds of change have been blowing, giving way to \u003cstrong\u003esome immaculate vibes:\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eTGFE — Thank Goodness for Expo.\u003c/strong\u003e Similar to Next.js for React, Expo has provided a simpler, more straightforward way to build React Native apps. Expo 47 recently brought file-based routing and concurrent features to RN and has helped improve many (though not all) of the above issues.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePerformance improvements.\u003c/strong\u003e RN v0.70 shipped with the new Hermes engine as the default back in September, which dramatically \u003ca href=\"https://reactnative.dev/blog/2022/07/08/hermes-as-the-default#benchmarking\"\u003eimproved performance\u003c/a\u003e. And this upcoming 0.71 release will ship with first-class TypeScript support.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eShifting the narrative\u003c/strong\u003e from “write once, run anywhere” to “learn once, write anywhere.” This helps calibrate expectations and should reduce jank, as developers realize there’s often still a lot of platform-specific work involved with any mobile app.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eBig-time apps switching to RN.\u003c/strong\u003e It’s always a positive signal for a framework to see popular apps like Discord, Coinbase, and Shopify migrate over and give \u003ca href=\"https://shopify.engineering/migrating-our-largest-mobile-app-to-react-native\"\u003eglowing reviews\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eBottom line:\u003c/strong\u003e We’ve still got a long ways to go in the cross-platform world, but you could argue that the React Native vibes are stronger than ever.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/150\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F150\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=The%20%40bytesdotdev%20team%20gives%20React%20Native%20a%20quick%20vibe%20check%20ahead%20of%20the%20v0.71%20release.%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F150\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AThe%20%40bytesdotdev%20team%20gives%20React%20Native%20a%20quick%20vibe%20check%20ahead%20of%20the%20v0.71%20release.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F150\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/kodekloud-logo.png\" alt=\"KodeKloud logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/kubernetes.jpg\" alt=\"Puppet looking at chalkboard with tons of calcuations\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eEvery Kubernetes tutorial\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://kode.wiki/bytes-bf22\"\u003eKodeKloud\u003c/a\u003e will teach you DevOps (without making you hate life)\u003c/h3\u003e\u003cp\u003eHave you ever thought about exploring the DevOps world? Of course you have. (We all know how much those mofos get paid.)\u003c/p\u003e\u003cp\u003eBut how do you start? The best way to learn anything is through building — but you can’t just spin up a real-world cloud environment and start learning like when you spin up a basic site to learn a new JS framework.\u003c/p\u003e\u003cp\u003eOh wait, you actually \u003cem\u003ecan\u003c/em\u003e do that — with \u003ca href=\"https://kode.wiki/bytes-bf22\"\u003eKodeKloud\u003c/a\u003e. Their 45+ courses are all super hands-on, and come with over 400 labs and practice problems.\u003c/p\u003e\u003cp\u003eOver 550,000 developers have taken their courses, and they seem to be \u003ca href=\"https://kode.wiki/bytes-stories22\"\u003euniversally loved\u003c/a\u003e for three big reasons:\u003c/p\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eYou get instant access to 3 sandboxed cloud environments (Google Cloud, Azure, and AWS) and 40+ DevOps environments (Docker servers, Kubernetes clusters, etc.) — so it’s easy to get started.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eYou can use their KodeKloud Engineer Program to role-play a fictitious SysAdmin job, work on various portfolio-worthy projects, and get promoted through different roles all the way up to DevOps Architect. (Basically The Sims, but you actually learn stuff.)\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThey’ve helped thousands of developers get hired at jobs where they make an average of $100k a year.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003cp\u003e\u003ca href=\"https://kode.wiki/bytes-sale22\"\u003eCheck it out\u003c/a\u003e — they’ve extended their Cyber Monday sale for Bytes readers \u003cspan role=\"img\" aria-label=\"party popper\"\u003e🎉\u003c/span\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/trends.png\" alt=\"Trends logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eTrend of the Week\u003c/h2\u003e\u003cdiv class=\"section-presenter\" style=\"margin-bottom:50px;margin-top:15px\"\u003e\u003ch4\u003eSponsored by \u003ca href=\"https://www.developereconomics.net/?member_id=bytes\u0026amp;utm_medium=nl_pr2\"\u003eThe Developer Nation Survey\u003c/a\u003e\u003c/h4\u003e\u003cp\u003e\u003cem\u003eWant to make an impact on the developer ecosystem? Take part in Developer Nation’s \u003ca href=\"https://www.developereconomics.net/?member_id=bytes\u0026amp;utm_medium=nl_pr2\"\u003ebrand new survey\u003c/a\u003e, and you’ll help shape the ecosystem and be entered to win an iPad air, Udemy courses, IoT kits, and more.\u003c/em\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\n\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/tailwind-bootstrap-trend.jpg\" alt=\"Tailwind vs Bootstrap\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eTailwind overtakes Bootstrap\u003c!-- --\u003e \u003c!-- --\u003e–\u0026nbsp;data by \u003ca href=\"https://npmtrends.com/bootstrap-vs-tailwindcss\"\u003enpmtrends.com\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e\n\u003cp\u003eAfter a 10-year run on top, Bootstrap just gave up its crown as “npm’s most downloaded CSS framework.” Tailwind has the throne to itself now, thanks to growing by a whopping 2.65x in 2022. (Similarly, \u003cem\u003eAvatar 2\u003c/em\u003e just passed \u003cem\u003eTop Gun Maverick\u003c/em\u003e in total box office sales, despite being 2.65x more likely to put you to sleep).\u003c/p\u003e\n\u003cp\u003eLet’s take a look at how Tailwind became the new top dog:\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eComponents:\u003c/strong\u003e Components have become the de facto way to reuse styles, making global selectors less necessary for building websites. Tailwind’s utility-style CSS embraced this, and components + tailwind became a match made in heaven.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003ePerformance:\u003c/strong\u003e Tailwind’s biggest innovation was combining the utility classes with tooling to purge unused styles. So instead of having a really large stylesheet, you only ship the styles your site actually uses.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eDeveloper Experience:\u003c/strong\u003e Features like JIT compilation, \u003ca href=\"https://tailwindcss.com/blog/tailwindcss-v3-1\"\u003earbitrary variants\u003c/a\u003e, and out-of-the-box defaults for your design system make styling easier than ever.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eModern CSS:\u003c/strong\u003e As soon as the browser releases new CSS features, it feels like Tailwind has them integrated into their framework immediately.\u003c/p\u003e\n\u003cp\u003eThe big question is, will Tailwind still have the crown in 2033? And how many more Avatar movies can they possibly have made by then?\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eEvan You wrote \u003ca href=\"https://blog.vuejs.org/posts/2022-year-in-review.html\"\u003eA \u003cem\u003e2022\u003c/em\u003e Year in \u003cem\u003eReview\u003c/em\u003e for \u003cem\u003eVue\u003c/em\u003e\u003c/a\u003e. Apparently, 2022 was also a big year for rhyming.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSleuth is hosting a *free* live video chat on \u003ca href=\"https://www.sleuth.io/webinar-work-in-progress?utm_source=newsletter\u0026amp;utm_medium=email\u0026amp;utm_campaign=bytes\"\u003eBest practices for managing Work in Progress\u003c/a\u003e. You’ll get actionable insights from CTO’s and Engineering Managers who are currently in the trenches. \u003ca href=\"https://www.sleuth.io/webinar-work-in-progress?utm_source=newsletter\u0026amp;utm_medium=email\u0026amp;utm_campaign=bytes\"\u003eCheck it out.\u003c/a\u003e [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eIsaac Way just released \u003ca href=\"https://github.com/iway1/react-ts-form\"\u003ereact-ts-form\u003c/a\u003e, which (as you might’ve guessed) is a new Typesafe React form library with a lot less boilerplate than other libraries. He also has a pet chihuahua named, \u003ccode\u003elittle-taco-bell-dog\u003c/code\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJules Blom wrote an in-depth article about \u003ca href=\"https://julesblom.com/writing/ref-callback-use-cases\"\u003eUse Cases for React’s \u003ccode\u003eref\u003c/code\u003e Callback\u003c/a\u003e — which he describes as “a niche feature that you won’t need every day.” Sounds like the perfect API to sprinkle around your codebase for improved job security.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eRik Schennink wrote this article about \u003ca href=\"https://pqina.nl/blog/compress-image-before-upload\"\u003eHow to use JavaScript to compress images before uploading\u003c/a\u003e, and posted it first thing in the morning on New Year’s Day. Five points to Gryffindor for getting an early start on those resolutions.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eHTTPie just launched a new \u003ca href=\"https://httpie.io/blog/ai\"\u003eAI assistant\u003c/a\u003e that promises to be “a brand new way to interact with APIs.” Still waiting for an AI assitant that’ll give me a healthy new way to interact with my in-laws.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://mafs.dev/\"\u003eMafs\u003c/a\u003e is a set of opinionated React components for creating interactive math visualizations. \u003cem\u003eSo get off your ath, let’s do some math — math, math, math, math, mafs \u003cspan role=\"img\" aria-label=\"musical note\"\u003e🎵\u003c/span\u003e.\u003c/em\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #150 - React Native vibe check\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"The decade of Tailwind, AIs for your APIs, and word that rhyme with vue\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/150\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #150 - React Native vibe check\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"The decade of Tailwind, AIs for your APIs, and word that rhyme with vue\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/150\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/rn.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #150 - React Native vibe check\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"The decade of Tailwind, AIs for your APIs, and word that rhyme with vue\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/rn.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

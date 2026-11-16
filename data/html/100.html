@@ -1,0 +1,326 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #100 - 10 things we learned turning 100</title><meta name="description" content="This issue, we have a nice mix of wisdom, perspective, and IBS."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/100"/><meta property="og:title" content="Bytes #100 - 10 things we learned turning 100"/><meta property="og:description" content="This issue, we have a nice mix of wisdom, perspective, and IBS."/><meta property="og:url" content="https://bytes.dev/archives/100"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.devhttps//bytes.dev/images/content/gamers.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #100 - 10 things we learned turning 100"/><meta name="twitter:description" content="This issue, we have a nice mix of wisdom, perspective, and IBS."/><meta name="twitter:image" content="https://bytes.devhttps//bytes.dev/images/content/gamers.png"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> 10 things we learned turning 100</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->100<!-- -->.</span><span class="mr-6 font-bold">May 16, 2022<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/gamers.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/elmo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/bunny.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><span role="img" aria-label="party popper">🎉</span> Welcome to issue 100 <span role="img" aria-label="party popper">🎉</span></p>
+<p>We were planning on doing an awesome giveaway, but after looking at $NET this morning, it’ll have to wait until issue #200.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/gamers.png" alt="Old men gaming">
+</p><p class="image-alt">Let’s rage</p><p></p>
+<h2>10 things we learned turning 100</h2>
+<p>Just like real life, our old age has brought us a nice mix of wisdom, perspective, and IBS. We’ll try to share all three of those with you in this list of 10 things we’ve learned in the last 100 weeks.</p>
+<p><strong>1. Good frameworks borrow, great frameworks steal.</strong> And Next proved its greatness earlier this month when they <a href="https://twitter.com/leeerob/status/1521659624516030466">announced</a> that they’d be <del>stealing</del> adopting one of Remix’s killer features, <a href="https://remix.run/docs/en/v1/guides/routing#what-is-nested-routing">nested routes</a>, into the Next.js Router. But hey, framework competition/innovation is great for developers, so we’re not complaining.</p>
+<p><strong>2. If there’s an unintentional bug in our “Spot the Bug” section, we will get an email from literally everyone.</strong> Thank you (all 101,741 of you) for <a href="https://www.youtube.com/watch?v=xjyC5pv-hGc">your vigilance</a>.</p>
+<p><strong>3. Rust isn’t eating the web quite like we thought.</strong> Rust has been dominating the tooling space, but the whole “JavaScript is slow, so let’s rewrite our UI in Rust” <a href="https://zaplib.com/docs/blog_post_mortem.html">hasn’t really panned out</a> (at least not yet).</p>
+<p><strong>4. Having only high growth tech stocks in your portfolio is a bad idea.</strong> And it might be helpful to ask about the liquidation preference of the startup you work at <span role="img" aria-label="slightly smiling face">🙂</span>.</p>
+<p><strong>5. Developers love writing CSS… as long as you can trick them into thinking they’re writing HTML.</strong> Hats off to Tailwind for figuring this out and becoming the most loved framework in the game.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/elmo.png" alt="Elmo likes the snow">
+</p><p class="image-alt">Don’t be like Elmo. [sponsored]</p><p></p>
+<h2><a href="https://www.sleuth.io/">Sleuth.io</a> can actually make your team more efficient</h2>
+<p>Tracking “developer productivity” is stupid.</p>
+<p>Two reasons:</p>
+<ol>
+<li>Developers hate it (spying on me to see if I’m a “productive developer,” actually makes me a way less productive developer)</li>
+<li>It doesn’t work (“whoever writes the most lines of code/closes the most tickets is the best developer” is… really dumb?)</li>
+</ol>
+<p>That’s why Sleuth is the best. It doesn’t track developer productivity — it only measures <em>team</em> output. And it actually works.</p>
+<p>That’s because it captures your team’s <a href="https://www.sleuth.io/post/dora-metrics">DORA metrics</a> — which multiple studies have shown are the only stats that actually matter. No worthless vanity metrics and no individual stats.</p>
+<p>Sleuth automatically collects all that data for you (including deploys), unlike most other services that only collect git or issue tracker data. So you can trust that the numbers are legit.</p>
+<p>It’s also worth noting that <strong>Atlassian uses Sleuth.</strong> That’s like being Chef Gordon Ramsey’s favorite restaurant — if it works for them, it’ll probably help you too.</p>
+<p><a href="https://www.sleuth.io">Try it free</a> and help your team reach its goals faster.</p>
+<hr>
+<p><img src="https://bytes.dev/images/content/bunny.png" alt="Old lady with a knife...">
+</p><p class="image-alt">Death, taxes, and us in your inbox every week.</p><p></p>
+<h2>10 things we learned turning 100 — part 2</h2>
+<p><strong>6. There are exactly three ways to fund open source.</strong> 1) GitHub sponsors (lol). 2) Form a <del>pretend</del> very real company and raise money from VC’s. 3) Get <a href="https://vercel.com/blog/vercel-welcomes-rich-harris-creator-of-svelte">hired</a> and/or <a href="https://vercel.com/blog/vercel-acquires-turborepo">acquired</a> by Vercel. We don’t make the rules.</p>
+<p><strong>7. We don’t talk about <del>Bruno</del> CSS enough.</strong> This newsletter is mostly about JavaScript (and working through our early childhood traumas with niche humor), but CSS is having an <a href="https://hollywoodlife.com/pics/hot-male-celebrities-before-and-after-transformation-photos/drake-19/">Aubrey Graham style glow-up</a> right before our eyes. After decades of pain, a bunch of amazing new CSS features are <a href="https://web.dev/state-of-css-2022/">landing this year</a> — cascade layers, container queries, color functions, and lots more. And I, for one, am stoked to write a little less JS.</p>
+<p><strong>8. Your kids grow up too fast.</strong> People try and warn you, but you blink — and all of a sudden Deno (which we wrote about in our first-ever issue) is <a href="https://twitter.com/deno_land/status/1525119512277725184?s=20&amp;t=qBjc-m3wNITeygnuKInjNw">turning 4 years old</a>, partnering with Netlify to offer <a href="https://www.netlify.com/blog/announcing-serverless-compute-with-edge-functions/">Edge Functions</a>, and screaming to watch another episode of Daniel Tiger.</p>
+<p><strong>9. Anything that can live on the Edge, will end up living on the Edge.</strong> First it was JavaScript, and now it’s databases, thanks to Cloudflare bringing <a href="https://blog.cloudflare.com/introducing-d1/">SQL to the edge with D1</a>. We’re living through the glory days of the Edge, and like most things in life, Lady Gaga has already written <a href="https://www.youtube.com/watch?v=QeWBS0JBNzQ">the perfect song</a> for this moment.</p>
+<p><strong>10. Making JavaScript memes in my mom’s basement is a lot more time consuming than we thought.</strong> But it’s worth the crippling anxiety we feel every Sunday night. Thanks for reading <span role="img" aria-label="red heart">❤️</span></p>
+<hr>
+<h2>Jobs</h2>
+<h3><a href="https://liberating-jasmine-2eb.notion.site/DevRel-at-ChiselStrike-fully-remote-10e648b84c484757945e928ea5d03948">DevRel at ChiselStrike</a></h3>
+<p>ChiselStrike is looking for a hands-on DevRel leader with a track record of building and fostering communities around frontend, backends, and full-stack development. Need to know TypeScript and be willing to help build example applications that get developers excited about our product. Job is fully remote, but we have a preference for developers close to strong developer hubs (like USA, Canada, and Israel).</p>
+<h3><a href="https://www.ycombinator.com/companies/loops/jobs/yUbFitU-full-stack-engineer">Loops is looking for founding full-stack Next.js engineers</a></h3>
+<p>Most email platforms are showing their age — heck, this email was sent via a platform that is 9 years old now! Loops is a modern and beautiful alternative for SaaS companies. Our stack is Next.js, Postgres, and Tailwind. We just wrapped YC and our seed funding raise led by Craft Ventures. Come join our core engineering team!</p>
+<h3><a href="https://jobs.lever.co/close.io/23451700-e03a-4739-9da8-f23d2aad91d2">Senior or Staff Frontend Engineer - React (100% Remote)</a></h3>
+<p>Close.com is looking for 3 experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. Close is a 100% globally distributed team of ~55 high-performing, happy people that are dedicated to building a product our customers love.</p>
+<h3><a href="https://spring-lamprey-84b.notion.site/Frontend-React-Typescript-Developer-be5af2ab031f4550851fdf9468c26ba5">Yeti Labs is looking for Frontend (React + Typescript) developers</a></h3>
+<p>Yeti Labs is a human-centered frontend studio designing and building web apps for DeFi protocols. We love UI animations, innovative UXs, best practices, reusing our code, improving our workflow and learning new things. Come join our crew as we solve interesting challenges while having fun.</p>
+<hr>
+<h2><span role="img" aria-label="microscope">🔬</span> Spot the Bug — Presented by <a href="https://carbonqa.com/?utm_source=bytes&amp;utm_medium=ql&amp;utm_campaign=apr4">CarbonQA</a></h2>
+<p><em>CarbonQA provides QA services geared for dev teams. They work with your tools, talk with your team in Slack and let your devs be devs (not testers).</em></p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">factorial</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    result <span class="token operator">*=</span> i<span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<h2>Cool Bits</h2>
+<ol>
+<li>
+<p>Jake Archibald from the Chrome Team gave a fantastic talk at Google I/O about <a href="https://www.youtube.com/watch?v=JCJUPJ_zDQ4">bringing page transitions to the web</a> with a new page transition API.</p>
+</li>
+<li>
+<p><a href="https://dev.aspect.app/">Aspect</a> lets you build React components visually and sync them to your codebase. Like most post-modern performance art, it was inspired by the developer console in Chrome and Safari.</p>
+</li>
+<li>
+<p>Simon MacDonald wrote about <a href="https://blog.begin.com/posts/2022-05-10-why-i-no-longer-use-static-site-generators">why he no longer uses Static Site Generators</a> on his <del>farm</del> web apps.</p>
+</li>
+<li>
+<p>Antoine Craske wrote about <a href="https://medium.com/qe-unit/airbnbs-microservices-architecture-journey-to-quality-engineering-d5a490e6ba4f">Airbnb’s journey to microservices</a>. Sadly, I’m pretty sure he wasn’t talking about making Airbnb service fees smaller.</p>
+</li>
+<li>
+<p>Aaron Boodman wrote a great Twitter thread on <a href="https://twitter.com/aboodman/status/1524157782177447936?s=21&amp;t=ayL9ffFL1uBs6_HyFArFzQ">the backstory of Ajax</a> (Async JavaScript and XML — not the soccer club, or the bleach brand, or the Toronto suburb, or the Greek legend from Homer’s <em>Iliad</em>).</p>
+</li>
+<li>
+<p>Google’s <a href="https://web.dev/state-of-css-2022/">State of CSS 2022</a> was packed with a surprising amount of cool new stuff.</p>
+</li>
+<li>
+<p>Stripe created <a href="https://markdoc.io/">Markdoc</a> — a powerful and flexible Markdown-based framework that’s basically MDX without JSX. Powerful and flexible, just like the Collison brothers (we have the same Bikram yoga instructor).</p>
+</li>
+<li>
+<p>Supabase <a href="https://techcrunch.com/2022/05/10/supabase-raises-80m-series-b-for-its-open-source-firebase-alternative/">just raised $80m</a> for its open source Firebase alternative. Because if there’s one (more) thing we’ve learned in the last 100 issues, it’s that VC’s love OSS.</p>
+</li>
+</ol>
+<hr>
+<h2><span role="img" aria-label="microscope">🔬</span> Spot the Bug Solution — Presented by <a href="https://carbonqa.com/?utm_source=bytes&amp;utm_medium=ql&amp;utm_campaign=apr4">CarbonQA</a></h2>
+<p>For loops work by assigning a value to the variable for each iteration, but variables defined with <code>const</code> can’t be reassigned. Instead, we should use <code>let</code> to define our variable.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">factorial</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    result <span class="token operator">*=</span> i<span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"100\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"100\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"100\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" 10 things we learned turning 100\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"100\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"May 16, 2022\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T3769,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/gamers.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/elmo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/bunny.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cspan role=\"img\" aria-label=\"party popper\"\u003e🎉\u003c/span\u003e Welcome to issue 100 \u003cspan role=\"img\" aria-label=\"party popper\"\u003e🎉\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003eWe were planning on doing an awesome giveaway, but after looking at $NET this morning, it’ll have to wait until issue #200.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/gamers.png\" alt=\"Old men gaming\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eLet’s rage\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003e10 things we learned turning 100\u003c/h2\u003e\n\u003cp\u003eJust like real life, our old age has brought us a nice mix of wisdom, perspective, and IBS. We’ll try to share all three of those with you in this list of 10 things we’ve learned in the last 100 weeks.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e1. Good frameworks borrow, great frameworks steal.\u003c/strong\u003e And Next proved its greatness earlier this month when they \u003ca href=\"https://twitter.com/leeerob/status/1521659624516030466\"\u003eannounced\u003c/a\u003e that they’d be \u003cdel\u003estealing\u003c/del\u003e adopting one of Remix’s killer features, \u003ca href=\"https://remix.run/docs/en/v1/guides/routing#what-is-nested-routing\"\u003enested routes\u003c/a\u003e, into the Next.js Router. But hey, framework competition/innovation is great for developers, so we’re not complaining.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e2. If there’s an unintentional bug in our “Spot the Bug” section, we will get an email from literally everyone.\u003c/strong\u003e Thank you (all 101,741 of you) for \u003ca href=\"https://www.youtube.com/watch?v=xjyC5pv-hGc\"\u003eyour vigilance\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e3. Rust isn’t eating the web quite like we thought.\u003c/strong\u003e Rust has been dominating the tooling space, but the whole “JavaScript is slow, so let’s rewrite our UI in Rust” \u003ca href=\"https://zaplib.com/docs/blog_post_mortem.html\"\u003ehasn’t really panned out\u003c/a\u003e (at least not yet).\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e4. Having only high growth tech stocks in your portfolio is a bad idea.\u003c/strong\u003e And it might be helpful to ask about the liquidation preference of the startup you work at \u003cspan role=\"img\" aria-label=\"slightly smiling face\"\u003e🙂\u003c/span\u003e.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e5. Developers love writing CSS… as long as you can trick them into thinking they’re writing HTML.\u003c/strong\u003e Hats off to Tailwind for figuring this out and becoming the most loved framework in the game.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/elmo.png\" alt=\"Elmo likes the snow\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eDon’t be like Elmo. [sponsored]\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003e\u003ca href=\"https://www.sleuth.io/\"\u003eSleuth.io\u003c/a\u003e can actually make your team more efficient\u003c/h2\u003e\n\u003cp\u003eTracking “developer productivity” is stupid.\u003c/p\u003e\n\u003cp\u003eTwo reasons:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eDevelopers hate it (spying on me to see if I’m a “productive developer,” actually makes me a way less productive developer)\u003c/li\u003e\n\u003cli\u003eIt doesn’t work (“whoever writes the most lines of code/closes the most tickets is the best developer” is… really dumb?)\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eThat’s why Sleuth is the best. It doesn’t track developer productivity — it only measures \u003cem\u003eteam\u003c/em\u003e output. And it actually works.\u003c/p\u003e\n\u003cp\u003eThat’s because it captures your team’s \u003ca href=\"https://www.sleuth.io/post/dora-metrics\"\u003eDORA metrics\u003c/a\u003e — which multiple studies have shown are the only stats that actually matter. No worthless vanity metrics and no individual stats.\u003c/p\u003e\n\u003cp\u003eSleuth automatically collects all that data for you (including deploys), unlike most other services that only collect git or issue tracker data. So you can trust that the numbers are legit.\u003c/p\u003e\n\u003cp\u003eIt’s also worth noting that \u003cstrong\u003eAtlassian uses Sleuth.\u003c/strong\u003e That’s like being Chef Gordon Ramsey’s favorite restaurant — if it works for them, it’ll probably help you too.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://www.sleuth.io\"\u003eTry it free\u003c/a\u003e and help your team reach its goals faster.\u003c/p\u003e\n\u003chr\u003e\n\u003cp\u003e\u003cimg src=\"https://bytes.dev/images/content/bunny.png\" alt=\"Old lady with a knife...\"\u003e\n\u003c/p\u003e\u003cp class=\"image-alt\"\u003eDeath, taxes, and us in your inbox every week.\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\n\u003ch2\u003e10 things we learned turning 100 — part 2\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003e6. There are exactly three ways to fund open source.\u003c/strong\u003e 1) GitHub sponsors (lol). 2) Form a \u003cdel\u003epretend\u003c/del\u003e very real company and raise money from VC’s. 3) Get \u003ca href=\"https://vercel.com/blog/vercel-welcomes-rich-harris-creator-of-svelte\"\u003ehired\u003c/a\u003e and/or \u003ca href=\"https://vercel.com/blog/vercel-acquires-turborepo\"\u003eacquired\u003c/a\u003e by Vercel. We don’t make the rules.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e7. We don’t talk about \u003cdel\u003eBruno\u003c/del\u003e CSS enough.\u003c/strong\u003e This newsletter is mostly about JavaScript (and working through our early childhood traumas with niche humor), but CSS is having an \u003ca href=\"https://hollywoodlife.com/pics/hot-male-celebrities-before-and-after-transformation-photos/drake-19/\"\u003eAubrey Graham style glow-up\u003c/a\u003e right before our eyes. After decades of pain, a bunch of amazing new CSS features are \u003ca href=\"https://web.dev/state-of-css-2022/\"\u003elanding this year\u003c/a\u003e — cascade layers, container queries, color functions, and lots more. And I, for one, am stoked to write a little less JS.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e8. Your kids grow up too fast.\u003c/strong\u003e People try and warn you, but you blink — and all of a sudden Deno (which we wrote about in our first-ever issue) is \u003ca href=\"https://twitter.com/deno_land/status/1525119512277725184?s=20\u0026amp;t=qBjc-m3wNITeygnuKInjNw\"\u003eturning 4 years old\u003c/a\u003e, partnering with Netlify to offer \u003ca href=\"https://www.netlify.com/blog/announcing-serverless-compute-with-edge-functions/\"\u003eEdge Functions\u003c/a\u003e, and screaming to watch another episode of Daniel Tiger.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e9. Anything that can live on the Edge, will end up living on the Edge.\u003c/strong\u003e First it was JavaScript, and now it’s databases, thanks to Cloudflare bringing \u003ca href=\"https://blog.cloudflare.com/introducing-d1/\"\u003eSQL to the edge with D1\u003c/a\u003e. We’re living through the glory days of the Edge, and like most things in life, Lady Gaga has already written \u003ca href=\"https://www.youtube.com/watch?v=QeWBS0JBNzQ\"\u003ethe perfect song\u003c/a\u003e for this moment.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e10. Making JavaScript memes in my mom’s basement is a lot more time consuming than we thought.\u003c/strong\u003e But it’s worth the crippling anxiety we feel every Sunday night. Thanks for reading \u003cspan role=\"img\" aria-label=\"red heart\"\u003e❤️\u003c/span\u003e\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003eJobs\u003c/h2\u003e\n\u003ch3\u003e\u003ca href=\"https://liberating-jasmine-2eb.notion.site/DevRel-at-ChiselStrike-fully-remote-10e648b84c484757945e928ea5d03948\"\u003eDevRel at ChiselStrike\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eChiselStrike is looking for a hands-on DevRel leader with a track record of building and fostering communities around frontend, backends, and full-stack development. Need to know TypeScript and be willing to help build example applications that get developers excited about our product. Job is fully remote, but we have a preference for developers close to strong developer hubs (like USA, Canada, and Israel).\u003c/p\u003e\n\u003ch3\u003e\u003ca href=\"https://www.ycombinator.com/companies/loops/jobs/yUbFitU-full-stack-engineer\"\u003eLoops is looking for founding full-stack Next.js engineers\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eMost email platforms are showing their age — heck, this email was sent via a platform that is 9 years old now! Loops is a modern and beautiful alternative for SaaS companies. Our stack is Next.js, Postgres, and Tailwind. We just wrapped YC and our seed funding raise led by Craft Ventures. Come join our core engineering team!\u003c/p\u003e\n\u003ch3\u003e\u003ca href=\"https://jobs.lever.co/close.io/23451700-e03a-4739-9da8-f23d2aad91d2\"\u003eSenior or Staff Frontend Engineer - React (100% Remote)\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eClose.com is looking for 3 experienced individuals that have a solid understanding of React and want to help design, implement and launch major user-facing features. Close is a 100% globally distributed team of ~55 high-performing, happy people that are dedicated to building a product our customers love.\u003c/p\u003e\n\u003ch3\u003e\u003ca href=\"https://spring-lamprey-84b.notion.site/Frontend-React-Typescript-Developer-be5af2ab031f4550851fdf9468c26ba5\"\u003eYeti Labs is looking for Frontend (React + Typescript) developers\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eYeti Labs is a human-centered frontend studio designing and building web apps for DeFi protocols. We love UI animations, innovative UXs, best practices, reusing our code, improving our workflow and learning new things. Come join our crew as we solve interesting challenges while having fun.\u003c/p\u003e\n\u003chr\u003e\n\u003ch2\u003e\u003cspan role=\"img\" aria-label=\"microscope\"\u003e🔬\u003c/span\u003e Spot the Bug — Presented by \u003ca href=\"https://carbonqa.com/?utm_source=bytes\u0026amp;utm_medium=ql\u0026amp;utm_campaign=apr4\"\u003eCarbonQA\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cem\u003eCarbonQA provides QA services geared for dev teams. They work with your tools, talk with your team in Slack and let your devs be devs (not testers).\u003c/em\u003e\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003efactorial\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003en\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003elet\u003c/span\u003e result \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token number\"\u003e1\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003efor\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token keyword\"\u003econst\u003c/span\u003e i \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token number\"\u003e1\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e i \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e n \u003cspan class=\"token operator\"\u003e+\u003c/span\u003e \u003cspan class=\"token number\"\u003e1\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e i\u003cspan class=\"token operator\"\u003e++\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n    result \u003cspan class=\"token operator\"\u003e*=\u003c/span\u003e i\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e \n  \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e result\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003chr\u003e\n\u003ch2\u003eCool Bits\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eJake Archibald from the Chrome Team gave a fantastic talk at Google I/O about \u003ca href=\"https://www.youtube.com/watch?v=JCJUPJ_zDQ4\"\u003ebringing page transitions to the web\u003c/a\u003e with a new page transition API.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://dev.aspect.app/\"\u003eAspect\u003c/a\u003e lets you build React components visually and sync them to your codebase. Like most post-modern performance art, it was inspired by the developer console in Chrome and Safari.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSimon MacDonald wrote about \u003ca href=\"https://blog.begin.com/posts/2022-05-10-why-i-no-longer-use-static-site-generators\"\u003ewhy he no longer uses Static Site Generators\u003c/a\u003e on his \u003cdel\u003efarm\u003c/del\u003e web apps.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAntoine Craske wrote about \u003ca href=\"https://medium.com/qe-unit/airbnbs-microservices-architecture-journey-to-quality-engineering-d5a490e6ba4f\"\u003eAirbnb’s journey to microservices\u003c/a\u003e. Sadly, I’m pretty sure he wasn’t talking about making Airbnb service fees smaller.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAaron Boodman wrote a great Twitter thread on \u003ca href=\"https://twitter.com/aboodman/status/1524157782177447936?s=21\u0026amp;t=ayL9ffFL1uBs6_HyFArFzQ\"\u003ethe backstory of Ajax\u003c/a\u003e (Async JavaScript and XML — not the soccer club, or the bleach brand, or the Toronto suburb, or the Greek legend from Homer’s \u003cem\u003eIliad\u003c/em\u003e).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eGoogle’s \u003ca href=\"https://web.dev/state-of-css-2022/\"\u003eState of CSS 2022\u003c/a\u003e was packed with a surprising amount of cool new stuff.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eStripe created \u003ca href=\"https://markdoc.io/\"\u003eMarkdoc\u003c/a\u003e — a powerful and flexible Markdown-based framework that’s basically MDX without JSX. Powerful and flexible, just like the Collison brothers (we have the same Bikram yoga instructor).\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSupabase \u003ca href=\"https://techcrunch.com/2022/05/10/supabase-raises-80m-series-b-for-its-open-source-firebase-alternative/\"\u003ejust raised $80m\u003c/a\u003e for its open source Firebase alternative. Because if there’s one (more) thing we’ve learned in the last 100 issues, it’s that VC’s love OSS.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\n\u003ch2\u003e\u003cspan role=\"img\" aria-label=\"microscope\"\u003e🔬\u003c/span\u003e Spot the Bug Solution — Presented by \u003ca href=\"https://carbonqa.com/?utm_source=bytes\u0026amp;utm_medium=ql\u0026amp;utm_campaign=apr4\"\u003eCarbonQA\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eFor loops work by assigning a value to the variable for each iteration, but variables defined with \u003ccode\u003econst\u003c/code\u003e can’t be reassigned. Instead, we should use \u003ccode\u003elet\u003c/code\u003e to define our variable.\u003c/p\u003e\n\u003cpre class=\"language-js\"\u003e\u003ccode class=\"language-js\"\u003e\u003cspan class=\"token keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"token function\"\u003efactorial\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token parameter\"\u003en\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003elet\u003c/span\u003e result \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token number\"\u003e1\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003efor\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e(\u003c/span\u003e\u003cspan class=\"token keyword\"\u003elet\u003c/span\u003e i \u003cspan class=\"token operator\"\u003e=\u003c/span\u003e \u003cspan class=\"token number\"\u003e1\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e i \u003cspan class=\"token operator\"\u003e\u0026lt;\u003c/span\u003e n \u003cspan class=\"token operator\"\u003e+\u003c/span\u003e \u003cspan class=\"token number\"\u003e1\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e i\u003cspan class=\"token operator\"\u003e++\u003c/span\u003e\u003cspan class=\"token punctuation\"\u003e)\u003c/span\u003e \u003cspan class=\"token punctuation\"\u003e{\u003c/span\u003e\n    result \u003cspan class=\"token operator\"\u003e*=\u003c/span\u003e i\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e \n  \u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n  \u003cspan class=\"token keyword\"\u003ereturn\u003c/span\u003e result\u003cspan class=\"token punctuation\"\u003e;\u003c/span\u003e\n\u003cspan class=\"token punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #100 - 10 things we learned turning 100\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"This issue, we have a nice mix of wisdom, perspective, and IBS.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/100\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #100 - 10 things we learned turning 100\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"This issue, we have a nice mix of wisdom, perspective, and IBS.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/100\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/gamers.png\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #100 - 10 things we learned turning 100\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"This issue, we have a nice mix of wisdom, perspective, and IBS.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.devhttps//bytes.dev/images/content/gamers.png\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

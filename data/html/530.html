@@ -1,0 +1,289 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #530 - TanStack Strikes Back</title><meta name="description" content="Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/530"/><meta property="og:title" content="Bytes #530 - TanStack Strikes Back"/><meta property="og:description" content="Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code."/><meta property="og:url" content="https://bytes.dev/archives/530"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/spaceballs-vader-dolls.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #530 - TanStack Strikes Back"/><meta name="twitter:description" content="Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code."/><meta name="twitter:image" content="https://bytes.dev/images/content/spaceballs-vader-dolls.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> TanStack Strikes Back</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->530<!-- -->.</span><span class="mr-6 font-bold">October 16, 2026<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/spaceballs-vader-dolls.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/sonar-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/mtg-chaos-agent.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/530">#530</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/spaceballs-vader-dolls.jpg" alt="Dark Helmet plays with action figures at a desk in Spaceballs" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">“Oh! Oh! Now, Princess TanStack, at last we are alone.”<!-- --> </p></div><h3>TanStack Strikes Back</h3><p>I imagine trying to compete against Next.js feels a little bit like going up against The Galactic Empire. And while Tanner hasn’t blown up the Death Star and discovered that Pete Hunt is actually his dad, <a href="https://tanstack.com/blog/tanstack-start-1-0">TanStack Start hitting 1.0</a> this week is evidence that the rebellion is alive and well.</p><p>TanStack announced the release candidate for Start back in September 2025 and since then the framework has exploded in growth, with companies like Lovable <a href="https://lovable.dev/blog/building-apps-using-tanstack-start">making it the default framework for all of their apps</a>. And while this has been more of a slow build than an overnight success, it is interesting to consider what has enabled Start to become Next’s biggest competition.</p><p><em>What TanStack got right:</em></p><ul>
+<li>
+<p><strong>Simpler primitives:</strong> Start benefited from seeing where <a href="https://www.inngest.com/blog/migrating-off-nextjs-tanstack-start">Next’s App Router frustrated developers</a>. Nested directory conventions, caching directives, and a strong push toward RSC added complexity that didn’t appeal to everyone. TanStack offered a more familiar React model: routes, loaders, and server functions, with explicit control over where code runs and how pages render.</p>
+</li>
+<li>
+<p><strong>Type-safe by default:</strong> TanStack <a href="https://tanstack.com/start/latest/docs/framework/react/start-vs-nextjs">connects types across route parameters, search parameters, loaders, and server functions</a>. Next offers typed routes and server actions too, but TanStack makes that end-to-end connection a core part of the framework, catching more mistakes as you move between navigation, data loading, and backend calls.</p>
+</li>
+<li>
+<p><strong>Platform agnostic:</strong> Next supports other hosts, but its close ties to Vercel can make that choice feel more consequential. Start offers <a href="https://tanstack.com/start/latest/docs/framework/react/guide/hosting">deployment options across multiple providers and runtimes</a>, letting teams choose a framework without committing to a hosting provider. Keeping those decisions separate makes Start an easier bet.</p>
+</li>
+<li>
+<p><strong>Performance:</strong> Teams switching from Next.js to Start have reported substantial gains. <a href="https://www.inngest.com/blog/migrating-off-nextjs-tanstack-start">Inngest</a> cut local page loads from 10–12 seconds to 2–3 seconds, <a href="https://blog.railway.com/p/moving-railways-frontend-off-nextjs">Railway</a> cut builds from over 10 minutes to under two, and <a href="https://lovable.dev/blog/how-we-migrated-lovable-dev-away-from-nextjs">Lovable</a> reported 49% lower median time to first byte after its broader migration.</p>
+</li>
+</ul><p><strong>Bottom Line:</strong> TanStack Start is winning over the hearts of the agent developer alliance … which means Emperor Rauch trying to lure Tanner to the dark side will probably be one of our top Bytes predictions for 2027.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/530" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F530" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Too%20much%20git%2C%20Tesla%E2%80%99s%20cure%20for%20developer%20loneliness%2C%20and%20love%20letters%20to%20your%20bros%20written%20in%20code.%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F530" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AToo%20much%20git%2C%20Tesla%E2%80%99s%20cure%20for%20developer%20loneliness%2C%20and%20love%20letters%20to%20your%20bros%20written%20in%20code.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F530" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/sonar-logo.png" alt="Sonar logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/mtg-chaos-agent.jpg" alt="Three friends react as trading cards scatter through a living room" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">When you release a bunch of agents on your codebase without Sonar's code intelligence tooling<!-- --> </p></div><h3><a href="https://fandf.co/4rZCiWr">Bridge the gap between AI and quality</a></h3><p>Getting agents to produce quality code requires the right tools. Fortunately, one of those tools, SonarQube, just got a lot easier to use.</p><p>If you’re not familiar with Sonar, it’s been analyzing code for over 17 years and processes 750 billion lines of code daily. And its new <a href="https://fandf.co/4rZCiWr">SonarQube MCP Server</a> puts that analysis inside your AI coding agent, giving your agent access to Sonar’s entire code intelligence platform.</p><p>With the SonarQube MCP Server, you can:</p><ul>
+<li>Ask “Are there any new vulnerabilities in this file?” in plain English</li>
+<li>Check your project’s quality gate status without leaving your IDE</li>
+<li>Update an issue’s status or mark it as a false positive directly from your AI coding agent</li>
+</ul><p><a href="https://fandf.co/4rZCiWr">Set up the SonarQube MCP Server for free</a> and help your agents start shipping better code.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>Anthropic <a href="https://www.anthropic.com/engineering/redesigning-source-control">built their own source control platform</a> that can keep up with the 30,000 merges they do a day. Rumor is that 29,000 of these are from Jared Sumner’s clawd army.</p>
+</li>
+<li>
+<p>Speaking of git platforms, Jovi De Croock wrote about <a href="https://jovidecroock.com/blog/gittifacts/">how he built his own git platform for agents</a> that doesn’t have PRs. PRs really were just love letters to your bros written in code… RIP <span role="img" aria-label="broken heart">💔</span>.</p>
+</li>
+<li>
+<p>Apify’s <a href="https://apify.com/plugin?fpr=fireship">new plugin</a> connects your coding agent over MCP to live data from Google Maps, Instagram, X, and LinkedIn, with skills, hooks, and rules built in. Use code BYTES for $25 in credits. [sponsored]</p>
+</li>
+<li>
+<p>Jenna Smith and James Nelson wrote about the intricacies of <a href="https://base-ui.com/blog/building-a-filterable-menu">building a filterable menu that works for everyone</a>.</p>
+</li>
+<li>
+<p>SpaceXSI (did I get this right?) just <a href="https://x.ai/news/grok-voice-3">released Grok Voice 3.0</a>, the same model that lonely Tesla commuters use as a substitute for friendship.</p>
+</li>
+<li>
+<p>The TypeSafe AI team <a href="https://typesafe.ai/blog/jev-1-14">released Jev 1.14.0 alongside experimental image support</a>, making your dream of building “Hot Dog / Not Hot Dog” a reality.</p>
+</li>
+<li>
+<p>Only idiots write tests – modern engineering teams like Notion, Wiz and ElevenLabs use Meticulous to maintain e2e UI tests that <a href="https://www.meticulous.ai/?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=26q3&amp;utm_content=secondary">cover every edge case</a> of your web app. [sponsored]</p>
+</li>
+<li>
+<p>Shopify just <a href="https://hydrogen.shopify.dev/update/hydrogen-2026-10-now-available">released an overhaul of Hydrogen</a>, their framework for building custom Shopify sites. This new version is framework agnostic but comes with bindings for React and Vue out of the box.</p>
+</li>
+<li>
+<p>Cheng Lou <a href="https://chenglou.me/handwired/">broke the internet again with another “toy project” called Handwired</a> that converts JavaScript into a neural net that runs in the browser and works without training? I give up trying to explain it. Go see it for yourself.</p>
+</li>
+<li>
+<p><a href="https://hyperagent.com/fireship100">Hyperagent</a> lets you hire AI staff to take on roles across your business. They run in the cloud with their own browser, shell, and file system, connect to your tools, and hand work off to each other. Your whole team can work with the same agents—not just the person who set them up. [sponsored]</p>
+</li>
+<li>
+<p><a href="https://astro.build/blog/astro-740/">Astro released version 7.4</a>, which adds a new flag <code>astro build --timings</code> that gives you a breakdown of how long everything took, separate build and runtime image services, and experimental parallel prerendering support.</p>
+</li>
+<li>
+<p>Nick Cammarata wrote an article that will take you an hour to read, uses words that you don’t know (like polysemanticity), but will teach you everything you want to know about <a href="https://already-clean.goodfire.com/">the interoperability of neural networks</a>.</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"530\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"530\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"530\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" TanStack Strikes Back\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"530\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"October 16, 2026\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T303a,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/spaceballs-vader-dolls.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/sonar-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/mtg-chaos-agent.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/530\"\u003e#530\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/spaceballs-vader-dolls.jpg\" alt=\"Dark Helmet plays with action figures at a desk in Spaceballs\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003e“Oh! Oh! Now, Princess TanStack, at last we are alone.”\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eTanStack Strikes Back\u003c/h3\u003e\u003cp\u003eI imagine trying to compete against Next.js feels a little bit like going up against The Galactic Empire. And while Tanner hasn’t blown up the Death Star and discovered that Pete Hunt is actually his dad, \u003ca href=\"https://tanstack.com/blog/tanstack-start-1-0\"\u003eTanStack Start hitting 1.0\u003c/a\u003e this week is evidence that the rebellion is alive and well.\u003c/p\u003e\u003cp\u003eTanStack announced the release candidate for Start back in September 2025 and since then the framework has exploded in growth, with companies like Lovable \u003ca href=\"https://lovable.dev/blog/building-apps-using-tanstack-start\"\u003emaking it the default framework for all of their apps\u003c/a\u003e. And while this has been more of a slow build than an overnight success, it is interesting to consider what has enabled Start to become Next’s biggest competition.\u003c/p\u003e\u003cp\u003e\u003cem\u003eWhat TanStack got right:\u003c/em\u003e\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eSimpler primitives:\u003c/strong\u003e Start benefited from seeing where \u003ca href=\"https://www.inngest.com/blog/migrating-off-nextjs-tanstack-start\"\u003eNext’s App Router frustrated developers\u003c/a\u003e. Nested directory conventions, caching directives, and a strong push toward RSC added complexity that didn’t appeal to everyone. TanStack offered a more familiar React model: routes, loaders, and server functions, with explicit control over where code runs and how pages render.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eType-safe by default:\u003c/strong\u003e TanStack \u003ca href=\"https://tanstack.com/start/latest/docs/framework/react/start-vs-nextjs\"\u003econnects types across route parameters, search parameters, loaders, and server functions\u003c/a\u003e. Next offers typed routes and server actions too, but TanStack makes that end-to-end connection a core part of the framework, catching more mistakes as you move between navigation, data loading, and backend calls.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePlatform agnostic:\u003c/strong\u003e Next supports other hosts, but its close ties to Vercel can make that choice feel more consequential. Start offers \u003ca href=\"https://tanstack.com/start/latest/docs/framework/react/guide/hosting\"\u003edeployment options across multiple providers and runtimes\u003c/a\u003e, letting teams choose a framework without committing to a hosting provider. Keeping those decisions separate makes Start an easier bet.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003ePerformance:\u003c/strong\u003e Teams switching from Next.js to Start have reported substantial gains. \u003ca href=\"https://www.inngest.com/blog/migrating-off-nextjs-tanstack-start\"\u003eInngest\u003c/a\u003e cut local page loads from 10–12 seconds to 2–3 seconds, \u003ca href=\"https://blog.railway.com/p/moving-railways-frontend-off-nextjs\"\u003eRailway\u003c/a\u003e cut builds from over 10 minutes to under two, and \u003ca href=\"https://lovable.dev/blog/how-we-migrated-lovable-dev-away-from-nextjs\"\u003eLovable\u003c/a\u003e reported 49% lower median time to first byte after its broader migration.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e TanStack Start is winning over the hearts of the agent developer alliance … which means Emperor Rauch trying to lure Tanner to the dark side will probably be one of our top Bytes predictions for 2027.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/530\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F530\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Too%20much%20git%2C%20Tesla%E2%80%99s%20cure%20for%20developer%20loneliness%2C%20and%20love%20letters%20to%20your%20bros%20written%20in%20code.%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F530\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AToo%20much%20git%2C%20Tesla%E2%80%99s%20cure%20for%20developer%20loneliness%2C%20and%20love%20letters%20to%20your%20bros%20written%20in%20code.%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F530\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/sonar-logo.png\" alt=\"Sonar logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/mtg-chaos-agent.jpg\" alt=\"Three friends react as trading cards scatter through a living room\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eWhen you release a bunch of agents on your codebase without Sonar's code intelligence tooling\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://fandf.co/4rZCiWr\"\u003eBridge the gap between AI and quality\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eGetting agents to produce quality code requires the right tools. Fortunately, one of those tools, SonarQube, just got a lot easier to use.\u003c/p\u003e\u003cp\u003eIf you’re not familiar with Sonar, it’s been analyzing code for over 17 years and processes 750 billion lines of code daily. And its new \u003ca href=\"https://fandf.co/4rZCiWr\"\u003eSonarQube MCP Server\u003c/a\u003e puts that analysis inside your AI coding agent, giving your agent access to Sonar’s entire code intelligence platform.\u003c/p\u003e\u003cp\u003eWith the SonarQube MCP Server, you can:\u003c/p\u003e\u003cul\u003e\n\u003cli\u003eAsk “Are there any new vulnerabilities in this file?” in plain English\u003c/li\u003e\n\u003cli\u003eCheck your project’s quality gate status without leaving your IDE\u003c/li\u003e\n\u003cli\u003eUpdate an issue’s status or mark it as a false positive directly from your AI coding agent\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003ca href=\"https://fandf.co/4rZCiWr\"\u003eSet up the SonarQube MCP Server for free\u003c/a\u003e and help your agents start shipping better code.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eAnthropic \u003ca href=\"https://www.anthropic.com/engineering/redesigning-source-control\"\u003ebuilt their own source control platform\u003c/a\u003e that can keep up with the 30,000 merges they do a day. Rumor is that 29,000 of these are from Jared Sumner’s clawd army.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSpeaking of git platforms, Jovi De Croock wrote about \u003ca href=\"https://jovidecroock.com/blog/gittifacts/\"\u003ehow he built his own git platform for agents\u003c/a\u003e that doesn’t have PRs. PRs really were just love letters to your bros written in code… RIP \u003cspan role=\"img\" aria-label=\"broken heart\"\u003e💔\u003c/span\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eApify’s \u003ca href=\"https://apify.com/plugin?fpr=fireship\"\u003enew plugin\u003c/a\u003e connects your coding agent over MCP to live data from Google Maps, Instagram, X, and LinkedIn, with skills, hooks, and rules built in. Use code BYTES for $25 in credits. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJenna Smith and James Nelson wrote about the intricacies of \u003ca href=\"https://base-ui.com/blog/building-a-filterable-menu\"\u003ebuilding a filterable menu that works for everyone\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eSpaceXSI (did I get this right?) just \u003ca href=\"https://x.ai/news/grok-voice-3\"\u003ereleased Grok Voice 3.0\u003c/a\u003e, the same model that lonely Tesla commuters use as a substitute for friendship.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe TypeSafe AI team \u003ca href=\"https://typesafe.ai/blog/jev-1-14\"\u003ereleased Jev 1.14.0 alongside experimental image support\u003c/a\u003e, making your dream of building “Hot Dog / Not Hot Dog” a reality.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eOnly idiots write tests – modern engineering teams like Notion, Wiz and ElevenLabs use Meticulous to maintain e2e UI tests that \u003ca href=\"https://www.meticulous.ai/?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=26q3\u0026amp;utm_content=secondary\"\u003ecover every edge case\u003c/a\u003e of your web app. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eShopify just \u003ca href=\"https://hydrogen.shopify.dev/update/hydrogen-2026-10-now-available\"\u003ereleased an overhaul of Hydrogen\u003c/a\u003e, their framework for building custom Shopify sites. This new version is framework agnostic but comes with bindings for React and Vue out of the box.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eCheng Lou \u003ca href=\"https://chenglou.me/handwired/\"\u003ebroke the internet again with another “toy project” called Handwired\u003c/a\u003e that converts JavaScript into a neural net that runs in the browser and works without training? I give up trying to explain it. Go see it for yourself.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://hyperagent.com/fireship100\"\u003eHyperagent\u003c/a\u003e lets you hire AI staff to take on roles across your business. They run in the cloud with their own browser, shell, and file system, connect to your tools, and hand work off to each other. Your whole team can work with the same agents—not just the person who set them up. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://astro.build/blog/astro-740/\"\u003eAstro released version 7.4\u003c/a\u003e, which adds a new flag \u003ccode\u003eastro build --timings\u003c/code\u003e that gives you a breakdown of how long everything took, separate build and runtime image services, and experimental parallel prerendering support.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eNick Cammarata wrote an article that will take you an hour to read, uses words that you don’t know (like polysemanticity), but will teach you everything you want to know about \u003ca href=\"https://already-clean.goodfire.com/\"\u003ethe interoperability of neural networks\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #530 - TanStack Strikes Back\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/530\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #530 - TanStack Strikes Back\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/530\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/spaceballs-vader-dolls.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #530 - TanStack Strikes Back\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"Too much git, Tesla’s cure for developer loneliness, and love letters to your bros written in code.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/spaceballs-vader-dolls.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

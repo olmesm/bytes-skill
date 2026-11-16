@@ -1,0 +1,292 @@
+<!DOCTYPE html><!--PWonVMwymPqSfvgTGZMW1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/bytes-icon.png"/><link rel="stylesheet" href="/_next/static/css/6743fffb78d613a1.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-f8a9a76c45be32fc.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-ebd51be49873d76c.js" async=""></script><script src="/_next/static/chunks/main-app-f9b5d20365cb8be2.js" async=""></script><script src="/_next/static/chunks/619-ba102abea3e3d0e4.js" async=""></script><script src="/_next/static/chunks/663-7ced58db679b6cdc.js" async=""></script><script src="/_next/static/chunks/app/layout-aafff56f3ecdb122.js" async=""></script><script src="/_next/static/chunks/578c2090-898cc8de403d0607.js" async=""></script><script src="/_next/static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Bytes #371 - Laravel goes full Vercel</title><meta name="description" content="The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a controversial use case for the Apple Vision Pro."/><link rel="manifest" href="/favicon/site.webmanifest"/><meta name="msapplication-TileColor" content="#000000"/><link rel="canonical" href="https://bytes.dev/archives/371"/><meta property="og:title" content="Bytes #371 - Laravel goes full Vercel"/><meta property="og:description" content="The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a controversial use case for the Apple Vision Pro."/><meta property="og:url" content="https://bytes.dev/archives/371"/><meta property="og:site_name" content="Bytes by Fireship"/><meta property="og:image" content="https://bytes.dev/images/content/tai-lambo.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:creator" content="fireship_dev"/><meta name="twitter:title" content="Bytes #371 - Laravel goes full Vercel"/><meta name="twitter:description" content="The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a controversial use case for the Apple Vision Pro."/><meta name="twitter:image" content="https://bytes.dev/images/content/tai-lambo.jpg"/><link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16" type="image/png"/><link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link href="https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Outfit:wght@400;500;700;900&amp;family=Paytone+One" rel="stylesheet"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div hidden=""><!--$--><!--/$--></div><div data-rht-toaster="" style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><div class="text-white"><div class="bg-brand-coal"><nav class="flex justify-between items-center mb-10 p-8 container mx-auto gap-12"><a class="block relative" href="/"><img width="48" src="/images/bytes-icon.png" alt="Bytes by Fireship"/></a><div class="flex gap-8"><a class="sm:text-xl text-biege hover:text-yellow underline" href="/advertise">advertise</a><a class="sm:text-xl text-biege hover:text-yellow underline" href="/archives">archives</a></div></nav><div class="mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]"><h1 class="font-black text-3xl lg:text-6xl uppercase"> Laravel goes full Vercel</h1><div class="text-sm sm:text-lg font-normal font-mono mt-6"><span class="mr-6 font-bold">Issue #<!-- -->371<!-- -->.</span><span class="mr-6 font-bold">February 27, 2025<!-- -->.</span><span class="font-bold">2 Minute read.</span></div></div></div><div class="p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10"><div class="hidden xl:block"></div><div style="line-height:32.36px;font-size:20px" class="post max-w-[600px] mx-auto"><style>
+    .email-wrapper {
+      color: #231F20;
+      background-color: #FFF;
+      font-size: 16px;
+      font-family: Outfit, sans-serif;
+    }
+
+    p {
+      font-family: Outfit, sans-serif;
+      line-height: 1.5;
+      font-size: 17px;
+    }
+
+    h3, * + p:not([class]) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a:not([class]) {
+      color: #12b5e5;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+
+    h4 {
+      font-size: 19px;
+      margin-bottom: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #f9f9f9;
+      color: #231F20;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      word-break: normal; border-collapse : collapse !important;
+    }
+
+    hr {
+      border: 0;
+      border-color: #f5f5f5;
+      border-bottom: 5px solid;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+
+    .section-presenter p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    mark {
+      background-color: #F9F4DA;
+      color: #231F20;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 2px;
+    }
+
+    .bg-alt {
+      background-color: #f5f5f5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .email-wrapper {
+        color: #F9F4DA !important;
+        background-color: #0F0D0E !important;
+      }
+
+      hr {
+        border-color: #262422 !important;
+      }
+
+      mark {
+        background-color: #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      pre {
+        background-color: #231F20 !important;
+        border: 1px solid #231F20 !important;
+        color: #F9F4DA !important;
+      }
+
+      .bg-alt { 
+        background-color: #231F20 !important;
+      }
+
+      .unsubscribe-link {
+        color: #8d8a7f !important;
+      }
+
+      .token.punctuation { 
+        color: #f9f4da !important;
+      }
+    }
+
+    @media screen and (min-width: 600px)  {
+      .mobile-break { display: none; }
+    }
+
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-family: "Fira Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      direction: ltr;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      color: #c0c5ce;
+    }
+    pre[class*=language-] {
+      overflow: auto;
+    }
+    pre[class*="language-"]::-moz-selection,
+    pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection,
+    code[class*="language-"] ::-moz-selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    pre[class*="language-"]::selection,
+    pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection,
+    code[class*="language-"] ::selection {
+      text-shadow: none;
+      background: #a7adba;
+    }
+    :not(pre) > code[class*="language-"] {
+      padding: 3px;
+      border-radius: 0.3em;
+      white-space: normal;
+    }
+    .language-text {
+      background: #36424D !important;
+      padding: 3px 8px !important;
+      color: #e5e5e5 !important;
+    }
+    code,
+    code * {
+      font-size: 14px;
+    }
+    code:not(pre) {
+      font-size: 17px;
+    }
+    .token.comment {
+      color: rgb(167, 167, 167);
+    }
+    .token.punctuation { 
+      color: #231F20;
+    }
+    .token.deleted {
+      color: #ed203d;
+    }
+    .token.inserted,
+    .token.attr-name {
+      color: #0ba95b;
+    }
+    .token.string,
+    .token.url {
+      color: #f99157;
+    }
+    .token.attr-value,
+    .token.number {
+      color: #fcba28;
+    }
+    .token.boolean,
+    .token.keyword,
+    .token.function {
+      color: #9d7dce;
+    }
+    .token.keyword,
+    .token.tag,
+    .token.parameter,
+    .token.method,
+    .token.property-access {
+      color: #f38ba3;
+    }
+    .token.changed,
+    .token.property,
+    .token.namespace,
+    .token.operator,
+    .token.selector,
+    .token.doctype,
+    .token.class-name,
+    .token.builtin,
+    .token.char,
+    .token.constant,
+    .token.interpolation {
+      color: #12b5e5;
+    }
+</style><div><html><head><link rel="preload" as="image" href="https://bytes.dev/images/bytes-banner-rounded.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/eyes.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/tai-lambo.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/fb-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/li-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/tw-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/em-share-icon.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/sentry-logo.png"><link rel="preload" as="image" href="https://bytes.dev/images/content/chair-legs.jpg"><link rel="preload" as="image" href="https://bytes.dev/images/content/cool-bits.png"></head><body><div style="max-width:600px;padding-top:80px"><div style="text-align:center"><img width="600" style="padding-bottom:40px;max-width:100%" src="https://bytes.dev/images/bytes-banner-rounded.png" alt="Bytes"></div><p><strong>Today’s issue:</strong> The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a <em>controversial-but-effective</em> use case for the Apple Vision Pro.</p>
+<p>Welcome to <a href="https://bytes.dev/archives/371">#371</a>.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="80" src="https://bytes.dev/images/content/eyes.png" alt="Eyeballs logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">The Main Thing</h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/tai-lambo.jpg" alt="Tai Lopez standing in front of his Lamborghini" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Average Laravel enjoyer<!-- --> </p></div><h3>Laravel goes full Vercel</h3><p>When the Laravel team tweeted that last Monday was “the biggest day in Laravel history,” I naturally assumed that Aaron Francis must have <em>finally</em> posted a video reveal of his skincare routine.</p><p>Sadly, I was mistaken – but Laravel <em>did</em> release some <a href="https://blog.laravel.com/laravel-cloud-is-live-can-you-ship-in-1-minute?dub_id=wSdT64deAt9cvrZ2">major updates</a> that help chart a new course for both the framework and the company behind it.</p><p><strong>Quick context:</strong> This is Laravel’s first big launch since raising <a href="https://laravel-news.com/laravel-raises-57-million-series-a">$57 million</a> from VCs back in December, and the playbook feels a little bit familiar to those of us in the JavaScript community.</p><p><strong>Let’s dive in:</strong></p><ul>
+<li>
+<p><strong>Laravel 12</strong> – Despite the major version bump, this is mostly a <a href="https://laravel.com/docs/12.x/releases">maintenance release</a> that upgrades dependencies and lays the foundation for new features that will come in minor releases throughout 2025. But there is one cool thing…</p>
+</li>
+<li>
+<p><strong>Application Starter Kits</strong> – They launched new <a href="https://laravel.com/docs/12.x/starter-kits">starter kits</a> for React, Vue, and Livewire that feel very JavaScript-y. The React kit uses Inertia.js to enable modern, single-page React apps with SSR, and it comes with React 19, TypeScript, shadcn/ui components, Tailwind, and built-in auth.</p>
+</li>
+<li>
+<p><strong>Laravel Cloud</strong> – They launched their own hosting platform to allow you to “deploy your Laravel app in 60 seconds.” It comes with autoscaling and hibernation, one-click database provisioning, and preview URLs for every environment.</p>
+</li>
+</ul><p>To recap, Laravel raised fat stacks of cash from VCs, launched their own hosting platform, and built a full-stack React <del>framework</del> <em>starter kit</em> to help expand their market size. That’s what we in the JavaScript world refer to as “going full Vercel.”</p><p>And it’s probably a smart move, considering Vercel is now a <em>$3 billion</em> company. As Max Stoiber and swyx recently <a href="https://dx.tips/ceiling">pointed out</a>, the best (and maybe only?) way for a devtool company to hit the massive revenue numbers required to successfully IPO is to eventually become an infrastructure business.</p><p><strong>Bottom Line:</strong> You either die a hero or live long enough to see yourself become an AWS abstraction.</p><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;text-align:center;margin-top:40px"><tbody><tr><td style="padding-top:12px"><a href="https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/371" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/fb-share-icon.png"></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F371" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/li-share-icon.png"></a><a href="https://twitter.com/intent/tweet/?text=Why%20was%20Feb%2024th%20the%20biggest%20day%20in%20Laravel%20history%3F%20%40bytesdotdev%20investigates%0A%0A&amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F371" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/tw-share-icon.png"></a><a href="mailto:?subject=You%20like%20cornbread%3F&amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AWhy%20was%20Feb%2024th%20the%20biggest%20day%20in%20Laravel%20history%3F%20%40bytesdotdev%20investigates%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F371" rel="noopener" style="text-decoration:none;padding-left:5px" target="_blank"><img alt="" style="display:inline-block;width:32px" width="25" src="https://bytes.dev/images/em-share-icon.png"></a></td></tr></tbody></table>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="150" src="https://bytes.dev/images/content/sentry-logo.png" alt="Sentry logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px"><span>Our Friends <br class="mobile-break">(With Benefits)</span></h2></div><div class="bg-alt" style="padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%"><img src="https://bytes.dev/images/content/chair-legs.jpg" alt="A girl standing on swivel chair legs" width="600" style="max-width:100%;border-radius:5px"><p style="text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic">Me gliding around my entire codebase with Trace Explorer<!-- --> </p></div><h3><a href="https://blog.sentry.io/find-and-fix-performance-bottlenecks-with-sentrys-trace-explorer/">Sentry’s new Trace Explorer is genuinely cool</a></h3><p>Debugging issues usually means digging through logs, manually tracing requests one by one, and asking yourself how life brought you to this point.</p><p>Thankfully, Sentry wants to save you from that existential dread – so they just launched a new <a href="https://blog.sentry.io/find-and-fix-performance-bottlenecks-with-sentrys-trace-explorer/">Trace Explorer tool</a> that lets you debug issues across your entire system and get the answers you need much faster.</p><p><strong>Here’s how:</strong></p><ul>
+<li>
+<p><strong>Find patterns, not just problems</strong> – Search, filter, and visualize traces using any attribute (span operation, API body, user segment, etc.) to pinpoint recurring bottlenecks and issues.</p>
+</li>
+<li>
+<p><strong>Drill down instantly</strong> – Jump directly from high-level trends to the exact spans causing trouble, so you can fix issues without context switching.</p>
+</li>
+<li>
+<p><strong>Custom metrics and visualizations</strong> – Calculate key metrics for your project (like P95 latency) and turn them into alerts and dashboards for ongoing monitoring.</p>
+</li>
+</ul><p><a href="https://blog.sentry.io/find-and-fix-performance-bottlenecks-with-sentrys-trace-explorer/">Try it out</a>, and I promise you’ll never go back.</p>
+<hr><div style="text-align:center;margin-bottom:36px"><img width="110" src="https://bytes.dev/images/content/cool-bits.png" alt="Cool Bits logo"><h2 style="font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px">Cool Bits</h2></div><ol>
+<li>
+<p>James Long wrote about <a href="https://jlongster.com/subverting-control-weak-refs">subverting control with weak references</a>, which is also the name of my favorite Rage Against the Machine song.</p>
+</li>
+<li>
+<p><a href="https://story.to.design/?ref=bytes">story.to.design</a> is a Figma plugin that lets you automatically turn your Storybook components into Figma components. [sponsored]</p>
+</li>
+<li>
+<p>The mad lads at Michigan TypeScript got <a href="https://www.youtube.com/watch?v=0mCsluv5FXA&amp;ab_channel=MichiganTypeScript">the Doom engine running purely in TypeScript types</a>. It’s by far the largest TypeScript codebase ever created, and it proves that you can accomplish anything when you’re locked inside during winter in Michigan.</p>
+</li>
+<li>
+<p>Cloudflare just announced <a href="https://blog.cloudflare.com/build-ai-agents-on-cloudflare/">some cool new tools</a> that make it easier to build AI agents on Cloudflare.</p>
+</li>
+<li>
+<p>Buildkite and Oso are hosting a live panel discussion in San Francisco on March 6th on <a href="https://www.google.com/url?q=https://buildkite.com/resources/events/25/buildkite-meetup-san-francisco/?utm_source%3DOso&amp;source=gmail&amp;ust=1740614252624000&amp;usg=AOvVaw16u_gzdqIWTjWOkuU35O2l">Strategies for Efficient Scaling</a>. Join engineering leaders from Vanta, Faire, and more as they cover scaling challenges they’ve faced and how they’ve solved them – plus enjoy food, drinks, and merch giveaways. <a href="https://buildkite.com/resources/events/25/buildkite-meetup-san-francisco/?utm_source=Oso">Reserve your spot</a> before it fills up. [sponsored]</p>
+</li>
+<li>
+<p>Scott Chacon wrote about <a href="https://blog.gitbutler.com/how-git-core-devs-configure-git/">how core Git developers configure Git</a>. Because to become a GitLord, one must first inhabit the mind of a GitLord.</p>
+</li>
+<li>
+<p>Krish wrote about <a href="https://www.krish.gg/blog/json-parser-in-rust">Parsing JSON in 500 lines of Rust</a></p>
+</li>
+<li>
+<p><a href="https://results.stateofreactnative.com/en-US/">The State of React Native survey results</a>, and I’m very disappointed to see how few of you are building Apple Vision Pro apps.</p>
+</li>
+<li>
+<p>Aurora Scharff wrote about <a href="https://aurorascharff.no/posts/avoiding-server-component-waterfall-fetching-with-react-19-cache/">avoiding server component waterfall fetching with React 19’s <code>cache()</code> API</a>.</p>
+</li>
+<li>
+<p><a href="https://www.qawolf.com?utm_source=bytes&amp;utm_medium=newsletter&amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_MobileTesting_20250227-None_Experiment-FALSE&amp;utm_term=body-QAWolf&amp;utm_content=MobileTesting_None_None_Headline%3ANone_None_None_None_Newsletter-SecondaryPlacement_20250227_v1_">QA Wolf can now test your mobile app</a> on both iOS and Android devices – and they run all tests in 100% parallel with no extra charges, so there are no run limits of any kind. [sponsored]</p>
+</li>
+<li>
+<p>vlt launched <a href="https://blog.vlt.sh/blog/reproducibility"><code>reproduce</code></a>, a tool that empirically tests whether an npm package can be faithfully rebuilt from its declared source code.</p>
+</li>
+<li>
+<p>Aiden Bai created <a href="https://www.react-explorer.com/">React Explorer</a>, which turns any React website into an interactive visualization. If you open this bad boy up and put it side by side with my Windows Music visualizer from 2007, I’m pretty sure you’ll enter the astral plane. <em>This</em> is what the Apple Vision Pro was made for.</p>
+</li>
+</ol></div></div></div><!--$!--><template data-dgst="BAILOUT_TO_CLIENT_SIDE_RENDERING"></template><!--/$--></div></div><!--$--><!--/$--><footer class="mt-20 py-8 lg:pt-20 lg:pb-10 relative bg-brand-charcoal text-brand-biege"><div class="container mx-auto px-8 mb-12 flex justify-center"><img src="/images/bytes-icon.png" alt="Bytes" width="48"/></div><div class="container mx-auto px-8 pb-8"><div><ul class="list-unstyled flex justify-center flex-wrap gap-4 text-sm"><li><a class="underline" href="/archives">Archives</a></li><li><a class="underline" href="/advertise">Advertise</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://npmtrends.com">npmtrends</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://react.gg">Learn React</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://query.gg">Learn React Query</a></li><li><a class="underline" target="_blank" rel="noopener noreferrer" href="https://usehooks.com">useHooks</a></li></ul></div></div><p class="text-center mb-8">Made with ❤️ by<!-- --> <a class="text-brand-red underline" href="https://fireship.dev">Fireship</a></p></footer><script src="/_next/static/chunks/webpack-f8a9a76c45be32fc.js" id="_R_" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[4476,[\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"177\",\"static/chunks/app/layout-aafff56f3ecdb122.js\"],\"default\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n6:I[4431,[],\"OutletBoundary\"]\n8:I[5278,[],\"AsyncMetadataOutlet\"]\na:I[4431,[],\"ViewportBoundary\"]\nc:I[4431,[],\"MetadataBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[7150,[],\"\"]\n:HL[\"/_next/static/css/6743fffb78d613a1.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"PWonVMwymPqSfvgTGZMW1\",\"p\":\"\",\"c\":[\"\",\"archives\",\"371\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"archives\",{\"children\":[[\"slug\",\"371\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6743fffb78d613a1.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Fira+Mono\u0026family=Outfit:wght@400;500;700;900\u0026family=Paytone+One\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"div\",null,{\"className\":\"h-screen pb-12 flex flex-col bg-black\",\"children\":[\"$\",\"main\",null,{\"className\":\"flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"py-16 text-biege\",\"children\":[\"$\",\"div\",null,{\"className\":\"text-center\",\"children\":[[\"$\",\"p\",null,{\"className\":\"font-semibold text-gray-100 uppercase tracking-wide\",\"children\":\"404 error\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 mb-6 uppercase text-4xl font-extrabold text-gray-50 tracking-tight sm:text-5xl\",\"children\":\"Page not found\"}],[\"$\",\"img\",null,{\"className\":\"inline-block\",\"width\":400,\"height\":400,\"src\":\"/images/mr-bytens.png\",\"alt\":\"Mr Bytens\"}]]}]}]}]}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}]]}],{\"children\":[\"archives\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"371\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L5\",null,[\"$\",\"$L6\",null,{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"promise\":\"$@9\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$d\",null,{\"fallback\":null,\"children\":\"$Le\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"10:I[2619,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"\"]\n11:T11d6,"])</script><script>self.__next_f.push([1,"\n    .email-wrapper {\n      color: #231F20;\n      background-color: #FFF;\n      font-size: 16px;\n      font-family: Outfit, sans-serif;\n    }\n\n    p {\n      font-family: Outfit, sans-serif;\n      line-height: 1.5;\n      font-size: 17px;\n    }\n\n    h3, * + p:not([class]) {\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n\n    a:not([class]) {\n      color: #12b5e5;\n      text-decoration: underline;\n      font-weight: 600;\n    }\n\n    h2 {\n      margin-top: 10px;\n    }\n\n    h3 {\n      font-size: 24px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n\n    h4 {\n      font-size: 19px;\n      margin-bottom: 0;\n      padding-left: 24px;\n      padding-right: 24px;\n    }\n    \n    img {\n      max-width: 100%;\n    }\n\n    strong {\n      font-weight: 600;\n    }\n\n    pre {\n      background-color: #f9f9f9;\n      border: 1px solid #f9f9f9;\n      color: #231F20;\n      padding: 24px;\n      border-radius: 8px;\n    }\n\n    table {\n      border-collapse: collapse;\n    }\n\n    td {\n      word-break: normal; border-collapse : collapse !important;\n    }\n\n    hr {\n      border: 0;\n      border-color: #f5f5f5;\n      border-bottom: 5px solid;\n      margin-top: 100px;\n      margin-bottom: 100px;\n    }\n\n    .section-presenter p {\n      font-size: 16px;\n      margin-top: 5px;\n    }\n\n    mark {\n      background-color: #F9F4DA;\n      color: #231F20;\n      padding-left: 2px;\n      padding-right: 2px;\n      border-radius: 2px;\n    }\n\n    .bg-alt {\n      background-color: #f5f5f5;\n    }\n\n    @media (prefers-color-scheme: dark) {\n      .email-wrapper {\n        color: #F9F4DA !important;\n        background-color: #0F0D0E !important;\n      }\n\n      hr {\n        border-color: #262422 !important;\n      }\n\n      mark {\n        background-color: #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      pre {\n        background-color: #231F20 !important;\n        border: 1px solid #231F20 !important;\n        color: #F9F4DA !important;\n      }\n\n      .bg-alt { \n        background-color: #231F20 !important;\n      }\n\n      .unsubscribe-link {\n        color: #8d8a7f !important;\n      }\n\n      .token.punctuation { \n        color: #f9f4da !important;\n      }\n    }\n\n    @media screen and (min-width: 600px)  {\n      .mobile-break { display: none; }\n    }\n\n    code[class*=\"language-\"],\n    pre[class*=\"language-\"] {\n      font-family: \"Fira Mono\", \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace;\n      font-size: 14px;\n      line-height: 1.5;\n      direction: ltr;\n      text-align: left;\n      white-space: pre;\n      word-spacing: normal;\n      word-break: normal;\n      -moz-tab-size: 2;\n      -o-tab-size: 2;\n      tab-size: 2;\n      -webkit-hyphens: none;\n      -moz-hyphens: none;\n      -ms-hyphens: none;\n      hyphens: none;\n      color: #c0c5ce;\n    }\n    pre[class*=language-] {\n      overflow: auto;\n    }\n    pre[class*=\"language-\"]::-moz-selection,\n    pre[class*=\"language-\"] ::-moz-selection,\n    code[class*=\"language-\"]::-moz-selection,\n    code[class*=\"language-\"] ::-moz-selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    pre[class*=\"language-\"]::selection,\n    pre[class*=\"language-\"] ::selection,\n    code[class*=\"language-\"]::selection,\n    code[class*=\"language-\"] ::selection {\n      text-shadow: none;\n      background: #a7adba;\n    }\n    :not(pre) \u003e code[class*=\"language-\"] {\n      padding: 3px;\n      border-radius: 0.3em;\n      white-space: normal;\n    }\n    .language-text {\n      background: #36424D !important;\n      padding: 3px 8px !important;\n      color: #e5e5e5 !important;\n    }\n    code,\n    code * {\n      font-size: 14px;\n    }\n    code:not(pre) {\n      font-size: 17px;\n    }\n    .token.comment {\n      color: rgb(167, 167, 167);\n    }\n    .token.punctuation { \n      color: #231F20;\n    }\n    .token.deleted {\n      color: #ed203d;\n    }\n    .token.inserted,\n    .token.attr-name {\n      color: #0ba95b;\n    }\n    .token.string,\n    .token.url {\n      color: #f99157;\n    }\n    .token.attr-value,\n    .token.number {\n      color: #fcba28;\n    }\n    .token.boolean,\n    .token.keyword,\n    .token.function {\n      color: #9d7dce;\n    }\n    .token.keyword,\n    .token.tag,\n    .token.parameter,\n    .token.method,\n    .token.property-access {\n      color: #f38ba3;\n    }\n    .token.changed,\n    .token.property,\n    .token.namespace,\n    .token.operator,\n    .token.selector,\n    .token.doctype,\n    .token.class-name,\n    .token.builtin,\n    .token.char,\n    .token.constant,\n    .token.interpolation {\n      color: #12b5e5;\n    }\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"div\",null,{\"className\":\"text-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"bg-brand-coal\",\"children\":[[\"$\",\"nav\",null,{\"className\":\"flex justify-between items-center mb-10 p-8 container mx-auto gap-12\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/\",\"className\":\"block relative\",\"children\":[\"$\",\"img\",null,{\"width\":48,\"src\":\"/images/bytes-icon.png\",\"alt\":\"Bytes by Fireship\"}]}],[\"$\",\"div\",null,{\"className\":\"flex gap-8\",\"children\":[[\"$\",\"$L10\",null,{\"href\":\"/advertise\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"advertise\"}],[\"$\",\"$L10\",null,{\"href\":\"/archives\",\"className\":\"sm:text-xl text-biege hover:text-yellow underline\",\"children\":\"archives\"}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mx-auto md:pt-14 md:pb-8 text-center max-w-[75ch]\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"font-black text-3xl lg:text-6xl uppercase\",\"children\":\" Laravel goes full Vercel\"}],[\"$\",\"div\",null,{\"className\":\"text-sm sm:text-lg font-normal font-mono mt-6\",\"children\":[[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"Issue #\",\"371\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"mr-6 font-bold\",\"children\":[\"February 27, 2025\",\".\"]}],[\"$\",\"span\",null,{\"className\":\"font-bold\",\"children\":\"2 Minute read.\"}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"p-8 pt-0 relative xl:grid xl:grid-cols-[1fr_auto_1fr] gap-10\",\"children\":[[\"$\",\"div\",null,{\"className\":\"hidden xl:block\"}],[\"$\",\"div\",null,{\"style\":{\"lineHeight\":\"32.36px\",\"fontSize\":20},\"className\":\"post max-w-[600px] mx-auto\",\"children\":[[\"$\",\"style\",null,{\"children\":\"$11\"}],\"$L12\"]}],\"$L13\"]}]]}]\n"])</script><script>self.__next_f.push([1,"15:I[843,[\"949\",\"static/chunks/578c2090-898cc8de403d0607.js\",\"619\",\"static/chunks/619-ba102abea3e3d0e4.js\",\"663\",\"static/chunks/663-7ced58db679b6cdc.js\",\"268\",\"static/chunks/app/archives/%5Bslug%5D/page-de277a2f516b55a7.js\"],\"default\"]\n14:T3034,"])</script><script>self.__next_f.push([1,"\u003chtml\u003e\u003chead\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/bytes-banner-rounded.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/eyes.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/tai-lambo.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/sentry-logo.png\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/chair-legs.jpg\"\u003e\u003clink rel=\"preload\" as=\"image\" href=\"https://bytes.dev/images/content/cool-bits.png\"\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv style=\"max-width:600px;padding-top:80px\"\u003e\u003cdiv style=\"text-align:center\"\u003e\u003cimg width=\"600\" style=\"padding-bottom:40px;max-width:100%\" src=\"https://bytes.dev/images/bytes-banner-rounded.png\" alt=\"Bytes\"\u003e\u003c/div\u003e\u003cp\u003e\u003cstrong\u003eToday’s issue:\u003c/strong\u003e The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a \u003cem\u003econtroversial-but-effective\u003c/em\u003e use case for the Apple Vision Pro.\u003c/p\u003e\n\u003cp\u003eWelcome to \u003ca href=\"https://bytes.dev/archives/371\"\u003e#371\u003c/a\u003e.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"80\" src=\"https://bytes.dev/images/content/eyes.png\" alt=\"Eyeballs logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eThe Main Thing\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/tai-lambo.jpg\" alt=\"Tai Lopez standing in front of his Lamborghini\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eAverage Laravel enjoyer\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003eLaravel goes full Vercel\u003c/h3\u003e\u003cp\u003eWhen the Laravel team tweeted that last Monday was “the biggest day in Laravel history,” I naturally assumed that Aaron Francis must have \u003cem\u003efinally\u003c/em\u003e posted a video reveal of his skincare routine.\u003c/p\u003e\u003cp\u003eSadly, I was mistaken – but Laravel \u003cem\u003edid\u003c/em\u003e release some \u003ca href=\"https://blog.laravel.com/laravel-cloud-is-live-can-you-ship-in-1-minute?dub_id=wSdT64deAt9cvrZ2\"\u003emajor updates\u003c/a\u003e that help chart a new course for both the framework and the company behind it.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eQuick context:\u003c/strong\u003e This is Laravel’s first big launch since raising \u003ca href=\"https://laravel-news.com/laravel-raises-57-million-series-a\"\u003e$57 million\u003c/a\u003e from VCs back in December, and the playbook feels a little bit familiar to those of us in the JavaScript community.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eLet’s dive in:\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eLaravel 12\u003c/strong\u003e – Despite the major version bump, this is mostly a \u003ca href=\"https://laravel.com/docs/12.x/releases\"\u003emaintenance release\u003c/a\u003e that upgrades dependencies and lays the foundation for new features that will come in minor releases throughout 2025. But there is one cool thing…\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eApplication Starter Kits\u003c/strong\u003e – They launched new \u003ca href=\"https://laravel.com/docs/12.x/starter-kits\"\u003estarter kits\u003c/a\u003e for React, Vue, and Livewire that feel very JavaScript-y. The React kit uses Inertia.js to enable modern, single-page React apps with SSR, and it comes with React 19, TypeScript, shadcn/ui components, Tailwind, and built-in auth.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eLaravel Cloud\u003c/strong\u003e – They launched their own hosting platform to allow you to “deploy your Laravel app in 60 seconds.” It comes with autoscaling and hibernation, one-click database provisioning, and preview URLs for every environment.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eTo recap, Laravel raised fat stacks of cash from VCs, launched their own hosting platform, and built a full-stack React \u003cdel\u003eframework\u003c/del\u003e \u003cem\u003estarter kit\u003c/em\u003e to help expand their market size. That’s what we in the JavaScript world refer to as “going full Vercel.”\u003c/p\u003e\u003cp\u003eAnd it’s probably a smart move, considering Vercel is now a \u003cem\u003e$3 billion\u003c/em\u003e company. As Max Stoiber and swyx recently \u003ca href=\"https://dx.tips/ceiling\"\u003epointed out\u003c/a\u003e, the best (and maybe only?) way for a devtool company to hit the massive revenue numbers required to successfully IPO is to eventually become an infrastructure business.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eBottom Line:\u003c/strong\u003e You either die a hero or live long enough to see yourself become an AWS abstraction.\u003c/p\u003e\u003ctable width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;text-align:center;margin-top:40px\"\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd style=\"padding-top:12px\"\u003e\u003ca href=\"https://facebook.com/sharer/sharer.php?u=https://bytes.dev/archives/371\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/fb-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbytes.dev%2Farchives%2F371\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/li-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"https://twitter.com/intent/tweet/?text=Why%20was%20Feb%2024th%20the%20biggest%20day%20in%20Laravel%20history%3F%20%40bytesdotdev%20investigates%0A%0A\u0026amp;url=https%3A%2F%2Fbytes.dev%2Farchives%2F371\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/tw-share-icon.png\"\u003e\u003c/a\u003e\u003ca href=\"mailto:?subject=You%20like%20cornbread%3F\u0026amp;body=Thought%20you'd%20love%20this%20week's%20Bytes%0A---%0AWhy%20was%20Feb%2024th%20the%20biggest%20day%20in%20Laravel%20history%3F%20%40bytesdotdev%20investigates%0Ahttps%3A%2F%2Fbytes.dev%2Farchives%2F371\" rel=\"noopener\" style=\"text-decoration:none;padding-left:5px\" target=\"_blank\"\u003e\u003cimg alt=\"\" style=\"display:inline-block;width:32px\" width=\"25\" src=\"https://bytes.dev/images/em-share-icon.png\"\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"150\" src=\"https://bytes.dev/images/content/sentry-logo.png\" alt=\"Sentry logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003e\u003cspan\u003eOur Friends \u003cbr class=\"mobile-break\"\u003e(With Benefits)\u003c/span\u003e\u003c/h2\u003e\u003c/div\u003e\u003cdiv class=\"bg-alt\" style=\"padding:24px;padding-bottom:12px;border-radius:16px;margin-bottom:40px;max-width:100%\"\u003e\u003cimg src=\"https://bytes.dev/images/content/chair-legs.jpg\" alt=\"A girl standing on swivel chair legs\" width=\"600\" style=\"max-width:100%;border-radius:5px\"\u003e\u003cp style=\"text-align:center;font-size:17px;line-height:1;padding-top:10px;padding-bottom:4px;margin:0;font-style:italic\"\u003eMe gliding around my entire codebase with Trace Explorer\u003c!-- --\u003e \u003c/p\u003e\u003c/div\u003e\u003ch3\u003e\u003ca href=\"https://blog.sentry.io/find-and-fix-performance-bottlenecks-with-sentrys-trace-explorer/\"\u003eSentry’s new Trace Explorer is genuinely cool\u003c/a\u003e\u003c/h3\u003e\u003cp\u003eDebugging issues usually means digging through logs, manually tracing requests one by one, and asking yourself how life brought you to this point.\u003c/p\u003e\u003cp\u003eThankfully, Sentry wants to save you from that existential dread – so they just launched a new \u003ca href=\"https://blog.sentry.io/find-and-fix-performance-bottlenecks-with-sentrys-trace-explorer/\"\u003eTrace Explorer tool\u003c/a\u003e that lets you debug issues across your entire system and get the answers you need much faster.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eHere’s how:\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eFind patterns, not just problems\u003c/strong\u003e – Search, filter, and visualize traces using any attribute (span operation, API body, user segment, etc.) to pinpoint recurring bottlenecks and issues.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eDrill down instantly\u003c/strong\u003e – Jump directly from high-level trends to the exact spans causing trouble, so you can fix issues without context switching.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003eCustom metrics and visualizations\u003c/strong\u003e – Calculate key metrics for your project (like P95 latency) and turn them into alerts and dashboards for ongoing monitoring.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003e\u003ca href=\"https://blog.sentry.io/find-and-fix-performance-bottlenecks-with-sentrys-trace-explorer/\"\u003eTry it out\u003c/a\u003e, and I promise you’ll never go back.\u003c/p\u003e\n\u003chr\u003e\u003cdiv style=\"text-align:center;margin-bottom:36px\"\u003e\u003cimg width=\"110\" src=\"https://bytes.dev/images/content/cool-bits.png\" alt=\"Cool Bits logo\"\u003e\u003ch2 style=\"font-family:Paytone One, sans-serif;text-transform:uppercase;font-size:28px\"\u003eCool Bits\u003c/h2\u003e\u003c/div\u003e\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eJames Long wrote about \u003ca href=\"https://jlongster.com/subverting-control-weak-refs\"\u003esubverting control with weak references\u003c/a\u003e, which is also the name of my favorite Rage Against the Machine song.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://story.to.design/?ref=bytes\"\u003estory.to.design\u003c/a\u003e is a Figma plugin that lets you automatically turn your Storybook components into Figma components. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eThe mad lads at Michigan TypeScript got \u003ca href=\"https://www.youtube.com/watch?v=0mCsluv5FXA\u0026amp;ab_channel=MichiganTypeScript\"\u003ethe Doom engine running purely in TypeScript types\u003c/a\u003e. It’s by far the largest TypeScript codebase ever created, and it proves that you can accomplish anything when you’re locked inside during winter in Michigan.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eCloudflare just announced \u003ca href=\"https://blog.cloudflare.com/build-ai-agents-on-cloudflare/\"\u003esome cool new tools\u003c/a\u003e that make it easier to build AI agents on Cloudflare.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eBuildkite and Oso are hosting a live panel discussion in San Francisco on March 6th on \u003ca href=\"https://www.google.com/url?q=https://buildkite.com/resources/events/25/buildkite-meetup-san-francisco/?utm_source%3DOso\u0026amp;source=gmail\u0026amp;ust=1740614252624000\u0026amp;usg=AOvVaw16u_gzdqIWTjWOkuU35O2l\"\u003eStrategies for Efficient Scaling\u003c/a\u003e. Join engineering leaders from Vanta, Faire, and more as they cover scaling challenges they’ve faced and how they’ve solved them – plus enjoy food, drinks, and merch giveaways. \u003ca href=\"https://buildkite.com/resources/events/25/buildkite-meetup-san-francisco/?utm_source=Oso\"\u003eReserve your spot\u003c/a\u003e before it fills up. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eScott Chacon wrote about \u003ca href=\"https://blog.gitbutler.com/how-git-core-devs-configure-git/\"\u003ehow core Git developers configure Git\u003c/a\u003e. Because to become a GitLord, one must first inhabit the mind of a GitLord.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eKrish wrote about \u003ca href=\"https://www.krish.gg/blog/json-parser-in-rust\"\u003eParsing JSON in 500 lines of Rust\u003c/a\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://results.stateofreactnative.com/en-US/\"\u003eThe State of React Native survey results\u003c/a\u003e, and I’m very disappointed to see how few of you are building Apple Vision Pro apps.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAurora Scharff wrote about \u003ca href=\"https://aurorascharff.no/posts/avoiding-server-component-waterfall-fetching-with-react-19-cache/\"\u003eavoiding server component waterfall fetching with React 19’s \u003ccode\u003ecache()\u003c/code\u003e API\u003c/a\u003e.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ca href=\"https://www.qawolf.com?utm_source=bytes\u0026amp;utm_medium=newsletter\u0026amp;utm_campaign=ACQ_All_Demo_Conversions__NewsletterAudience_-_Newsletter_MobileTesting_20250227-None_Experiment-FALSE\u0026amp;utm_term=body-QAWolf\u0026amp;utm_content=MobileTesting_None_None_Headline%3ANone_None_None_None_Newsletter-SecondaryPlacement_20250227_v1_\"\u003eQA Wolf can now test your mobile app\u003c/a\u003e on both iOS and Android devices – and they run all tests in 100% parallel with no extra charges, so there are no run limits of any kind. [sponsored]\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003evlt launched \u003ca href=\"https://blog.vlt.sh/blog/reproducibility\"\u003e\u003ccode\u003ereproduce\u003c/code\u003e\u003c/a\u003e, a tool that empirically tests whether an npm package can be faithfully rebuilt from its declared source code.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAiden Bai created \u003ca href=\"https://www.react-explorer.com/\"\u003eReact Explorer\u003c/a\u003e, which turns any React website into an interactive visualization. If you open this bad boy up and put it side by side with my Windows Music visualizer from 2007, I’m pretty sure you’ll enter the astral plane. \u003cem\u003eThis\u003c/em\u003e is what the Apple Vision Pro was made for.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\u003c/div\u003e\u003c/body\u003e\u003c/html\u003e"])</script><script>self.__next_f.push([1,"12:[\"$\",\"div\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"$14\"}}]\n13:[\"$\",\"$d\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{}]}]\n"])</script><script>self.__next_f.push([1,"b:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n7:null\n"])</script><script>self.__next_f.push([1,"16:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"9:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Bytes #371 - Laravel goes full Vercel\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a controversial use case for the Apple Vision Pro.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/favicon/site.webmanifest\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"meta\",\"3\",{\"name\":\"msapplication-TileColor\",\"content\":\"#000000\"}],[\"$\",\"link\",\"4\",{\"rel\":\"canonical\",\"href\":\"https://bytes.dev/archives/371\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:title\",\"content\":\"Bytes #371 - Laravel goes full Vercel\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:description\",\"content\":\"The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a controversial use case for the Apple Vision Pro.\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:url\",\"content\":\"https://bytes.dev/archives/371\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:site_name\",\"content\":\"Bytes by Fireship\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:image\",\"content\":\"https://bytes.dev/images/content/tai-lambo.jpg\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"13\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"14\",{\"name\":\"twitter:creator\",\"content\":\"fireship_dev\"}],[\"$\",\"meta\",\"15\",{\"name\":\"twitter:title\",\"content\":\"Bytes #371 - Laravel goes full Vercel\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:description\",\"content\":\"The largest TypeScript codebase on Earth, the Zen philosophy for becoming a GitLord, and a controversial use case for the Apple Vision Pro.\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:image\",\"content\":\"https://bytes.dev/images/content/tai-lambo.jpg\"}],[\"$\",\"link\",\"18\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-32x32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"19\",{\"rel\":\"icon\",\"href\":\"/favicon/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"20\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon/apple-touch-icon.png\",\"sizes\":\"180x180\"}],[\"$\",\"link\",\"21\",{\"rel\":\"mask-icon\",\"href\":\"/favicon/safari-pinned-tab.svg\",\"color\":\"#000000\"}],[\"$\",\"$L16\",\"22\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"e:\"$9:metadata\"\n"])</script></body></html>

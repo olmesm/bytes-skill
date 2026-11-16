@@ -1,0 +1,3768 @@
+[
+ {
+  "issue": 1,
+  "title": "jQuery and TypeScript take the L",
+  "date": "June 22, 2020",
+  "url": "https://bytes.dev/archives/1",
+  "words": 1174
+ },
+ {
+  "issue": 2,
+  "title": "JS OGs reminisce, Angular ditches IE, and the future of No Code",
+  "date": "June 29, 2020",
+  "url": "https://bytes.dev/archives/2",
+  "words": 1161
+ },
+ {
+  "issue": 3,
+  "title": "Turn off Hamilton, let's talk about $$$",
+  "date": "July 6, 2020",
+  "url": "https://bytes.dev/archives/3",
+  "words": 1073
+ },
+ {
+  "issue": 4,
+  "title": "React and Rust, sitting in a tree, R-E-N-DER-I-N-G",
+  "date": "July 13, 2020",
+  "url": "https://bytes.dev/archives/4",
+  "words": 1422
+ },
+ {
+  "issue": 5,
+  "title": "Cache rules everything around me",
+  "date": "July 20, 2020",
+  "url": "https://bytes.dev/archives/5",
+  "words": 1137
+ },
+ {
+  "issue": 6,
+  "title": "Svelte supports TypeScript, because that\u2019s what friends do",
+  "date": "July 27, 2020",
+  "url": "https://bytes.dev/archives/6",
+  "words": 979
+ },
+ {
+  "issue": 7,
+  "title": "thank u, next.js",
+  "date": "August 3, 2020",
+  "url": "https://bytes.dev/archives/7",
+  "words": 768
+ },
+ {
+  "issue": 8,
+  "title": "TypeScript gets a facelift",
+  "date": "August 10, 2020",
+  "url": "https://bytes.dev/archives/8",
+  "words": 762
+ },
+ {
+  "issue": 9,
+  "title": "He came, he saw, he conquered",
+  "date": "August 17, 2020",
+  "url": "https://bytes.dev/archives/9",
+  "words": 956
+ },
+ {
+  "issue": 10,
+  "title": "Testing? We talkin' 'bout testing?",
+  "date": "August 24, 2020",
+  "url": "https://bytes.dev/archives/10",
+  "words": 1086
+ },
+ {
+  "issue": 11,
+  "title": "Big and slow, but powerful",
+  "date": "August 31, 2020",
+  "url": "https://bytes.dev/archives/11",
+  "words": 801
+ },
+ {
+  "issue": 12,
+  "title": "Bring a bucket and a mop for these new operators",
+  "date": "September 7, 2020",
+  "url": "https://bytes.dev/archives/12",
+  "words": 1126
+ },
+ {
+  "issue": 13,
+  "title": "The Fellowship of the Spec",
+  "date": "September 14, 2020",
+  "url": "https://bytes.dev/archives/13",
+  "words": 864
+ },
+ {
+  "issue": 14,
+  "title": "The best Vue comes after t\u0336h\u0336e\u0336 \u0336l\u0336o\u0336n\u0336g\u0336e\u0336s\u0336t\u0336 \u0336c\u0336l\u0336i\u0336m\u0336b\u0336 37 RFCs",
+  "date": "September 21, 2020",
+  "url": "https://bytes.dev/archives/14",
+  "words": 1130
+ },
+ {
+  "issue": 15,
+  "title": "React in the streets, D3 in the sheets",
+  "date": "September 28, 2020",
+  "url": "https://bytes.dev/archives/15",
+  "words": 1051
+ },
+ {
+  "issue": 16,
+  "title": "@decorators are sus",
+  "date": "October 5, 2020",
+  "url": "https://bytes.dev/archives/16",
+  "words": 1383
+ },
+ {
+  "issue": 17,
+  "title": "WTF IDC just ship it",
+  "date": "October 12, 2020",
+  "url": "https://bytes.dev/archives/17",
+  "words": 1071
+ },
+ {
+  "issue": 18,
+  "title": "This is going to make writing ransom letters SO much easier",
+  "date": "October 19, 2020",
+  "url": "https://bytes.dev/archives/18",
+  "words": 1110
+ },
+ {
+  "issue": 19,
+  "title": "The best hair in OSS",
+  "date": "October 26, 2020",
+  "url": "https://bytes.dev/archives/19",
+  "words": 1819
+ },
+ {
+  "issue": 20,
+  "title": "MTV Cribs - Next.js Edition",
+  "date": "November 2, 2020",
+  "url": "https://bytes.dev/archives/20",
+  "words": 1324
+ },
+ {
+  "issue": 21,
+  "title": "Somebody please tell em who the F I is",
+  "date": "November 9, 2020",
+  "url": "https://bytes.dev/archives/21",
+  "words": 870
+ },
+ {
+  "issue": 22,
+  "title": "Prince William, Duke of Cambridge, may or may not be the co-creator of Styled Components",
+  "date": "November 16, 2020",
+  "url": "https://bytes.dev/archives/22",
+  "words": 868
+ },
+ {
+  "issue": 23,
+  "title": "The solution to your impending technical irrelevance",
+  "date": "November 23, 2020",
+  "url": "https://bytes.dev/archives/23",
+  "words": 1045
+ },
+ {
+  "issue": 24,
+  "title": "The keys to the universe",
+  "date": "November 30, 2020",
+  "url": "https://bytes.dev/archives/24",
+  "words": 1716
+ },
+ {
+  "issue": 25,
+  "title": "We wasn't supposed to make it past 25",
+  "date": "December 7, 2020",
+  "url": "https://bytes.dev/archives/25",
+  "words": 1108
+ },
+ {
+  "issue": 26,
+  "title": "I don\u2019t make libs for free, I make \u2019em for freedom",
+  "date": "December 14, 2020",
+  "url": "https://bytes.dev/archives/26",
+  "words": 944
+ },
+ {
+  "issue": 27,
+  "title": "Venusaur used S\u0336o\u0336l\u0336a\u0336r\u0336 f\u0336l\u0336a\u0336r\u0336e\u0336 Cloudflare!",
+  "date": "December 21, 2020",
+  "url": "https://bytes.dev/archives/27",
+  "words": 1162
+ },
+ {
+  "issue": 28,
+  "title": "React is back baby!",
+  "date": "December 28, 2020",
+  "url": "https://bytes.dev/archives/28",
+  "words": 1102
+ },
+ {
+  "issue": 29,
+  "title": "My boy's wicked smaht",
+  "date": "January 4, 2021",
+  "url": "https://bytes.dev/archives/29",
+  "words": 1075
+ },
+ {
+  "issue": 30,
+  "title": "The hottest job on the planet",
+  "date": "January 11, 2021",
+  "url": "https://bytes.dev/archives/30",
+  "words": 1060
+ },
+ {
+  "issue": 31,
+  "title": "Guac is Extra",
+  "date": "January 18, 2021",
+  "url": "https://bytes.dev/archives/31",
+  "words": 1740
+ },
+ {
+  "issue": 32,
+  "title": "Bring it on, coward",
+  "date": "January 25, 2021",
+  "url": "https://bytes.dev/archives/32",
+  "words": 1149
+ },
+ {
+  "issue": 33,
+  "title": "Big Tech has established an over-leveraged short position in Backbone.js",
+  "date": "February 1, 2021",
+  "url": "https://bytes.dev/archives/33",
+  "words": 1196
+ },
+ {
+  "issue": 34,
+  "title": "An absolute rager",
+  "date": "February 8, 2021",
+  "url": "https://bytes.dev/archives/34",
+  "words": 942
+ },
+ {
+  "issue": 35,
+  "title": "The creation of a Salad Fingers Cinematic Universe\u2122",
+  "date": "February 15, 2021",
+  "url": "https://bytes.dev/archives/35",
+  "words": 1089
+ },
+ {
+  "issue": 36,
+  "title": "The more buildings you have the better of a developer you are",
+  "date": "February 21, 2021",
+  "url": "https://bytes.dev/archives/36",
+  "words": 1168
+ },
+ {
+  "issue": 37,
+  "title": "Prepping to fight the Haskell demon",
+  "date": "March 1, 2021",
+  "url": "https://bytes.dev/archives/37",
+  "words": 1051
+ },
+ {
+  "issue": 38,
+  "title": "Google has learned your toasting habits",
+  "date": "March 8, 2021",
+  "url": "https://bytes.dev/archives/38",
+  "words": 1175
+ },
+ {
+  "issue": 39,
+  "title": "I'm talkin' bout Mountain Dews baby",
+  "date": "March 15, 2021",
+  "url": "https://bytes.dev/archives/39",
+  "words": 1008
+ },
+ {
+  "issue": 40,
+  "title": "The engine, not the juice",
+  "date": "March 22, 2021",
+  "url": "https://bytes.dev/archives/40",
+  "words": 1024
+ },
+ {
+  "issue": 41,
+  "title": "BFFs who share the hobby of bashing React",
+  "date": "March 28, 2021",
+  "url": "https://bytes.dev/archives/41",
+  "words": 976
+ },
+ {
+  "issue": 42,
+  "title": "Money and fame",
+  "date": "April 5, 2021",
+  "url": "https://bytes.dev/archives/42",
+  "words": 1362
+ },
+ {
+  "issue": 43,
+  "title": "A bit Chonky",
+  "date": "April 12, 2021",
+  "url": "https://bytes.dev/archives/43",
+  "words": 1004
+ },
+ {
+  "issue": 44,
+  "title": "console.log(\"buttz\")",
+  "date": "April 19, 2021",
+  "url": "https://bytes.dev/archives/44",
+  "words": 949
+ },
+ {
+  "issue": 45,
+  "title": "A lot more adderall than usual",
+  "date": "April 26, 2021",
+  "url": "https://bytes.dev/archives/45",
+  "words": 1008
+ },
+ {
+  "issue": 46,
+  "title": "RxJS is *not* a JavaScript prescription",
+  "date": "May 3, 2021",
+  "url": "https://bytes.dev/archives/46",
+  "words": 1145
+ },
+ {
+  "issue": 47,
+  "title": "Why can't fruit be compared?",
+  "date": "May 10, 2021",
+  "url": "https://bytes.dev/archives/47",
+  "words": 0
+ },
+ {
+  "issue": 48,
+  "title": "the cutthroat P\u00e2tisserie world",
+  "date": "May 17, 2021",
+  "url": "https://bytes.dev/archives/48",
+  "words": 2179
+ },
+ {
+  "issue": 49,
+  "title": "After the party it's the hotel lobby",
+  "date": "May 24, 2021",
+  "url": "https://bytes.dev/archives/49",
+  "words": 0
+ },
+ {
+  "issue": 50,
+  "title": "fork you... Or rather, fork us",
+  "date": "May 31, 2021",
+  "url": "https://bytes.dev/archives/50",
+  "words": 1752
+ },
+ {
+  "issue": 51,
+  "title": "My toddler's only interested in Redux",
+  "date": "June 7, 2021",
+  "url": "https://bytes.dev/archives/51",
+  "words": 1225
+ },
+ {
+  "issue": 52,
+  "title": "thE sUSpenSe iS KIlliNg mE",
+  "date": "June 14, 2021",
+  "url": "https://bytes.dev/archives/52",
+  "words": 1266
+ },
+ {
+  "issue": 53,
+  "title": "Integration Test Email #2",
+  "date": "June 21, 2021",
+  "url": "https://bytes.dev/archives/53",
+  "words": 1118
+ },
+ {
+  "issue": 54,
+  "title": "1.1 billion Taco Bell Cheesy Bean & Rice Burritos",
+  "date": "June 28, 2021",
+  "url": "https://bytes.dev/archives/54",
+  "words": 0
+ },
+ {
+  "issue": 55,
+  "title": "Kaboom goes the dynamite",
+  "date": "July 5, 2021",
+  "url": "https://bytes.dev/archives/55",
+  "words": 903
+ },
+ {
+  "issue": 56,
+  "title": "Grief is just love with no place to go",
+  "date": "July 12, 2021",
+  "url": "https://bytes.dev/archives/56",
+  "words": 1036
+ },
+ {
+  "issue": 57,
+  "title": "a monthly subscription fee for node_modules",
+  "date": "July 19, 2021",
+  "url": "https://bytes.dev/archives/57",
+  "words": 777
+ },
+ {
+  "issue": 58,
+  "title": "not here to make friends",
+  "date": "July 26, 2021",
+  "url": "https://bytes.dev/archives/58",
+  "words": 0
+ },
+ {
+  "issue": 59,
+  "title": "PTSD Chihuahua",
+  "date": "August 2, 2021",
+  "url": "https://bytes.dev/archives/59",
+  "words": 1195
+ },
+ {
+  "issue": 60,
+  "title": "using the computer to draw weiners",
+  "date": "August 9, 2021",
+  "url": "https://bytes.dev/archives/60",
+  "words": 1141
+ },
+ {
+  "issue": 61,
+  "title": "Whoopi Goldberg discuss the latest tech",
+  "date": "August 16, 2021",
+  "url": "https://bytes.dev/archives/61",
+  "words": 1339
+ },
+ {
+  "issue": 62,
+  "title": "Spy Kids 2: The Island of Lost Dreams",
+  "date": "August 22, 2021",
+  "url": "https://bytes.dev/archives/62",
+  "words": 1229
+ },
+ {
+  "issue": 63,
+  "title": "2nd cousin of Nigel from \"The Wild Thornberrys\"",
+  "date": "August 29, 2021",
+  "url": "https://bytes.dev/archives/63",
+  "words": 1111
+ },
+ {
+  "issue": 64,
+  "title": "Well, well. If it isn't Chromium!",
+  "date": "September 6, 2021",
+  "url": "https://bytes.dev/archives/64",
+  "words": 979
+ },
+ {
+  "issue": 65,
+  "title": "A package manager for your package manager's package manger to manage",
+  "date": "September 13, 2021",
+  "url": "https://bytes.dev/archives/65",
+  "words": 1145
+ },
+ {
+  "issue": 66,
+  "title": "What do DevRels actually do?",
+  "date": "September 20, 2021",
+  "url": "https://bytes.dev/archives/66",
+  "words": 0
+ },
+ {
+  "issue": 67,
+  "title": "macaroni in the pot",
+  "date": "September 27, 2021",
+  "url": "https://bytes.dev/archives/67",
+  "words": 1117
+ },
+ {
+  "issue": 68,
+  "title": "What's easy to get into, but hard to get out of?",
+  "date": "October 4, 2021",
+  "url": "https://bytes.dev/archives/68",
+  "words": 0
+ },
+ {
+  "issue": 69,
+  "title": "Bored LulaRoe Yacht Club",
+  "date": "October 11, 2021",
+  "url": "https://bytes.dev/archives/69",
+  "words": 1100
+ },
+ {
+  "issue": 70,
+  "title": "163 million dollars",
+  "date": "October 18, 2021",
+  "url": "https://bytes.dev/archives/70",
+  "words": 1151
+ },
+ {
+  "issue": 71,
+  "title": "the degradation of the free and open internet",
+  "date": "October 25, 2021",
+  "url": "https://bytes.dev/archives/71",
+  "words": 1234
+ },
+ {
+  "issue": 72,
+  "title": "The answer? Mike Tyson",
+  "date": "November 1, 2021",
+  "url": "https://bytes.dev/archives/72",
+  "words": 1208
+ },
+ {
+  "issue": 73,
+  "title": "it's sterile and I like the taste",
+  "date": "November 8, 2021",
+  "url": "https://bytes.dev/archives/73",
+  "words": 0
+ },
+ {
+  "issue": 74,
+  "title": "talking animals and Turkish delight",
+  "date": "November 15, 2021",
+  "url": "https://bytes.dev/archives/74",
+  "words": 0
+ },
+ {
+  "issue": 75,
+  "title": "(Taylor's Version)",
+  "date": "November 15, 2021",
+  "url": "https://bytes.dev/archives/75",
+  "words": 1130
+ },
+ {
+  "issue": 76,
+  "title": "get hired as an S3 at Netflix",
+  "date": "November 29, 2021",
+  "url": "https://bytes.dev/archives/76",
+  "words": 0
+ },
+ {
+  "issue": 77,
+  "title": "Spot the bug",
+  "date": "December 6, 2021",
+  "url": "https://bytes.dev/archives/77",
+  "words": 1415
+ },
+ {
+  "issue": 78,
+  "title": "I can show you the world",
+  "date": "December 13, 2021",
+  "url": "https://bytes.dev/archives/78",
+  "words": 0
+ },
+ {
+  "issue": 79,
+  "title": "NFL Blitz.js",
+  "date": "December 20, 2021",
+  "url": "https://bytes.dev/archives/79",
+  "words": 1250
+ },
+ {
+  "issue": 80,
+  "title": "Oh, well this is awkward.",
+  "date": "December 27, 2021",
+  "url": "https://bytes.dev/archives/80",
+  "words": 1039
+ },
+ {
+  "issue": 81,
+  "title": "Ten predictions for 2022",
+  "date": "January 3, 2022",
+  "url": "https://bytes.dev/archives/81",
+  "words": 1270
+ },
+ {
+  "issue": 82,
+  "title": "Timoth\u00e9e Chalamet rapping under the moniker Timmy Tim",
+  "date": "January 10, 2022",
+  "url": "https://bytes.dev/archives/82",
+  "words": 1299
+ },
+ {
+  "issue": 83,
+  "title": "Scooby Snack bribes for the TC39 Gang",
+  "date": "January 17, 2022",
+  "url": "https://bytes.dev/archives/83",
+  "words": 1478
+ },
+ {
+  "issue": 84,
+  "title": "Swimming in Gravy",
+  "date": "January 24, 2022",
+  "url": "https://bytes.dev/archives/84",
+  "words": 1216
+ },
+ {
+  "issue": 85,
+  "title": "Render me, tenderly",
+  "date": "January 31, 2022",
+  "url": "https://bytes.dev/archives/85",
+  "words": 1286
+ },
+ {
+  "issue": 86,
+  "title": "butterflies aren't made out of butter",
+  "date": "February 7, 2022",
+  "url": "https://bytes.dev/archives/86",
+  "words": 1296
+ },
+ {
+  "issue": 87,
+  "title": "wtf is a state machine?",
+  "date": "February 14, 2022",
+  "url": "https://bytes.dev/archives/87",
+  "words": 1337
+ },
+ {
+  "issue": 88,
+  "title": "Async JavaScript, Furbies, Denny's, and Skeletor",
+  "date": "February 21, 2022",
+  "url": "https://bytes.dev/archives/88",
+  "words": 1370
+ },
+ {
+  "issue": 89,
+  "title": "To feel young again",
+  "date": "February 28, 2022",
+  "url": "https://bytes.dev/archives/89",
+  "words": 1190
+ },
+ {
+  "issue": 90,
+  "title": "A hygiene intervention for NPM",
+  "date": "March 7, 2022",
+  "url": "https://bytes.dev/archives/90",
+  "words": 1174
+ },
+ {
+  "issue": 91,
+  "title": "creepy Tim Burton movies",
+  "date": "March 14, 2022",
+  "url": "https://bytes.dev/archives/91",
+  "words": 1437
+ },
+ {
+  "issue": 92,
+  "title": "Stacks on Stacks on Stacks",
+  "date": "March 21, 2022",
+  "url": "https://bytes.dev/archives/92",
+  "words": 1174
+ },
+ {
+  "issue": 93,
+  "title": "Welcome to the 1st annual OSScars",
+  "date": "March 28, 2022",
+  "url": "https://bytes.dev/archives/93",
+  "words": 1339
+ },
+ {
+  "issue": 94,
+  "title": "Github stars don't pay the bills",
+  "date": "April 4, 2022",
+  "url": "https://bytes.dev/archives/94",
+  "words": 1281
+ },
+ {
+  "issue": 95,
+  "title": "You Can throw Anything In JavaScript",
+  "date": "April 11, 2022",
+  "url": "https://bytes.dev/archives/95",
+  "words": 1311
+ },
+ {
+  "issue": 96,
+  "title": "making FTP cool again",
+  "date": "April 18, 2022",
+  "url": "https://bytes.dev/archives/96",
+  "words": 1303
+ },
+ {
+  "issue": 97,
+  "title": "The Edge is just a spicy CDN",
+  "date": "April 24, 2022",
+  "url": "https://bytes.dev/archives/97",
+  "words": 1255
+ },
+ {
+  "issue": 98,
+  "title": "Wtf is a monorepo",
+  "date": "May 2, 2022",
+  "url": "https://bytes.dev/archives/98",
+  "words": 1402
+ },
+ {
+  "issue": 99,
+  "title": "Why Web Components Lost",
+  "date": "May 9, 2022",
+  "url": "https://bytes.dev/archives/99",
+  "words": 1431
+ },
+ {
+  "issue": 100,
+  "title": "10 things we learned turning 100",
+  "date": "May 16, 2022",
+  "url": "https://bytes.dev/archives/100",
+  "words": 1327
+ },
+ {
+  "issue": 101,
+  "title": "Two words: React fatigue",
+  "date": "May 23, 2022",
+  "url": "https://bytes.dev/archives/101",
+  "words": 1384
+ },
+ {
+  "issue": 102,
+  "title": "Twitter beefs between framework authors",
+  "date": "May 23, 2022",
+  "url": "https://bytes.dev/archives/102",
+  "words": 1637
+ },
+ {
+  "issue": 103,
+  "title": "What do Air Bud and Angular have in common?",
+  "date": "June 6, 2022",
+  "url": "https://bytes.dev/archives/103",
+  "words": 1601
+ },
+ {
+  "issue": 104,
+  "title": "15 badges earns you a waffle party",
+  "date": "June 13, 2022",
+  "url": "https://bytes.dev/archives/104",
+  "words": 1459
+ },
+ {
+  "issue": 105,
+  "title": "If it renders on the edge, it's time to pledge.",
+  "date": "June 19, 2022",
+  "url": "https://bytes.dev/archives/105",
+  "words": 1469
+ },
+ {
+  "issue": 106,
+  "title": "Hot Spec Summer is BACK",
+  "date": "June 27, 2022",
+  "url": "https://bytes.dev/archives/106",
+  "words": 1557
+ },
+ {
+  "issue": 107,
+  "title": "Like any good doggo, ESLint might be a little overbearing",
+  "date": "July 4, 2022",
+  "url": "https://bytes.dev/archives/107",
+  "words": 1611
+ },
+ {
+  "issue": 108,
+  "title": "Sun's Out Bun's Out",
+  "date": "July 11, 2022",
+  "url": "https://bytes.dev/archives/108",
+  "words": 1336
+ },
+ {
+  "issue": 109,
+  "title": "what exactly are the differences between JSC and V8?",
+  "date": "July 18, 2022",
+  "url": "https://bytes.dev/archives/109",
+  "words": 1593
+ },
+ {
+  "issue": 110,
+  "title": "C++ kind of sucks, actually.",
+  "date": "July 25, 2022",
+  "url": "https://bytes.dev/archives/110",
+  "words": 1630
+ },
+ {
+  "issue": 111,
+  "title": "React Query is single and ready to mingle",
+  "date": "August 1, 2022",
+  "url": "https://bytes.dev/archives/111",
+  "words": 1300
+ },
+ {
+  "issue": 112,
+  "title": "developers don't understand edge compute",
+  "date": "August 7, 2022",
+  "url": "https://bytes.dev/archives/112",
+  "words": 1329
+ },
+ {
+  "issue": 113,
+  "title": "another made up acronym to sound smart with your dev friends",
+  "date": "August 15, 2022",
+  "url": "https://bytes.dev/archives/113",
+  "words": 1291
+ },
+ {
+  "issue": 114,
+  "title": "a jQuery tattoo station",
+  "date": "August 22, 2022",
+  "url": "https://bytes.dev/archives/114",
+  "words": 1425
+ },
+ {
+  "issue": 115,
+  "title": "adding feet support to their new Vite support",
+  "date": "August 29, 2022",
+  "url": "https://bytes.dev/archives/115",
+  "words": 1261
+ },
+ {
+  "issue": 116,
+  "title": "Web Components - The Good Parts",
+  "date": "September 5, 2022",
+  "url": "https://bytes.dev/archives/116",
+  "words": 1267
+ },
+ {
+  "issue": 117,
+  "title": "Retiring JavaScript",
+  "date": "September 8, 2022",
+  "url": "https://bytes.dev/archives/117",
+  "words": 1350
+ },
+ {
+  "issue": 118,
+  "title": "The answer is more JavaScript",
+  "date": "September 12, 2022",
+  "url": "https://bytes.dev/archives/118",
+  "words": 1500
+ },
+ {
+  "issue": 119,
+  "title": "less hallucinogens and more JavaScript",
+  "date": "September 15, 2022",
+  "url": "https://bytes.dev/archives/119",
+  "words": 1274
+ },
+ {
+  "issue": 120,
+  "title": "A Whole Website in a Single JavaScript",
+  "date": "September 19, 2022",
+  "url": "https://bytes.dev/archives/120",
+  "words": 1029
+ },
+ {
+  "issue": 121,
+  "title": "monthly donor to Big JavaScript",
+  "date": "September 19, 2022",
+  "url": "https://bytes.dev/archives/121",
+  "words": 1157
+ },
+ {
+  "issue": 122,
+  "title": "The New Wave of JavaScript",
+  "date": "September 26, 2022",
+  "url": "https://bytes.dev/archives/122",
+  "words": 1307
+ },
+ {
+  "issue": 123,
+  "title": "infinity divs",
+  "date": "September 29, 2022",
+  "url": "https://bytes.dev/archives/123",
+  "words": 1206
+ },
+ {
+  "issue": 124,
+  "title": "JavaScript is a sh*tshow",
+  "date": "October 3, 2022",
+  "url": "https://bytes.dev/archives/124",
+  "words": 1513
+ },
+ {
+  "issue": 125,
+  "title": "Meet Ezno",
+  "date": "October 6, 2022",
+  "url": "https://bytes.dev/archives/125",
+  "words": 1561
+ },
+ {
+  "issue": 126,
+  "title": "Abandon ship",
+  "date": "October 10, 2022",
+  "url": "https://bytes.dev/archives/126",
+  "words": 1270
+ },
+ {
+  "issue": 127,
+  "title": "the 4 Horsemen of the Test-pocalypse",
+  "date": "October 13, 2022",
+  "url": "https://bytes.dev/archives/127",
+  "words": 1523
+ },
+ {
+  "issue": 128,
+  "title": "another footgun perpetrated by Big JavaScript\u2122",
+  "date": "October 17, 2022",
+  "url": "https://bytes.dev/archives/128",
+  "words": 1374
+ },
+ {
+  "issue": 129,
+  "title": "all that HTML has to offer",
+  "date": "October 20, 2022",
+  "url": "https://bytes.dev/archives/129",
+  "words": 1822
+ },
+ {
+  "issue": 130,
+  "title": "Pierced through the heart but never killed",
+  "date": "October 24, 2022",
+  "url": "https://bytes.dev/archives/130",
+  "words": 1448
+ },
+ {
+  "issue": 131,
+  "title": "Hot goss from Next Conf",
+  "date": "October 27, 2022",
+  "url": "https://bytes.dev/archives/131",
+  "words": 1824
+ },
+ {
+  "issue": 132,
+  "title": "Remix joins Shopify",
+  "date": "October 31, 2022",
+  "url": "https://bytes.dev/archives/132",
+  "words": 1503
+ },
+ {
+  "issue": 133,
+  "title": "Tailwind - A 100% true story",
+  "date": "November 3, 2022",
+  "url": "https://bytes.dev/archives/133",
+  "words": 1535
+ },
+ {
+  "issue": 134,
+  "title": "funding OSS through illicit activities",
+  "date": "November 7, 2022",
+  "url": "https://bytes.dev/archives/134",
+  "words": 1594
+ },
+ {
+  "issue": 135,
+  "title": "The People's Router\u2122\ufe0f",
+  "date": "November 10, 2022",
+  "url": "https://bytes.dev/archives/135",
+  "words": 1427
+ },
+ {
+  "issue": 136,
+  "title": "is this project still maintained?",
+  "date": "November 14, 2022",
+  "url": "https://bytes.dev/archives/136",
+  "words": 1255
+ },
+ {
+  "issue": 137,
+  "title": "Slurp Slurp Slurp",
+  "date": "November 17, 2022",
+  "url": "https://bytes.dev/archives/137",
+  "words": 1524
+ },
+ {
+  "issue": 138,
+  "title": "Pop Quiz",
+  "date": "November 21, 2022",
+  "url": "https://bytes.dev/archives/138",
+  "words": 1713
+ },
+ {
+  "issue": 139,
+  "title": "Angular DGAF",
+  "date": "November 24, 2022",
+  "url": "https://bytes.dev/archives/139",
+  "words": 1515
+ },
+ {
+  "issue": 140,
+  "title": "Monorepos and a pig named Cheddar",
+  "date": "November 28, 2022",
+  "url": "https://bytes.dev/archives/140",
+  "words": 1741
+ },
+ {
+  "issue": 141,
+  "title": "3 Burning Questions: Svelte Edition",
+  "date": "December 1, 2022",
+  "url": "https://bytes.dev/archives/141",
+  "words": 1547
+ },
+ {
+  "issue": 142,
+  "title": "Benchmarketing 101",
+  "date": "December 5, 2022",
+  "url": "https://bytes.dev/archives/142",
+  "words": 1280
+ },
+ {
+  "issue": 143,
+  "title": "Field notes from the singularity",
+  "date": "December 8, 2022",
+  "url": "https://bytes.dev/archives/143",
+  "words": 1496
+ },
+ {
+  "issue": 144,
+  "title": "Those two magic words",
+  "date": "December 12, 2022",
+  "url": "https://bytes.dev/archives/144",
+  "words": 1214
+ },
+ {
+  "issue": 145,
+  "title": "Say hello to SvelteKitty 1.0",
+  "date": "December 15, 2022",
+  "url": "https://bytes.dev/archives/145",
+  "words": 1377
+ },
+ {
+  "issue": 146,
+  "title": "underground, indie JavaScript APIs",
+  "date": "December 19, 2022",
+  "url": "https://bytes.dev/archives/146",
+  "words": 1291
+ },
+ {
+  "issue": 147,
+  "title": "Grading our 2022 predictions",
+  "date": "December 22, 2022",
+  "url": "https://bytes.dev/archives/147",
+  "words": 1261
+ },
+ {
+  "issue": 148,
+  "title": "Bun's big month",
+  "date": "December 29, 2022",
+  "url": "https://bytes.dev/archives/148",
+  "words": 1454
+ },
+ {
+  "issue": 149,
+  "title": "Our 2023 Predictions",
+  "date": "January 2, 2023",
+  "url": "https://bytes.dev/archives/149",
+  "words": 1255
+ },
+ {
+  "issue": 150,
+  "title": "React Native vibe check",
+  "date": "January 5, 2023",
+  "url": "https://bytes.dev/archives/150",
+  "words": 1257
+ },
+ {
+  "issue": 151,
+  "title": "Wasm for the rest of us",
+  "date": "January 9, 2023",
+  "url": "https://bytes.dev/archives/151",
+  "words": 1425
+ },
+ {
+  "issue": 152,
+  "title": "The Turbopack + That's So Raven Crossover",
+  "date": "January 12, 2022",
+  "url": "https://bytes.dev/archives/152",
+  "words": 1310
+ },
+ {
+  "issue": 153,
+  "title": "Remixing the React Router Remix",
+  "date": "January 16, 2022",
+  "url": "https://bytes.dev/archives/153",
+  "words": 1166
+ },
+ {
+  "issue": 154,
+  "title": "Inertia.js is a property of matter",
+  "date": "January 19, 2023",
+  "url": "https://bytes.dev/archives/154",
+  "words": 1284
+ },
+ {
+  "issue": 155,
+  "title": "The Truth about CSS",
+  "date": "January 23, 2023",
+  "url": "https://bytes.dev/archives/155",
+  "words": 1208
+ },
+ {
+  "issue": 156,
+  "title": "Astro 2 Takes Flight",
+  "date": "January 26, 2023",
+  "url": "https://bytes.dev/archives/156",
+  "words": 1110
+ },
+ {
+  "issue": 157,
+  "title": "SQLite on the Edge",
+  "date": "January 30, 2023",
+  "url": "https://bytes.dev/archives/157",
+  "words": 1459
+ },
+ {
+  "issue": 158,
+  "title": "Netlify buys Gatsby",
+  "date": "February 2, 2023",
+  "url": "https://bytes.dev/archives/158",
+  "words": 1374
+ },
+ {
+  "issue": 159,
+  "title": "Pizza Rolls and JavaScript memes",
+  "date": "February 6, 2023",
+  "url": "https://bytes.dev/archives/159",
+  "words": 1732
+ },
+ {
+  "issue": 160,
+  "title": "Framework field trip",
+  "date": "February 9, 2023",
+  "url": "https://bytes.dev/archives/160",
+  "words": 1207
+ },
+ {
+  "issue": 161,
+  "title": "New Year's Reso-Vue-tions",
+  "date": "February 13, 2023",
+  "url": "https://bytes.dev/archives/161",
+  "words": 1148
+ },
+ {
+  "issue": 162,
+  "title": "The mitochondria of the web",
+  "date": "February 16, 2023",
+  "url": "https://bytes.dev/archives/162",
+  "words": 1173
+ },
+ {
+  "issue": 163,
+  "title": "We built Qwik City on rock and roll",
+  "date": "February 20, 2023",
+  "url": "https://bytes.dev/archives/163",
+  "words": 1024
+ },
+ {
+  "issue": 164,
+  "title": "The Ng-Renaissance Fair",
+  "date": "February 23, 2023",
+  "url": "https://bytes.dev/archives/164",
+  "words": 924
+ },
+ {
+  "issue": 165,
+  "title": "The Next Next",
+  "date": "February 27, 2023",
+  "url": "https://bytes.dev/archives/165",
+  "words": 1000
+ },
+ {
+  "issue": 166,
+  "title": "Deno's Dilemma",
+  "date": "March 2, 2023",
+  "url": "https://bytes.dev/archives/166",
+  "words": 1110
+ },
+ {
+  "issue": 167,
+  "title": "Hono's flame of eternal hope",
+  "date": "March 6, 2023",
+  "url": "https://bytes.dev/archives/167",
+  "words": 887
+ },
+ {
+  "issue": 168,
+  "title": "Is there a Prisma killer on the loose?",
+  "date": "March 9, 2023",
+  "url": "https://bytes.dev/archives/168",
+  "words": 1054
+ },
+ {
+  "issue": 169,
+  "title": "Welcome to the 2nd annual OSScars",
+  "date": "March 13, 2023",
+  "url": "https://bytes.dev/archives/169",
+  "words": 1349
+ },
+ {
+  "issue": 170,
+  "title": "Bank runs, AI, and Signals",
+  "date": "March 16, 2023",
+  "url": "https://bytes.dev/archives/170",
+  "words": 1081
+ },
+ {
+  "issue": 171,
+  "title": "The Eras of Electron",
+  "date": "March 20, 2023",
+  "url": "https://bytes.dev/archives/171",
+  "words": 883
+ },
+ {
+  "issue": 172,
+  "title": "The Eras of React",
+  "date": "March 23, 2023",
+  "url": "https://bytes.dev/archives/172",
+  "words": 1060
+ },
+ {
+  "issue": 173,
+  "title": "Moore's Law is a social construct",
+  "date": "March 27, 2023",
+  "url": "https://bytes.dev/archives/173",
+  "words": 1291
+ },
+ {
+  "issue": 174,
+  "title": "Putting the \"p\" in npm",
+  "date": "March 31, 2023",
+  "url": "https://bytes.dev/archives/174",
+  "words": 1286
+ },
+ {
+  "issue": 175,
+  "title": "The Rise and Fall and Rise Again of Rome",
+  "date": "April 3, 2023",
+  "url": "https://bytes.dev/archives/175",
+  "words": 1136
+ },
+ {
+  "issue": 176,
+  "title": "Bauhaus, Brutalism, and... React Native?",
+  "date": "April 6, 2023",
+  "url": "https://bytes.dev/archives/176",
+  "words": 1207
+ },
+ {
+  "issue": 177,
+  "title": "Playing Uno and writing CSS",
+  "date": "April 10, 2023",
+  "url": "https://bytes.dev/archives/177",
+  "words": 1135
+ },
+ {
+  "issue": 178,
+  "title": "Unit tests... but make it blazing",
+  "date": "April 13, 2023",
+  "url": "https://bytes.dev/archives/178",
+  "words": 1035
+ },
+ {
+  "issue": 179,
+  "title": "Rust\u2122\u00ae\ufe0f drama",
+  "date": "April 17, 2023",
+  "url": "https://bytes.dev/archives/179",
+  "words": 1086
+ },
+ {
+  "issue": 180,
+  "title": "Node 20 coming in hot",
+  "date": "April 20, 2023",
+  "url": "https://bytes.dev/archives/180",
+  "words": 1060
+ },
+ {
+  "issue": 181,
+  "title": "JavaScript, let's party",
+  "date": "April 24, 2023",
+  "url": "https://bytes.dev/archives/181",
+  "words": 1087
+ },
+ {
+  "issue": 182,
+  "title": "Modern.js is a giant mystery meat enchilada",
+  "date": "April 27, 2023",
+  "url": "https://bytes.dev/archives/182",
+  "words": 950
+ },
+ {
+  "issue": 183,
+  "title": "We heard you like containers...",
+  "date": "May 1, 2023",
+  "url": "https://bytes.dev/archives/183",
+  "words": 947
+ },
+ {
+  "issue": 184,
+  "title": "Jack be Nimble, Jack be Qwik",
+  "date": "May 4, 2023",
+  "url": "https://bytes.dev/archives/184",
+  "words": 1078
+ },
+ {
+  "issue": 185,
+  "title": "Angular's bold new look",
+  "date": "May 8, 2023",
+  "url": "https://bytes.dev/archives/185",
+  "words": 1249
+ },
+ {
+  "issue": 186,
+  "title": "Don't call it a (virtual) comeback",
+  "date": "May 11, 2023",
+  "url": "https://bytes.dev/archives/186",
+  "words": 1033
+ },
+ {
+  "issue": 187,
+  "title": "Google I/O speed run",
+  "date": "May 18, 2023",
+  "url": "https://bytes.dev/archives/187",
+  "words": 1089
+ },
+ {
+  "issue": 188,
+  "title": "Let's get ready to BUNdle",
+  "date": "May 18, 2023",
+  "url": "https://bytes.dev/archives/188",
+  "words": 992
+ },
+ {
+  "issue": 189,
+  "title": "Cloudflare Developer Week field notes",
+  "date": "May 22, 2023",
+  "url": "https://bytes.dev/archives/189",
+  "words": 1040
+ },
+ {
+  "issue": 190,
+  "title": "The biggest Dart yet",
+  "date": "May 25, 2023",
+  "url": "https://bytes.dev/archives/190",
+  "words": 981
+ },
+ {
+  "issue": 191,
+  "title": "LangChain steps into the JS octagon",
+  "date": "May 29, 2023",
+  "url": "https://bytes.dev/archives/191",
+  "words": 918
+ },
+ {
+  "issue": 192,
+  "title": "The deep magic of state machines",
+  "date": "June 1, 2023",
+  "url": "https://bytes.dev/archives/192",
+  "words": 921
+ },
+ {
+  "issue": 193,
+  "title": "React Server Components in the wild",
+  "date": "June 5, 2023",
+  "url": "https://bytes.dev/archives/193",
+  "words": 1017
+ },
+ {
+  "issue": 194,
+  "title": "Astro amps it up",
+  "date": "June 8, 2023",
+  "url": "https://bytes.dev/archives/194",
+  "words": 889
+ },
+ {
+  "issue": 195,
+  "title": "Once you Wasm, the fun don't stopsm",
+  "date": "June 12, 2023",
+  "url": "https://bytes.dev/archives/195",
+  "words": 1101
+ },
+ {
+  "issue": 196,
+  "title": "Developer Family Feud",
+  "date": "June 15, 2023",
+  "url": "https://bytes.dev/archives/196",
+  "words": 1144
+ },
+ {
+  "issue": 197,
+  "title": "CSS Panda-monium",
+  "date": "June 19, 2023",
+  "url": "https://bytes.dev/archives/197",
+  "words": 1110
+ },
+ {
+  "issue": 198,
+  "title": "React Native is listening",
+  "date": "June 22, 2023",
+  "url": "https://bytes.dev/archives/198",
+  "words": 1172
+ },
+ {
+  "issue": 199,
+  "title": "The Officially Unofficial Svelte 4 Launch Party\u2122\ufe0f",
+  "date": "June 26, 2023",
+  "url": "https://bytes.dev/archives/199",
+  "words": 1162
+ },
+ {
+  "issue": 200,
+  "title": "Issue #200 Extravaganza!",
+  "date": "June 29, 2023",
+  "url": "https://bytes.dev/archives/200",
+  "words": 2161
+ },
+ {
+  "issue": 201,
+  "title": "I Will Rem-Ember.js You",
+  "date": "July 3, 2023",
+  "url": "https://bytes.dev/archives/201",
+  "words": 1323
+ },
+ {
+  "issue": 202,
+  "title": "The great CommonJS debate of 2023",
+  "date": "July 6, 2023",
+  "url": "https://bytes.dev/archives/202",
+  "words": 1342
+ },
+ {
+  "issue": 203,
+  "title": "Hot Spec Summer is back again",
+  "date": "July 10, 2023",
+  "url": "https://bytes.dev/archives/203",
+  "words": 1188
+ },
+ {
+  "issue": 204,
+  "title": "Turso goes all-in on the edge",
+  "date": "July 13, 2023",
+  "url": "https://bytes.dev/archives/204",
+  "words": 993
+ },
+ {
+  "issue": 205,
+  "title": "One style guide to rule them all",
+  "date": "July 17, 2023",
+  "url": "https://bytes.dev/archives/205",
+  "words": 1087
+ },
+ {
+  "issue": 206,
+  "title": "Material Web Components surprised everyone",
+  "date": "July 20, 2023",
+  "url": "https://bytes.dev/archives/206",
+  "words": 1060
+ },
+ {
+  "issue": 207,
+  "title": "Barbie Edition",
+  "date": "July 24, 2023",
+  "url": "https://bytes.dev/archives/207",
+  "words": 1206
+ },
+ {
+  "issue": 208,
+  "title": "Animorphs and View Transitions",
+  "date": "July 27, 2023",
+  "url": "https://bytes.dev/archives/208",
+  "words": 1180
+ },
+ {
+  "issue": 209,
+  "title": "HTML, but make it eXtra",
+  "date": "July 31, 2023",
+  "url": "https://bytes.dev/archives/209",
+  "words": 1056
+ },
+ {
+  "issue": 210,
+  "title": "Lights, Camera, Tailwind",
+  "date": "August 3, 2023",
+  "url": "https://bytes.dev/archives/210",
+  "words": 1057
+ },
+ {
+  "issue": 211,
+  "title": "Jamstack is dead, long live Jamstack!",
+  "date": "August 7, 2023",
+  "url": "https://bytes.dev/archives/211",
+  "words": 1424
+ },
+ {
+  "issue": 212,
+  "title": "IDX Gon' Give It To Ya",
+  "date": "August 10, 2023",
+  "url": "https://bytes.dev/archives/212",
+  "words": 1287
+ },
+ {
+  "issue": 213,
+  "title": "Expo throws a rager",
+  "date": "August 14, 2023",
+  "url": "https://bytes.dev/archives/213",
+  "words": 1002
+ },
+ {
+  "issue": 214,
+  "title": "The Cascadeaissance",
+  "date": "August 17, 2023",
+  "url": "https://bytes.dev/archives/214",
+  "words": 1156
+ },
+ {
+  "issue": 215,
+  "title": "Requiem for a Query",
+  "date": "",
+  "url": "https://bytes.dev/archives/215",
+  "words": 1466
+ },
+ {
+  "issue": 216,
+  "title": "Using Web Components responsibly",
+  "date": "August 24, 2023",
+  "url": "https://bytes.dev/archives/216",
+  "words": 1230
+ },
+ {
+  "issue": 217,
+  "title": "Ride the Lightning CSS",
+  "date": "August 28, 2023",
+  "url": "https://bytes.dev/archives/217",
+  "words": 1049
+ },
+ {
+  "issue": 218,
+  "title": "\ud83d\ude80 Astro Takeover",
+  "date": "August 31, 2023",
+  "url": "https://bytes.dev/archives/218",
+  "words": 1653
+ },
+ {
+  "issue": 219,
+  "title": "Rome has fallen",
+  "date": "September 4, 2023",
+  "url": "https://bytes.dev/archives/219",
+  "words": 1007
+ },
+ {
+  "issue": 220,
+  "title": "\ud83d\udd79\ufe0f React Takeover",
+  "date": "September 7, 2023",
+  "url": "https://bytes.dev/archives/220",
+  "words": 1870
+ },
+ {
+  "issue": 221,
+  "title": "Sun's Out, Bun's Out",
+  "date": "September 11, 2023",
+  "url": "https://bytes.dev/archives/221",
+  "words": 1176
+ },
+ {
+  "issue": 222,
+  "title": "I'm running for Mayor of CSS Town",
+  "date": "September 14, 2023",
+  "url": "https://bytes.dev/archives/222",
+  "words": 1210
+ },
+ {
+  "issue": 223,
+  "title": "v0 to hero",
+  "date": "September 18, 2023",
+  "url": "https://bytes.dev/archives/223",
+  "words": 1252
+ },
+ {
+  "issue": 224,
+  "title": "Oops, Svelte did it again",
+  "date": "September 21, 2023",
+  "url": "https://bytes.dev/archives/224",
+  "words": 1724
+ },
+ {
+  "issue": 225,
+  "title": "The Return of the Mix",
+  "date": "September 25, 2023",
+  "url": "https://bytes.dev/archives/225",
+  "words": 1420
+ },
+ {
+  "issue": 226,
+  "title": "All Aboard to Turso Town",
+  "date": "September 28, 2023",
+  "url": "https://bytes.dev/archives/226",
+  "words": 1521
+ },
+ {
+  "issue": 227,
+  "title": "It's party time for PartyKit",
+  "date": "October 2, 2023",
+  "url": "https://bytes.dev/archives/227",
+  "words": 981
+ },
+ {
+  "issue": 228,
+  "title": "It's Lit",
+  "date": "October 5, 2023",
+  "url": "https://bytes.dev/archives/228",
+  "words": 1120
+ },
+ {
+  "issue": 229,
+  "title": "It rhymes with FeetConf",
+  "date": "October 9, 2023",
+  "url": "https://bytes.dev/archives/229",
+  "words": 976
+ },
+ {
+  "issue": 230,
+  "title": "The power of layers",
+  "date": "October 12, 2023",
+  "url": "https://bytes.dev/archives/230",
+  "words": 1163
+ },
+ {
+  "issue": 231,
+  "title": "To bundle or not to bundle?",
+  "date": "October 16, 2023",
+  "url": "https://bytes.dev/archives/231",
+  "words": 1105
+ },
+ {
+  "issue": 232,
+  "title": "The Ghost of TanStack Past",
+  "date": "October 19, 2023",
+  "url": "https://bytes.dev/archives/232",
+  "words": 1206
+ },
+ {
+  "issue": 233,
+  "title": "Angular goes meta",
+  "date": "October 23, 2023",
+  "url": "https://bytes.dev/archives/233",
+  "words": 1048
+ },
+ {
+  "issue": 234,
+  "title": "React Forgetttabouttittt",
+  "date": "October 26, 2023",
+  "url": "https://bytes.dev/archives/234",
+  "words": 1133
+ },
+ {
+  "issue": 235,
+  "title": "Rethinking best practices\u2122\ufe0f at Next.js Conf",
+  "date": "October 31, 2023",
+  "url": "https://bytes.dev/archives/235",
+  "words": 1096
+ },
+ {
+  "issue": 236,
+  "title": "Remix takes its Vite-amins",
+  "date": "November 2, 2023",
+  "url": "https://bytes.dev/archives/236",
+  "words": 1219
+ },
+ {
+  "issue": 237,
+  "title": "WinterJS is coming",
+  "date": "November 6, 2023",
+  "url": "https://bytes.dev/archives/237",
+  "words": 1083
+ },
+ {
+  "issue": 238,
+  "title": "The Ang-eissance",
+  "date": "November 9, 2023",
+  "url": "https://bytes.dev/archives/238",
+  "words": 1045
+ },
+ {
+  "issue": 239,
+  "title": "The first rule of HTML First Club",
+  "date": "November 13, 2023",
+  "url": "https://bytes.dev/archives/239",
+  "words": 972
+ },
+ {
+  "issue": 240,
+  "title": "Real talk about The Edge\u2122\ufe0f",
+  "date": "November 16, 2023",
+  "url": "https://bytes.dev/archives/240",
+  "words": 1167
+ },
+ {
+  "issue": 241,
+  "title": "The People's Bundler",
+  "date": "November 20, 2023",
+  "url": "https://bytes.dev/archives/241",
+  "words": 978
+ },
+ {
+  "issue": 242,
+  "title": "The Hannah Montana of Next.js",
+  "date": "November 30, 2023",
+  "url": "https://bytes.dev/archives/242",
+  "words": 1090
+ },
+ {
+  "issue": 243,
+  "title": "Dust off your CS textbook",
+  "date": "December 4, 2023",
+  "url": "https://bytes.dev/archives/243",
+  "words": 1059
+ },
+ {
+  "issue": 244,
+  "title": "Meta blesses us with StyleX",
+  "date": "December 7, 2023",
+  "url": "https://bytes.dev/archives/244",
+  "words": 1158
+ },
+ {
+  "issue": 245,
+  "title": "Astro launches v4 \ud83d\ude80",
+  "date": "December 11, 2023",
+  "url": "https://bytes.dev/archives/245",
+  "words": 981
+ },
+ {
+  "issue": 246,
+  "title": "A New React Framework",
+  "date": "December 14, 2023",
+  "url": "https://bytes.dev/archives/246",
+  "words": 1065
+ },
+ {
+  "issue": 247,
+  "title": "SvelteKitty 2.0 -- now even sveltier!",
+  "date": "December 18, 2023",
+  "url": "https://bytes.dev/archives/247",
+  "words": 1057
+ },
+ {
+  "issue": 248,
+  "title": "Grading our 2023 predictions",
+  "date": "December 21, 2023",
+  "url": "https://bytes.dev/archives/248",
+  "words": 1282
+ },
+ {
+  "issue": 249,
+  "title": "Have yourself a merry little Route-mas",
+  "date": "December 28, 2023",
+  "url": "https://bytes.dev/archives/249",
+  "words": 1077
+ },
+ {
+  "issue": 250,
+  "title": "Our 2024 Predictions \ud83c\udf89",
+  "date": "January 1, 2024",
+  "url": "https://bytes.dev/archives/250",
+  "words": 1049
+ },
+ {
+  "issue": 251,
+  "title": "The secret lovechild of Angular and Vue",
+  "date": "January 4, 2024",
+  "url": "https://bytes.dev/archives/251",
+  "words": 1262
+ },
+ {
+  "issue": 252,
+  "title": "V8 revs up",
+  "date": "January 8, 2024",
+  "url": "https://bytes.dev/archives/252",
+  "words": 1000
+ },
+ {
+  "issue": 253,
+  "title": "Superglue and Stockholm Syndrome",
+  "date": "January 11, 2024",
+  "url": "https://bytes.dev/archives/253",
+  "words": 1030
+ },
+ {
+  "issue": 254,
+  "title": "Pour one out for Vue 2",
+  "date": "January 15, 2024",
+  "url": "https://bytes.dev/archives/254",
+  "words": 1078
+ },
+ {
+  "issue": 255,
+  "title": "The Rebirth of ReScript",
+  "date": "January 18, 2024",
+  "url": "https://bytes.dev/archives/255",
+  "words": 936
+ },
+ {
+  "issue": 256,
+  "title": "The Davos of web components",
+  "date": "January 22, 2024",
+  "url": "https://bytes.dev/archives/256",
+  "words": 1115
+ },
+ {
+  "issue": 257,
+  "title": "Expo is back on their grindset",
+  "date": "January 25, 2024",
+  "url": "https://bytes.dev/archives/257",
+  "words": 1064
+ },
+ {
+  "issue": 258,
+  "title": "Better off Zed",
+  "date": "January 29, 2024",
+  "url": "https://bytes.dev/archives/258",
+  "words": 1230
+ },
+ {
+  "issue": 259,
+  "title": "TypeScript's new type",
+  "date": "February 1, 2024",
+  "url": "https://bytes.dev/archives/259",
+  "words": 1066
+ },
+ {
+  "issue": 260,
+  "title": "Bippity boppity browser interoppity",
+  "date": "February 5, 2024",
+  "url": "https://bytes.dev/archives/260",
+  "words": 1159
+ },
+ {
+  "issue": 261,
+  "title": "Building apps for the fancy face goggles",
+  "date": "February 8, 2024",
+  "url": "https://bytes.dev/archives/261",
+  "words": 1264
+ },
+ {
+  "issue": 262,
+  "title": "The Super Bowl of monorepos",
+  "date": "February 12, 2024",
+  "url": "https://bytes.dev/archives/262",
+  "words": 1164
+ },
+ {
+  "issue": 263,
+  "title": "Using the web to build the web",
+  "date": "February 15, 2024",
+  "url": "https://bytes.dev/archives/263",
+  "words": 1330
+ },
+ {
+  "issue": 264,
+  "title": "React's tradition unlike any other",
+  "date": "February 19, 2024",
+  "url": "https://bytes.dev/archives/264",
+  "words": 1212
+ },
+ {
+  "issue": 265,
+  "title": "Hono wants it all",
+  "date": "February 22, 2024",
+  "url": "https://bytes.dev/archives/265",
+  "words": 1034
+ },
+ {
+  "issue": 266,
+  "title": "Remix takes a SPA day",
+  "date": "February 26, 2024",
+  "url": "https://bytes.dev/archives/266",
+  "words": 1127
+ },
+ {
+  "issue": 267,
+  "title": "The Data Issue",
+  "date": "February 29, 2024",
+  "url": "https://bytes.dev/archives/267",
+  "words": 1509
+ },
+ {
+  "issue": 268,
+  "title": "Is JSR the chosen one?",
+  "date": "March 4, 2024",
+  "url": "https://bytes.dev/archives/268",
+  "words": 1208
+ },
+ {
+  "issue": 269,
+  "title": "Artificially Intelligent React Server Components",
+  "date": "March 7, 2024",
+  "url": "https://bytes.dev/archives/269",
+  "words": 1112
+ },
+ {
+  "issue": 270,
+  "title": "Welcome to the 3rd annual OSScars",
+  "date": "March 11, 2024",
+  "url": "https://bytes.dev/archives/270",
+  "words": 1102
+ },
+ {
+  "issue": 271,
+  "title": "Astro just launched a database",
+  "date": "March 14, 2024",
+  "url": "https://bytes.dev/archives/271",
+  "words": 1239
+ },
+ {
+  "issue": 272,
+  "title": "It's easy as I-N-P",
+  "date": "March 18, 2024",
+  "url": "https://bytes.dev/archives/272",
+  "words": 1047
+ },
+ {
+  "issue": 273,
+  "title": "Wangular is born",
+  "date": "March 21, 2024",
+  "url": "https://bytes.dev/archives/273",
+  "words": 1194
+ },
+ {
+  "issue": 274,
+  "title": "The Runtime Rumble",
+  "date": "March 25, 2024",
+  "url": "https://bytes.dev/archives/274",
+  "words": 1235
+ },
+ {
+  "issue": 275,
+  "title": "Hitting your (Bundler) Macros",
+  "date": "March 28, 2024",
+  "url": "https://bytes.dev/archives/275",
+  "words": 979
+ },
+ {
+  "issue": 276,
+  "title": "Bundows is here",
+  "date": "April 1, 2024",
+  "url": "https://bytes.dev/archives/276",
+  "words": 1114
+ },
+ {
+  "issue": 277,
+  "title": "Signals are coming for you",
+  "date": "April 5, 2024",
+  "url": "https://bytes.dev/archives/277",
+  "words": 1101
+ },
+ {
+  "issue": 278,
+  "title": "Cloudflare's big week",
+  "date": "April 8, 2024",
+  "url": "https://bytes.dev/archives/278",
+  "words": 1056
+ },
+ {
+  "issue": 279,
+  "title": "Feeling the Flow Envy\u2122\ufe0f",
+  "date": "April 11, 2024",
+  "url": "https://bytes.dev/archives/279",
+  "words": 966
+ },
+ {
+  "issue": 280,
+  "title": "Next.js hits the turbo button",
+  "date": "April 15, 2024",
+  "url": "https://bytes.dev/archives/280",
+  "words": 1041
+ },
+ {
+  "issue": 281,
+  "title": "Putting the \"p\" in npm",
+  "date": "April 18, 2024",
+  "url": "https://bytes.dev/archives/281",
+  "words": 1203
+ },
+ {
+  "issue": 282,
+  "title": "The Shopify Remix",
+  "date": "April 22, 2024",
+  "url": "https://bytes.dev/archives/282",
+  "words": 1172
+ },
+ {
+  "issue": 283,
+  "title": "React Native Yoga",
+  "date": "April 25, 2024",
+  "url": "https://bytes.dev/archives/283",
+  "words": 940
+ },
+ {
+  "issue": 284,
+  "title": "React 19 Beta Bonanza",
+  "date": "April 29, 2024",
+  "url": "https://bytes.dev/archives/284",
+  "words": 939
+ },
+ {
+  "issue": 285,
+  "title": "Hot Node features near you",
+  "date": "May 2, 2024",
+  "url": "https://bytes.dev/archives/285",
+  "words": 848
+ },
+ {
+  "issue": 286,
+  "title": "Type-Maxxing with Effect",
+  "date": "May 6, 2024",
+  "url": "https://bytes.dev/archives/286",
+  "words": 1068
+ },
+ {
+  "issue": 287,
+  "title": "Chrome's sneaky new API",
+  "date": "May 9, 2024",
+  "url": "https://bytes.dev/archives/287",
+  "words": 936
+ },
+ {
+  "issue": 288,
+  "title": "Lights, Camera, Astro Actions",
+  "date": "May 13, 2024",
+  "url": "https://bytes.dev/archives/288",
+  "words": 944
+ },
+ {
+  "issue": 289,
+  "title": "5 Big Things from React Conf",
+  "date": "May 16, 2024",
+  "url": "https://bytes.dev/archives/289",
+  "words": 1349
+ },
+ {
+  "issue": 290,
+  "title": "Google I/O Web Goodies",
+  "date": "May 20, 2024",
+  "url": "https://bytes.dev/archives/290",
+  "words": 1170
+ },
+ {
+  "issue": 291,
+  "title": "The Metaframework of the Future",
+  "date": "May 23, 2024",
+  "url": "https://bytes.dev/archives/291",
+  "words": 1052
+ },
+ {
+  "issue": 292,
+  "title": "Angular becomes an adult",
+  "date": "May 27, 2024",
+  "url": "https://bytes.dev/archives/292",
+  "words": 987
+ },
+ {
+  "issue": 293,
+  "title": "What's going on with HTML?",
+  "date": "May 30, 2024",
+  "url": "https://bytes.dev/archives/293",
+  "words": 934
+ },
+ {
+  "issue": 294,
+  "title": "The Vercel Homophone",
+  "date": "June 3, 2024",
+  "url": "https://bytes.dev/archives/294",
+  "words": 1025
+ },
+ {
+  "issue": 295,
+  "title": "Turborepo 2.0 hits the nitrous",
+  "date": "June 6, 2024",
+  "url": "https://bytes.dev/archives/295",
+  "words": 989
+ },
+ {
+  "issue": 296,
+  "title": "WTF is a vector database?",
+  "date": "June 10, 2024",
+  "url": "https://bytes.dev/archives/296",
+  "words": 1001
+ },
+ {
+  "issue": 297,
+  "title": "Valibot and the circle of life",
+  "date": "June 13, 2024",
+  "url": "https://bytes.dev/archives/297",
+  "words": 1018
+ },
+ {
+  "issue": 298,
+  "title": "CSS-in-JS is so back",
+  "date": "June 17, 2024",
+  "url": "https://bytes.dev/archives/298",
+  "words": 1130
+ },
+ {
+  "issue": 299,
+  "title": "React 19 just got delayed",
+  "date": "June 20, 2024",
+  "url": "https://bytes.dev/archives/299",
+  "words": 1111
+ },
+ {
+  "issue": 300,
+  "title": "The TypeScript of your dreams",
+  "date": "June 24, 2024",
+  "url": "https://bytes.dev/archives/300",
+  "words": 1203
+ },
+ {
+  "issue": 301,
+  "title": "How open source goes viral",
+  "date": "June 27, 2024",
+  "url": "https://bytes.dev/archives/301",
+  "words": 1247
+ },
+ {
+  "issue": 302,
+  "title": "Where do OSS projects go when they die?",
+  "date": "July 1, 2024",
+  "url": "https://bytes.dev/archives/302",
+  "words": 1174
+ },
+ {
+  "issue": 303,
+  "title": "Hot Spec Summer is back",
+  "date": "July 3, 2024",
+  "url": "https://bytes.dev/archives/303",
+  "words": 1000
+ },
+ {
+  "issue": 304,
+  "title": "Chrome is coming for React devs",
+  "date": "July 8, 2024",
+  "url": "https://bytes.dev/archives/304",
+  "words": 1197
+ },
+ {
+  "issue": 305,
+  "title": "high power tools for... HTML",
+  "date": "July 11, 2024",
+  "url": "https://bytes.dev/archives/305",
+  "words": 1218
+ },
+ {
+  "issue": 306,
+  "title": "React Native makes it official",
+  "date": "July 15, 2024",
+  "url": "https://bytes.dev/archives/306",
+  "words": 1083
+ },
+ {
+  "issue": 307,
+  "title": "Vitest and the future of testing",
+  "date": "July 18, 2024",
+  "url": "https://bytes.dev/archives/307",
+  "words": 998
+ },
+ {
+  "issue": 308,
+  "title": "Welcome to Server Island",
+  "date": "July 22, 2024",
+  "url": "https://bytes.dev/archives/308",
+  "words": 906
+ },
+ {
+  "issue": 309,
+  "title": "War of the Bundlers",
+  "date": "July 25, 2024",
+  "url": "https://bytes.dev/archives/309",
+  "words": 935
+ },
+ {
+  "issue": 310,
+  "title": "The final boss of build tools",
+  "date": "August 1, 2024",
+  "url": "https://bytes.dev/archives/310",
+  "words": 1164
+ },
+ {
+  "issue": 311,
+  "title": "Electron, but make it zesty",
+  "date": "August 5, 2024",
+  "url": "https://bytes.dev/archives/311",
+  "words": 975
+ },
+ {
+  "issue": 312,
+  "title": "WTF is e18e?",
+  "date": "August 8, 2024",
+  "url": "https://bytes.dev/archives/312",
+  "words": 977
+ },
+ {
+  "issue": 313,
+  "title": "AI in JavaScript-Land",
+  "date": "August 12, 2024",
+  "url": "https://bytes.dev/archives/313",
+  "words": 1179
+ },
+ {
+  "issue": 314,
+  "title": "Free range, non-GMO software",
+  "date": "August 15, 2024",
+  "url": "https://bytes.dev/archives/314",
+  "words": 937
+ },
+ {
+  "issue": 315,
+  "title": "React Native goes stable",
+  "date": "August 19, 2024",
+  "url": "https://bytes.dev/archives/315",
+  "words": 1005
+ },
+ {
+  "issue": 316,
+  "title": "Wtf is Waku?",
+  "date": "August 22, 2024",
+  "url": "https://bytes.dev/archives/316",
+  "words": 1114
+ },
+ {
+  "issue": 317,
+  "title": "The Deno-lution",
+  "date": "August 26, 2024",
+  "url": "https://bytes.dev/archives/317",
+  "words": 1078
+ },
+ {
+  "issue": 318,
+  "title": "Yo' Momma, Ollama",
+  "date": "August 29, 2024",
+  "url": "https://bytes.dev/archives/318",
+  "words": 1161
+ },
+ {
+  "issue": 319,
+  "title": "I like rusty JavaScript",
+  "date": "September 2, 2024",
+  "url": "https://bytes.dev/archives/319",
+  "words": 940
+ },
+ {
+  "issue": 320,
+  "title": "What's new with Vue?",
+  "date": "September 5, 2024",
+  "url": "https://bytes.dev/archives/320",
+  "words": 965
+ },
+ {
+  "issue": 321,
+  "title": "The Remix Roadmap",
+  "date": "September 9, 2024",
+  "url": "https://bytes.dev/archives/321",
+  "words": 985
+ },
+ {
+  "issue": 322,
+  "title": "React for Billionaires",
+  "date": "September 12, 2024",
+  "url": "https://bytes.dev/archives/322",
+  "words": 1030
+ },
+ {
+  "issue": 323,
+  "title": "The Hono takeover",
+  "date": "September 16, 2024",
+  "url": "https://bytes.dev/archives/323",
+  "words": 1120
+ },
+ {
+  "issue": 324,
+  "title": "Astro's Hybrid Theory",
+  "date": "September 19, 2024",
+  "url": "https://bytes.dev/archives/324",
+  "words": 1071
+ },
+ {
+  "issue": 325,
+  "title": "Welcome to Browser-Land",
+  "date": "September 23, 2024",
+  "url": "https://bytes.dev/archives/325",
+  "words": 962
+ },
+ {
+  "issue": 326,
+  "title": "Big W for Web Components",
+  "date": "September 26, 2024",
+  "url": "https://bytes.dev/archives/326",
+  "words": 1112
+ },
+ {
+  "issue": 327,
+  "title": "Feasting at the Cloudflare buffet",
+  "date": "September 30, 2024",
+  "url": "https://bytes.dev/archives/327",
+  "words": 1176
+ },
+ {
+  "issue": 328,
+  "title": "Bloomberg's new TypeScript framework",
+  "date": "October 3, 2024",
+  "url": "https://bytes.dev/archives/328",
+  "words": 1003
+ },
+ {
+  "issue": 329,
+  "title": "WebContainers are having a moment",
+  "date": "October 6, 2024",
+  "url": "https://bytes.dev/archives/329",
+  "words": 1056
+ },
+ {
+  "issue": 330,
+  "title": "Deno 2.0 finally hatched",
+  "date": "October 11, 2024",
+  "url": "https://bytes.dev/archives/330",
+  "words": 1024
+ },
+ {
+  "issue": 331,
+  "title": "The One true React framework",
+  "date": "October 14, 2024",
+  "url": "https://bytes.dev/archives/331",
+  "words": 975
+ },
+ {
+  "issue": 332,
+  "title": "TanStack Start your engines",
+  "date": "October 17, 2024",
+  "url": "https://bytes.dev/archives/332",
+  "words": 1035
+ },
+ {
+  "issue": 333,
+  "title": "Turso's AI moment",
+  "date": "October 21, 2024",
+  "url": "https://bytes.dev/archives/333",
+  "words": 1390
+ },
+ {
+  "issue": 334,
+  "title": "Svelte 5 looks different",
+  "date": "October 24, 2024",
+  "url": "https://bytes.dev/archives/334",
+  "words": 1132
+ },
+ {
+  "issue": 335,
+  "title": "5 Big Things in Next.js 15",
+  "date": "October 28, 2024",
+  "url": "https://bytes.dev/archives/335",
+  "words": 1135
+ },
+ {
+  "issue": 336,
+  "title": "React compiler magic \ud83e\uddd9\ud83d\udd2e",
+  "date": "October 30, 2024",
+  "url": "https://bytes.dev/archives/336",
+  "words": 1093
+ },
+ {
+  "issue": 337,
+  "title": "React Native's New Arch",
+  "date": "November 1, 2024",
+  "url": "https://bytes.dev/archives/337",
+  "words": 1189
+ },
+ {
+  "issue": 338,
+  "title": "Flock is Forking Flutter",
+  "date": "November 5, 2024",
+  "url": "https://bytes.dev/archives/338",
+  "words": 1161
+ },
+ {
+  "issue": 339,
+  "title": "GitHub triples down on AI",
+  "date": "November 7, 2024",
+  "url": "https://bytes.dev/archives/339",
+  "words": 1105
+ },
+ {
+  "issue": 340,
+  "title": "To grid or not to grid?",
+  "date": "November 11, 2024",
+  "url": "https://bytes.dev/archives/340",
+  "words": 1173
+ },
+ {
+  "issue": 341,
+  "title": "Node strikes back",
+  "date": "November 14, 2024",
+  "url": "https://bytes.dev/archives/341",
+  "words": 1112
+ },
+ {
+  "issue": 342,
+  "title": "The Future of JavaScript",
+  "date": "November 18, 2024",
+  "url": "https://bytes.dev/archives/342",
+  "words": 1131
+ },
+ {
+  "issue": 343,
+  "title": "Wasm for the rest of us",
+  "date": "November 20, 2024",
+  "url": "https://bytes.dev/archives/343",
+  "words": 1007
+ },
+ {
+  "issue": 344,
+  "title": "Angular on the Server",
+  "date": "November 22, 2024",
+  "url": "https://bytes.dev/archives/344",
+  "words": 1008
+ },
+ {
+  "issue": 345,
+  "title": "Expo magic intensifies",
+  "date": "November 26, 2024",
+  "url": "https://bytes.dev/archives/345",
+  "words": 1086
+ },
+ {
+  "issue": 346,
+  "title": "Framer Motion breaks up",
+  "date": "November 29, 2024",
+  "url": "https://bytes.dev/archives/346",
+  "words": 1177
+ },
+ {
+  "issue": 347,
+  "title": "Vite 6.0 goes environmental",
+  "date": "December 3, 2024",
+  "url": "https://bytes.dev/archives/347",
+  "words": 953
+ },
+ {
+  "issue": 348,
+  "title": "Astro's blasting off again",
+  "date": "December 5, 2024",
+  "url": "https://bytes.dev/archives/348",
+  "words": 907
+ },
+ {
+  "issue": 349,
+  "title": "React's Tidings of Comfort and Joy",
+  "date": "December 9, 2024",
+  "url": "https://bytes.dev/archives/349",
+  "words": 1166
+ },
+ {
+  "issue": 350,
+  "title": "That JS-free lifestyle",
+  "date": "December 12, 2024",
+  "url": "https://bytes.dev/archives/350",
+  "words": 1049
+ },
+ {
+  "issue": 351,
+  "title": "Our top 5 CSS features from 2024",
+  "date": "December 16, 2024",
+  "url": "https://bytes.dev/archives/351",
+  "words": 1064
+ },
+ {
+  "issue": 352,
+  "title": "Roasting our 2024 Predictions",
+  "date": "December 19, 2024",
+  "url": "https://bytes.dev/archives/352",
+  "words": 1411
+ },
+ {
+  "issue": 353,
+  "title": "Re-gifting React components",
+  "date": "December 23, 2024",
+  "url": "https://bytes.dev/archives/353",
+  "words": 1068
+ },
+ {
+  "issue": 354,
+  "title": "The bridge to modern React",
+  "date": "December 27, 2024",
+  "url": "https://bytes.dev/archives/354",
+  "words": 1084
+ },
+ {
+  "issue": 355,
+  "title": "The Laravel\u2013Next.js turf war",
+  "date": "December 30, 2024",
+  "url": "https://bytes.dev/archives/355",
+  "words": 899
+ },
+ {
+  "issue": 356,
+  "title": "Our 2025 Predictions",
+  "date": "January 3, 2025",
+  "url": "https://bytes.dev/archives/356",
+  "words": 1196
+ },
+ {
+  "issue": 357,
+  "title": "I ain't afraid of no Ghostty",
+  "date": "January 6, 2025",
+  "url": "https://bytes.dev/archives/357",
+  "words": 1033
+ },
+ {
+  "issue": 358,
+  "title": "pnpm hits level 10",
+  "date": "January 13, 2025",
+  "url": "https://bytes.dev/archives/358",
+  "words": 1061
+ },
+ {
+  "issue": 359,
+  "title": "Expo is coming for Vercel",
+  "date": "January 16, 2025",
+  "url": "https://bytes.dev/archives/359",
+  "words": 988
+ },
+ {
+  "issue": 360,
+  "title": "Angular life goals",
+  "date": "January 20, 2025",
+  "url": "https://bytes.dev/archives/360",
+  "words": 837
+ },
+ {
+  "issue": 361,
+  "title": "Tailwind hits the big 4.0",
+  "date": "January 24, 2025",
+  "url": "https://bytes.dev/archives/361",
+  "words": 1080
+ },
+ {
+  "issue": 362,
+  "title": "Bun is eating the world",
+  "date": "January 27, 2025",
+  "url": "https://bytes.dev/archives/362",
+  "words": 1040
+ },
+ {
+  "issue": 363,
+  "title": "New spec just dropped",
+  "date": "January 30, 2025",
+  "url": "https://bytes.dev/archives/363",
+  "words": 1175
+ },
+ {
+  "issue": 364,
+  "title": "We're off the Rails\u2122\ufe0f",
+  "date": "February 3, 2025",
+  "url": "https://bytes.dev/archives/364",
+  "words": 1036
+ },
+ {
+  "issue": 365,
+  "title": "Breaking up with a JavaScript OG",
+  "date": "February 6, 2025",
+  "url": "https://bytes.dev/archives/365",
+  "words": 1011
+ },
+ {
+  "issue": 366,
+  "title": "Erasing TypeScript",
+  "date": "February 10, 2025",
+  "url": "https://bytes.dev/archives/366",
+  "words": 1151
+ },
+ {
+  "issue": 367,
+  "title": "Finding love on the web",
+  "date": "February 13, 2025",
+  "url": "https://bytes.dev/archives/367",
+  "words": 876
+ },
+ {
+  "issue": 368,
+  "title": "AI prompting metaframework (yes, it's real)",
+  "date": "February 18, 2025",
+  "url": "https://bytes.dev/archives/368",
+  "words": 1208
+ },
+ {
+  "issue": 369,
+  "title": "The rise of Bolto",
+  "date": "February 20, 2025",
+  "url": "https://bytes.dev/archives/369",
+  "words": 1090
+ },
+ {
+  "issue": 370,
+  "title": "RIP CRA",
+  "date": "February 25, 2025",
+  "url": "https://bytes.dev/archives/370",
+  "words": 1018
+ },
+ {
+  "issue": 371,
+  "title": "Laravel goes full Vercel",
+  "date": "February 27, 2025",
+  "url": "https://bytes.dev/archives/371",
+  "words": 916
+ },
+ {
+  "issue": 372,
+  "title": "Welcome to the 4th annual OSScars",
+  "date": "March 4, 2025",
+  "url": "https://bytes.dev/archives/372",
+  "words": 1320
+ },
+ {
+  "issue": 373,
+  "title": "Penetrating JavaScript's inner sanctum",
+  "date": "March 6, 2025",
+  "url": "https://bytes.dev/archives/373",
+  "words": 1022
+ },
+ {
+  "issue": 374,
+  "title": "TikTok comes for React Native",
+  "date": "March 10, 2025",
+  "url": "https://bytes.dev/archives/374",
+  "words": 1037
+ },
+ {
+  "issue": 375,
+  "title": "King Hejlsberg's Decree",
+  "date": "March 13, 2025",
+  "url": "https://bytes.dev/archives/375",
+  "words": 857
+ },
+ {
+  "issue": 376,
+  "title": "Happy St. Nuxt-rick's Day",
+  "date": "March 18, 2025",
+  "url": "https://bytes.dev/archives/376",
+  "words": 1008
+ },
+ {
+  "issue": 377,
+  "title": "You can't spell Parcel without R-S-C",
+  "date": "March 21, 2025",
+  "url": "https://bytes.dev/archives/377",
+  "words": 923
+ },
+ {
+  "issue": 378,
+  "title": "TanStack nourishes its children",
+  "date": "March 25, 2025",
+  "url": "https://bytes.dev/archives/378",
+  "words": 877
+ },
+ {
+  "issue": 379,
+  "title": "tRPC rhymes with tipsy",
+  "date": "March 28, 2025",
+  "url": "https://bytes.dev/archives/379",
+  "words": 732
+ },
+ {
+  "issue": 380,
+  "title": "Firefox is finally adding PWA support",
+  "date": "March 31, 2025",
+  "url": "https://bytes.dev/archives/380",
+  "words": 931
+ },
+ {
+  "issue": 381,
+  "title": "The State of the Vuenion",
+  "date": "April 3, 2025",
+  "url": "https://bytes.dev/archives/381",
+  "words": 1247
+ },
+ {
+  "issue": 382,
+  "title": "The Great (React) Divide",
+  "date": "April 7, 2025",
+  "url": "https://bytes.dev/archives/382",
+  "words": 848
+ },
+ {
+  "issue": 383,
+  "title": "Barenaked Runtimes",
+  "date": "April 11, 2025",
+  "url": "https://bytes.dev/archives/383",
+  "words": 852
+ },
+ {
+  "issue": 384,
+  "title": "Cloudchella 2025",
+  "date": "April 14, 2025",
+  "url": "https://bytes.dev/archives/384",
+  "words": 934
+ },
+ {
+  "issue": 385,
+  "title": "RIP Records & Tuples",
+  "date": "April 18, 2025",
+  "url": "https://bytes.dev/archives/385",
+  "words": 999
+ },
+ {
+  "issue": 386,
+  "title": "React Native sneak attack",
+  "date": "April 22, 2025",
+  "url": "https://bytes.dev/archives/386",
+  "words": 898
+ },
+ {
+  "issue": 387,
+  "title": "The Redwood Revolution",
+  "date": "April 24, 2025",
+  "url": "https://bytes.dev/archives/387",
+  "words": 1037
+ },
+ {
+  "issue": 388,
+  "title": "A tale of two React announcements",
+  "date": "April 29, 2025",
+  "url": "https://bytes.dev/archives/388",
+  "words": 1158
+ },
+ {
+  "issue": 389,
+  "title": "Expo peer pressure",
+  "date": "May 2, 2025",
+  "url": "https://bytes.dev/archives/389",
+  "words": 1059
+ },
+ {
+  "issue": 390,
+  "title": "Moore's Law is a social construct",
+  "date": "May 6, 2025",
+  "url": "https://bytes.dev/archives/390",
+  "words": 1370
+ },
+ {
+  "issue": 391,
+  "title": "Nine Inch Node.js",
+  "date": "May 9, 2025",
+  "url": "https://bytes.dev/archives/391",
+  "words": 1149
+ },
+ {
+  "issue": 392,
+  "title": "Parcel joins the Church of Rust",
+  "date": "May 13, 2025",
+  "url": "https://bytes.dev/archives/392",
+  "words": 741
+ },
+ {
+  "issue": 393,
+  "title": "TanStack made its own database",
+  "date": "May 15, 2025",
+  "url": "https://bytes.dev/archives/393",
+  "words": 991
+ },
+ {
+  "issue": 394,
+  "title": "An AI-less Google I/O",
+  "date": "May 22, 2025",
+  "url": "https://bytes.dev/archives/394",
+  "words": 772
+ },
+ {
+  "issue": 395,
+  "title": "Zod 4 validates my feelings",
+  "date": "May 28, 2025",
+  "url": "https://bytes.dev/archives/395",
+  "words": 760
+ },
+ {
+  "issue": 396,
+  "title": "The Remix Chronicles",
+  "date": "May 30, 2025",
+  "url": "https://bytes.dev/archives/396",
+  "words": 956
+ },
+ {
+  "issue": 397,
+  "title": "Angular's glow up",
+  "date": "June 3, 2025",
+  "url": "https://bytes.dev/archives/397",
+  "words": 891
+ },
+ {
+  "issue": 398,
+  "title": "Storybook 9 thinks it can change me",
+  "date": "June 6, 2025",
+  "url": "https://bytes.dev/archives/398",
+  "words": 789
+ },
+ {
+  "issue": 399,
+  "title": "Pass me the Oxlint",
+  "date": "June 10, 2025",
+  "url": "https://bytes.dev/archives/399",
+  "words": 911
+ },
+ {
+  "issue": 400,
+  "title": "React Native is pre-built different",
+  "date": "June 12, 2025",
+  "url": "https://bytes.dev/archives/400",
+  "words": 1059
+ },
+ {
+  "issue": 401,
+  "title": "Google wants you to vibe code now",
+  "date": "June 16, 2025",
+  "url": "https://bytes.dev/archives/401",
+  "words": 956
+ },
+ {
+  "issue": 402,
+  "title": "Biome v2 heals the planet",
+  "date": "June 19, 2025",
+  "url": "https://bytes.dev/archives/402",
+  "words": 1136
+ },
+ {
+  "issue": 403,
+  "title": "Stuffing 8 Safari releases into one",
+  "date": "June 23, 2025",
+  "url": "https://bytes.dev/archives/403",
+  "words": 1053
+ },
+ {
+  "issue": 404,
+  "title": "Vite fetish intensifies",
+  "date": "June 27, 2025",
+  "url": "https://bytes.dev/archives/404",
+  "words": 1057
+ },
+ {
+  "issue": 405,
+  "title": "Hot Spec Summer: ES2025",
+  "date": "July 1, 2025",
+  "url": "https://bytes.dev/archives/405",
+  "words": 1174
+ },
+ {
+  "issue": 406,
+  "title": "Vercel expands its empire",
+  "date": "July 8, 2025",
+  "url": "https://bytes.dev/archives/406",
+  "words": 1209
+ },
+ {
+  "issue": 407,
+  "title": "The great SQLite rewrite",
+  "date": "July 11, 2025",
+  "url": "https://bytes.dev/archives/407",
+  "words": 1231
+ },
+ {
+  "issue": 408,
+  "title": "Style once, run anywhere",
+  "date": "July 14, 2025",
+  "url": "https://bytes.dev/archives/408",
+  "words": 844
+ },
+ {
+  "issue": 409,
+  "title": "America's NextJS Top Model",
+  "date": "July 17, 2025",
+  "url": "https://bytes.dev/archives/409",
+  "words": 868
+ },
+ {
+  "issue": 410,
+  "title": "Cage-free Nuxt 4.0",
+  "date": "July 22, 2025",
+  "url": "https://bytes.dev/archives/410",
+  "words": 1032
+ },
+ {
+  "issue": 411,
+  "title": "The compiler is coming for us all",
+  "date": "July 25, 2025",
+  "url": "https://bytes.dev/archives/411",
+  "words": 1143
+ },
+ {
+  "issue": 412,
+  "title": "Of Mice and Toolkits",
+  "date": "July 28, 2025",
+  "url": "https://bytes.dev/archives/412",
+  "words": 1074
+ },
+ {
+  "issue": 413,
+  "title": "TanStack Labubus",
+  "date": "August 1, 2025",
+  "url": "https://bytes.dev/archives/413",
+  "words": 1118
+ },
+ {
+  "issue": 414,
+  "title": "The Next.js of LLMs",
+  "date": "August 6, 2025",
+  "url": "https://bytes.dev/archives/414",
+  "words": 1218
+ },
+ {
+  "issue": 415,
+  "title": "CSS Panda-monium goes stable",
+  "date": "August 11, 2025",
+  "url": "https://bytes.dev/archives/415",
+  "words": 1159
+ },
+ {
+  "issue": 416,
+  "title": "TypeScript gets lean",
+  "date": "August 15, 2025",
+  "url": "https://bytes.dev/archives/416",
+  "words": 973
+ },
+ {
+  "issue": 417,
+  "title": "Fullmetal (TypeScript) Alchemist",
+  "date": "August 19, 2025",
+  "url": "https://bytes.dev/archives/417",
+  "words": 1004
+ },
+ {
+  "issue": 418,
+  "title": "Next.js 15.5 goes back to school",
+  "date": "August 22, 2025",
+  "url": "https://bytes.dev/archives/418",
+  "words": 832
+ },
+ {
+  "issue": 419,
+  "title": "Firebase steps into the Studio",
+  "date": "August 26, 2025",
+  "url": "https://bytes.dev/archives/419",
+  "words": 991
+ },
+ {
+  "issue": 420,
+  "title": "Hot frameworks near me",
+  "date": "August 29, 2025",
+  "url": "https://bytes.dev/archives/420",
+  "words": 803
+ },
+ {
+  "issue": 421,
+  "title": "Warp wants it all",
+  "date": "September 4, 2025",
+  "url": "https://bytes.dev/archives/421",
+  "words": 1111
+ },
+ {
+  "issue": 422,
+  "title": "The largest supply chain attack in history",
+  "date": "September 9, 2025",
+  "url": "https://bytes.dev/archives/422",
+  "words": 1017
+ },
+ {
+  "issue": 423,
+  "title": "Deno gets boring",
+  "date": "September 12, 2025",
+  "url": "https://bytes.dev/archives/423",
+  "words": 1050
+ },
+ {
+  "issue": 424,
+  "title": "Rusty runtimes",
+  "date": "September 17, 2025",
+  "url": "https://bytes.dev/archives/424",
+  "words": 1025
+ },
+ {
+  "issue": 425,
+  "title": "Wasm 3.0 coming in hot",
+  "date": "September 19, 2025",
+  "url": "https://bytes.dev/archives/425",
+  "words": 1138
+ },
+ {
+  "issue": 426,
+  "title": "Mediabunny and McDonald's WiFi",
+  "date": "September 23, 2025",
+  "url": "https://bytes.dev/archives/426",
+  "words": 1053
+ },
+ {
+  "issue": 427,
+  "title": "Libghostty sneak peek",
+  "date": "September 26, 2025",
+  "url": "https://bytes.dev/archives/427",
+  "words": 813
+ },
+ {
+  "issue": 428,
+  "title": "Chrome DevTools made an MCP server",
+  "date": "September 30, 2025",
+  "url": "https://bytes.dev/archives/428",
+  "words": 1164
+ },
+ {
+  "issue": 429,
+  "title": "My hot takes on a new React release",
+  "date": "October 3, 2025",
+  "url": "https://bytes.dev/archives/429",
+  "words": 838
+ },
+ {
+  "issue": 430,
+  "title": "Oops all TypeScript",
+  "date": "October 8, 2025",
+  "url": "https://bytes.dev/archives/430",
+  "words": 1072
+ },
+ {
+  "issue": 431,
+  "title": "React Conf Rapid Fire",
+  "date": "October 10, 2025",
+  "url": "https://bytes.dev/archives/431",
+  "words": 1118
+ },
+ {
+  "issue": 432,
+  "title": "The biggest Bun yet",
+  "date": "October 15, 2025",
+  "url": "https://bytes.dev/archives/432",
+  "words": 956
+ },
+ {
+  "issue": 433,
+  "title": "Wtf is Remix 3?",
+  "date": "October 17, 2025",
+  "url": "https://bytes.dev/archives/433",
+  "words": 999
+ },
+ {
+  "issue": 434,
+  "title": "My super sweet Next.js 16",
+  "date": "October 21, 2025",
+  "url": "https://bytes.dev/archives/434",
+  "words": 887
+ },
+ {
+  "issue": 435,
+  "title": "Vite+ is the future of something",
+  "date": "October 24, 2025",
+  "url": "https://bytes.dev/archives/435",
+  "words": 944
+ },
+ {
+  "issue": 436,
+  "title": "React Native's new era",
+  "date": "October 28, 2025",
+  "url": "https://bytes.dev/archives/436",
+  "words": 1139
+ },
+ {
+  "issue": 437,
+  "title": "shadcn spooky szn",
+  "date": "October 31, 2025",
+  "url": "https://bytes.dev/archives/437",
+  "words": 1077
+ },
+ {
+  "issue": 438,
+  "title": "Next.js but make it Angular",
+  "date": "November 5, 2025",
+  "url": "https://bytes.dev/archives/438",
+  "words": 1069
+ },
+ {
+  "issue": 439,
+  "title": "The htmx loophole",
+  "date": "November 7, 2025",
+  "url": "https://bytes.dev/archives/439",
+  "words": 1051
+ },
+ {
+  "issue": 440,
+  "title": "Snapchat is coming for React Native",
+  "date": "November 12, 2025",
+  "url": "https://bytes.dev/archives/440",
+  "words": 1057
+ },
+ {
+  "issue": 441,
+  "title": "TanStack dominance intensifies",
+  "date": "November 14, 2025",
+  "url": "https://bytes.dev/archives/441",
+  "words": 1105
+ },
+ {
+  "issue": 442,
+  "title": "Tailwind duct-tape wallets",
+  "date": "November 20, 2025",
+  "url": "https://bytes.dev/archives/442",
+  "words": 1019
+ },
+ {
+  "issue": 443,
+  "title": "Angular 21 Savage",
+  "date": "November 21, 2025",
+  "url": "https://bytes.dev/archives/443",
+  "words": 1186
+ },
+ {
+  "issue": 444,
+  "title": "The AWS Harvest Festival \ud83e\udd83",
+  "date": "November 26, 2025",
+  "url": "https://bytes.dev/archives/444",
+  "words": 1138
+ },
+ {
+  "issue": 445,
+  "title": "Why Anthropic bought Bun",
+  "date": "December 3, 2025",
+  "url": "https://bytes.dev/archives/445",
+  "words": 1010
+ },
+ {
+  "issue": 446,
+  "title": "Pimp my Bundler: Vite edition",
+  "date": "December 5, 2025",
+  "url": "https://bytes.dev/archives/446",
+  "words": 1073
+ },
+ {
+  "issue": 447,
+  "title": "There's no place like Chrome",
+  "date": "December 9, 2025",
+  "url": "https://bytes.dev/archives/447",
+  "words": 1144
+ },
+ {
+  "issue": 448,
+  "title": "A tale of two Reacts",
+  "date": "December 13, 2025",
+  "url": "https://bytes.dev/archives/448",
+  "words": 1114
+ },
+ {
+  "issue": 449,
+  "title": "Grading our 2025 predictions",
+  "date": "December 17, 2025",
+  "url": "https://bytes.dev/archives/449",
+  "words": 1229
+ },
+ {
+  "issue": 450,
+  "title": "Base UI (Taylor's Version)",
+  "date": "December 19, 2025",
+  "url": "https://bytes.dev/archives/450",
+  "words": 1006
+ },
+ {
+  "issue": 451,
+  "title": "The Christmas Compiler Miracle",
+  "date": "December 31, 2025",
+  "url": "https://bytes.dev/archives/451",
+  "words": 849
+ },
+ {
+  "issue": 452,
+  "title": "The fate of React",
+  "date": "January 7, 2025",
+  "url": "https://bytes.dev/archives/452",
+  "words": 1098
+ },
+ {
+  "issue": 453,
+  "title": "More React-y than React Native",
+  "date": "January 10, 2025",
+  "url": "https://bytes.dev/archives/453",
+  "words": 1012
+ },
+ {
+  "issue": 454,
+  "title": "Practice safe npx with Deno",
+  "date": "January 14, 2026",
+  "url": "https://bytes.dev/archives/454",
+  "words": 958
+ },
+ {
+  "issue": 455,
+  "title": "Cloudflare buys Astro",
+  "date": "January 17, 2026",
+  "url": "https://bytes.dev/archives/455",
+  "words": 1011
+ },
+ {
+  "issue": 456,
+  "title": "Nothing can kill jQuery",
+  "date": "January 21, 2026",
+  "url": "https://bytes.dev/archives/456",
+  "words": 907
+ },
+ {
+  "issue": 457,
+  "title": "Stop, Drop and Rolldown",
+  "date": "January 26, 2026",
+  "url": "https://bytes.dev/archives/457",
+  "words": 917
+ },
+ {
+  "issue": 458,
+  "title": "Firefox is cooking again",
+  "date": "January 28, 2026",
+  "url": "https://bytes.dev/archives/458",
+  "words": 987
+ },
+ {
+  "issue": 459,
+  "title": "The ultimate Gemini has survived",
+  "date": "January 31, 2026",
+  "url": "https://bytes.dev/archives/459",
+  "words": 1127
+ },
+ {
+  "issue": 460,
+  "title": "Breaking Babel",
+  "date": "February 6, 2026",
+  "url": "https://bytes.dev/archives/460",
+  "words": 1079
+ },
+ {
+  "issue": 461,
+  "title": "ESLint 10 is making moves",
+  "date": "February 11, 2026",
+  "url": "https://bytes.dev/archives/461",
+  "words": 1027
+ },
+ {
+  "issue": 462,
+  "title": "Markdown for Agents\u2122\ufe0f",
+  "date": "February 13, 2026",
+  "url": "https://bytes.dev/archives/462",
+  "words": 933
+ },
+ {
+  "issue": 463,
+  "title": "Interop 2026 browser scoreboard",
+  "date": "February 18, 2026",
+  "url": "https://bytes.dev/archives/463",
+  "words": 1002
+ },
+ {
+  "issue": 464,
+  "title": "TanStack Hotkeys near me",
+  "date": "February 20, 2026",
+  "url": "https://bytes.dev/archives/464",
+  "words": 1041
+ },
+ {
+  "issue": 465,
+  "title": "Vercel is gonna buy Tailwind (probably)",
+  "date": "February 24, 2026",
+  "url": "https://bytes.dev/archives/465",
+  "words": 1333
+ },
+ {
+  "issue": 466,
+  "title": "Cloudflare rebuilt Next.js on Vite",
+  "date": "February 27, 2026",
+  "url": "https://bytes.dev/archives/466",
+  "words": 1114
+ },
+ {
+  "issue": 467,
+  "title": "Making React Native actually native",
+  "date": "March 4, 2026",
+  "url": "https://bytes.dev/archives/467",
+  "words": 887
+ },
+ {
+  "issue": 468,
+  "title": "Another Prettier killer has entered the villa",
+  "date": "March 9, 2026",
+  "url": "https://bytes.dev/archives/468",
+  "words": 765
+ },
+ {
+  "issue": 469,
+  "title": "Astro 6.0 goes full Cloudflare",
+  "date": "March 11, 2026",
+  "url": "https://bytes.dev/archives/469",
+  "words": 848
+ },
+ {
+  "issue": 470,
+  "title": "Waiting and dating",
+  "date": "March 13, 2026",
+  "url": "https://bytes.dev/archives/470",
+  "words": 900
+ },
+ {
+  "issue": 471,
+  "title": "Vite+ enters the Matrix",
+  "date": "March 20, 2026",
+  "url": "https://bytes.dev/archives/471",
+  "words": 1058
+ },
+ {
+  "issue": 472,
+  "title": "A new JS framework for old time's sake",
+  "date": "March 23, 2026",
+  "url": "https://bytes.dev/archives/472",
+  "words": 1049
+ },
+ {
+  "issue": 473,
+  "title": "TypeScript 6.0 is your final warning",
+  "date": "March 27, 2026",
+  "url": "https://bytes.dev/archives/473",
+  "words": 1019
+ },
+ {
+  "issue": 474,
+  "title": "RedwoodSDK 1.0 is Cloudflare-maxxing",
+  "date": "April 1, 2026",
+  "url": "https://bytes.dev/archives/474",
+  "words": 799
+ },
+ {
+  "issue": 475,
+  "title": "Pretext fixed the web",
+  "date": "April 3, 2026",
+  "url": "https://bytes.dev/archives/475",
+  "words": 945
+ },
+ {
+  "issue": 476,
+  "title": "Cloudflare built its own WordPress",
+  "date": "April 7, 2026",
+  "url": "https://bytes.dev/archives/476",
+  "words": 1198
+ },
+ {
+  "issue": 477,
+  "title": "React Native solves some real problems",
+  "date": "April 10, 2026",
+  "url": "https://bytes.dev/archives/477",
+  "words": 1127
+ },
+ {
+  "issue": 478,
+  "title": "TanStack Start gets RSC",
+  "date": "April 14, 2026",
+  "url": "https://bytes.dev/archives/478",
+  "words": 1066
+ },
+ {
+  "issue": 479,
+  "title": "Agent-chella 2026",
+  "date": "April 20, 2026",
+  "url": "https://bytes.dev/archives/479",
+  "words": 1050
+ },
+ {
+  "issue": 480,
+  "title": "The TypeScript 7.0 prophecy is fulfilled",
+  "date": "April 23, 2026",
+  "url": "https://bytes.dev/archives/480",
+  "words": 1020
+ },
+ {
+  "issue": 481,
+  "title": "Smoking that Rspack",
+  "date": "April 27, 2026",
+  "url": "https://bytes.dev/archives/481",
+  "words": 1002
+ },
+ {
+  "issue": 482,
+  "title": "The Spiritual Successor to JSX",
+  "date": "April 29, 2026",
+  "url": "https://bytes.dev/archives/482",
+  "words": 809
+ },
+ {
+  "issue": 483,
+  "title": "Zed's not dead",
+  "date": "May 1, 2026",
+  "url": "https://bytes.dev/archives/483",
+  "words": 1092
+ },
+ {
+  "issue": 484,
+  "title": "pnpm 11 cuts the npm umbilical cord",
+  "date": "May 5, 2026",
+  "url": "https://bytes.dev/archives/484",
+  "words": 848
+ },
+ {
+  "issue": 485,
+  "title": "The new CEO of agent harness frameworks",
+  "date": "May 8, 2026",
+  "url": "https://bytes.dev/archives/485",
+  "words": 1020
+ },
+ {
+  "issue": 486,
+  "title": "TanStack Attack",
+  "date": "May 13, 2026",
+  "url": "https://bytes.dev/archives/486",
+  "words": 1004
+ },
+ {
+  "issue": 487,
+  "title": "Bun goes full Leeeerroyyyy Jenkins",
+  "date": "May 15, 2026",
+  "url": "https://bytes.dev/archives/487",
+  "words": 882
+ },
+ {
+  "issue": 488,
+  "title": "What Claude Mythos showed Cloudflare",
+  "date": "May 19, 2026",
+  "url": "https://bytes.dev/archives/488",
+  "words": 1008
+ },
+ {
+  "issue": 489,
+  "title": "AI's Love Language",
+  "date": "May 22, 2026",
+  "url": "https://bytes.dev/archives/489",
+  "words": 793
+ },
+ {
+  "issue": 490,
+  "title": "Google I/O 2026 - The Good Parts",
+  "date": "May 26, 2026",
+  "url": "https://bytes.dev/archives/490",
+  "words": 1042
+ },
+ {
+  "issue": 491,
+  "title": "Deno's biggest minor release ever",
+  "date": "May 29, 2026",
+  "url": "https://bytes.dev/archives/491",
+  "words": 788
+ },
+ {
+  "issue": 492,
+  "title": "Making Jam for the love of the game",
+  "date": "June 2, 2026",
+  "url": "https://bytes.dev/archives/492",
+  "words": 1058
+ },
+ {
+  "issue": 493,
+  "title": "The VC-backed Open Source Endgame",
+  "date": "June 5, 2026",
+  "url": "https://bytes.dev/archives/493",
+  "words": 1035
+ },
+ {
+  "issue": 494,
+  "title": "Angular's new mantra",
+  "date": "June 9, 2026",
+  "url": "https://bytes.dev/archives/494",
+  "words": 895
+ },
+ {
+  "issue": 495,
+  "title": "Claude Fable 5",
+  "date": "June 12, 2026",
+  "url": "https://bytes.dev/archives/495",
+  "words": 1000
+ },
+ {
+  "issue": 496,
+  "title": "Claude Fable Pt 2",
+  "date": "June 16, 2026",
+  "url": "https://bytes.dev/archives/496",
+  "words": 920
+ },
+ {
+  "issue": 497,
+  "title": "Next.js for agents",
+  "date": "June 19, 2026",
+  "url": "https://bytes.dev/archives/497",
+  "words": 1063
+ },
+ {
+  "issue": 498,
+  "title": "What's next for Nx",
+  "date": "June 23, 2026",
+  "url": "https://bytes.dev/archives/498",
+  "words": 1009
+ },
+ {
+  "issue": 499,
+  "title": "Everything but the runtime",
+  "date": "June 26, 2026",
+  "url": "https://bytes.dev/archives/499",
+  "words": 1107
+ },
+ {
+  "issue": 500,
+  "title": "By the numbers",
+  "date": "July 1, 2026",
+  "url": "https://bytes.dev/archives/500",
+  "words": 988
+ },
+ {
+  "issue": 501,
+  "title": "React Router gets another major",
+  "date": "July 7, 2026",
+  "url": "https://bytes.dev/archives/501",
+  "words": 839
+ },
+ {
+  "issue": 502,
+  "title": "TypeScript 7 is here",
+  "date": "July 10, 2026",
+  "url": "https://bytes.dev/archives/502",
+  "words": 881
+ },
+ {
+  "issue": 503,
+  "title": "The Model Roundup",
+  "date": "July 15, 2026",
+  "url": "https://bytes.dev/archives/503",
+  "words": 893
+ },
+ {
+  "issue": 504,
+  "title": "Feminine Energy",
+  "date": "July 17, 2026",
+  "url": "https://bytes.dev/archives/504",
+  "words": 928
+ },
+ {
+  "issue": 505,
+  "title": "Turso does it again",
+  "date": "July 22, 2026",
+  "url": "https://bytes.dev/archives/505",
+  "words": 1015
+ },
+ {
+  "issue": 506,
+  "title": "One way ticket to TypeScript hell... and back",
+  "date": "July 24, 2026",
+  "url": "https://bytes.dev/archives/506",
+  "words": 921
+ },
+ {
+  "issue": 507,
+  "title": "Something worse than semver",
+  "date": "July 28, 2026",
+  "url": "https://bytes.dev/archives/507",
+  "words": 1115
+ },
+ {
+  "issue": 508,
+  "title": "The Atoning for Sins of React",
+  "date": "July 31, 2026",
+  "url": "https://bytes.dev/archives/508",
+  "words": 871
+ },
+ {
+  "issue": 509,
+  "title": "A Next.js release for the boys",
+  "date": "August 4, 2026",
+  "url": "https://bytes.dev/archives/509",
+  "words": 872
+ },
+ {
+  "issue": 510,
+  "title": "A browser for agents",
+  "date": "August 7, 2026",
+  "url": "https://bytes.dev/archives/510",
+  "words": 769
+ },
+ {
+  "issue": 511,
+  "title": "A love letter to Durable Objects",
+  "date": "August 11, 2026",
+  "url": "https://bytes.dev/archives/511",
+  "words": 1062
+ },
+ {
+  "issue": 512,
+  "title": "The New Gorky Boy",
+  "date": "August 14, 2026",
+  "url": "https://bytes.dev/archives/512",
+  "words": 724
+ },
+ {
+  "issue": 513,
+  "title": "Cursor dumps Solid, birthday ruined",
+  "date": "August 19, 2026",
+  "url": "https://bytes.dev/archives/513",
+  "words": 1080
+ },
+ {
+  "issue": 514,
+  "title": "The Git War of 2026",
+  "date": "August 21, 2026",
+  "url": "https://bytes.dev/archives/514",
+  "words": 818
+ },
+ {
+  "issue": 515,
+  "title": "Bun\u2019s all in (one)",
+  "date": "August 26, 2026",
+  "url": "https://bytes.dev/archives/515",
+  "words": 843
+ },
+ {
+  "issue": 516,
+  "title": "CSS-in-JS is back",
+  "date": "August 28, 2026",
+  "url": "https://bytes.dev/archives/516",
+  "words": 801
+ },
+ {
+  "issue": 517,
+  "title": "100 years of htmx",
+  "date": "September 1, 2026",
+  "url": "https://bytes.dev/archives/517",
+  "words": 988
+ },
+ {
+  "issue": 518,
+  "title": "The true cost of Muse Spark",
+  "date": "September 4, 2026",
+  "url": "https://bytes.dev/archives/518",
+  "words": 1032
+ },
+ {
+  "issue": 519,
+  "title": "Your AGI good boy",
+  "date": "September 8, 2026",
+  "url": "https://bytes.dev/archives/519",
+  "words": 1073
+ },
+ {
+  "issue": 520,
+  "title": "Tailwind joins Shopify",
+  "date": "September 11, 2026",
+  "url": "https://bytes.dev/archives/520",
+  "words": 889
+ },
+ {
+  "issue": 521,
+  "title": "React 19.3",
+  "date": "September 15, 2026",
+  "url": "https://bytes.dev/archives/521",
+  "words": 1119
+ },
+ {
+  "issue": 522,
+  "title": "Jev\u2019s Paradox",
+  "date": "September 18, 2026",
+  "url": "https://bytes.dev/archives/522",
+  "words": 728
+ },
+ {
+  "issue": 523,
+  "title": "Vibe-coding bug-free apps (expect bugs)",
+  "date": "September 23, 2026",
+  "url": "https://bytes.dev/archives/523",
+  "words": 820
+ },
+ {
+  "issue": 524,
+  "title": "Is AI slowing down?",
+  "date": "September 25, 2026",
+  "url": "https://bytes.dev/archives/524",
+  "words": 884
+ },
+ {
+  "issue": 525,
+  "title": "Childproofing the ungovernable",
+  "date": "September 29, 2026",
+  "url": "https://bytes.dev/archives/525",
+  "words": 891
+ },
+ {
+  "issue": 526,
+  "title": "Pi Pilled",
+  "date": "October 2, 2026",
+  "url": "https://bytes.dev/archives/526",
+  "words": 1095
+ },
+ {
+  "issue": 527,
+  "title": "Ready to Remiiix",
+  "date": "October 6, 2026",
+  "url": "https://bytes.dev/archives/527",
+  "words": 1136
+ },
+ {
+  "issue": 528,
+  "title": "Deno Joins Cloudflare",
+  "date": "October 9, 2026",
+  "url": "https://bytes.dev/archives/528",
+  "words": 884
+ },
+ {
+  "issue": 529,
+  "title": "A Eulogy for Deno",
+  "date": "October 14, 2026",
+  "url": "https://bytes.dev/archives/529",
+  "words": 953
+ },
+ {
+  "issue": 530,
+  "title": "TanStack Strikes Back",
+  "date": "October 16, 2026",
+  "url": "https://bytes.dev/archives/530",
+  "words": 1003
+ },
+ {
+  "issue": 531,
+  "title": "A TypeScript Compiler Journey from Hell",
+  "date": "October 20, 2026",
+  "url": "https://bytes.dev/archives/531",
+  "words": 1000
+ },
+ {
+  "issue": 532,
+  "title": "Pouring One Out for PHP",
+  "date": "October 23, 2026",
+  "url": "https://bytes.dev/archives/532",
+  "words": 1209
+ },
+ {
+  "issue": 533,
+  "title": "TypeScript Can Read Your Weird Files",
+  "date": "October 27, 2026",
+  "url": "https://bytes.dev/archives/533",
+  "words": 895
+ },
+ {
+  "issue": 534,
+  "title": "The masculine urge to multiplex everything",
+  "date": "October 30, 2026",
+  "url": "https://bytes.dev/archives/534",
+  "words": 940
+ },
+ {
+  "issue": 535,
+  "title": "The CSS ballot for Interop 2027",
+  "date": "November 3, 2026",
+  "url": "https://bytes.dev/archives/535",
+  "words": 847
+ },
+ {
+  "issue": 536,
+  "title": "Parcel's Big Rust Wave",
+  "date": "November 6, 2026",
+  "url": "https://bytes.dev/archives/536",
+  "words": 964
+ },
+ {
+  "issue": 537,
+  "title": "The long-promised \u201cagent-first\u201d UI framework",
+  "date": "November 10, 2026",
+  "url": "https://bytes.dev/archives/537",
+  "words": 1049
+ },
+ {
+  "issue": 538,
+  "title": "Behavior Modification",
+  "date": "November 13, 2026",
+  "url": "https://bytes.dev/archives/538",
+  "words": 902
+ }
+]
